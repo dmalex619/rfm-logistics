@@ -1,0 +1,334 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ActiveReportsLayout Version="3" PrintWidth="16157.48" DocumentName="ARNet Document" ScriptLang="C#" MasterReport="0">
+  <StyleSheet>
+    <Style Name="Normal" Value="font-family: Arial; font-style: normal; text-decoration: none; font-weight: normal; font-size: 10pt; color: Black; " />
+    <Style Name="Heading1" Value="font-size: 16pt; font-weight: bold; " />
+    <Style Name="Heading2" Value="font-family: Times New Roman; font-size: 14pt; font-weight: bold; font-style: italic; " />
+    <Style Name="Heading3" Value="font-size: 13pt; font-weight: bold; " />
+  </StyleSheet>
+  <Sections>
+    <Section Type="PageHeader" Name="PageHeader" Height="0" BackColor="16777215" CanShrink="0" />
+    <Section Type="GroupHeader" Name="GroupHeader1" Height="3344" DataField="OutputDocumentID" ColKeepTogether="1" RepeatStyle="4" BackColor="16777215" KeepTogether="1" CanShrink="1" Tag="OrderUniq">
+      <Control Type="AR.Label" Name="lblGroupHeader104" Left="113.3858" Top="1360.63" Width="2415" Height="195" Caption="Грузоотправитель и его адрес:" HyperLink="" Style="ddo-char-set: 204; font-size: 8pt; font-family: Tahoma; white-space: nowrap; " Multiline="0" />
+      <Control Type="AR.Field" Name="txtGroupHeaderPayerName" DataField="PayerName" Left="1190.551" Top="2040.945" Width="14796.85" Height="226.7716" Text="PayerName" Multiline="0" Style="ddo-char-set: 204; text-align: left; font-weight: bold; font-size: 8pt; font-family: Tahoma; " />
+      <Control Type="AR.Field" Name="txtGroupHeaderPayerInn" DataField="PayerFullInn" Left="2551.182" Top="2494.489" Width="5669.292" Height="226.7718" Text="PayerFullInn" Multiline="0" Style="color: Black; ddo-char-set: 204; text-align: left; font-weight: bold; font-size: 8pt; font-family: Tahoma; " />
+      <Control Type="AR.Field" Name="txtGroupHeaderPayerAddress" DataField="PayerAddress" Left="737.0079" Top="2267.716" Width="15255" Height="225" Text="PayerAddress" Multiline="0" Style="ddo-char-set: 204; text-align: left; font-weight: bold; font-size: 8pt; font-family: Tahoma; " />
+      <Control Type="AR.Label" Name="lblGroupHeader101" Left="4592.127" Top="0" Width="11281.89" Height="170.0787" Caption="Приложение № 1 к правилам ведения журналов счетов-фактур (в ред. Постановлений Правительства РФ от 15.03.2001 № 189, от 27.02.2002 № 575, от 16.02.2004 № 84, от 11.05.2006 № 283)" HyperLink="" Style="color: Black; ddo-char-set: 1; text-align: right; font-size: 6pt; font-family: Tahoma; white-space: nowrap; " Multiline="0" />
+      <Control Type="AR.Label" Name="lblGroupHeader102" Left="113.3858" Top="453.5433" Width="810" Height="195" Caption="Продавец:" HyperLink="" Style="ddo-char-set: 204; font-size: 8pt; font-family: Tahoma; white-space: nowrap; " Multiline="0" />
+      <Control Type="AR.Label" Name="lblGroupHeader103" Left="113.3858" Top="1133.858" Width="1814.174" Height="195" Caption="ИНН/КПП продавца:" HyperLink="" Style="ddo-char-set: 204; font-size: 8pt; font-family: Tahoma; white-space: nowrap; " Multiline="0" />
+      <Control Type="AR.Label" Name="lblGroupHeader105" Left="113.3858" Top="1587.401" Width="2325" Height="195" Caption="Грузополучатель и его адрес:" HyperLink="" Style="ddo-char-set: 204; font-size: 8pt; font-family: Tahoma; white-space: nowrap; " Multiline="0" />
+      <Control Type="AR.Label" Name="lblGroupHeader106" Left="113.3858" Top="1814.174" Width="3000" Height="195" Caption="К платежно-расчетному документу №" HyperLink="" Style="ddo-char-set: 204; font-size: 8pt; font-family: Tahoma; white-space: nowrap; " Multiline="0" />
+      <Control Type="AR.Label" Name="lblGroupHeader107" Left="113.3858" Top="2040.945" Width="975" Height="195" Caption="Покупатель:" HyperLink="" Style="ddo-char-set: 204; font-size: 8pt; font-family: Tahoma; white-space: nowrap; " Multiline="0" />
+      <Control Type="AR.Label" Name="lblGroupHeader108" Left="113.3858" Top="2267.716" Width="525" Height="195" Caption="Адрес:" HyperLink="" Style="ddo-char-set: 204; font-size: 8pt; font-family: Tahoma; white-space: nowrap; " Multiline="0" />
+      <Control Type="AR.Label" Name="lblGroupHeader109" Left="113.3858" Top="2494.489" Width="1814.174" Height="195" Caption="ИНН/КПП покупателя:" HyperLink="" Style="ddo-char-set: 204; font-size: 8pt; font-family: Tahoma; white-space: nowrap; " Multiline="0" />
+      <Control Type="AR.Field" Name="txtGroupHeaderPayeeName" DataField="PayeeFullName" Left="1020.472" Top="453.5433" Width="14966.93" Height="226.7716" Text="PayeeFullName" Multiline="0" Style="ddo-char-set: 204; text-align: left; font-weight: bold; font-size: 8pt; font-family: Tahoma; " />
+      <Control Type="AR.Field" Name="txtGroupHeaderPayeeBank" DataField="PayeeFullBank" Left="113.3858" Top="907.0867" Width="15874.01" Height="226.7716" Text="PayeeFullBank" Multiline="0" Style="ddo-char-set: 204; text-align: left; font-weight: bold; font-size: 8pt; font-family: Tahoma; " />
+      <Control Type="AR.Field" Name="txtGroupHeaderPayeeInn" DataField="PayeeFullInn" Left="2551.182" Top="1133.858" Width="5669.292" Height="226.7716" Text="PayeeFullInn" Multiline="0" Style="color: Black; ddo-char-set: 204; text-align: left; font-weight: bold; font-size: 8pt; font-family: Tahoma; " />
+      <Control Type="AR.Field" Name="txtGroupHeaderShipperNameAddress" DataField="ShipperNameAddress" Left="2551.182" Top="1360.63" Width="13436.22" Height="226.7716" Text="ShipperNameAddress" Multiline="0" Style="ddo-char-set: 204; text-align: left; font-weight: bold; font-size: 8pt; font-family: Tahoma; " />
+      <Control Type="AR.Field" Name="txtGroupHeaderPayerNameDeliveryAddress" DataField="PayerNameDeliveryAddress" Left="2551.182" Top="1587.401" Width="13436.22" Height="226.7716" Text="PayerNameDeliveryAddress" Multiline="0" Style="ddo-char-set: 204; text-align: left; font-weight: bold; font-size: 8pt; font-family: Tahoma; " />
+      <Control Type="AR.Field" Name="txtGroupHeader106" Left="3118.11" Top="1814.174" Width="12869.29" Height="226.7716" Text="__________________ от ________________" Multiline="0" Style="ddo-char-set: 204; text-align: left; font-size: 8pt; font-family: Tahoma; " />
+      <Control Type="AR.Label" Name="lblGroupHeader201" Left="113.3858" Top="226.7716" Width="2145" Height="195" Caption="С Ч Е Т - Ф А К Т У Р А №" HyperLink="" Style="ddo-char-set: 204; font-weight: bold; font-size: 8pt; font-family: Tahoma; white-space: nowrap; " Multiline="0" />
+      <Control Type="AR.Field" Name="txtGroupHeaderDateOutput" DataField="DateOutput" Left="4138.583" Top="226.7716" Width="1125" Height="225" Text="DateOutput" OutputFormat="dd.MM.yyyy" Multiline="0" Style="ddo-char-set: 204; text-align: center; font-weight: bold; font-size: 8pt; font-family: Tahoma; " />
+      <Control Type="AR.Field" Name="txtGroupHeaderFactureNumber" DataField="FactureNumber" Left="2437.795" Top="226.7716" Width="1077.165" Height="226.7716" Text="FactureNumber" Multiline="0" Style="ddo-char-set: 204; text-align: center; font-weight: bold; font-size: 8pt; font-family: Tahoma; " />
+      <Control Type="AR.Label" Name="lblGroupHeader202" Left="3685.039" Top="226.7716" Width="210" Height="195" Caption="от" HyperLink="" Style="ddo-char-set: 204; font-weight: bold; font-size: 8pt; font-family: Tahoma; white-space: nowrap; " Multiline="0" />
+      <Control Type="AR.Line" Name="linGroupHeader201" X1="3514.961" Y1="453.5433" X2="2437.795" Y2="453.5433" />
+      <Control Type="AR.Line" Name="linGroupHeader202" X1="5272.44" Y1="453.5433" X2="4081.89" Y2="453.5433" />
+      <Control Type="AR.Label" Name="lblFactoring1" Left="113.3858" Top="2948.031" Width="15874.01" Height="170.0787" Caption="Право денежного требования по оплате товара уступлено Поставщиком (продавцом) Коммерческому Банку ОАО &quot;АльфаБанк&quot; ЗАО. Покупатель уведомлен об уступке  права требования" HyperLink="" Style="ddo-char-set: 1; font-size: 7pt; font-family: Tahoma; white-space: nowrap; " Multiline="0" />
+      <Control Type="AR.Label" Name="lblFactoring2" Left="113.3858" Top="3118.11" Width="15874.01" Height="170.0788" Caption="и необходимости оплаты нижеуказанного товара исключительно по реквизитам: Счет №61212.810.7.00000000007 в ОАО &quot;АЛЬФА-БАНК&quot; ЗАО, к/с №30101810200000000593 в, БИК 044525593" HyperLink="" Style="ddo-char-set: 1; font-size: 7pt; font-family: Tahoma; white-space: nowrap; " Multiline="0" />
+      <Control Type="AR.Label" Name="label1" Left="113.3858" Top="680.315" Width="623.6221" Height="226.7716" Caption="Адрес:" HyperLink="" Style="ddo-char-set: 204; font-size: 8pt; font-family: Tahoma; white-space: nowrap; " Multiline="0" />
+      <Control Type="AR.Field" Name="txtGroupHeaderPayeeAddress" DataField="PayeeAddress" Left="793.7007" Top="680.315" Width="15193.7" Height="226.7716" Text="PayeeAddress" Multiline="0" Style="ddo-char-set: 204; text-align: left; font-weight: bold; font-size: 8pt; font-family: Tahoma; " />
+      <Control Type="AR.Label" Name="lblCurrencyName" Left="113.3858" Top="2721.26" Width="2267.717" Height="195" Caption="Валюта: наименование , код" HyperLink="" Style="ddo-char-set: 204; font-size: 8pt; font-family: Tahoma; white-space: nowrap; " Multiline="0" />
+      <Control Type="AR.Field" Name="txtGroupHeaderCurrencyName" DataField="=CurrencyName + &quot;, &quot; + CurrencyISODigitalCode" Left="2551.182" Top="2721.26" Width="5669.292" Height="226.7718" Text="=CurrencyName + &quot;, &quot; + CurrencyISODigitalCode" Multiline="0" Style="color: Black; ddo-char-set: 204; text-align: left; font-weight: bold; font-size: 8pt; font-family: Tahoma; " />
+    </Section>
+    <Section Type="GroupHeader" Name="GroupHeader2" Height="419" DataField="PrintPageNumber" ColKeepTogether="1" RepeatStyle="4" BackColor="16777215" NewPage="1" KeepTogether="1" CanShrink="0" Tag="PagePrintOrder">
+      <Control Type="AR.Shape" Name="shpGroupHeader201" Left="56.69291" Top="0" Width="15874.01" Height="402.5196" BackColor="16777215" LineColor="0" LineWeight="2" RoundingRadius="0" />
+      <Control Type="AR.Label" Name="lblGroupHeader217" Left="6462.993" Top="170.0787" Width="645" Height="195" Caption="единицу" HyperLink="" Style="ddo-char-set: 1; text-align: center; font-size: 7pt; font-family: Tahoma; white-space: nowrap; " Multiline="0" />
+      <Control Type="AR.Label" Name="lblGroupHeader203" Left="566.9291" Top="0" Width="3741.732" Height="170.0787" Caption="Наименование товара (описание выполненных работ," HyperLink="" Style="ddo-char-set: 1; text-align: center; font-size: 7pt; font-family: Tahoma; white-space: nowrap; " Multiline="0" />
+      <Control Type="AR.Label" Name="lblGroupHeader205" Left="5555.906" Top="0" Width="737.0079" Height="170.0787" Caption="Кол-во" HyperLink="" Style="ddo-char-set: 1; text-align: center; font-size: 7pt; font-family: Tahoma; white-space: nowrap; " Multiline="0" />
+      <Control Type="AR.Label" Name="lblGroupHeader206" Left="6462.993" Top="0" Width="600" Height="195" Caption="Цена за" HyperLink="" Style="ddo-char-set: 1; text-align: center; font-size: 7pt; font-family: Tahoma; white-space: nowrap; " Multiline="0" />
+      <Control Type="AR.Label" Name="lblGroupHeader207" Left="8333.859" Top="0" Width="396.85" Height="170.0787" Caption="В т.ч." HyperLink="" Style="ddo-char-set: 1; text-align: center; font-size: 6pt; font-family: Tahoma; white-space: nowrap; " Multiline="0" />
+      <Control Type="AR.Label" Name="lblGroupHeader208" Left="8787.401" Top="0" Width="510" Height="195" Caption="Налог." HyperLink="" Style="ddo-char-set: 204; font-size: 6.75pt; font-family: Tahoma; white-space: nowrap; " Multiline="0" />
+      <Control Type="AR.Label" Name="lblGroupHeader209" Left="9411.023" Top="0" Width="680.3146" Height="170.0787" Caption="Сумма" HyperLink="" Style="ddo-char-set: 1; text-align: center; font-size: 7pt; font-family: Tahoma; white-space: nowrap; " Multiline="0" />
+      <Control Type="AR.Label" Name="lblGroupHeader210" Left="7256.693" Top="0" Width="1170" Height="360" Caption="Стоимость товаров (работ,усл.), им.прав, всего без налога" HyperLink="" Style="ddo-char-set: 204; font-size: 5pt; font-family: Tahoma; white-space: inherit; " />
+      <Control Type="AR.Label" Name="lblGroupHeader211" Left="10318.11" Top="0" Width="1185" Height="360" Caption="Стоимость товаров (работ,усл.), им.прав, всего с учетом налога" HyperLink="" Style="ddo-char-set: 204; font-size: 5pt; font-family: Tahoma; white-space: inherit; " />
+      <Control Type="AR.Label" Name="lblGroupHeader212" Left="11792.13" Top="0" Width="1360.63" Height="283.4646" Caption="Страна происхождения: код, наименование" HyperLink="" Style="ddo-char-set: 1; text-align: center; font-size: 5pt; font-family: Tahoma; white-space: inherit; " />
+      <Control Type="AR.Label" Name="lblGroupHeader213" Left="13436.22" Top="113.3858" Width="2400" Height="195" Caption="Номер таможенной декларации" HyperLink="" Style="ddo-char-set: 1; text-align: center; font-size: 7pt; font-family: Tahoma; white-space: nowrap; " Multiline="0" />
+      <Control Type="AR.Label" Name="lblGroupHeader214" Left="963.7795" Top="170.0788" Width="3061.417" Height="170.0787" Caption="оказанных услуг), имущественного права" HyperLink="" Style="ddo-char-set: 1; text-align: center; font-size: 7pt; font-family: Tahoma; white-space: nowrap; " Multiline="0" />
+      <Control Type="AR.Label" Name="lblGroupHeader216" Left="5612.599" Top="170.0787" Width="623.6219" Height="170.0787" Caption="единиц" HyperLink="" Style="ddo-char-set: 1; text-align: center; font-size: 7pt; font-family: Tahoma; white-space: nowrap; " Multiline="0" />
+      <Control Type="AR.Label" Name="lblGroupHeader218" Left="8333.859" Top="170.0787" Width="396.85" Height="170.0787" Caption="акциз" HyperLink="" Style="ddo-char-set: 1; text-align: center; font-size: 6pt; font-family: Tahoma; white-space: nowrap; " Multiline="0" />
+      <Control Type="AR.Label" Name="lblGroupHeader219" Left="8787.401" Top="170.0787" Width="525" Height="195" Caption="ставка" HyperLink="" Style="ddo-char-set: 204; font-size: 6.75pt; font-family: Tahoma; white-space: nowrap; " Multiline="0" />
+      <Control Type="AR.Label" Name="lblGroupHeader220" Left="9467.716" Top="170.0787" Width="566.9296" Height="170.0787" Caption="налога" HyperLink="" Style="ddo-char-set: 1; text-align: center; font-size: 7pt; font-family: Tahoma; white-space: nowrap; " Multiline="0" />
+      <Control Type="AR.Line" Name="linGroupHeader204" X1="4818.898" Y1="0" X2="4818.898" Y2="396.8504" LineColor="0" LineWeight="2" />
+      <Control Type="AR.Line" Name="linGroupHeader205" X1="6349.607" Y1="0" X2="6349.607" Y2="396.8505" LineColor="0" LineWeight="2" />
+      <Control Type="AR.Line" Name="linGroupHeader206" X1="7200" Y1="0" X2="7200" Y2="396.8505" LineColor="0" LineWeight="2" />
+      <Control Type="AR.Line" Name="linGroupHeader207" X1="8333.859" Y1="0" X2="8333.859" Y2="396.8505" LineColor="0" LineWeight="2" />
+      <Control Type="AR.Line" Name="linGroupHeader208" X1="8730.709" Y1="0" X2="8730.709" Y2="396.8505" LineColor="0" LineWeight="2" />
+      <Control Type="AR.Line" Name="linGroupHeader209" X1="9240.945" Y1="0" X2="9240.945" Y2="396.8505" LineColor="0" LineWeight="2" />
+      <Control Type="AR.Line" Name="linGroupHeader210" X1="10261.42" Y1="0" X2="10261.42" Y2="396.8505" LineColor="0" LineWeight="2" />
+      <Control Type="AR.Line" Name="linGroupHeader211" X1="11508.66" Y1="0" X2="11508.66" Y2="396.8505" LineColor="0" LineWeight="2" />
+      <Control Type="AR.Line" Name="linGroupHeader212" X1="13379.53" Y1="0" X2="13379.53" Y2="396.8505" LineColor="0" LineWeight="2" />
+      <Control Type="AR.Line" Name="line2" X1="5499.213" Y1="0" X2="5499.213" Y2="396.8505" LineColor="0" LineWeight="2" />
+      <Control Type="AR.Label" Name="label4" Left="4875.591" Top="0" Width="623.6221" Height="340.1575" Caption="Ед. изм. код, обозн." HyperLink="" Style="ddo-char-set: 1; text-align: center; font-size: 5pt; font-family: Tahoma; white-space: inherit; " />
+    </Section>
+    <Section Type="Detail" Name="Detail" Height="225" BackColor="16777215" CanShrink="0">
+      <Control Type="AR.Field" Name="txtDetailPriceNoVatSum" DataField="PriceNoVatSum" Left="7200" Top="0" Width="1133.858" Height="170.0787" Text="PriceNoVatSum" OutputFormat="# ##0.00" Multiline="0" Style="ddo-char-set: 204; text-align: right; font-size: 6.75pt; font-family: Microsoft Sans Serif; " />
+      <Control Type="AR.Field" Name="txtDetailPriceNoVat" DataField="PriceNoVat" Left="6406.3" Top="0" Width="737.0079" Height="170.0787" Text="Price" OutputFormat="# ##0.00" Multiline="0" Style="ddo-char-set: 204; text-align: right; font-size: 6.75pt; font-family: Microsoft Sans Serif; " />
+      <Control Type="AR.Field" Name="txtDetailPriceSum" DataField="PriceSum" Left="10148.03" Top="0" Width="1303.937" Height="170.0787" Text="PriceSum" OutputFormat="# ##0.00" Multiline="0" Style="ddo-char-set: 204; text-align: right; font-size: 6.75pt; font-family: Microsoft Sans Serif; " />
+      <Control Type="AR.Field" Name="txtDetailCountryName" DataField="=CountryCode + &quot;, &quot; + CountryName" Left="11565.35" Top="0" Width="1757.481" Height="170.0787" Text="=CountryCode + &quot;, &quot; + CountryName" Multiline="0" Style="ddo-char-set: 204; text-align: left; font-size: 6.75pt; font-family: Microsoft Sans Serif; " />
+      <Control Type="AR.Field" Name="txtDetailVat" DataField="Vat" Left="8730.709" Top="0" Width="510.2361" Height="170.0787" Text="Vat" OutputFormat="##0" Multiline="0" Style="ddo-char-set: 204; text-align: center; font-size: 6.75pt; font-family: Microsoft Sans Serif; " />
+      <Control Type="AR.Field" Name="txtDetailVatSum" DataField="VatSum" Left="9184.252" Top="0" Width="1020.472" Height="170.0787" Text="VatSum" OutputFormat="# ##0.00" Multiline="0" Style="ddo-char-set: 204; text-align: right; font-size: 6.75pt; font-family: Microsoft Sans Serif; " />
+      <Control Type="AR.Line" Name="linDetail01" X1="56.69291" Y1="0" X2="56.69291" Y2="226.7716" ANCHORB="1" />
+      <Control Type="AR.Line" Name="linDetail03" X1="5499.213" Y1="0" X2="5499.213" Y2="226.7716" ANCHORB="1" />
+      <Control Type="AR.Line" Name="linDetail04" X1="6349.607" Y1="0" X2="6349.607" Y2="226.7716" ANCHORB="1" />
+      <Control Type="AR.Line" Name="linDetail05" X1="7200" Y1="0" X2="7200" Y2="226.7716" ANCHORB="1" />
+      <Control Type="AR.Line" Name="linDetail06" X1="8390.552" Y1="0" X2="8390.552" Y2="226.7716" ANCHORB="1" />
+      <Control Type="AR.Line" Name="linDetail07" X1="8730.709" Y1="0" X2="8730.709" Y2="226.7716" ANCHORB="1" />
+      <Control Type="AR.Line" Name="linDetail08" X1="9240.945" Y1="0" X2="9240.945" Y2="226.7716" ANCHORB="1" />
+      <Control Type="AR.Line" Name="linDetail09" X1="10261.42" Y1="0" X2="10261.42" Y2="226.7716" ANCHORB="1" />
+      <Control Type="AR.Line" Name="linDetail10" X1="11508.66" Y1="0" X2="11508.66" Y2="209.9041" ANCHORB="1" />
+      <Control Type="AR.Line" Name="linDetail11" X1="13379.53" Y1="0" X2="13380" Y2="209.9041" ANCHORB="1" />
+      <Control Type="AR.Line" Name="linDetail12" X1="15930.71" Y1="0" X2="15930.71" Y2="209.9041" ANCHORB="1" />
+      <Control Type="AR.Field" Name="txtDetailGoodName" DataField="GoodAlias" Left="113.3858" Top="0" Width="4648.819" Height="170.0787" Text="GoodAlias" Style="ddo-char-set: 204; text-align: left; font-size: 6.75pt; font-family: Microsoft Sans Serif; " />
+      <Control Type="AR.Field" Name="txtDetailWeightText" DataField="=WeightCode + &quot;, &quot; + WeightText" Left="4875.591" Top="0" Width="566.9291" Height="170.0787" Text="=WeightCode + &quot;, &quot; + WeightText" Multiline="0" Style="ddo-char-set: 204; text-align: left; font-size: 6.75pt; font-family: Microsoft Sans Serif; " />
+      <Control Type="AR.Field" Name="txtDetailQnt" DataField="Qnt" Left="5442.52" Top="0" Width="850.3939" Height="170.0787" Text="Qnt" OutputFormat="# ##0" Multiline="0" Style="ddo-char-set: 204; text-align: right; font-size: 6.75pt; font-family: Microsoft Sans Serif; " />
+      <Control Type="AR.Field" Name="txtDetail05" Left="8447.244" Top="0" Width="283.4646" Height="170.0787" Text="-" Multiline="0" Style="ddo-char-set: 204; text-align: center; font-size: 6.75pt; font-family: Microsoft Sans Serif; " />
+      <Control Type="AR.Field" Name="txtDetailCustomNumber" DataField="CustomNumber" Left="13436.22" Top="0" Width="2494.489" Height="170.0787" Text="CustomNumber" Multiline="0" Style="ddo-char-set: 204; text-align: left; font-size: 6.75pt; font-family: Microsoft Sans Serif; " />
+      <Control Type="AR.Line" Name="line1" X1="4818.898" Y1="0" X2="4818.898" Y2="226.7717" ANCHORB="1" />
+    </Section>
+    <Section Type="GroupFooter" Name="GroupFooter2" Height="15" BackColor="16777215" CanShrink="0">
+      <Control Type="AR.Line" Name="linGroupFooter201" X1="15930" Y1="0" X2="90" Y2="0" />
+    </Section>
+    <Section Type="GroupFooter" Name="GroupFooter1" Height="4365" BackColor="16777215" KeepTogether="1" CanShrink="1">
+      <Control Type="AR.Field" Name="txtCurrentUserName" DataField="CurrentUserName" Left="5839.37" Top="1077.166" Width="1635" Height="225" Text="CurrentUserName" Multiline="0" Style="ddo-char-set: 204; text-align: center; font-size: 8pt; font-family: Tahoma; " />
+      <Control Type="AR.Shape" Name="shpGroupFooter101" Left="56.69291" Top="0" Width="11451.97" Height="238.1102" BackColor="16777215" LineWeight="2" RoundingRadius="0" />
+      <Control Type="AR.Field" Name="txtGroupFooter102" DataField="PriceSum" Left="10086.97" Top="0" Width="1365" Height="225" Text="round(PriceNds*Qnt,2)" OutputFormat="# ##0.00" Multiline="0" Style="ddo-char-set: 1; text-align: right; font-weight: bold; font-size: 7.5pt; font-family: Tahoma; " SummaryType="3" SummaryRunning="1" SummaryGroup="GroupHeader1" />
+      <Control Type="AR.Line" Name="linGroupFooter106" X1="15874.01" Y1="1020.472" X2="14286.61" Y2="1020.472" />
+      <Control Type="AR.Field" Name="txtGroupFooter109" DataField="=&quot;Уполномоченное лицо по приказу/дов-ти №&quot;" Tag="" Left="113.3858" Top="1133.858" Width="3685.039" Height="283.4646" Text="'Уполномоченное лицо по приказу/дов-ти № ' + lcDov" Style="ddo-char-set: 1; text-align: left; font-size: 7pt; font-family: Tahoma; white-space: inherit; " />
+      <Control Type="AR.Line" Name="linGroupFooter109" X1="14173.23" Y1="1303.937" X2="12359.05" Y2="1303.937" />
+      <Control Type="AR.Label" Name="lblGroupFooter111" Left="8617.323" Top="1474.016" Width="5442.52" Height="170.0787" Caption="Реквизиты свидетельства о гос. регистрации индивидуального предпринимателя" HyperLink="" Style="color: Black; ddo-char-set: 1; font-size: 7pt; font-family: Tahoma; white-space: nowrap; " Multiline="0" />
+      <Control Type="AR.Field" Name="txtGroupFooter106" DataField="FioDirector" Left="5839.37" Top="793.7007" Width="1635" Height="225" Text="Fio1" Multiline="0" Style="ddo-char-set: 204; text-align: center; font-size: 8pt; font-family: Tahoma; " />
+      <Control Type="AR.Field" Name="txtGroupFooter112" Left="14286.61" Top="1077.166" Width="1700.787" Height="226.7716" Multiline="0" Style="ddo-char-set: 204; text-align: center; font-size: 8pt; font-family: Tahoma; " />
+      <Control Type="AR.Field" Name="txtGroupFooter108" DataField="FioAccountant" Left="14286.61" Top="793.7007" Width="1644.094" Height="226.7716" Text="Fio2" Multiline="0" Style="ddo-char-set: 204; text-align: center; font-size: 8pt; font-family: Tahoma; " />
+      <Control Type="AR.Label" Name="lblGroupFooter105" Left="12359.05" Top="1020.472" Width="623.6218" Height="170.0787" Caption="(подпись)" HyperLink="" Style="color: Black; ddo-char-set: 1; font-size: 5pt; font-family: Tahoma; white-space: nowrap; " Multiline="0" />
+      <Control Type="AR.Field" Name="txtGroupFooter111" Left="5839.37" Top="1077.166" Width="1635" Height="225" Multiline="0" Style="ddo-char-set: 204; text-align: center; font-size: 8pt; font-family: Tahoma; " />
+      <Control Type="AR.Label" Name="lblGroupFooter101" Left="113.3858" Top="0" Width="1140" Height="195" Caption="Всего к оплате" HyperLink="" Style="color: Black; ddo-char-set: 1; font-size: 7.5pt; font-family: Tahoma; white-space: nowrap; " Multiline="0" />
+      <Control Type="AR.Label" Name="lblGroupFooter102" Left="5839.37" Top="1020.472" Width="453.5434" Height="170.0787" Caption="(ф.и.о)" HyperLink="" Style="color: Black; ddo-char-set: 1; font-size: 5pt; font-family: Tahoma; white-space: nowrap; " Multiline="0" />
+      <Control Type="AR.Label" Name="lblGroupFooter103" Left="14286.61" Top="1020.472" Width="453.5437" Height="170.0787" Caption="(ф.и.о)" HyperLink="" Style="color: Black; ddo-char-set: 1; font-size: 5pt; font-family: Tahoma; white-space: nowrap; " Multiline="0" />
+      <Control Type="AR.Label" Name="lblGroupFooter104" Left="3911.812" Top="1020.472" Width="680.3149" Height="226.7716" Caption="(подпись)" HyperLink="" Style="color: Black; ddo-char-set: 1; font-size: 5pt; font-family: Tahoma; white-space: nowrap; " Multiline="0" />
+      <Control Type="AR.Label" Name="lblGroupFooter106" Left="5839.37" Top="1303.937" Width="453.5433" Height="226.7716" Caption="(ф.и.о)" HyperLink="" Style="color: Black; ddo-char-set: 1; font-size: 5pt; font-family: Tahoma; white-space: nowrap; " Multiline="0" />
+      <Control Type="AR.Label" Name="lblGroupFooter107" Left="14286.61" Top="1303.937" Width="453.5433" Height="226.7716" Caption="(ф.и.о)" HyperLink="" Style="color: Black; ddo-char-set: 1; font-size: 5pt; font-family: Tahoma; white-space: nowrap; " Multiline="0" />
+      <Control Type="AR.Label" Name="lblGroupFooter108" Left="3911.812" Top="1303.937" Width="680.3149" Height="226.7716" Caption="(подпись)" HyperLink="" Style="color: Black; ddo-char-set: 1; font-size: 5pt; font-family: Tahoma; white-space: nowrap; " Multiline="0" />
+      <Control Type="AR.Label" Name="lblGroupFooter109" Left="12359.05" Top="1303.937" Width="623.6221" Height="170.0787" Caption="(подпись)" HyperLink="" Style="color: Black; ddo-char-set: 1; font-size: 5pt; font-family: Tahoma; white-space: nowrap; " Multiline="0" />
+      <Control Type="AR.Label" Name="lblGroupFooter110" Left="113.3858" Top="1417.323" Width="3685.039" Height="226.7716" Caption="Индивидуальный предприниматель" HyperLink="" Style="color: Black; ddo-char-set: 1; font-size: 7pt; font-family: Tahoma; white-space: nowrap; " Multiline="0" />
+      <Control Type="AR.Label" Name="lblGroupFooter112" Left="5839.37" Top="1587.401" Width="453.5433" Height="226.7716" Caption="(ф.и.о)" HyperLink="" Style="color: Black; ddo-char-set: 1; font-size: 5pt; font-family: Tahoma; white-space: nowrap; " Multiline="0" />
+      <Control Type="AR.Label" Name="lblGroupFooter113" Left="3911.812" Top="1587.401" Width="680.3149" Height="226.7716" Caption="(подпись)" HyperLink="" Style="color: Black; ddo-char-set: 1; font-size: 5pt; font-family: Tahoma; white-space: nowrap; " Multiline="0" />
+      <Control Type="AR.Line" Name="linGroupFooter101" X1="9240.945" Y1="0" X2="9240.945" Y2="226.7716" LineWeight="2" />
+      <Control Type="AR.Line" Name="linGroupFooter102" X1="10261.42" Y1="0" X2="10261.42" Y2="226.7716" LineWeight="2" />
+      <Control Type="AR.Line" Name="linGroupFooter103" X1="5725.984" Y1="1020.472" X2="3911.812" Y2="1020.472" />
+      <Control Type="AR.Line" Name="linGroupFooter104" X1="7483.464" Y1="1020.472" X2="5839.371" Y2="1020.472" />
+      <Control Type="AR.Line" Name="linGroupFooter105" X1="14173.23" Y1="1020.472" X2="12359.05" Y2="1020.472" />
+      <Control Type="AR.Line" Name="linGroupFooter107" X1="5725.984" Y1="1303.937" X2="3911.812" Y2="1303.937" />
+      <Control Type="AR.Line" Name="linGroupFooter108" X1="7483.464" Y1="1303.937" X2="5839.371" Y2="1303.937" />
+      <Control Type="AR.Line" Name="linGroupFooter110" X1="15874.01" Y1="1303.937" X2="14286.61" Y2="1303.937" />
+      <Control Type="AR.Line" Name="linGroupFooter111" X1="5725.984" Y1="1587.401" X2="3911.812" Y2="1587.401" />
+      <Control Type="AR.Line" Name="linGroupFooter112" X1="7483.464" Y1="1587.401" X2="5839.371" Y2="1587.401" />
+      <Control Type="AR.Line" Name="linGroupFooter113" X1="15874.01" Y1="1587.401" X2="14286.61" Y2="1587.401" />
+      <Control Type="AR.Field" Name="txtGroupFooter101" DataField="VatSum" Left="9034.725" Top="0" Width="1170" Height="225" Text="round(Qnt * PriceNds, 2) - round(Qnt * PriceNds / (1+Nds), 2)" OutputFormat="# ##0.00" Multiline="0" Style="ddo-char-set: 1; text-align: right; font-weight: bold; font-size: 7.5pt; font-family: Tahoma; " SummaryType="3" SummaryRunning="1" SummaryGroup="GroupHeader1" />
+      <Control Type="AR.Field" Name="txtGroupFooter105" DataField="JobTitleDirector" Left="113.3858" Top="850.3936" Width="3685.039" Height="226.7716" Text="JobTitleDirector" Multiline="0" Style="ddo-char-set: 1; text-align: left; font-size: 7pt; font-family: Tahoma; " />
+      <Control Type="AR.Field" Name="txtGroupFooter107" DataField="JobTitleAccountant" Left="8617.323" Top="850.3936" Width="3628.346" Height="226.7716" Text="JobTitleAccountant" Multiline="0" Style="ddo-char-set: 1; text-align: left; font-size: 7pt; font-family: Tahoma; " />
+      <Control Type="AR.Field" Name="txtGroupFooter110" DataField="=&quot;Уполномоченное лицо по приказу/дов-ти №&quot;" Tag="" Left="8617.323" Top="1190.551" Width="3628.346" Height="226.7716" Text="Уполномоченное лицо по приказу/дов-ти № " Style="ddo-char-set: 1; text-align: left; font-size: 7pt; font-family: Tahoma; white-space: inherit; " />
+      <Control Type="AR.Barcode" Name="barcode2" Left="113.3858" Top="3174.804" Width="6179.527" Height="1133.858" BarStyle="8" Text="2" CaptionPos="2" Font="Tahoma" FontSize="8" CODE128="0;0;0" />
+      <Control Type="AR.Barcode" Name="barcode1" Left="113.3858" Top="1870.867" Width="6803.15" Height="1133.858" BarStyle="8" Text="1" CaptionPos="2" Font="Tahoma" FontSize="8" CODE128="0;0;0" />
+      <Control Type="AR.Field" Name="txtGroupFooterAmount" Left="1303.937" Top="283.4646" Width="14570.08" Height="226.7716" Text="*AmountText" Style="color: Black; ddo-char-set: 1; text-align: left; font-size: 7.5pt; font-family: Tahoma; " />
+      <Control Type="AR.Label" Name="label2" Left="113.3858" Top="283.4646" Width="1190.551" Height="226.7716" Caption="Всего на сумму:" HyperLink="" Style="color: Black; ddo-char-set: 1; font-size: 7.5pt; font-family: Tahoma; white-space: nowrap; " Multiline="0" />
+      <Control Type="AR.Field" Name="txtGroupFooterVat1Text" DataField="VatText1" Left="113.3858" Top="566.9291" Width="8050.393" Height="170.0787" Text="Vat1Text" Multiline="0" Style="color: Black; ddo-char-set: 1; text-align: left; font-size: 7.5pt; font-family: Tahoma; " />
+      <Control Type="AR.Field" Name="txtGroupFooterVat2Text" DataField="VatText2" Left="8617.323" Top="566.9291" Width="7483.464" Height="170.0787" Text="Vat2Text" Multiline="0" Style="color: Black; ddo-char-set: 1; text-align: left; font-size: 7.5pt; font-family: Tahoma; " />
+      <Control Type="AR.Field" Name="txtCurrentUserName1" DataField="CurrentUserName" Left="14286.61" Top="1077.166" Width="1635" Height="225" Text="CurrentUserName" Multiline="0" Style="ddo-char-set: 204; text-align: center; font-size: 8pt; font-family: Tahoma; " />
+    </Section>
+    <Section Type="PageFooter" Name="PageFooter" Height="240" BackColor="16777215" CanShrink="0">
+      <Control Type="AR.Label" Name="lblPageFooter01" Left="344.9999" Top="14.66424" Width="2145" Height="195" Caption="С Ч Е Т - Ф А К Т У Р А №" HyperLink="" Style="ddo-char-set: 204; font-weight: bold; font-size: 8pt; font-family: Tahoma; white-space: nowrap; " Multiline="0" />
+      <Control Type="AR.Field" Name="txtPageFooterFactureNumber" Left="2580" Top="0" Width="1005" Height="225" Text="FactureNumber" Multiline="0" Style="ddo-char-set: 204; text-align: left; font-weight: bold; font-size: 8pt; font-family: Tahoma; " />
+      <Control Type="AR.ReportInfo" Name="reportInfo1" Left="14286.61" Top="0" Width="1700.787" Height="226.7716" FormatString="Стр. {PageNumber} из {PageCount}" Style="ddo-char-set: 1; text-align: right; font-size: 8pt; font-family: Tahoma; " SummaryRunning="1" SummaryGroup="GroupHeader1" />
+    </Section>
+  </Sections>
+  <ReportComponentTray />
+  <Script><![CDATA[int _nOutputDocumentID = 0;
+string _sFactureNumber = "";
+bool _bFactoring = false;
+
+string _sPartnerOrderNumber = "";
+
+string sPayeeINN = "";
+string sPayerINN = "";
+decimal nSum = 0; 
+DateTime dDate = DateTime.Now.Date;
+string sIsoCode = "";
+
+int _nCnt = 0;
+decimal _nOutputDocumentQnt = 0;
+decimal _nOutputDocumentBox = 0;
+decimal _nOutputDocumentBrutto = 0;
+decimal _nOutputDocumentNetto = 0;
+decimal _nAmount = 0;
+int _nCurrencyID = 0;
+string _sCurrencyAlias = "";
+string _sRubID = "";
+
+decimal _nVatAllSum = 0, _nNoVatAllSum = 0,
+		_nVat1Rate = 0, _nVat1Sum = 0, _nNoVat1Sum = 0,
+		_nVat2Rate = 0, _nVat2Sum = 0, _nNoVat2Sum = 0;
+
+public void ActiveReport_ReportStart()
+{
+	LogBizObjects.Setting oRub = new LogBizObjects.Setting();
+	_sRubID = oRub.FillVariable("gnCurrencyBaseID");
+}
+
+public bool ActiveReport_FetchData(bool eof)
+{
+	_nOutputDocumentID = (int)rpt.Fields["OutputDocumentID"].Value;
+	 _sFactureNumber = rpt.Fields["FactureNumber"].Value.ToString();
+	_bFactoring = (bool)rpt.Fields["Factoring"].Value;
+
+	_sPartnerOrderNumber = rpt.Fields["PartnerOrderNumber"].Value.ToString();
+
+	sPayeeINN = rpt.Fields["PayeeINN"].Value.ToString();
+	sPayerINN = rpt.Fields["PayerINN"].Value.ToString();
+	nSum = (decimal)rpt.Fields["Amount"].Value;
+	dDate = (DateTime)rpt.Fields["DateOutput"].Value;
+	sIsoCode = rpt.Fields["CurrencyISODigitalCode"].Value.ToString();
+		
+	_nCnt = (int)rpt.Fields["Cnt"].Value;
+	_nOutputDocumentQnt = (decimal)rpt.Fields["OutputDocumentQnt"].Value;
+	_nOutputDocumentBox = (decimal)rpt.Fields["OutputDocumentBox"].Value;
+	_nOutputDocumentBrutto = (decimal)rpt.Fields["OutputDocumentBrutto"].Value;
+	_nOutputDocumentNetto = (decimal)rpt.Fields["OutputDocumentNetto"].Value;
+	_nAmount = (decimal)rpt.Fields["Amount"].Value;
+	_nCurrencyID = (int)rpt.Fields["CurrencyID"].Value;
+	_sCurrencyAlias = rpt.Fields["CurrencyAlias"].Value.ToString();
+	
+	_nVatAllSum = (decimal)rpt.Fields["VatAllSum"].Value;
+	_nNoVatAllSum = (decimal)rpt.Fields["NoVatAllSum"].Value;
+	_nVat1Rate = (decimal)rpt.Fields["Vat1Rate"].Value;
+	_nVat1Sum = (decimal)rpt.Fields["Vat1Sum"].Value;
+	_nNoVat1Sum = (decimal)rpt.Fields["NoVat1Sum"].Value;
+	_nVat2Rate = (decimal)rpt.Fields["Vat2Rate"].Value;
+	_nVat2Sum = (decimal)rpt.Fields["Vat2Sum"].Value;
+	_nNoVat2Sum = (decimal)rpt.Fields["NoVat2Sum"].Value;
+
+	if ((bool)rpt.Fields["Weighting"].Value || 
+		(decimal)rpt.Fields["InBox"].Value != (int)(decimal)rpt.Fields["InBox"].Value)
+	{
+		//((TextBox)rpt.Sections["Detail"].Controls["txtDetailInBox"]).OutputFormat = "# ### ##0.000";
+		((TextBox)rpt.Sections["Detail"].Controls["txtDetailQnt"]).OutputFormat = "# ### ##0.000";
+	}
+	else
+	{
+		//((TextBox)rpt.Sections["Detail"].Controls["txtDetailInBox"]).OutputFormat = "# ### ##0";
+		((TextBox)rpt.Sections["Detail"].Controls["txtDetailQnt"]).OutputFormat = "# ### ##0";
+	}
+	return eof;
+}
+
+public void GroupHeader1_Format()
+{
+	((Label)rpt.Sections["GroupHeader1"].Controls["lblFactoring1"]).Visible = 
+	((Label)rpt.Sections["GroupHeader1"].Controls["lblFactoring2"]).Visible = 
+		_bFactoring;
+
+	if (_sPartnerOrderNumber != null && _sPartnerOrderNumber.Length > 0 && _sPartnerOrderNumber.Contains("/"))
+		((TextBox)rpt.Sections["GroupHeader1"].Controls["txtGroupHeaderFactureNumber"]).Value = _sPartnerOrderNumber.Substring(_sPartnerOrderNumber.IndexOf("/") + 1);
+	else
+		((TextBox)rpt.Sections["GroupHeader1"].Controls["txtGroupHeaderFactureNumber"]).Value = "";
+}
+
+public void GroupHeader2_Format()
+{
+}
+
+public void GroupFooter1_Format()
+{
+	if (_bFactoring)
+	{
+		((Barcode)rpt.Sections["GroupFooter1"].Controls["barcode1"]).Text = Logistics.Utilities.GetCRCBarCode_128A(Logistics.Utilities.GetAlfaBankBarCode_128A42(sPayeeINN, sPayerINN, nSum, dDate));
+		((Barcode)rpt.Sections["GroupFooter1"].Controls["barcode2"]).Text = Logistics.Utilities.GetCRCBarCode_128A(Logistics.Utilities.GetAlfaBankBarCode_128A40(_sFactureNumber, sIsoCode));
+		((Barcode)rpt.Sections["GroupFooter1"].Controls["barcode1"]).Visible =
+		((Barcode)rpt.Sections["GroupFooter1"].Controls["barcode2"]).Visible =
+			true;
+	}
+	else
+	{
+		((Barcode)rpt.Sections["GroupFooter1"].Controls["barcode1"]).Visible =
+		((Barcode)rpt.Sections["GroupFooter1"].Controls["barcode2"]).Visible =
+			false;
+	}
+
+/*
+	((TextBox)rpt.Sections["GroupFooter1"].Controls["txtGroupFooterNettoText"]).Text = _nOutputDocumentNetto.ToString("# ### ##0.000") + 
+		" (" + ((int)Math.Floor(_nOutputDocumentNetto)).ToString("# ### ##0").Trim() + " кг " +
+		((int)((_nOutputDocumentNetto - Math.Floor(_nOutputDocumentNetto)) * 1000)).ToString("000") + " г)";
+	((TextBox)rpt.Sections["GroupFooter1"].Controls["txtGroupFooterBruttoText"]).Text = _nOutputDocumentBrutto.ToString("# ### ##0.000") + 
+		" (" + ((int)Math.Floor(_nOutputDocumentBrutto)).ToString("# ### ##0").Trim() + " кг " +
+		((int)((_nOutputDocumentBrutto - Math.Floor(_nOutputDocumentBrutto)) * 1000)).ToString("000") + " г)";
+*/
+	if (_nCurrencyID.ToString() == _sRubID)
+	{
+		((TextBox)rpt.Sections["GroupFooter1"].Controls["txtGroupFooterAmount"]).Text = RFMPublic.RFMUtilities.ValToRub(_nAmount);
+	}
+	else
+	{
+		((TextBox)rpt.Sections["GroupFooter1"].Controls["txtGroupFooterAmount"]).Text = RFMPublic.RFMUtilities.ValToRub(_nAmount, _sCurrencyAlias);
+	}
+	
+	/*
+	((TextBox)rpt.Sections["GroupFooter1"].Controls["txtGroupFooterVatSum"]).Text = _nVatAllSum.ToString("### ### ###0.00");
+	((TextBox)rpt.Sections["GroupFooter1"].Controls["txtGroupFooterNoVatSum"]).Text = _nNoVatAllSum.ToString("### ### ###0.00");
+
+	if (_nVat1Rate > 0)
+	{
+		((TextBox)rpt.Sections["GroupFooter1"].Controls["txtGroupFooterLabelVat1Sum"]).Text = ((TextBox)rpt.Sections["GroupFooter1"].Controls["txtGroupFooterLabelVat1Sum"]).Tag.ToString().Replace("#", _nVat1Rate.ToString("######").Trim());
+		((TextBox)rpt.Sections["GroupFooter1"].Controls["txtGroupFooterLabelNoVat1Sum"]).Text = ((TextBox)rpt.Sections["GroupFooter1"].Controls["txtGroupFooterLabelNoVat1Sum"]).Tag.ToString().Replace("#", _nVat1Rate.ToString("######").Trim());
+		((TextBox)rpt.Sections["GroupFooter1"].Controls["txtGroupFooterVat1Sum"]).Text = _nVat1Sum.ToString("### ### ###0.00");
+		((TextBox)rpt.Sections["GroupFooter1"].Controls["txtGroupFooterNoVat1Sum"]).Text = _nNoVat1Sum.ToString("### ### ###0.00");
+	}
+	else
+	{
+		((TextBox)rpt.Sections["GroupFooter1"].Controls["txtGroupFooterLabelVat1Sum"]).Text = 
+		((TextBox)rpt.Sections["GroupFooter1"].Controls["txtGroupFooterLabelNoVat1Sum"]).Text = 
+		((TextBox)rpt.Sections["GroupFooter1"].Controls["txtGroupFooterVat1Sum"]).Text = 
+		((TextBox)rpt.Sections["GroupFooter1"].Controls["txtGroupFooterNoVat1Sum"]).Text = 
+			""; 
+	}
+
+	if (_nVat2Rate > 0)
+	{
+		((TextBox)rpt.Sections["GroupFooter1"].Controls["txtGroupFooterLabelVat2Sum"]).Text = ((TextBox)rpt.Sections["GroupFooter1"].Controls["txtGroupFooterLabelVat2Sum"]).Tag.ToString().Replace("#", _nVat2Rate.ToString("######").Trim());
+		((TextBox)rpt.Sections["GroupFooter1"].Controls["txtGroupFooterLabelNoVat2Sum"]).Text = ((TextBox)rpt.Sections["GroupFooter1"].Controls["txtGroupFooterLabelNoVat2Sum"]).Tag.ToString().Replace("#", _nVat2Rate.ToString("######").Trim());
+		((TextBox)rpt.Sections["GroupFooter1"].Controls["txtGroupFooterVat2Sum"]).Text = _nVat2Sum.ToString("### ### ###0.00");
+		((TextBox)rpt.Sections["GroupFooter1"].Controls["txtGroupFooterNoVat2Sum"]).Text = _nNoVat2Sum.ToString("### ### ###0.00");
+	}
+	else
+	{
+		((TextBox)rpt.Sections["GroupFooter1"].Controls["txtGroupFooterLabelVat2Sum"]).Text =
+		((TextBox)rpt.Sections["GroupFooter1"].Controls["txtGroupFooterLabelNoVat2Sum"]).Text =
+		((TextBox)rpt.Sections["GroupFooter1"].Controls["txtGroupFooterVat2Sum"]).Text =
+		((TextBox)rpt.Sections["GroupFooter1"].Controls["txtGroupFooterNoVat2Sum"]).Text =
+			""; 
+	}
+	*/
+	
+	((TextBox)rpt.Sections["GroupFooter1"].Controls["txtCurrentUserName"]).Text = 
+	((TextBox)rpt.Sections["GroupFooter1"].Controls["txtCurrentUserName1"]).Text = 
+		((RFMBaseClasses.RFMFormMain)System.Windows.Forms.Application.OpenForms[0]).UserInfo.UserAlias;
+}
+
+public void PageFooter_Format()
+{
+	if (_sPartnerOrderNumber != null && _sPartnerOrderNumber.Length > 0 && _sPartnerOrderNumber.Contains("/"))
+		((TextBox)rpt.Sections["PageFooter"].Controls["txtPageFooterFactureNumber"]).Text = _sPartnerOrderNumber.Substring(_sPartnerOrderNumber.IndexOf("/") + 1);
+	else
+		((TextBox)rpt.Sections["PageFooter"].Controls["txtPageFooterFactureNumber"]).Text = "";
+}]]></Script>
+  <PageSettings LeftMargin="283" RightMargin="283" TopMargin="283" BottomMargin="283" Orientation="2" />
+  <Parameters />
+</ActiveReportsLayout>
