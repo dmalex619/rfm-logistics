@@ -1,0 +1,1624 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{76856539-FC36-4ED9-ADC8-A27FABCA2504}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Logistics</RootNamespace>
+    <AssemblyName>Logistics</AssemblyName>
+    <StartupObject>Logistics.StartProgram</StartupObject>
+    <ManifestCertificateThumbprint>65B6E7C809FF0D1F50DB902B31E0C6D4B05518AC</ManifestCertificateThumbprint>
+    <ManifestKeyFile>Logistics_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>false</GenerateManifests>
+    <SignManifests>false</SignManifests>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetZone>LocalIntranet</TargetZone>
+    <ApplicationIcon>Logistics.ico</ApplicationIcon>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>z:\4\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ActiveReports.Chart, Version=5.2.0.397, Culture=neutral, PublicKeyToken=cc4967777c49a3ff">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ActiveReports.HtmlExport, Version=5.2.0.397, Culture=neutral, PublicKeyToken=cc4967777c49a3ff">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ActiveReports.PdfExport, Version=5.2.0.397, Culture=neutral, PublicKeyToken=cc4967777c49a3ff">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ActiveReports.RtfExport, Version=5.2.0.397, Culture=neutral, PublicKeyToken=cc4967777c49a3ff">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ActiveReports.TextExport, Version=5.2.0.397, Culture=neutral, PublicKeyToken=cc4967777c49a3ff">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ActiveReports.TiffExport, Version=5.2.0.397, Culture=neutral, PublicKeyToken=cc4967777c49a3ff">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ActiveReports.Viewer3, Version=5.2.0.397, Culture=neutral, PublicKeyToken=cc4967777c49a3ff">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ActiveReports.XlsExport, Version=5.2.0.397, Culture=neutral, PublicKeyToken=cc4967777c49a3ff">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ActiveReports3, Version=5.2.0.397, Culture=neutral, PublicKeyToken=cc4967777c49a3ff">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=10.0.4504.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\LogAdd\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\WINDOWS\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.Windows.Controls">
+      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for WPF R1 2018\Binaries\WPF40\Telerik.Windows.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.DataVisualization">
+      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for WPF R1 2018\Binaries\WPF40\Telerik.Windows.Controls.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActiveReports\billAdditionWithGoodsBarCodes.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ActiveReports\billAdditionWithGoodsBarCodes.designer.cs">
+      <DependentUpon>billAdditionWithGoodsBarCodes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActiveReports\billInnerMoving.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ActiveReports\billInnerMoving.designer.cs">
+      <DependentUpon>billInnerMoving.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActiveReports\billPortrait.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ActiveReports\billPortrait.designer.cs">
+      <DependentUpon>billPortrait.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActiveReports\billM15.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ActiveReports\billM15.designer.cs">
+      <DependentUpon>billM15.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActiveReports\DrivingScheme.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ActiveReports\DrivingScheme.designer.cs">
+      <DependentUpon>DrivingScheme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActiveReports\facture.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ActiveReports\facture.Designer.cs">
+      <DependentUpon>facture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActiveReports\GoodsGroupsList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ActiveReports\GoodsGroupsList.designer.cs">
+      <DependentUpon>GoodsGroupsList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActiveReports\InputBill.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ActiveReports\InputBill.designer.cs">
+      <DependentUpon>InputBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActiveReports\InputDocumentBill.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ActiveReports\InputDocumentBill.designer.cs">
+      <DependentUpon>InputDocumentBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActiveReports\MovingDocumentBill.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ActiveReports\MovingDocumentBill.designer.cs">
+      <DependentUpon>MovingDocumentBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActiveReports\OutputBill.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ActiveReports\OutputBill.designer.cs">
+      <DependentUpon>OutputBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActiveReports\PassBill.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ActiveReports\PassBill.designer.cs">
+      <DependentUpon>PassBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActiveReports\Perversions\billPerversion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ActiveReports\Perversions\billPerversion.designer.cs">
+      <DependentUpon>billPerversion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActiveReports\Perversions\facturePerversion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ActiveReports\Perversions\facturePerversion.designer.cs">
+      <DependentUpon>facturePerversion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActiveReports\QualityList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ActiveReports\QualityList.designer.cs">
+      <DependentUpon>QualityList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActiveReports\repForSalary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ActiveReports\repForSalary.designer.cs">
+      <DependentUpon>repForSalary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActiveReports\repPackingsSimple.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ActiveReports\repPackingsSimple.designer.cs">
+      <DependentUpon>repPackingsSimple.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActiveReports\repWayBillsFuelData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ActiveReports\repWayBillsFuelData.designer.cs">
+      <DependentUpon>repWayBillsFuelData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActiveReports\TransportAct.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ActiveReports\TransportAct.designer.cs">
+      <DependentUpon>TransportAct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActiveReports\TransportBill.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ActiveReports\TransportBill.designer.cs">
+      <DependentUpon>TransportBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActiveReports\TripBill.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ActiveReports\TripBill.designer.cs">
+      <DependentUpon>TripBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActiveReports\repTestReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ActiveReports\repTestReport.Designer.cs">
+      <DependentUpon>repTestReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActiveReports\repPackings.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ActiveReports\repPackings.designer.cs">
+      <DependentUpon>repPackings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActiveReports\repUsersBadges.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ActiveReports\repUsersBadges.designer.cs">
+      <DependentUpon>repUsersBadges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActiveReports\TripBillShort.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ActiveReports\TripBillShort.designer.cs">
+      <DependentUpon>TripBillShort.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActiveReports\TripInputsBalance.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ActiveReports\TripInputsBalance.designer.cs">
+      <DependentUpon>TripInputsBalance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActiveReports\TripOutputsBalance.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ActiveReports\TripOutputsBalance.designer.cs">
+      <DependentUpon>TripOutputsBalance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActiveReports\TripReturnBill.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ActiveReports\TripReturnBill.designer.cs">
+      <DependentUpon>TripReturnBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActiveReports\TripsList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ActiveReports\TripsList.designer.cs">
+      <DependentUpon>TripsList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActiveReports\TripsListNotes.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ActiveReports\TripsListNotes.designer.cs">
+      <DependentUpon>TripsListNotes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActiveReports\VeterinaryBlank.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ActiveReports\VeterinaryBlank.designer.cs">
+      <DependentUpon>VeterinaryBlank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActiveReports\VeterinaryList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ActiveReports\VeterinaryList.Designer.cs">
+      <DependentUpon>VeterinaryList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActiveReports\VeterinaryListAdd.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ActiveReports\VeterinaryListAdd.designer.cs">
+      <DependentUpon>VeterinaryListAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActiveReports\warrant.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ActiveReports\warrant.designer.cs">
+      <DependentUpon>warrant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActiveReports\WayBillShort.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ActiveReports\WayBillShort.designer.cs">
+      <DependentUpon>WayBillShort.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AlterMethods.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="ActiveReports\billLandscape.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ActiveReports\billLandscape.designer.cs">
+      <DependentUpon>billLandscape.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActiveReports\billReturn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ActiveReports\billReturn.designer.cs">
+      <DependentUpon>billReturn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActiveReports\billMX1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ActiveReports\billMX1.designer.cs">
+      <DependentUpon>billMX1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActiveReports\billMX3.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ActiveReports\billMX3.designer.cs">
+      <DependentUpon>billMX3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActiveReports\CarsDayList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ActiveReports\CarsDayList.designer.cs">
+      <DependentUpon>CarsDayList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmActs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmActs.designer.cs">
+      <DependentUpon>frmActs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmActsEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmActsEdit.designer.cs">
+      <DependentUpon>frmActsEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCarsEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCarsEdit.designer.cs">
+      <DependentUpon>frmCarsEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCarsTasks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCarsTasks.designer.cs">
+      <DependentUpon>frmCarsTasks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCarsTasksEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCarsTasksEdit.designer.cs">
+      <DependentUpon>frmCarsTasksEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCarsTypesEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCarsTypesEdit.designer.cs">
+      <DependentUpon>frmCarsTypesEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmExchangeLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmExchangeLog.designer.cs">
+      <DependentUpon>frmExchangeLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFreeOperations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFreeOperations.designer.cs">
+      <DependentUpon>frmFreeOperations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmGetMXNames.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmGetMXNames.Designer.cs">
+      <DependentUpon>frmGetMXNames.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMovingsDocumentsEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMovingsDocumentsEdit.designer.cs">
+      <DependentUpon>frmMovingsDocumentsEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmOutputsDocumentsDeliveryPrices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmOutputsDocumentsDeliveryPrices.designer.cs">
+      <DependentUpon>frmOutputsDocumentsDeliveryPrices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmOutputsDocumentsEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmOutputsDocumentsEdit.designer.cs">
+      <DependentUpon>frmOutputsDocumentsEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmOutputsDocumentsFactTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmOutputsDocumentsFactTime.designer.cs">
+      <DependentUpon>frmOutputsDocumentsFactTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmOutputsDocumentsGoodsPriceEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmOutputsDocumentsGoodsPriceEdit.designer.cs">
+      <DependentUpon>frmOutputsDocumentsGoodsPriceEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmOutputsDocumentsGuiltyEmployees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmOutputsDocumentsGuiltyEmployees.designer.cs">
+      <DependentUpon>frmOutputsDocumentsGuiltyEmployees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmOutputsDocumentsTTNData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmOutputsDocumentsTTNData.designer.cs">
+      <DependentUpon>frmOutputsDocumentsTTNData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmOutputsInputsCarries.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmOutputsInputsCarries.designer.cs">
+      <DependentUpon>frmOutputsInputsCarries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPartners.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPartners.designer.cs">
+      <DependentUpon>frmPartners.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPartnersEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPartnersEdit.designer.cs">
+      <DependentUpon>frmPartnersEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmEmployeesDrivers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmEmployeesDrivers.designer.cs">
+      <DependentUpon>frmEmployeesDrivers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmEmployeesDriversEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmEmployeesDriversEdit.designer.cs">
+      <DependentUpon>frmEmployeesDriversEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFacturesNumbers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFacturesNumbers.designer.cs">
+      <DependentUpon>frmFacturesNumbers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFillingsEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFillingsEdit.designer.cs">
+      <DependentUpon>frmFillingsEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmGatesHistoryEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmGatesHistoryEdit.designer.cs">
+      <DependentUpon>frmGatesHistoryEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmGoods.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmGoods.designer.cs">
+      <DependentUpon>frmGoods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmGoodsQualitiesEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmGoodsQualitiesEdit.designer.cs">
+      <DependentUpon>frmGoodsQualitiesEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmGoodsVeterinariesEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmGoodsVeterinariesEdit.designer.cs">
+      <DependentUpon>frmGoodsVeterinariesEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmInputsDocumentsEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmInputsDocumentsEdit.designer.cs">
+      <DependentUpon>frmInputsDocumentsEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmInputsEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmInputsEdit.designer.cs">
+      <DependentUpon>frmInputsEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmLogistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmLogistics.designer.cs">
+      <DependentUpon>frmLogistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmOutputsDocumentsBring.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmOutputsDocumentsBring.designer.cs">
+      <DependentUpon>frmOutputsDocumentsBring.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmOutputsInputs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmOutputsInputs.designer.cs">
+      <DependentUpon>frmOutputsInputs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPartnersGoodsEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPartnersGoodsEdit.designer.cs">
+      <DependentUpon>frmPartnersGoodsEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPassesEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPassesEdit.designer.cs">
+      <DependentUpon>frmPassesEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPrintFormsEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPrintFormsEdit.designer.cs">
+      <DependentUpon>frmPrintFormsEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmReportDriversWorksTimes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmReportDriversWorksTimes.designer.cs">
+      <DependentUpon>frmReportDriversWorksTimes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmReportForSalary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmReportForSalary.designer.cs">
+      <DependentUpon>frmReportForSalary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmReportForSalaryWithPenalty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmReportForSalaryWithPenalty.designer.cs">
+      <DependentUpon>frmReportForSalaryWithPenalty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmReportTripsCosts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmReportTripsCosts.designer.cs">
+      <DependentUpon>frmReportTripsCosts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSalaryExtraWorks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSalaryExtraWorks.designer.cs">
+      <DependentUpon>frmSalaryExtraWorks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSalaryExtraWorksEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSalaryExtraWorksEdit.designer.cs">
+      <DependentUpon>frmSalaryExtraWorksEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSalaryTariffs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSalaryTariffs.designer.cs">
+      <DependentUpon>frmSalaryTariffs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSalaryTariffsEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSalaryTariffsEdit.designer.cs">
+      <DependentUpon>frmSalaryTariffsEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSelectOneInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSelectOneInput.designer.cs">
+      <DependentUpon>frmSelectOneInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSelectOneOutput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSelectOneOutput.designer.cs">
+      <DependentUpon>frmSelectOneOutput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSelectOneOutputDocument.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSelectOneOutputDocument.designer.cs">
+      <DependentUpon>frmSelectOneOutputDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSelectOneInputDocument.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSelectOneInputDocument.designer.cs">
+      <DependentUpon>frmSelectOneInputDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSelectOnePartner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSelectOnePartner.designer.cs">
+      <DependentUpon>frmSelectOnePartner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTripsBringEasy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTripsBringEasy.designer.cs">
+      <DependentUpon>frmTripsBringEasy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTripsByDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTripsByDate.designer.cs">
+      <DependentUpon>frmTripsByDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTripsCostAmountEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTripsCostAmountEdit.designer.cs">
+      <DependentUpon>frmTripsCostAmountEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTripsCostEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTripsCostEdit.designer.cs">
+      <DependentUpon>frmTripsCostEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTripsDriversReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTripsDriversReport.designer.cs">
+      <DependentUpon>frmTripsDriversReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTripsEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTripsEdit.designer.cs">
+      <DependentUpon>frmTripsEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTripsOthersByDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTripsOthersByDate.designer.cs">
+      <DependentUpon>frmTripsOthersByDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTripsPrintDocuments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTripsPrintDocuments.designer.cs">
+      <DependentUpon>frmTripsPrintDocuments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTripsReturnsActsCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTripsReturnsActsCreate.designer.cs">
+      <DependentUpon>frmTripsReturnsActsCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTripsReturnsEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTripsReturnsEdit.designer.cs">
+      <DependentUpon>frmTripsReturnsEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTripsTimes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTripsTimes.designer.cs">
+      <DependentUpon>frmTripsTimes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTripsTimesReorder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTripsTimesReorder.designer.cs">
+      <DependentUpon>frmTripsTimesReorder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmVeterinaryExportXmlEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmVeterinaryExportXmlEdit.Designer.cs">
+      <DependentUpon>frmVeterinaryExportXmlEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmWarrantsNumbers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmWarrantsNumbers.designer.cs">
+      <DependentUpon>frmWarrantsNumbers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmWayBillsEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmWayBillsEdit.designer.cs">
+      <DependentUpon>frmWayBillsEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmOutputsDocumentsVeterinaryBlankData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmOutputsDocumentsVeterinaryBlankData.designer.cs">
+      <DependentUpon>frmOutputsDocumentsVeterinaryBlankData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmGoodsCustomsEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmGoodsCustomsEdit.designer.cs">
+      <DependentUpon>frmGoodsCustomsEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmShowMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmShowMap.Designer.cs">
+      <DependentUpon>frmShowMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActiveReports\PayBill.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ActiveReports\PayBill.designer.cs">
+      <DependentUpon>PayBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTripEfficiency.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTripEfficiency.Designer.cs">
+      <DependentUpon>frmTripEfficiency.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Programs\LogService.cs" />
+    <Compile Include="Programs\Utilities.cs" />
+    <Compile Include="Forms\frmCars.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCars.designer.cs">
+      <DependentUpon>frmCars.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmGatesHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmGatesHistory.designer.cs">
+      <DependentUpon>frmGatesHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmOutputsInputsDocuments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmOutputsInputsDocuments.designer.cs">
+      <DependentUpon>frmOutputsInputsDocuments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPasses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPasses.designer.cs">
+      <DependentUpon>frmPasses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTrips.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTrips.designer.cs">
+      <DependentUpon>frmTrips.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmWayBills.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmWayBills.designer.cs">
+      <DependentUpon>frmWayBills.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="StartProgram.cs" />
+    <Compile Include="SysForms\frmGetHost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysForms\frmGetHost.designer.cs">
+      <DependentUpon>frmGetHost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysForms\frmSysEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysForms\frmSysEdit.designer.cs">
+      <DependentUpon>frmSysEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysForms\frmSysLook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysForms\frmSysLook.designer.cs">
+      <DependentUpon>frmSysLook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmUsers.designer.cs">
+      <DependentUpon>frmUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmUsersEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmUsersEdit.designer.cs">
+      <DependentUpon>frmUsersEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysForms\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysForms\frmMain.designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSelectOnePacking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSelectOnePacking.designer.cs">
+      <DependentUpon>frmSelectOnePacking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActiveReports\VeterinaryBlankSingle.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ActiveReports\VeterinaryBlankSingle.designer.cs">
+      <DependentUpon>VeterinaryBlankSingle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActiveReports\TripBalance.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ActiveReports\TripBalance.designer.cs">
+      <DependentUpon>TripBalance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActiveReports\TripsListUnDelivery.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ActiveReports\TripsListUnDelivery.designer.cs">
+      <DependentUpon>TripsListUnDelivery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActiveReports\TtnOneLine.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ActiveReports\TtnOneLine.designer.cs">
+      <DependentUpon>TtnOneLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActiveReports\TripsListAllReturns.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ActiveReports\TripsListAllReturns.designer.cs">
+      <DependentUpon>TripsListAllReturns.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ActiveReports\billAdditionWithGoodsBarCodes.resx">
+      <DependentUpon>billAdditionWithGoodsBarCodes.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActiveReports\billInnerMoving.resx">
+      <DependentUpon>billInnerMoving.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActiveReports\billPortrait.resx">
+      <DependentUpon>billPortrait.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActiveReports\billM15.resx">
+      <DependentUpon>billM15.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActiveReports\DrivingScheme.resx">
+      <DependentUpon>DrivingScheme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActiveReports\facture.resx">
+      <DependentUpon>facture.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActiveReports\GoodsGroupsList.resx">
+      <DependentUpon>GoodsGroupsList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActiveReports\InputBill.resx">
+      <DependentUpon>InputBill.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActiveReports\InputDocumentBill.resx">
+      <DependentUpon>InputDocumentBill.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActiveReports\MovingDocumentBill.resx">
+      <DependentUpon>MovingDocumentBill.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActiveReports\OutputBill.resx">
+      <DependentUpon>OutputBill.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActiveReports\PassBill.resx">
+      <DependentUpon>PassBill.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActiveReports\Perversions\billPerversion.resx">
+      <DependentUpon>billPerversion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActiveReports\Perversions\facturePerversion.resx">
+      <DependentUpon>facturePerversion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActiveReports\QualityList.resx">
+      <DependentUpon>QualityList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActiveReports\repForSalary.resx">
+      <DependentUpon>repForSalary.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActiveReports\repPackingsSimple.resx">
+      <DependentUpon>repPackingsSimple.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActiveReports\repWayBillsFuelData.resx">
+      <DependentUpon>repWayBillsFuelData.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActiveReports\TransportAct.resx">
+      <DependentUpon>TransportAct.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActiveReports\TransportBill.resx">
+      <DependentUpon>TransportBill.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActiveReports\TripBill.resx">
+      <DependentUpon>TripBill.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActiveReports\repPackings.resx">
+      <DependentUpon>repPackings.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActiveReports\repTestReport.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>repTestReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActiveReports\repUsersBadges.resx">
+      <DependentUpon>repUsersBadges.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActiveReports\TripBillShort.resx">
+      <DependentUpon>TripBillShort.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActiveReports\TripInputsBalance.resx">
+      <DependentUpon>TripInputsBalance.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActiveReports\TripOutputsBalance.resx">
+      <DependentUpon>TripOutputsBalance.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActiveReports\TripReturnBill.resx">
+      <DependentUpon>TripReturnBill.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActiveReports\TripsList.resx">
+      <DependentUpon>TripsList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActiveReports\TripsListNotes.resx">
+      <DependentUpon>TripsListNotes.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActiveReports\VeterinaryBlank.resx">
+      <DependentUpon>VeterinaryBlank.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActiveReports\VeterinaryList.resx">
+      <DependentUpon>VeterinaryList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActiveReports\VeterinaryListAdd.resx">
+      <DependentUpon>VeterinaryListAdd.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActiveReports\warrant.resx">
+      <DependentUpon>warrant.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActiveReports\WayBillShort.resx">
+      <DependentUpon>WayBillShort.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActiveReports\billLandscape.resx">
+      <DependentUpon>billLandscape.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActiveReports\billReturn.resx">
+      <DependentUpon>billReturn.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActiveReports\billMX1.resx">
+      <DependentUpon>billMX1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActiveReports\billMX3.resx">
+      <DependentUpon>billMX3.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActiveReports\CarsDayList.resx">
+      <DependentUpon>CarsDayList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmActs.resx">
+      <DependentUpon>frmActs.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmActsEdit.resx">
+      <DependentUpon>frmActsEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCars.resx">
+      <DependentUpon>frmCars.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCarsEdit.resx">
+      <DependentUpon>frmCarsEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCarsTasks.resx">
+      <DependentUpon>frmCarsTasks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCarsTasksEdit.resx">
+      <DependentUpon>frmCarsTasksEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCarsTypesEdit.resx">
+      <DependentUpon>frmCarsTypesEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmExchangeLog.resx">
+      <DependentUpon>frmExchangeLog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFreeOperations.resx">
+      <DependentUpon>frmFreeOperations.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmGetMXNames.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmGetMXNames.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMovingsDocumentsEdit.resx">
+      <DependentUpon>frmMovingsDocumentsEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmOutputsDocumentsDeliveryPrices.resx">
+      <DependentUpon>frmOutputsDocumentsDeliveryPrices.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmOutputsDocumentsEdit.resx">
+      <DependentUpon>frmOutputsDocumentsEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmOutputsDocumentsFactTime.resx">
+      <DependentUpon>frmOutputsDocumentsFactTime.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmOutputsDocumentsGoodsPriceEdit.resx">
+      <DependentUpon>frmOutputsDocumentsGoodsPriceEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmOutputsDocumentsGuiltyEmployees.resx">
+      <DependentUpon>frmOutputsDocumentsGuiltyEmployees.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmOutputsDocumentsTTNData.resx">
+      <DependentUpon>frmOutputsDocumentsTTNData.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmOutputsInputsCarries.resx">
+      <DependentUpon>frmOutputsInputsCarries.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPartners.resx">
+      <DependentUpon>frmPartners.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPartnersEdit.resx">
+      <DependentUpon>frmPartnersEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmEmployeesDrivers.resx">
+      <DependentUpon>frmEmployeesDrivers.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmEmployeesDriversEdit.resx">
+      <DependentUpon>frmEmployeesDriversEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFacturesNumbers.resx">
+      <DependentUpon>frmFacturesNumbers.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFillingsEdit.resx">
+      <DependentUpon>frmFillingsEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmGatesHistory.resx">
+      <DependentUpon>frmGatesHistory.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmGatesHistoryEdit.resx">
+      <DependentUpon>frmGatesHistoryEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmGoods.resx">
+      <DependentUpon>frmGoods.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmGoodsQualitiesEdit.resx">
+      <DependentUpon>frmGoodsQualitiesEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmGoodsVeterinariesEdit.resx">
+      <DependentUpon>frmGoodsVeterinariesEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmInputsDocumentsEdit.resx">
+      <DependentUpon>frmInputsDocumentsEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmInputsEdit.resx">
+      <DependentUpon>frmInputsEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmLogistics.resx">
+      <DependentUpon>frmLogistics.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmOutputsDocumentsBring.resx">
+      <DependentUpon>frmOutputsDocumentsBring.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmOutputsInputsDocuments.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmOutputsInputsDocuments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmOutputsInputs.resx">
+      <DependentUpon>frmOutputsInputs.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPartnersGoodsEdit.resx">
+      <DependentUpon>frmPartnersGoodsEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPasses.resx">
+      <DependentUpon>frmPasses.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPassesEdit.resx">
+      <DependentUpon>frmPassesEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPrintFormsEdit.resx">
+      <DependentUpon>frmPrintFormsEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmReportDriversWorksTimes.resx">
+      <DependentUpon>frmReportDriversWorksTimes.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmReportForSalary.resx">
+      <DependentUpon>frmReportForSalary.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmReportForSalaryWithPenalty.resx">
+      <DependentUpon>frmReportForSalaryWithPenalty.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmReportTripsCosts.resx">
+      <DependentUpon>frmReportTripsCosts.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSalaryExtraWorks.resx">
+      <DependentUpon>frmSalaryExtraWorks.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSalaryExtraWorksEdit.resx">
+      <DependentUpon>frmSalaryExtraWorksEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSalaryTariffs.resx">
+      <DependentUpon>frmSalaryTariffs.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSalaryTariffsEdit.resx">
+      <DependentUpon>frmSalaryTariffsEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSelectOneInput.resx">
+      <DependentUpon>frmSelectOneInput.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSelectOneOutput.resx">
+      <DependentUpon>frmSelectOneOutput.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSelectOneOutputDocument.resx">
+      <DependentUpon>frmSelectOneOutputDocument.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSelectOneInputDocument.resx">
+      <DependentUpon>frmSelectOneInputDocument.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSelectOnePartner.resx">
+      <DependentUpon>frmSelectOnePartner.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTripEfficiency.resx">
+      <DependentUpon>frmTripEfficiency.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTrips.resx">
+      <DependentUpon>frmTrips.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTripsBringEasy.resx">
+      <DependentUpon>frmTripsBringEasy.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTripsByDate.resx">
+      <DependentUpon>frmTripsByDate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTripsCostAmountEdit.resx">
+      <DependentUpon>frmTripsCostAmountEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTripsCostEdit.resx">
+      <DependentUpon>frmTripsCostEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTripsDriversReport.resx">
+      <DependentUpon>frmTripsDriversReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTripsEdit.resx">
+      <DependentUpon>frmTripsEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTripsOthersByDate.resx">
+      <DependentUpon>frmTripsOthersByDate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTripsPrintDocuments.resx">
+      <DependentUpon>frmTripsPrintDocuments.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTripsReturnsActsCreate.resx">
+      <DependentUpon>frmTripsReturnsActsCreate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTripsReturnsEdit.resx">
+      <DependentUpon>frmTripsReturnsEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTripsTimes.resx">
+      <DependentUpon>frmTripsTimes.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTripsTimesReorder.resx">
+      <DependentUpon>frmTripsTimesReorder.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmVeterinaryExportXmlEdit.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmVeterinaryExportXmlEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmWarrantsNumbers.resx">
+      <DependentUpon>frmWarrantsNumbers.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmWayBills.resx">
+      <DependentUpon>frmWayBills.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmWayBillsEdit.resx">
+      <DependentUpon>frmWayBillsEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmOutputsDocumentsVeterinaryBlankData.resx">
+      <DependentUpon>frmOutputsDocumentsVeterinaryBlankData.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmGoodsCustomsEdit.resx">
+      <DependentUpon>frmGoodsCustomsEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmShowMap.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmShowMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActiveReports\PayBill.resx">
+      <DependentUpon>PayBill.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysForms\frmGetHost.resx">
+      <DependentUpon>frmGetHost.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysForms\frmSysEdit.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmSysEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysForms\frmSysLook.resx">
+      <DependentUpon>frmSysLook.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmUsers.resx">
+      <DependentUpon>frmUsers.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmUsersEdit.resx">
+      <DependentUpon>frmUsersEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysForms\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSelectOnePacking.resx">
+      <DependentUpon>frmSelectOnePacking.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActiveReports\VeterinaryBlankSingle.resx">
+      <DependentUpon>VeterinaryBlankSingle.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActiveReports\TripBalance.resx">
+      <DependentUpon>TripBalance.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActiveReports\TripsListUnDelivery.resx">
+      <DependentUpon>TripsListUnDelivery.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActiveReports\TtnOneLine.resx">
+      <DependentUpon>TtnOneLine.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActiveReports\TripsListAllReturns.resx">
+      <DependentUpon>TripsListAllReturns.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LogImages\BarCode.gif" />
+    <Content Include="LogImages\Bottom_B.gif" />
+    <Content Include="LogImages\Bottom_T.gif" />
+    <Content Include="LogImages\Calc.gif" />
+    <Content Include="LogImages\CheckBoxOff.gif" />
+    <Content Include="LogImages\CheckBoxOn.gif" />
+    <Content Include="LogImages\Closed.gif" />
+    <Content Include="LogImages\DotBlue.gif" />
+    <Content Include="LogImages\Edit_coin_gray.gif" />
+    <Content Include="LogImages\Equal.gif" />
+    <Content Include="LogImages\Filter.gif" />
+    <Content Include="LogImages\FirstRec.gif" />
+    <Content Include="LogImages\Font.gif" />
+    <Content Include="LogImages\Info.gif" />
+    <Content Include="LogImages\LastRec.gif" />
+    <Content Include="LogImages\Opened.gif" />
+    <Content Include="LogImages\PgDn.gif" />
+    <Content Include="LogImages\PgUp.gif" />
+    <Content Include="LogImages\PlusMinus.gif" />
+    <Content Include="LogImages\Up.gif" />
+    <Content Include="LogImages\Add.gif" />
+    <Content Include="LogImages\Bottom.gif" />
+    <Content Include="LogImages\Bottom_R.gif" />
+    <Content Include="LogImages\Boxes.gif" />
+    <Content Include="LogImages\Box_full.gif" />
+    <Content Include="LogImages\Box_open.gif" />
+    <Content Include="LogImages\Calendar.gif" />
+    <Content Include="LogImages\Car_Red.gif" />
+    <Content Include="LogImages\Certificate.gif" />
+    <Content Include="LogImages\Check.gif" />
+    <Content Include="LogImages\CheckBox_Green.gif" />
+    <Content Include="LogImages\CheckBox_No.gif" />
+    <Content Include="LogImages\CheckBox_Red.gif" />
+    <Content Include="LogImages\CheckGreen.gif" />
+    <Content Include="LogImages\CheckGreenLight.gif" />
+    <Content Include="LogImages\CheckGreenOff.gif" />
+    <Content Include="LogImages\CheckRed.gif" />
+    <Content Include="LogImages\Copy.gif" />
+    <Content Include="LogImages\Delete.gif" />
+    <Content Include="LogImages\DeleteAll.gif" />
+    <Content Include="LogImages\Detail.gif" />
+    <Content Include="LogImages\DotGreen.gif" />
+    <Content Include="LogImages\DotGreenHalf.gif" />
+    <Content Include="LogImages\DotRed.gif" />
+    <Content Include="LogImages\DotYellow.gif" />
+    <Content Include="LogImages\Down.gif" />
+    <Content Include="LogImages\Edit.gif" />
+    <Content Include="LogImages\Edit_coin.gif" />
+    <Content Include="LogImages\Empty.gif" />
+    <Content Include="LogImages\Excel.gif" />
+    <None Include="LogImages\Exclamation.gif" />
+    <Content Include="LogImages\Exit.gif" />
+    <Content Include="LogImages\Find.gif" />
+    <Content Include="LogImages\Flag.gif" />
+    <Content Include="LogImages\Folder.gif" />
+    <Content Include="LogImages\FolderClosed.gif" />
+    <Content Include="LogImages\FolderIn.gif" />
+    <Content Include="LogImages\FolderOut.gif" />
+    <Content Include="LogImages\Folder_Open.gif" />
+    <Content Include="LogImages\Frame.gif" />
+    <Content Include="LogImages\Geometry.gif" />
+    <Content Include="LogImages\Geometry1.gif" />
+    <Content Include="LogImages\Go.gif" />
+    <Content Include="LogImages\Go_Blue.gif" />
+    <Content Include="LogImages\Go_Red.gif" />
+    <Content Include="LogImages\Graph.gif" />
+    <Content Include="LogImages\Grid.gif" />
+    <Content Include="LogImages\Hands.gif" />
+    <Content Include="LogImages\Help.gif" />
+    <Content Include="LogImages\HourGlass.gif" />
+    <Content Include="LogImages\Leaf.gif" />
+    <Content Include="LogImages\Leaf_G.gif" />
+    <Content Include="LogImages\Leaf_R.gif" />
+    <Content Include="LogImages\Leaf_RW.gif" />
+    <Content Include="LogImages\Leaf_Y.gif" />
+    <Content Include="LogImages\Locate.gif" />
+    <Content Include="LogImages\Lock1.gif" />
+    <Content Include="LogImages\Login.gif" />
+    <None Include="LogImages\Medication.gif" />
+    <Content Include="LogImages\Minus.gif" />
+    <Content Include="LogImages\MinusTree.gif" />
+    <Content Include="LogImages\Next.gif" />
+    <Content Include="LogImages\Next_R.gif" />
+    <Content Include="LogImages\Note.gif" />
+    <Content Include="LogImages\Paint.gif" />
+    <Content Include="LogImages\Paste.gif" />
+    <Content Include="LogImages\Plain_B.GIF" />
+    <Content Include="LogImages\Plain_BD.GIF" />
+    <Content Include="LogImages\Plain_G.GIF" />
+    <Content Include="LogImages\Plain_GD.GIF" />
+    <Content Include="LogImages\Plain_GS.GIF" />
+    <Content Include="LogImages\Plain_M.GIF" />
+    <Content Include="LogImages\Plain_O.GIF" />
+    <Content Include="LogImages\Plain_R.GIF" />
+    <Content Include="LogImages\Plain_Y.GIF" />
+    <Content Include="LogImages\Plus.gif" />
+    <Content Include="LogImages\PlusTree.gif" />
+    <Content Include="LogImages\Previous.gif" />
+    <Content Include="LogImages\Previous_R.gif" />
+    <Content Include="LogImages\Print.gif" />
+    <Content Include="LogImages\Printer_iz.gif" />
+    <Content Include="LogImages\ReDo.gif" />
+    <Content Include="LogImages\Refresh.gif" />
+    <Content Include="LogImages\Repair.gif" />
+    <Content Include="LogImages\ReSize.gif" />
+    <Content Include="LogImages\Save.gif" />
+    <Content Include="LogImages\Save_Half.gif" />
+    <Content Include="LogImages\Service.gif" />
+    <Content Include="LogImages\Sort.gif" />
+    <Content Include="LogImages\SortDn.gif" />
+    <Content Include="LogImages\SortUp.gif" />
+    <Content Include="LogImages\Star.gif" />
+    <Content Include="LogImages\Stop.gif" />
+    <Content Include="LogImages\Stop_L.gif" />
+    <Content Include="LogImages\Sum.gif" />
+    <Content Include="LogImages\Top.gif" />
+    <Content Include="LogImages\Top_R.gif" />
+    <Content Include="LogImages\Tree.gif" />
+    <Content Include="LogImages\Tree\dash.gif" />
+    <Content Include="LogImages\Tree\dashminus.gif" />
+    <Content Include="LogImages\Tree\dashplus.gif" />
+    <Content Include="LogImages\Tree\i.gif" />
+    <Content Include="LogImages\Tree\l.gif" />
+    <Content Include="LogImages\Tree\lminus.gif" />
+    <Content Include="LogImages\Tree\lplus.gif" />
+    <Content Include="LogImages\Tree\MinusTree.gif" />
+    <Content Include="LogImages\Tree\noexpand.gif" />
+    <Content Include="LogImages\Tree\PlusTree.gif" />
+    <Content Include="LogImages\Tree\r.gif" />
+    <Content Include="LogImages\Tree\rminus.gif" />
+    <Content Include="LogImages\Tree\rplus.gif" />
+    <Content Include="LogImages\Tree\t.gif" />
+    <Content Include="LogImages\Tree\tminus.gif" />
+    <Content Include="LogImages\Tree\tplus.gif" />
+    <Content Include="LogImages\Truck.gif" />
+    <Content Include="LogImages\UnDo.gif" />
+    <Content Include="LogImages\User1.gif" />
+    <Content Include="LogImages\User2.gif" />
+    <Content Include="LogImages\View.gif" />
+    <Content Include="LogImages\Wizard.gif" />
+    <Content Include="LogImages\WWW.gif" />
+    <Content Include="Logistics.ico" />
+    <None Include="YandexMapTemplate.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="LogImages\Tree\Thumbs.db" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\RFMBaseClasses\RFMBaseClasses.csproj">
+      <Project>{cc843c2b-b011-45d9-9f63-e0309079cd44}</Project>
+      <Name>RFMBaseClasses</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\RFMExcelLite\RFMExcelLite\RFMExcelLite.csproj">
+      <Project>{2c119dcd-8d6b-4293-abb3-664294a099b6}</Project>
+      <Name>RFMExcelLite</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\RFMPublic\RFMPublic.csproj">
+      <Project>{e2c7ba0f-4463-4c20-a669-62be654c58ce}</Project>
+      <Name>RFMPublic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LogBizObjects\LogBizObjects.csproj">
+      <Project>{349f2c34-75a8-4db8-a33a-4b81d732e944}</Project>
+      <Name>LogBizObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WpfControlLibrary\WpfControlLibrary.csproj">
+      <Project>{b467ed90-6a20-4bb3-9fa7-f10155d5f109}</Project>
+      <Name>WpfControlLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Reports\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

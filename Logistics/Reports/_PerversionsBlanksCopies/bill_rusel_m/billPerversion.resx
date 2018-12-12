@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="txtGroupHeader2002.OutputFormat" xml:space="preserve">
+    <value>dd.MM.yyyy</value>
+  </data>
+  <data name="txtDetail009.OutputFormat" xml:space="preserve">
+    <value>###0.00</value>
+  </data>
+  <data name="txtDetail013.OutputFormat" xml:space="preserve">
+    <value>########0.00</value>
+  </data>
+  <data name="txtDetail012.OutputFormat" xml:space="preserve">
+    <value>########0.00</value>
+  </data>
+  <data name="txtDetail011.OutputFormat" xml:space="preserve">
+    <value>##0</value>
+  </data>
+  <data name="txtDetailInBox.OutputFormat" xml:space="preserve">
+    <value>00000</value>
+  </data>
+  <data name="txtDetail010.OutputFormat" xml:space="preserve">
+    <value>########0.00</value>
+  </data>
+  <data name="txtDetailBox.OutputFormat" xml:space="preserve">
+    <value>#####0.0</value>
+  </data>
+  <data name="txtGroupFooter2001.OutputFormat" xml:space="preserve">
+    <value>#####0.0</value>
+  </data>
+  <data name="txtGroupFooter2007.OutputFormat" xml:space="preserve">
+    <value>########0.00</value>
+  </data>
+  <data name="txtGroupFooter2008.OutputFormat" xml:space="preserve">
+    <value>########0.00</value>
+  </data>
+  <data name="txtGroupFooter2005.OutputFormat" xml:space="preserve">
+    <value>########0.00</value>
+  </data>
+  <data name="txtGroupFooter1008.OutputFormat" xml:space="preserve">
+    <value>########0.00</value>
+  </data>
+  <data name="txtGroupFooter1005.OutputFormat" xml:space="preserve">
+    <value>########0.00</value>
+  </data>
+  <data name="txtGroupFooter1001.OutputFormat" xml:space="preserve">
+    <value>#####0.0</value>
+  </data>
+  <data name="txtGroupFooter1007.OutputFormat" xml:space="preserve">
+    <value>########0.00</value>
+  </data>
+  <metadata name="$this.TrayLargeIcon" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.Script" xml:space="preserve">
+    <value>int _nOutputDocumentID = 0;
+string _sBillNumber = "";
+
+int _nCnt = 0;
+decimal _nOutputDocumentQnt = 0;
+decimal _nOutputDocumentBox = 0;
+decimal _nOutputDocumentBrutto = 0;
+decimal _nOutputDocumentNetto = 0;
+decimal _nAmount = 0;
+int _nCurrencyID = 0;
+string _sCurrencyAlias = "";
+string _sRubID = "";
+
+decimal _nVatAllSum = 0, _nNoVatAllSum = 0,
+		_nVat1Rate = 0, _nVat1Sum = 0, _nNoVat1Sum = 0,
+		_nVat2Rate = 0, _nVat2Sum = 0, _nNoVat2Sum = 0;
+
+public void ActiveReport_ReportStart()
+{
+	LogBizObjects.Setting oRub = new LogBizObjects.Setting();
+	_sRubID = oRub.FillVariable("gnCurrencyBaseID");
+}
+
+public bool ActiveReport_FetchData(bool eof)
+{
+	_nOutputDocumentID = (int)rpt.Fields["OutputDocumentID"].Value;
+	_sBillNumber = rpt.Fields["BillNumber"].Value.ToString();
+			
+	_nCnt = (int)rpt.Fields["Cnt"].Value;
+	_nOutputDocumentQnt = (decimal)rpt.Fields["OutputDocumentQnt"].Value;
+	_nOutputDocumentBox = (decimal)rpt.Fields["OutputDocumentBox"].Value;
+	_nOutputDocumentBrutto = (decimal)rpt.Fields["OutputDocumentBrutto"].Value;
+	_nOutputDocumentNetto = (decimal)rpt.Fields["OutputDocumentNetto"].Value;
+	_nAmount = (decimal)rpt.Fields["Amount"].Value;
+	_nCurrencyID = (int)rpt.Fields["CurrencyID"].Value;
+	_sCurrencyAlias = rpt.Fields["CurrencyAlias"].Value.ToString();
+	
+	_nVatAllSum = (decimal)rpt.Fields["VatAllSum"].Value;
+	_nNoVatAllSum = (decimal)rpt.Fields["NoVatAllSum"].Value;
+	_nVat1Rate = (decimal)rpt.Fields["Vat1Rate"].Value;
+	_nVat1Sum = (decimal)rpt.Fields["Vat1Sum"].Value;
+	_nNoVat1Sum = (decimal)rpt.Fields["NoVat1Sum"].Value;
+	_nVat2Rate = (decimal)rpt.Fields["Vat2Rate"].Value;
+	_nVat2Sum = (decimal)rpt.Fields["Vat2Sum"].Value;
+	_nNoVat2Sum = (decimal)rpt.Fields["NoVat2Sum"].Value;
+
+	if ((bool)rpt.Fields["Weighting"].Value)
+	{
+		((TextBox)rpt.Sections["Detail"].Controls["txtDetailInBox"]).OutputFormat = "# ### ##0.000";
+		((TextBox)rpt.Sections["Detail"].Controls["txtDetailQnt"]).OutputFormat = "# ### ##0.000";
+	}
+	else
+	{
+		((TextBox)rpt.Sections["Detail"].Controls["txtDetailInBox"]).OutputFormat = "# ### ##0";
+		((TextBox)rpt.Sections["Detail"].Controls["txtDetailQnt"]).OutputFormat = "# ### ##0";
+	}
+	return eof;
+}
+
+public void GroupHeader1_Format()
+{
+	if (rpt.Fields["ContractNumber"].Value.ToString().Length &gt; 0)
+	{
+		((TextBox)rpt.Sections["GroupHeader1"].Controls["txtGroupHeaderPayeeName"]).Text = rpt.Fields["PayerFullName"].Value.ToString() + "  Договор " + rpt.Fields["ContractNumber"].Value.ToString();
+	}
+	else
+	{
+		((TextBox)rpt.Sections["GroupHeader1"].Controls["txtGroupHeaderPayeeName"]).Text = rpt.Fields["PayerFullName"].Value.ToString(); 
+	}
+}
+
+public void GroupHeader2_Format()
+{
+}
+
+public void GroupFooter1_Format()
+{
+	((TextBox)rpt.Sections["GroupFooter1"].Controls["txtGroupFooterAdd"]).Text = ((TextBox)rpt.Sections["GroupFooter1"].Controls["txtGroupFooterAdd"]).Tag.ToString().Replace("#", RFMPublic.RFMUtilities.Declen(_nCnt, "номер", "номера", "номеров") + " записей");
+	if ((int)Math.Round(_nOutputDocumentBox, 0) != 0)
+	{
+		((TextBox)rpt.Sections["GroupFooter1"].Controls["txtGroupFooterBoxes"]).Text = ((TextBox)rpt.Sections["GroupFooter1"].Controls["txtGroupFooterBoxes"]).Tag + 
+			RFMPublic.RFMUtilities.ValToTxt((int)Math.Round(_nOutputDocumentBox, 0));
+	}
+	else
+	{
+		((TextBox)rpt.Sections["GroupFooter1"].Controls["txtGroupFooterBoxes"]).Text = "";
+	}
+	((TextBox)rpt.Sections["GroupFooter1"].Controls["txtGroupFooterNetto"]).Text = _nOutputDocumentNetto.ToString("# ### ##0.000");
+	((TextBox)rpt.Sections["GroupFooter1"].Controls["txtGroupFooterBrutto"]).Text = _nOutputDocumentBrutto.ToString("# ### ##0.000");
+	((TextBox)rpt.Sections["GroupFooter1"].Controls["txtGroupFooterNettoText"]).Text = _nOutputDocumentNetto.ToString("# ### ##0.000") + 
+		" (" + ((int)Math.Floor(_nOutputDocumentNetto)).ToString("# ### ##0").Trim() + " кг " +
+		((int)((_nOutputDocumentNetto - Math.Floor(_nOutputDocumentNetto)) * 1000)).ToString("000") + " г)";
+	((TextBox)rpt.Sections["GroupFooter1"].Controls["txtGroupFooterBruttoText"]).Text = _nOutputDocumentBrutto.ToString("# ### ##0.000") + 
+		" (" + ((int)Math.Floor(_nOutputDocumentBrutto)).ToString("# ### ##0").Trim() + " кг " +
+		((int)((_nOutputDocumentBrutto - Math.Floor(_nOutputDocumentBrutto)) * 1000)).ToString("000") + " г)";
+	if (_nCurrencyID.ToString() == _sRubID)
+	{
+		((TextBox)rpt.Sections["GroupFooter1"].Controls["txtGroupFooterAmount"]).Text = RFMPublic.RFMUtilities.ValToRub(_nAmount);
+	}
+	else
+	{
+		((TextBox)rpt.Sections["GroupFooter1"].Controls["txtGroupFooterAmount"]).Text = RFMPublic.RFMUtilities.ValToRub(_nAmount, _sCurrencyAlias);
+	}
+
+/*
+	((TextBox)rpt.Sections["GroupFooter1"].Controls["txtGroupFooterVatSum"]).Text = _nVatAllSum.ToString("### ### ###0.00");
+	((TextBox)rpt.Sections["GroupFooter1"].Controls["txtGroupFooterNoVatSum"]).Text = _nNoVatAllSum.ToString("### ### ###0.00");
+
+	if (_nVat1Rate &gt; 0)
+	{
+		((TextBox)rpt.Sections["GroupFooter1"].Controls["txtGroupFooterLabelVat1Sum"]).Text = ((TextBox)rpt.Sections["GroupFooter1"].Controls["txtGroupFooterLabelVat1Sum"]).Tag.ToString().Replace("#", _nVat1Rate.ToString("######").Trim());
+		((TextBox)rpt.Sections["GroupFooter1"].Controls["txtGroupFooterLabelNoVat1Sum"]).Text = ((TextBox)rpt.Sections["GroupFooter1"].Controls["txtGroupFooterLabelNoVat1Sum"]).Tag.ToString().Replace("#", _nVat1Rate.ToString("######").Trim());
+		((TextBox)rpt.Sections["GroupFooter1"].Controls["txtGroupFooterVat1Sum"]).Text = _nVat1Sum.ToString("### ### ###0.00");
+		((TextBox)rpt.Sections["GroupFooter1"].Controls["txtGroupFooterNoVat1Sum"]).Text = _nNoVat1Sum.ToString("### ### ###0.00");
+	}
+	else
+	{
+		((TextBox)rpt.Sections["GroupFooter1"].Controls["txtGroupFooterLabelVat1Sum"]).Text = 
+		((TextBox)rpt.Sections["GroupFooter1"].Controls["txtGroupFooterLabelNoVat1Sum"]).Text = 
+		((TextBox)rpt.Sections["GroupFooter1"].Controls["txtGroupFooterVat1Sum"]).Text = 
+		((TextBox)rpt.Sections["GroupFooter1"].Controls["txtGroupFooterNoVat1Sum"]).Text = 
+			""; 
+	}
+
+	if (_nVat2Rate &gt; 0)
+	{
+		((TextBox)rpt.Sections["GroupFooter1"].Controls["txtGroupFooterLabelVat2Sum"]).Text = ((TextBox)rpt.Sections["GroupFooter1"].Controls["txtGroupFooterLabelVat2Sum"]).Tag.ToString().Replace("#", _nVat2Rate.ToString("######").Trim());
+		((TextBox)rpt.Sections["GroupFooter1"].Controls["txtGroupFooterLabelNoVat2Sum"]).Text = ((TextBox)rpt.Sections["GroupFooter1"].Controls["txtGroupFooterLabelNoVat2Sum"]).Tag.ToString().Replace("#", _nVat2Rate.ToString("######").Trim());
+		((TextBox)rpt.Sections["GroupFooter1"].Controls["txtGroupFooterVat2Sum"]).Text = _nVat2Sum.ToString("### ### ###0.00");
+		((TextBox)rpt.Sections["GroupFooter1"].Controls["txtGroupFooterNoVat2Sum"]).Text = _nNoVat2Sum.ToString("### ### ###0.00");
+	}
+	else
+	{
+		((TextBox)rpt.Sections["GroupFooter1"].Controls["txtGroupFooterLabelVat2Sum"]).Text =
+		((TextBox)rpt.Sections["GroupFooter1"].Controls["txtGroupFooterLabelNoVat2Sum"]).Text =
+		((TextBox)rpt.Sections["GroupFooter1"].Controls["txtGroupFooterVat2Sum"]).Text =
+		((TextBox)rpt.Sections["GroupFooter1"].Controls["txtGroupFooterNoVat2Sum"]).Text =
+			""; 
+	}
+*/
+}
+
+public  void PageFooter_Format()
+{
+	((TextBox)rpt.Sections["PageFooter"].Controls["txtPageFooterBillNumber"]).Text = _sBillNumber;
+}</value>
+  </data>
+</root>

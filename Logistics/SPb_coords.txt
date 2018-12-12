@@ -1,0 +1,12 @@
+   <setting name="MapCenterLatitude" serializeAs="String">
+    <value>59.938991</value>
+   </setting>
+   <setting name="MapCenterLongitude" serializeAs="String">
+    <value>30.315992</value>
+   </setting>
+   <setting name="MapBaseLatitude" serializeAs="String">
+    <value>59.996214</value>
+   </setting>
+   <setting name="MapBaseLongitude" serializeAs="String">
+    <value>30.643311</value>
+   </setting>
