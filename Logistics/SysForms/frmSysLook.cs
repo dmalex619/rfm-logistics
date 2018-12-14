@@ -45,7 +45,7 @@ namespace Logistics
 			grdTableData.AutoGenerateColumns = true;
 
 			oDBTableList.recordID = null;
-			oDBTableList.FillDataAsync();
+			oDBTableList.FillData();
 
 			cboTables.DataSource = oDBTableList.MainTable;
 			cboTables.DisplayMember = oDBTableList.ColumnName;

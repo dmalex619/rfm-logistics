@@ -267,7 +267,7 @@ namespace Logistics
 			}
 
 			grdEmployees.DataSource = null;
-			oEmployeeList.FillDataAsync();
+			oEmployeeList.FillData();
 			
 			grdEmployees.Restore(oEmployeeList.MainTable);
 

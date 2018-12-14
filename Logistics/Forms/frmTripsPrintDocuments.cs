@@ -52,7 +52,7 @@ namespace Logistics
 		{
 			bool bResult = true;
 
-			oTrip.FillDataAsync();
+			oTrip.FillData();
 			if (oTrip.ErrorNumber != 0 || oTrip.MainTable == null || oTrip.MainTable.Rows.Count == 0)
 			{
 				bResult = false;

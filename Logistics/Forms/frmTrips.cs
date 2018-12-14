@@ -1889,7 +1889,7 @@ namespace Logistics
                 {
                     oCarFilter.IDList = ucSelectRecordID_Cars.GetIdString();
                 }
-                oCarFilter.FillDataAsync();
+                oCarFilter.FillData();
                 if (oCarFilter.ErrorNumber == 0 && oCarFilter.MainTable != null)
                 {
                     foreach (DataRow c in oCarFilter.MainTable.Rows)
@@ -1984,7 +1984,7 @@ namespace Logistics
                 if (ucSelectRecordID_Partners.IsSelectedExist)
 				{
                     oPartner.IDList = ucSelectRecordID_Partners.GetIdString();
-                    oPartner.FillDataAsync();
+                    oPartner.FillData();
 					foreach (DataRow rc in oPartner.MainTable.Rows)
 						sPartnersIDList += rc["ID"].ToString() + ",";
 					oPartner.ClearFilters();
@@ -1994,7 +1994,7 @@ namespace Logistics
 				if (txtPartnerNameContext.Text.Trim().Length > 0)
 				{
 					oPartner.FilterNameContext = txtPartnerNameContext.Text.Trim();
-					oPartner.FillDataAsync();
+					oPartner.FillData();
 					foreach (DataRow rc in oPartner.MainTable.Rows)
 						sPartnersIDList += rc["ID"].ToString() + ",";
 					oPartner.ClearFilters();
@@ -2009,7 +2009,7 @@ namespace Logistics
 					if (!dtrDates.dtpEndDate.IsEmpty)
 						oOutputDocument.FilterDateEnd = dtrDates.dtpEndDate.Value.Date;
 					oOutputDocument.FilterPartnersTargetList = sPartnersIDList;
-					oOutputDocument.FillDataAsync();
+					oOutputDocument.FillData();
 					if (oOutputDocument.MainTable.Rows.Count > 0)
 					{
 						foreach (DataRow ro in oOutputDocument.MainTable.Rows)
@@ -2037,7 +2037,7 @@ namespace Logistics
 					InputDocument oInputDocument = new InputDocument();
 					oInputDocument.FilterTripExists = true;
 					oInputDocument.FilterPartnersSourceList = sPartnersIDList;
-					oInputDocument.FillDataAsync();
+					oInputDocument.FillData();
 					if (oInputDocument.MainTable.Rows.Count > 0)
 					{
 						foreach (DataRow rs in oInputDocument.MainTable.Rows)
@@ -2080,7 +2080,7 @@ namespace Logistics
 				if (!dtrDates.dtpEndDate.IsEmpty)
 					oOutputDocument.FilterDateEnd = dtrDates.dtpEndDate.Value.Date;
 				oOutputDocument.FilterDepartmentNameContext = txtOutputsDocumentsDepartmentNameContext.Text.Trim().ToUpper();
-				oOutputDocument.FillDataAsync();
+				oOutputDocument.FillData();
 				if (oOutputDocument.MainTable.Rows.Count > 0)
 				{
 					foreach (DataRow ro in oOutputDocument.MainTable.Rows)
@@ -2162,7 +2162,7 @@ namespace Logistics
 
 			grdTrips.GetGridState();
 
-			oTripList.FillDataAsync();
+			oTripList.FillData();
 			grdTrips.IsLockRowChanged = true;
 			grdTrips.Restore(oTripList.MainTable);
 			tmrRestore.Enabled = true;
@@ -2315,7 +2315,7 @@ namespace Logistics
 				if (ucSelectRecordID_Hosts.IsSelectedExist)
 					oActInTrip.FilterHostsList = ucSelectRecordID_Hosts.GetIdString();
 			}
-			oActInTrip.FillDataAsync();
+			oActInTrip.FillData();
 			grdTrips_Acts.Restore(oActInTrip.MainTable);
 
 			return (oActInTrip.ErrorNumber == 0);
@@ -2338,7 +2338,7 @@ namespace Logistics
 				if (ucSelectRecordID_Hosts.IsSelectedExist)
 					oTripReturn.FilterHostsList = ucSelectRecordID_Hosts.GetIdString();
 			}
-			oTripReturn.FillDataAsync();
+			oTripReturn.FillData();
 			grdTrips_TripsReturns.Restore(oTripReturn.MainTable);
 
 			return (oTripReturn.ErrorNumber == 0);
@@ -2360,21 +2360,21 @@ namespace Logistics
             // Получаем список партнеров по расходным документам
             OutputDocument oOutputDocumentForTrip = new OutputDocument();
 			oOutputDocumentForTrip.FilterTripsList = oTripCur.ID.ToString();
-			oOutputDocumentForTrip.FillDataAsync();
+			oOutputDocumentForTrip.FillData();
 			foreach (DataRow r in oOutputDocumentForTrip.MainTable.Rows)
 				sPartnersList += r["PartnerTargetID"].ToString().Trim() + ",";
 
             // Получаем список партнеров по приходным документам
             InputDocument oInputDocumentForTrip = new InputDocument();
             oInputDocumentForTrip.FilterTripsList = oTripCur.ID.ToString();
-            oInputDocumentForTrip.FillDataAsync();
+            oInputDocumentForTrip.FillData();
             foreach (DataRow r in oInputDocumentForTrip.MainTable.Rows)
                 sPartnersList += r["PartnerTargetID"].ToString().Trim() + ",";
 
             // Получаем список клиентов в спецзаданиях
             CarTask oCarTaskForTrip = new CarTask();
             oCarTaskForTrip.FilterTripsList = oTripCur.ID.ToString();
-            oCarTaskForTrip.FillDataAsync();
+            oCarTaskForTrip.FillData();
             foreach (DataRow r in oCarTaskForTrip.MainTable.Rows)
                 sPartnersList += r["PartnerID"].ToString().Trim() + ",";
 
@@ -2386,7 +2386,7 @@ namespace Logistics
 				if (ucSelectRecordID_Hosts.IsSelectedExist)
 					oPartner.FilterHostsList = ucSelectRecordID_Hosts.GetIdString();
 			}
-			oPartner.FillDataAsync();
+			oPartner.FillData();
 			grdTrips_Partners.Restore(oPartner.MainTable);
 
 			return (oPartner.ErrorNumber == 0);
@@ -2501,7 +2501,7 @@ namespace Logistics
                 if (ucSelectRecordID_Partners.IsSelectedExist)
 				{
                     oPartner.IDList = ucSelectRecordID_Partners.GetIdString();
-					oPartner.FillDataAsync();
+					oPartner.FillData();
 					foreach (DataRow rc in oPartner.MainTable.Rows)
 						sPartnersIDList += rc["ID"].ToString() + ",";
 					oPartner.ClearFilters();
@@ -2511,7 +2511,7 @@ namespace Logistics
 				if (txtPartnerNameContext.Text.Trim().Length > 0)
 				{
 					oPartner.FilterNameContext = txtPartnerNameContext.Text.Trim();
-					oPartner.FillDataAsync();
+					oPartner.FillData();
 					foreach (DataRow rc in oPartner.MainTable.Rows)
 						sPartnersIDList += rc["ID"].ToString() + ",";
 					oPartner.ClearFilters();
@@ -2521,7 +2521,7 @@ namespace Logistics
 				{
 					OutputDocument oOutputDocument = new OutputDocument();
 					oOutputDocument.FilterPartnersTargetList = sPartnersIDList;
-					oOutputDocument.FillDataAsync();
+					oOutputDocument.FillData();
 					if (oOutputDocument.MainTable.Rows.Count > 0)
 					{
 						foreach (DataRow ro in oOutputDocument.MainTable.Rows)
@@ -2549,7 +2549,7 @@ namespace Logistics
 
 					InputDocument oInputDocument = new InputDocument();
 					oInputDocument.FilterPartnersSourceList = sPartnersIDList;
-					oInputDocument.FillDataAsync();
+					oInputDocument.FillData();
 					if (oInputDocument.MainTable.Rows.Count > 0)
 					{
 						foreach (DataRow rs in oInputDocument.MainTable.Rows)
@@ -2590,7 +2590,7 @@ namespace Logistics
 				if (!dtrDates.dtpEndDate.IsEmpty)
 					oOutputDocument.FilterDateEnd = dtrDates.dtpEndDate.Value.Date;
 				oOutputDocument.FilterDepartmentNameContext = txtOutputsDocumentsDepartmentNameContext.Text.Trim().ToUpper();
-				oOutputDocument.FillDataAsync();
+				oOutputDocument.FillData();
 				if (oOutputDocument.MainTable.Rows.Count > 0)
 				{
 					foreach (DataRow ro in oOutputDocument.MainTable.Rows)
@@ -2669,7 +2669,7 @@ namespace Logistics
 
 			grdOthers.GetGridState();
 
-			oOtherList.FillDataAsync();
+			oOtherList.FillData();
 			grdOthers.IsLockRowChanged = true;
 			grdOthers.Restore(oOtherList.MainTable);
 			tmrRestore.Enabled = true;
@@ -2815,7 +2815,7 @@ namespace Logistics
 				return (true);
 
 			oActInOther.FilterTripsList = oOtherCur.ID.ToString();
-			oActInOther.FillDataAsync();
+			oActInOther.FillData();
 			if (nUserHostID.HasValue)
 				oActInOther.FilterHostsList = nUserHostID.ToString();
 			else
@@ -3378,7 +3378,7 @@ namespace Logistics
 
 			Pass oPassTemp = new Pass();
 			oPassTemp.FilterTripsList = oTripCur.ID.ToString();
-			oPassTemp.FillDataAsync();
+			oPassTemp.FillData();
 			if (oPassTemp.ErrorNumber != 0 || oPassTemp.MainTable == null)
 				return;
 			if (oPassTemp.MainTable.Rows.Count > 0)
@@ -3592,7 +3592,7 @@ namespace Logistics
 
 				OutputDocument oOutputDocumentCarry = new OutputDocument();
 				oOutputDocumentCarry.FilterOutputsList = r["ID"].ToString();
-				oOutputDocumentCarry.FillDataAsync();
+				oOutputDocumentCarry.FillData();
 				int nOutputsDocumentsQnt = oOutputDocumentCarry.MainTable.Rows.Count; // r["OutputsDocumentsQnt"]
 				OutputDocument oOutputDocumentCarryOne = new OutputDocument();
 				foreach (DataRow ro in oOutputDocumentCarry.MainTable.Rows)
@@ -3631,7 +3631,7 @@ namespace Logistics
 				oInputCarry.FilterTripsList = nTripID.ToString();
 				oInputCarry.FilterIsConfirmed = false;
 				oInputCarry.FilterPartnersList = sPartnersList;
-				oInputCarry.FillDataAsync();
+				oInputCarry.FillData();
 				if (oInputCarry.ErrorNumber != 0 || oInputCarry.MainTable == null)
 				{
 					RFMMessage.MessageBoxError("Ошибка при получении данных о приходах в рейсе...");
@@ -3755,7 +3755,7 @@ namespace Logistics
 							if (RFMMessage.MessageBoxYesNo(sText + "\n\nПродолжить?") == DialogResult.Yes)
 							{
 								oInputCarry.IDList = sInputsList;
-								oInputCarry.FillDataAsync();
+								oInputCarry.FillData();
 								if (oInputCarry.ErrorNumber != 0 || oInputCarry.MainTable == null)
 								{
 									RFMMessage.MessageBoxError("Ошибка при получении данных о приходах...");
@@ -4015,7 +4015,7 @@ namespace Logistics
 
 				OutputDocument oOutputDocumentCarry = new OutputDocument();
 				oOutputDocumentCarry.FilterOutputsList = r["ID"].ToString();
-				oOutputDocumentCarry.FillDataAsync();
+				oOutputDocumentCarry.FillData();
 				int nOutputsDocumentsQnt = oOutputDocumentCarry.MainTable.Rows.Count; // r["OutputsDocumentsQnt"]
 				OutputDocument oOutputDocumentCarryOne = new OutputDocument();
 				foreach (DataRow ro in oOutputDocumentCarry.MainTable.Rows)
@@ -4051,7 +4051,7 @@ namespace Logistics
 				oInputCarry.FilterTripsList = nTripID.ToString();
 				oInputCarry.FilterIsConfirmed = false;
 				oInputCarry.FilterPartnersList = sPartnersList;
-				oInputCarry.FillDataAsync();
+				oInputCarry.FillData();
 				if (oInputCarry.ErrorNumber != 0 || oInputCarry.MainTable == null)
 				{
 					RFMMessage.MessageBoxError("Ошибка при получении данных о приходах в рейсе...");
@@ -4172,7 +4172,7 @@ namespace Logistics
 						if (RFMMessage.MessageBoxYesNo(sText + "\n\nПродолжить?") == DialogResult.Yes)
 						{
 							oInputCarry.IDList = sInputsList;
-							oInputCarry.FillDataAsync();
+							oInputCarry.FillData();
 							if (oInputCarry.ErrorNumber != 0 || oInputCarry.MainTable == null)
 							{
 								RFMMessage.MessageBoxError("Ошибка при получении данных о приходах...");
@@ -4262,7 +4262,7 @@ namespace Logistics
 					oOutputDocumentNear.FilterPartnersDetailsBayersList = oOutputDocumentCarry.PartnerDetailBayerID.ToString();
 					//oOutputDocumentNear.FilterPartnersDetailsSalersList = oOutputDocumentCarry.PartnerDetailSalerID.ToString();
 					oOutputDocumentNear.FilterIsBrought = false;
-					oOutputDocumentNear.FillDataAsync();
+					oOutputDocumentNear.FillData();
 					if (oOutputDocumentNear.MainTable != null && oOutputDocumentNear.MainTable.Rows.Count > 1)
 					{
 						foreach (DataRow ron in oOutputDocumentNear.MainTable.Rows)
@@ -4302,7 +4302,7 @@ namespace Logistics
 				oInputCarry.FilterTripsList = nTripID.ToString();
 				oInputCarry.FilterIsConfirmed = false;
 				oInputCarry.FilterPartnersList = oOutputDocumentCarry.PartnerTargetID.ToString();
-				oInputCarry.FillDataAsync();
+				oInputCarry.FillData();
 				if (oInputCarry.ErrorNumber != 0 || oInputCarry.MainTable == null)
 				{
 					RFMMessage.MessageBoxError("Ошибка при получении данных о приходах с документами в рейсе...");
@@ -4425,7 +4425,7 @@ namespace Logistics
 							{
 								WaitOn(this);
 								oOutputDocumentNear.IDList = sOutputsDocumentsNearList;
-								oOutputDocumentNear.FillDataAsync();
+								oOutputDocumentNear.FillData();
 								foreach (DataRow ron in oOutputDocumentNear.MainTable.Rows)
 								{
 									nNewOutputDocumentID = null;
@@ -4450,7 +4450,7 @@ namespace Logistics
 								if (RFMMessage.MessageBoxYesNo(sText + "\n\nПродолжить?") == DialogResult.Yes)
 								{
 									oInputCarry.IDList = sInputsList;
-									oInputCarry.FillDataAsync();
+									oInputCarry.FillData();
 									if (oInputCarry.ErrorNumber != 0 || oInputCarry.MainTable == null)
 									{
 										RFMMessage.MessageBoxError("Ошибка при получении данных о приходах...");
@@ -4808,7 +4808,7 @@ namespace Logistics
 			ActiveReport3 rep = new ActiveReport3();
 			PrintForm oPrintForm = new PrintForm();
 			oPrintForm.FilterPF_Name = sTemplate;
-			oPrintForm.FillDataAsync();
+			oPrintForm.FillData();
 			if (oPrintForm.ErrorNumber != 0)
 				return;
 			if (oPrintForm.MainTable.Rows.Count == 0)
@@ -5028,7 +5028,7 @@ namespace Logistics
 
 			OutputDocument oOutputDocumentPrint = new OutputDocument();
 			oOutputDocumentPrint.FilterTripsList = nTripID.ToString();
-			oOutputDocumentPrint.FillDataAsync();
+			oOutputDocumentPrint.FillData();
 			if (oOutputDocumentPrint.ErrorNumber != 0 || oOutputDocumentPrint.MainTable == null)
 			{
 				RFMMessage.MessageBoxError("Ошибка при получении списка расходных документов в рейсе...");
@@ -5085,7 +5085,7 @@ namespace Logistics
 
 			Input oInputPrint = new Input();
 			oInputPrint.FilterTripsList = nTripID.ToString();
-			oInputPrint.FillDataAsync();
+			oInputPrint.FillData();
 			if (oInputPrint.ErrorNumber != 0 || oInputPrint.MainTable == null)
 			{
 				RFMCursorWait.Set(false);
@@ -5148,7 +5148,7 @@ namespace Logistics
 
 			OutputDocument oOutputDocumentPrint = new OutputDocument();
 			oOutputDocumentPrint.FilterTripsList = nTripID.ToString();
-			oOutputDocumentPrint.FillDataAsync();
+			oOutputDocumentPrint.FillData();
 			if (oOutputDocumentPrint.ErrorNumber != 0 || oOutputDocumentPrint.MainTable == null)
 			{
 				RFMCursorWait.Set(false);
@@ -5346,7 +5346,7 @@ namespace Logistics
 				if (oOutputTemp.OwnerID.HasValue && oOutputTemp.PartnerID.HasValue)
 				{
 					oOutputDocumentTemp.FilterOutputsList = o["ID"].ToString();
-					oOutputDocumentTemp.FillDataAsync();
+					oOutputDocumentTemp.FillData();
 					if (oOutputDocumentTemp.ErrorNumber != 0 || oOutputDocumentTemp.MainTable == null)
 					{
 						RFMMessage.MessageBoxError("Ошибка при проверке наличия расходных документов для расходов...");
@@ -5732,7 +5732,7 @@ namespace Logistics
 			oTripTemp.FilterDateEnd =
 				dDate;
 			oTripTemp.FilterIsRentCar = false;
-			oTripTemp.FillDataAsync();
+			oTripTemp.FillData();
 			if (oTripTemp.ErrorNumber != 0 || oTripTemp.MainTable == null)
 				return;
 			if (oTripTemp.MainTable.Rows.Count == 0)
@@ -6198,7 +6198,7 @@ namespace Logistics
 				RFMMessage.MessageBoxError("Не отмечены рейсы...");
 				return;
 			}
-			oTripSet.FillDataAsync();
+			oTripSet.FillData();
 			if (oTripSet.ErrorNumber != 0 || oTripSet.MainTable == null)
 			{
 				RFMMessage.MessageBoxError("Ошибка при получении списка рейсов...");
@@ -6914,7 +6914,7 @@ namespace Logistics
 					// ? проверить ERPCode - задание передано в host-систему
 
 					oOutputDocumentNew.FilterOutputsList = oCC["NewOutputID"].ToString();
-					oOutputDocumentNew.FillDataAsync();
+					oOutputDocumentNew.FillData();
 					foreach (DataRow od in oOutputDocumentNew.MainTable.Rows)
 					{
 						if ((bool)od["IsBrought"])
@@ -7126,7 +7126,7 @@ namespace Logistics
 
 					// остальные документы, которые входят в это задание
 					oOutputDocumentOthers.FilterOutputsList = oOutputNew.ID.ToString();
-					oOutputDocumentOthers.FillDataAsync();
+					oOutputDocumentOthers.FillData();
 					if (oOutputDocumentOthers.MainTable.Rows.Count == 1)
 					{
 						// это единственный документ в задании
@@ -7312,7 +7312,7 @@ namespace Logistics
 
             // Прошли проверки, выбираем зону
             Zone oZone = new Zone();
-            oZone.FillDataAsync();
+            oZone.FillData();
             DataTable dt = CopyTable(oZone.MainTable, "FilteredZones", "Tariff > 0", "Name");
             
             if (StartForm(new frmSelectID(this, dt, "Name,Tariff", "Зона,Тариф", false)) == DialogResult.Yes)

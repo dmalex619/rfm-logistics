@@ -97,7 +97,7 @@ namespace LogBizObjects
 		/// <summary>
 		/// получение полного списка валют в MainTable
 		/// </summary>
-		public override bool FillDataAsync()
+		public override bool FillData()
 		{
 			ClearData();
 

@@ -282,7 +282,7 @@ namespace Logistics
 
 			grdData.GetGridState();
 
-			oFactureList.FillDataAsync();
+			oFactureList.FillData();
 			grdData.IsLockRowChanged = true;
 			grdData.Restore(oFactureList.MainTable);
 
@@ -397,7 +397,7 @@ namespace Logistics
 			FactureNumber oFactureAnalysis = new FactureNumber();
 			oFactureAnalysis.FilterDateBeg = dDateBeg;
 			oFactureAnalysis.FilterDateEnd = dDateEnd;
-			oFactureAnalysis.FillDataAsync();
+			oFactureAnalysis.FillData();
 			if (oFactureAnalysis.ErrorNumber != 0 || oFactureAnalysis.MainTable == null)
 			{
 				RFMMessage.MessageBoxError("Ошибка при анализе списка счетов-фактур...");
@@ -469,7 +469,7 @@ namespace Logistics
 				if (oFactureAnalysis.OutputDocumentID.HasValue)
 				{
 					oOutputDocument.ID = (int)oFactureAnalysis.OutputDocumentID;
-					oOutputDocument.FillDataAsync();
+					oOutputDocument.FillData();
 					if (oOutputDocument.MainTable.Rows.Count == 0)
 					{
 						sText += sNumber + ": не найден расходный документ с кодом " + oFactureAnalysis.OutputDocumentID + 
@@ -502,7 +502,7 @@ namespace Logistics
 			bOK = true;
 			oOutputDocument.FilterDateBeg = dDateBeg;
 			oOutputDocument.FilterDateEnd = dDateEnd;
-			oOutputDocument.FillDataAsync();
+			oOutputDocument.FillData();
 			if (oOutputDocument.ErrorNumber != 0 || oOutputDocument.MainTable == null)
 			{
 				RFMMessage.MessageBoxError("Ошибка при анализе списка заказов на отгрузку...");
@@ -543,7 +543,7 @@ namespace Logistics
 						if (oOutputDocument.PF_FactureNeed && sNumber.Length > 0)
 						{
 							oFactureAnalysis.FilterOutputsDocumentsList = sOutputDocument;
-							oFactureAnalysis.FillDataAsync();
+							oFactureAnalysis.FillData();
 							if (oFactureAnalysis.MainTable.Rows.Count == 0)
 							{
 								sText += sOutputDocument + ": в журнале не найден счет-фактура (" + sNumber + ") для заказа" + 
@@ -561,7 +561,7 @@ namespace Logistics
 							oFactureAnalysis.FilterPartnersSourceList = oOutputDocument.PartnerSourceID.ToString();
 							oFactureAnalysis.FilterDateBeg = oOutputDocument.DateOutput.AddDays(-10);
 							oFactureAnalysis.FilterDateEnd = oOutputDocument.DateOutput.AddDays(10);
-							oFactureAnalysis.FillDataAsync();
+							oFactureAnalysis.FillData();
 							if (oFactureAnalysis.MainTable.Rows.Count == 0)
 							{
 								sText += sOutputDocument + ": в журнале не найден счет-фактура по номеру (" + sNumber + "), указанному в заказе" + 
@@ -636,7 +636,7 @@ namespace Logistics
 			_SelectedText = "";
 
 			Partner oPartner = new Partner();
-			oPartner.FillDataAsync();
+			oPartner.FillData();
 			if (oPartner.ErrorNumber != 0 || oPartner.MainTable == null)
 			{
 				RFMMessage.MessageBoxError("Ошибка при получении данных (партнеры)...");
@@ -687,7 +687,7 @@ namespace Logistics
 			_SelectedText = "";
 
 			Partner oPartner = new Partner();
-			oPartner.FillDataAsync();
+			oPartner.FillData();
 			if (oPartner.ErrorNumber != 0 || oPartner.MainTable == null)
 			{
 				RFMMessage.MessageBoxError("Ошибка при получении данных (плательщики/поставщики)...");

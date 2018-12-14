@@ -732,7 +732,7 @@ namespace Logistics
 
 			grdData.GetGridState();
 
-			oPartnerList.FillDataAsync();
+			oPartnerList.FillData();
 			grdData.IsLockRowChanged = true;
 			grdData.Restore(oPartnerList.MainTable);
 			tmrRestore.Enabled = true;
@@ -843,7 +843,7 @@ namespace Logistics
 
 			oPartnerForRoot.ClearFilters();
 			oPartnerForRoot.FilterPartnersRootsList = oPartnerRootCur.PartnerRootID.ToString();
-			oPartnerForRoot.FillDataAsync();
+			oPartnerForRoot.FillData();
 			grdPartnersRoots_Partners.Restore(oPartnerForRoot.MainTable);
 
 			return (oPartnerForRoot.ErrorNumber == 0);
@@ -868,7 +868,7 @@ namespace Logistics
 
 			grdPrintForms.GetGridState();
 
-			oPrintFormList.FillDataAsync();
+			oPrintFormList.FillData();
 			grdPrintForms.IsLockRowChanged = true;
 			grdPrintForms.Restore(oPrintFormList.MainTable);
 			tmrRestore.Enabled = true;
@@ -895,7 +895,7 @@ namespace Logistics
 			{
 				if (oPartnerForPrintForm.MainTable == null || oPartnerForPrintForm.MainTable.Rows.Count == 0)
 				{
-					oPartnerForPrintForm.FillDataAsync();
+					oPartnerForPrintForm.FillData();
 				}
 
 				try
@@ -1103,7 +1103,7 @@ namespace Logistics
 					sText = sText.Replace("," + nPartnerID.ToString().Trim() + ",", ",");
 					oPartnerForCopy.IDList = RFMUtilities.NormalizeList(sText);
 				}
-				if (!oPartnerForCopy.FillDataAsync() ||
+				if (!oPartnerForCopy.FillData() ||
 					oPartnerForCopy.MainTable == null || oPartnerForCopy.MainTable.Rows.Count == 0)
 				{
 					RFMMessage.MessageBoxError("Нет данных об отмеченных партнерах...");
@@ -1166,7 +1166,7 @@ namespace Logistics
 					sText = sText.Replace("," + nPartnerID.ToString().Trim() + ",", ",");
 					oPartnerForCopy.IDList = RFMUtilities.NormalizeList(sText);
 				}
-				if (!oPartnerForCopy.FillDataAsync() ||
+				if (!oPartnerForCopy.FillData() ||
 					oPartnerForCopy.MainTable == null || oPartnerForCopy.MainTable.Rows.Count == 0)
 				{
 					RFMMessage.MessageBoxError("Нет данных об отмеченных партнерах...");

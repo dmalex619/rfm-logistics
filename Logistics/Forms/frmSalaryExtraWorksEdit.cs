@@ -180,7 +180,7 @@ namespace Logistics
 		private bool cboEmployees_Restore()
 		{
 			oEmployee.FilterIsDriver = true;
-			oEmployee.FillDataAsync();
+			oEmployee.FillData();
 			cboEmployees.ValueMember = oEmployee.ColumnID;
 			cboEmployees.DisplayMember = oEmployee.ColumnName;
 			cboEmployees.DataSource = oEmployee.MainTable;

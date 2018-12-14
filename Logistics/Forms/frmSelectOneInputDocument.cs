@@ -300,7 +300,7 @@ namespace Logistics
 			{
 				Partner oPartnerSource = new Partner();
 				oPartnerSource.FilterNameContext = txtPartnerSourceNameContext.Text.Trim();
-				oPartnerSource.FillDataAsync();
+				oPartnerSource.FillData();
 				oInputDocumentList.FilterPartnersSourceList = "";
 				foreach (DataRow rcs in oPartnerSource.MainTable.Rows)
 					oInputDocumentList.FilterPartnersSourceList += rcs["ID"].ToString() + ",";
@@ -315,7 +315,7 @@ namespace Logistics
 			{
 				Partner oPartnerTarget = new Partner();
 				oPartnerTarget.FilterNameContext = txtPartnerTargetNameContext.Text.Trim();
-				oPartnerTarget.FillDataAsync();
+				oPartnerTarget.FillData();
 				oInputDocumentList.FilterPartnersTargetList = "";
 				foreach (DataRow rct in oPartnerTarget.MainTable.Rows)
 					oInputDocumentList.FilterPartnersTargetList += rct["ID"].ToString() + ",";
@@ -363,7 +363,7 @@ namespace Logistics
 			{
 				Trip oTripFilter = new Trip();
 				oTripFilter.FilterAliasContext = txtTripAliasContext.Text.Trim();
-				oTripFilter.FillDataAsync();
+				oTripFilter.FillData();
 				if (oTripFilter.ErrorNumber == 0 && oTripFilter.MainTable != null)
 				{
 					foreach (DataRow tr in oTripFilter.MainTable.Rows)
@@ -418,7 +418,7 @@ namespace Logistics
 
 			grdInputsDocuments.GetGridState();
 
-			oInputDocumentList.FillDataAsync();
+			oInputDocumentList.FillData();
 			grdInputsDocuments.IsLockRowChanged = true;
 			grdInputsDocuments.Restore(oInputDocumentList.MainTable);
 			tmrRestore.Enabled = true;

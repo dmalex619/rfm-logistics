@@ -346,7 +346,7 @@ namespace LogBizObjects
 		/// <summary>
 		/// получение полного списка выданных доверенностей в MainTable
 		/// </summary>
-		public override bool FillDataAsync()
+		public override bool FillData()
 		{
 			ClearData();
 

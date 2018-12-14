@@ -341,7 +341,7 @@ namespace LogBizObjects
         /// <summary>
         /// получение полного списка спецзаданий с дополнительными сведениями в MainTable
         /// </summary>
-        public override bool FillDataAsync()
+        public override bool FillData()
         {
             ClearData();
 

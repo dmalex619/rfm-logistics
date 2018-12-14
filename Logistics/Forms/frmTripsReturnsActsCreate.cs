@@ -205,7 +205,7 @@ namespace Logistics
 				}
 			}
 
-            if (oOwner.FillDataAsync())
+            if (oOwner.FillData())
             {
                 cboOwner.ValueMember = oOwner.ColumnID;
 				cboOwner.DisplayMember = oOwner.ColumnName;
@@ -223,7 +223,7 @@ namespace Logistics
 				oGoodState.IDList = nGoodStateID.ToString(); // только полученное значение
 			}
 
-            if (oGoodState.FillDataAsync())
+            if (oGoodState.FillData())
             {
                 cboGoodsState.ValueMember = oGoodState.ColumnID;
                 cboGoodsState.DisplayMember = oGoodState.ColumnName;
@@ -571,7 +571,7 @@ namespace Logistics
 					}
 		
 					oGood.PackingID = _SelectedPackingID;
-					oGood.FillDataAsync();
+					oGood.FillData();
 					// выбранный товар
 					DataRow rg = oGood.MainTable.Rows[0];
 					// добавляем новую строку для выбранного товара

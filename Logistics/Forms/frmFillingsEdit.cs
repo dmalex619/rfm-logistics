@@ -102,7 +102,7 @@ namespace Logistics
 					// существующая заправка
 					Text += " (" + nFillingID.ToString() + ")";
 
-					oFilling.FillDataAsync();
+					oFilling.FillData();
 					if (oFilling.ErrorNumber != 0 || oFilling.MainTable.Rows.Count != 1)
 					{
 						RFMMessage.MessageBoxError("Ошибка при получении данных о заправке топлива...");
@@ -163,7 +163,7 @@ namespace Logistics
 					{
 						Car oCarTemp = new Car();
 						oCarTemp.ID = oWayBill.CarID;
-						oCarTemp.FillDataAsync();
+						oCarTemp.FillData();
 						if (oCarTemp.ErrorNumber != 0 || oCarTemp.MainTable.Rows.Count != 1)
 						{
 							RFMMessage.MessageBoxError("Ошибка при получении данных о машине...");
@@ -282,7 +282,7 @@ namespace Logistics
 			cboCar.DataSource = null;
 			oCar.ClearError();
 			oCar.FilterActual = true;
-			if (oCar.FillDataAsync())
+			if (oCar.FillData())
 			{
 				cboCar.ValueMember = oCar.ColumnID;
 				cboCar.DisplayMember = oCar.ColumnName;
@@ -296,7 +296,7 @@ namespace Logistics
 			cboDriverEmployee.DataSource = null;
 			oDriver.ClearError();
 			oDriver.FilterActual = true;
-			if (oDriver.FillDataAsync())
+			if (oDriver.FillData())
 			{
 				cboDriverEmployee.ValueMember = oDriver.ColumnID;
 				cboDriverEmployee.DisplayMember = oDriver.ColumnName;

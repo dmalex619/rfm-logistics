@@ -1157,7 +1157,7 @@ namespace Logistics
 				{
 					oTripFilter.FilterCarsList = ucSelectRecordID_Cars.GetIdString();
 				}
-				oTripFilter.FillDataAsync();
+				oTripFilter.FillData();
 				if (oTripFilter.ErrorNumber == 0 && oTripFilter.MainTable != null)
 				{
 					foreach (DataRow tr in oTripFilter.MainTable.Rows)
@@ -1192,7 +1192,7 @@ namespace Logistics
 
 			grdOutputs.GetGridState();
 
-			oOutputList.FillDataAsync();
+			oOutputList.FillData();
 			grdOutputs.IsLockRowChanged = true;
 
 			// ERPCode
@@ -1248,7 +1248,7 @@ namespace Logistics
 				return (true);
 
 			oOutputDocumentInOutput.FilterOutputsList = oOutputCur.ID.ToString();
-			oOutputDocumentInOutput.FillDataAsync();
+			oOutputDocumentInOutput.FillData();
 			grdOutputsDocuments.Restore(oOutputDocumentInOutput.MainTable);
 			return (oOutputDocumentInOutput.ErrorNumber == 0);
 		}
@@ -1263,7 +1263,7 @@ namespace Logistics
 				return (true);
 
 			oActForOutput.FilterOutputsList = oOutputCur.ID.ToString();
-			oActForOutput.FillDataAsync();
+			oActForOutput.FillData();
 			grdOutputsActs.Restore(oActForOutput.MainTable);
 			return (oActForOutput.ErrorNumber == 0);
 		}
@@ -1374,7 +1374,7 @@ namespace Logistics
 				{
 					oTripFilter.FilterCarsList = ucSelectRecordID_Cars.GetIdString();
 				}
-				oTripFilter.FillDataAsync();
+				oTripFilter.FillData();
 				if (oTripFilter.ErrorNumber == 0 && oTripFilter.MainTable != null)
 				{
 					foreach (DataRow tr in oTripFilter.MainTable.Rows)
@@ -1409,7 +1409,7 @@ namespace Logistics
 
 			grdInputs.GetGridState();
 
-			oInputList.FillDataAsync();
+			oInputList.FillData();
 			grdInputs.IsLockRowChanged = true;
 
 			// ERPCode
@@ -1464,7 +1464,7 @@ namespace Logistics
 				return (true);
 
 			oInputDocumentInInput.FilterInputsList = oInputCur.ID.ToString();
-			oInputDocumentInInput.FillDataAsync();
+			oInputDocumentInInput.FillData();
 			grdInputsDocuments.Restore(oInputDocumentInInput.MainTable);
 			return (oInputDocumentInInput.ErrorNumber == 0);
 		}
@@ -1479,7 +1479,7 @@ namespace Logistics
 				return (true);
 
 			oActForInput.FilterInputsList = oInputCur.ID.ToString();
-			oActForInput.FillDataAsync();
+			oActForInput.FillData();
 			grdInputsActs.Restore(oActForInput.MainTable);
 			return (oActForInput.ErrorNumber == 0);
 		}
@@ -1558,7 +1558,7 @@ namespace Logistics
 				{
 					oTripFilter.FilterCarsList = ucSelectRecordID_Cars.GetIdString();
 				}
-				oTripFilter.FillDataAsync();
+				oTripFilter.FillData();
 				if (oTripFilter.ErrorNumber == 0 && oTripFilter.MainTable != null)
 				{
 					foreach (DataRow tr in oTripFilter.MainTable.Rows)
@@ -1591,7 +1591,7 @@ namespace Logistics
 
 			grdTripsReturns.GetGridState();
 
-			oTripReturnList.FillDataAsync();
+			oTripReturnList.FillData();
 			grdTripsReturns.IsLockRowChanged = true;
 
 			// ERPCode
@@ -1768,7 +1768,7 @@ namespace Logistics
 
 				OutputDocument oOutputDocumentTemp = new OutputDocument();
 				oOutputDocumentTemp.FilterOutputsList = oOutputCur.ID.ToString();
-				oOutputDocumentTemp.FillDataAsync();
+				oOutputDocumentTemp.FillData();
 				if (oOutputDocumentTemp.MainTable != null && oOutputDocumentTemp.MainTable.Rows.Count > 0)
 				{
 					RFMMessage.MessageBoxError("Для задания на расход существует расходный документ...\n" +
@@ -1833,7 +1833,7 @@ namespace Logistics
 				}
 				InputDocument oInputDocumentTemp = new InputDocument();
 				oInputDocumentTemp.FilterInputsList = oInputCur.ID.ToString();
-				oInputDocumentTemp.FillDataAsync();
+				oInputDocumentTemp.FillData();
 				if (oInputDocumentTemp.MainTable != null && oInputDocumentTemp.MainTable.Rows.Count > 0)
 				{
 					RFMMessage.MessageBoxError("Для задания на приход существует приходный документ...\n" +
@@ -2321,7 +2321,7 @@ namespace Logistics
 
 			Input oInputPrint = new Input();
 			oInputPrint.ID = Convert.ToInt32(grdInputs.CurrentRow.Cells["grcInputs_ID"].Value);
-			oInputPrint.FillDataAsync();
+			oInputPrint.FillData();
 			if (oInputPrint.ErrorNumber != 0 || oInputPrint.MainTable == null)
 			{
 				RFMMessage.MessageBoxError("Ошибка при получении данных по заданию на приход...");
@@ -2347,7 +2347,7 @@ namespace Logistics
 
 			Input oInputPrint = new Input();
 			oInputPrint.ID = Convert.ToInt32(grdInputs.CurrentRow.Cells["grcInputs_ID"].Value);
-			oInputPrint.FillDataAsync();
+			oInputPrint.FillData();
 			if (oInputPrint.ErrorNumber != 0 || oInputPrint.MainTable == null)
 			{
 				RFMMessage.MessageBoxError("Ошибка при получении данных по заданию на приход с учетом актов...");
@@ -2484,7 +2484,7 @@ namespace Logistics
 
 			Output oOutputPrint = new Output();
 			oOutputPrint.ID = Convert.ToInt32(grdOutputs.CurrentRow.Cells["grcOutputs_ID"].Value);
-			oOutputPrint.FillDataAsync();
+			oOutputPrint.FillData();
 			if (oOutputPrint.ErrorNumber != 0 || oOutputPrint.MainTable == null)
 			{
 				RFMMessage.MessageBoxError("Ошибка при получении данных по заданию на расход...");
@@ -2508,7 +2508,7 @@ namespace Logistics
 
             Output oOutputPrint = new Output();
             oOutputPrint.ID = Convert.ToInt32(grdOutputs.CurrentRow.Cells["grcOutputs_ID"].Value);
-            oOutputPrint.FillDataAsync();
+            oOutputPrint.FillData();
             if (oOutputPrint.ErrorNumber != 0 || oOutputPrint.MainTable == null)
             {
                 RFMMessage.MessageBoxError("Ошибка при получении данных по заданию на расход...");
@@ -2532,7 +2532,7 @@ namespace Logistics
 
 			Output oOutputPrint = new Output();
 			oOutputPrint.ID = Convert.ToInt32(grdOutputs.CurrentRow.Cells["grcOutputs_ID"].Value);
-			oOutputPrint.FillDataAsync();
+			oOutputPrint.FillData();
 			if (oOutputPrint.ErrorNumber != 0 || oOutputPrint.MainTable == null)
 			{
 				RFMMessage.MessageBoxError("Ошибка при получении данных по заданию на расход с учетом актов...");
@@ -2577,7 +2577,7 @@ namespace Logistics
 
 			TripReturn oTripReturnPrint = new TripReturn();
 			oTripReturnPrint.ID = Convert.ToInt32(grdTripsReturns.CurrentRow.Cells["grcTripsReturns_ID"].Value);
-			oTripReturnPrint.FillDataAsync();
+			oTripReturnPrint.FillData();
 			if (oTripReturnPrint.ErrorNumber != 0 || oTripReturnPrint.MainTable == null)
 			{
 				RFMMessage.MessageBoxError("Ошибка при получении данных по возврату...");
@@ -2770,7 +2770,7 @@ namespace Logistics
 			string sPartnersList = ""; // список партнеров 
 			OutputDocument oOutputDocument = new OutputDocument();
 			oOutputDocument.FilterOutputsList = oOutputCur.ID.ToString();
-			oOutputDocument.FillDataAsync();
+			oOutputDocument.FillData();
 			int nOutputsDocumentsQnt = oOutputDocument.MainTable.Rows.Count;
 			OutputDocument oOutputDocumentOne = new OutputDocument();
 			foreach (DataRow od in oOutputDocument.MainTable.Rows)
@@ -2797,7 +2797,7 @@ namespace Logistics
 			oInput.FilterTripExists = false; 
 			oInput.FilterIsConfirmed = false;
 			oInput.FilterPartnersList = sPartnersList;
-			oInput.FillDataAsync();
+			oInput.FillData();
 			if (oInput.ErrorNumber != 0 || oInput.MainTable == null)
 			{
 				RFMMessage.MessageBoxError("Ошибка при получении данных о приходах...");
@@ -2898,7 +2898,7 @@ namespace Logistics
 						if (RFMMessage.MessageBoxYesNo(sText + ".\n\nПродолжить?") == DialogResult.Yes)
 						{
 							oInput.IDList = sInputsList;
-							oInput.FillDataAsync();
+							oInput.FillData();
 							if (oInput.ErrorNumber != 0 || oInput.MainTable == null)
 							{
 								RFMMessage.MessageBoxError("Ошибка при получении данных о приходах...");
@@ -3007,7 +3007,7 @@ namespace Logistics
 				RFMMessage.MessageBoxError("Не отмечены задания на расход...");
 				return;
 			}
-			oOutputTemp.FillDataAsync();
+			oOutputTemp.FillData();
 			if (oOutputTemp.ErrorNumber != 0 || oOutputTemp.MainTable == null)
 			{
 				RFMCursorWait.Set(false);
@@ -3093,7 +3093,7 @@ namespace Logistics
 				RFMMessage.MessageBoxError("Не отмечены задания на приход...");
 				return;
 			}
-			oInputTemp.FillDataAsync();
+			oInputTemp.FillData();
 			if (oInputTemp.ErrorNumber != 0 || oInputTemp.MainTable == null)
 			{
 				RFMCursorWait.Set(false);
@@ -3188,7 +3188,7 @@ namespace Logistics
 				RFMMessage.MessageBoxError("Не отмечены возвраты...");
 				return;
 			}
-			oTripReturnTemp.FillDataAsync();
+			oTripReturnTemp.FillData();
 			if (oTripReturnTemp.ErrorNumber != 0 || oTripReturnTemp.MainTable == null)
 			{
 				RFMCursorWait.Set(false);
@@ -3415,7 +3415,7 @@ namespace Logistics
 
 			InputDocument oInputDocument = new InputDocument();
 			oInputDocument.FilterInputsList = oInputCur.ID.ToString();
-			oInputDocument.FillDataAsync();
+			oInputDocument.FillData();
 			if (oInputDocument.MainTable == null)
 				return;
 

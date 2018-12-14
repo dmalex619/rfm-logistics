@@ -119,7 +119,7 @@ namespace Logistics
 							oUserPrint.IDList += nUserID.ToString() + ",";
 						}
 					}
-					oUserPrint.FillDataAsync();
+					oUserPrint.FillData();
 				}
 			}
 			if (oUserPrint.MainTable.Rows.Count == 0)
@@ -134,7 +134,7 @@ namespace Logistics
 				if (nUserID.HasValue)
 				{
 					oUserPrint.ID = nUserID;
-					oUserPrint.FillDataAsync();
+					oUserPrint.FillData();
 				}
 			}
 
@@ -168,7 +168,7 @@ namespace Logistics
 			grdData.DataSource = null;
 
 			oUserList.ClearError();
-			oUserList.FillDataAsync();
+			oUserList.FillData();
 
             // Затирание пароля для НЕ-администраторов
             if (((RFMFormBase)Application.OpenForms[0]).UserInfo.UserIsAdmin == false)

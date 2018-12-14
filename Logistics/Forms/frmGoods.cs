@@ -945,7 +945,7 @@ namespace Logistics
 
 			grdData.GetGridState();
 
-			oGoodList.FillDataAsync();
+			oGoodList.FillData();
 			grdData.IsLockRowChanged = true;
 			grdData.Restore(oGoodList.MainTable);
 			tmrRestore.Enabled = true;
@@ -1095,7 +1095,7 @@ namespace Logistics
 			string sGoodsQualitiesIDList = null;
 			if (bFilter)
 			{
-				oGoodTemp.FillDataAsync();
+				oGoodTemp.FillData();
 				if (oGoodTemp.ErrorNumber != 0 || oGoodTemp.MainTable == null)
 					return (false);
 
@@ -1260,7 +1260,7 @@ namespace Logistics
 			string sGoodsVeterinariesIDList = null;
 			if (bFilter)
 			{
-				oGoodTemp.FillDataAsync();
+				oGoodTemp.FillData();
 				if (oGoodTemp.ErrorNumber != 0 || oGoodTemp.MainTable == null)
 					return (false);
 
@@ -1426,7 +1426,7 @@ namespace Logistics
 			string sGoodsIDList = null;
 			if (bFilter)
 			{
-				oGoodTemp.FillDataAsync();
+				oGoodTemp.FillData();
 				if (oGoodTemp.ErrorNumber != 0 || oGoodTemp.MainTable == null)
 					return (false);
 
@@ -1815,7 +1815,7 @@ namespace Logistics
 			{
 				Good oGoodTemp = new Good();
 				oGoodTemp.PackingsIDList = sPackingsIDList;
-				oGoodTemp.FillDataAsync();
+				oGoodTemp.FillData();
 				if (oGoodTemp.ErrorNumber == 0 && oGoodTemp.MainTable != null && oGoodTemp.MainTable.Rows.Count > 0)
 				{
 					foreach (DataRow dg in oGoodTemp.MainTable.Rows)

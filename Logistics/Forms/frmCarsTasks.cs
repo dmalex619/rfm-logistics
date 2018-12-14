@@ -226,7 +226,7 @@ namespace Logistics
 			// 
 
 			dgvCarsTasks.GetGridState();
-			oCarTaskList.FillDataAsync();
+			oCarTaskList.FillData();
 			dgvCarsTasks.IsLockRowChanged = true;
 			dgvCarsTasks.Restore(oCarTaskList.MainTable);
 
@@ -383,7 +383,7 @@ namespace Logistics
 				RFMCursorWait.Set(true);
 				Partner oPartner = new Partner();
 				oPartner.FilterIsOwner = true;
-				oPartner.FillDataAsync();
+				oPartner.FillData();
 				RFMCursorWait.Set(false);
 				if (oPartner.ErrorNumber != 0 || oPartner.MainTable == null)
 				{

@@ -404,7 +404,7 @@ namespace LogBizObjects
 		/// <summary>
 		/// получение полного списка пропусков с дополнительными сведениями в MainTable
 		/// </summary>
-		public override bool FillDataAsync()
+		public override bool FillData()
 		{
 			ClearData();
 

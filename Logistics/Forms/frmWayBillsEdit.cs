@@ -108,7 +108,7 @@ namespace Logistics
 					// существующий путевой лист
 					Text += " (" + nWayBillID.ToString() + ")";
 
-					oWayBill.FillDataAsync();
+					oWayBill.FillData();
 					if (oWayBill.ErrorNumber != 0 || oWayBill.MainTable.Rows.Count != 1)
 					{
 						RFMMessage.MessageBoxError("Ошибка при получении данных о путевом листе...");
@@ -448,7 +448,7 @@ namespace Logistics
                         // ищем последний пут.лист для этой машины
                         WayBill oWayBillTemp = new WayBill();
                         oWayBillTemp.FilterCarsList = nCarSelectedID.ToString();
-                        oWayBillTemp.FillDataAsync();
+                        oWayBillTemp.FillData();
                         if (oWayBillTemp.ErrorNumber == 0)
                         {
                             if (oWayBillTemp.MainTable.Rows.Count > 0)
@@ -526,7 +526,7 @@ namespace Logistics
                 oTripTemp.FilterCarsList = nCarSelectedID.ToString();
                 oTripTemp.FilterDateBeg = dtpDateWayBeg.Value;
                 oTripTemp.FilterDateEnd = dtpDateWayEnd.Value;
-                oTripTemp.FillDataAsync();
+                oTripTemp.FillData();
                 if (oTripTemp.ErrorNumber == 0 && oTripTemp.MainTable != null && oTripTemp.MainTable.Rows.Count > 0)
                 {
                     foreach (DataRow r in oTripTemp.MainTable.Rows)
@@ -560,7 +560,7 @@ namespace Logistics
 			oWayBillTemp.FilterDateBeg = dtpDateWayBeg.Value;
 			oWayBillTemp.FilterDateEnd = dtpDateWayEnd.Value;
 			oWayBillTemp.FilterCarsList = nCarSelectedID.ToString();
-			oWayBillTemp.FillDataAsync();
+			oWayBillTemp.FillData();
 			if (oWayBillTemp.ErrorNumber != 0 || oWayBillTemp.MainTable == null)
 				return (false);
 
@@ -606,7 +606,7 @@ namespace Logistics
 			cboCar.DataSource = null;
 			oCar.ClearError();
 			oCar.FilterActual = true;
-			if (oCar.FillDataAsync())
+			if (oCar.FillData())
 			{
                 DataView dv = new DataView(oCar.MainTable);
                 //dv.Sort = "CarNumber";
@@ -623,7 +623,7 @@ namespace Logistics
 		{
 			cboDriverEmployee.DataSource = null;
 			oDriver.ClearError();
-			if (oDriver.FillDataAsync())
+			if (oDriver.FillData())
 			{
 				cboDriverEmployee.DataSource = new DataView(oDriver.MainTable);
 				cboDriverEmployee.ValueMember = oDriver.ColumnID;
@@ -651,7 +651,7 @@ namespace Logistics
 			{
 				oFilling.FilterWayBillsList = "-2";
 			}
-			oFilling.FillDataAsync();
+			oFilling.FillData();
 			grdFillings.Restore(oFilling.MainTable);
 			return (oFilling.ErrorNumber == 0);
 		}
@@ -670,7 +670,7 @@ namespace Logistics
 			{
 				oTrip.FilterWayBillsList = "-2";
 			}
-			oTrip.FillDataAsync();
+			oTrip.FillData();
 			if (oTrip.MainTable.Columns["IsUsed"] == null)
 			{
 				oTrip.MainTable.Columns.Add("IsUsed", System.Type.GetType("System.Boolean"));
@@ -727,7 +727,7 @@ namespace Logistics
 			WayBill oWayBillTemp = new WayBill();
 			oWayBillTemp.FilterDateBeg = DateTime.Now.Date.AddMonths(-1);
 			oWayBillTemp.FilterDateEnd = DateTime.Now.Date;
-			oWayBillTemp.FillDataAsync();
+			oWayBillTemp.FillData();
 			if (oWayBillTemp.ErrorNumber != 0 || oWayBillTemp.MainTable == null)
 				return;
 			if (oWayBillTemp.MainTable.Rows.Count == 0)
@@ -799,7 +799,7 @@ namespace Logistics
 					oTripTemp.FilterDateBeg = dtpDateWayBeg.Value.Date;
 					oTripTemp.FilterDateEnd = dtpDateWayEnd.Value.Date;
 					oTripTemp.FilterCarsList = cboCar.SelectedValue.ToString();
-					oTripTemp.FillDataAsync();
+					oTripTemp.FillData();
 					if (oTripTemp.MainTable.Rows.Count > 0)
 					{
 						DataTable dtTrips = oTripTemp.MainTable.Clone();
@@ -824,7 +824,7 @@ namespace Logistics
 								int nTripNewID = (int)_SelectedID;
 								Trip oTripNew = new Trip();
 								oTripNew.ID = nTripNewID;
-								oTripNew.FillDataAsync();
+								oTripNew.FillData();
 								if (oTripNew.MainTable.Rows.Count == 1)
 								{
 									oTrip.MainTable.ImportRow(oTripNew.MainTable.Rows[0]);

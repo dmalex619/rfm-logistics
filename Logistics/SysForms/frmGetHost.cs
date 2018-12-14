@@ -21,7 +21,7 @@ namespace Logistics
 		{
 			oHost = new Host();
 			oHost.FilterActual = true;
-			oHost.FillDataAsync();
+			oHost.FillData();
 
 			/*
 			if (oHost.Count() == 0)

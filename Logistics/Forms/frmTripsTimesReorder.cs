@@ -53,7 +53,7 @@ namespace Logistics
 			oTrip.FilterDateEnd =
 				dtpDateTrip.Value;
 			oTrip.FilterSelfDelivery = bSelfDelivery;
-			oTrip.FillDataAsync();
+			oTrip.FillData();
 
 			string sDate;
 			dt = CopyTable(oTrip.MainTable, "dt", "", "ByOrder, Alias");

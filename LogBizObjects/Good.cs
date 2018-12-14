@@ -549,7 +549,7 @@ namespace LogBizObjects
 		/// <summary>
 		/// получение полного списка товаров с возможными упаковками, cроком годности и прочими признаками в MainTable
 		/// </summary>
-		public override bool FillDataAsync()
+		public override bool FillData()
 		{
 			ClearData();
 

@@ -380,7 +380,7 @@ namespace Logistics
 			OutputDocument oOutputDocumentTemp = new OutputDocument();
 			oOutputDocumentTemp.FilterDateBeg = oOutputDocument.DateOutput.AddMonths(-1);
 			oOutputDocumentTemp.FilterDateEnd = DateTime.Now.Date;
-			oOutputDocumentTemp.FillDataAsync();
+			oOutputDocumentTemp.FillData();
 			if (oOutputDocumentTemp.ErrorNumber != 0 || oOutputDocumentTemp.MainTable == null)
 			{
 				RFMCursorWait.Set(false);

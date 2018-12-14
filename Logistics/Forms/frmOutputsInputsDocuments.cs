@@ -713,7 +713,7 @@ namespace Logistics
 			{
 				Partner oPartnerSource = new Partner();
 				oPartnerSource.FilterNameContext = txtPartnerSourceNameContext.Text.Trim();
-				oPartnerSource.FillDataAsync();
+				oPartnerSource.FillData();
 				oOutputDocumentList.FilterPartnersSourceList = "";
 				foreach (DataRow rcs in oPartnerSource.MainTable.Rows)
 					oOutputDocumentList.FilterPartnersSourceList += rcs["ID"].ToString() + ",";
@@ -728,7 +728,7 @@ namespace Logistics
 			{
 				Partner oPartnerTarget = new Partner();
 				oPartnerTarget.FilterNameContext = txtPartnerTargetNameContext.Text.Trim();
-				oPartnerTarget.FillDataAsync();
+				oPartnerTarget.FillData();
 				oOutputDocumentList.FilterPartnersTargetList = "";
 				foreach (DataRow rct in oPartnerTarget.MainTable.Rows)
 					oOutputDocumentList.FilterPartnersTargetList += rct["ID"].ToString() + ",";
@@ -810,7 +810,7 @@ namespace Logistics
 				{
 					oTripFilter.FilterAliasContext = txtTripAliasContext.Text.Trim();
 				}
-				oTripFilter.FillDataAsync();
+				oTripFilter.FillData();
 				if (oTripFilter.ErrorNumber == 0 && oTripFilter.MainTable != null)
 				{
 					foreach (DataRow tr in oTripFilter.MainTable.Rows)
@@ -843,7 +843,7 @@ namespace Logistics
 
 			grdOutputsDocuments.GetGridState();
 
-			oOutputDocumentList.FillDataAsync();
+			oOutputDocumentList.FillData();
 			grdOutputsDocuments.IsLockRowChanged = true;
 
 			// ERP-код
@@ -926,7 +926,7 @@ namespace Logistics
 			{
 				Partner oPartnerSource = new Partner();
 				oPartnerSource.FilterNameContext = txtPartnerSourceNameContext.Text.Trim();
-				oPartnerSource.FillDataAsync();
+				oPartnerSource.FillData();
 				oInputDocumentList.FilterPartnersSourceList = "";
 				foreach (DataRow rcs in oPartnerSource.MainTable.Rows)
 					oInputDocumentList.FilterPartnersSourceList += rcs["ID"].ToString() + ",";
@@ -941,7 +941,7 @@ namespace Logistics
 			{
 				Partner oPartnerTarget = new Partner();
 				oPartnerTarget.FilterNameContext = txtPartnerTargetNameContext.Text.Trim();
-				oPartnerTarget.FillDataAsync();
+				oPartnerTarget.FillData();
 				oInputDocumentList.FilterPartnersTargetList = "";
 				foreach (DataRow rct in oPartnerTarget.MainTable.Rows)
 					oInputDocumentList.FilterPartnersTargetList += rct["ID"].ToString() + ",";
@@ -999,7 +999,7 @@ namespace Logistics
 				{
 					oTripFilter.FilterAliasContext = txtTripAliasContext.Text.Trim();
 				}
-				oTripFilter.FillDataAsync();
+				oTripFilter.FillData();
 				if (oTripFilter.ErrorNumber == 0 && oTripFilter.MainTable != null)
 				{
 					foreach (DataRow tr in oTripFilter.MainTable.Rows)
@@ -1032,7 +1032,7 @@ namespace Logistics
 
 			grdInputsDocuments.GetGridState();
 
-			oInputDocumentList.FillDataAsync();
+			oInputDocumentList.FillData();
 			grdInputsDocuments.IsLockRowChanged = true;
 
 			// ERP-код
@@ -2384,7 +2384,7 @@ namespace Logistics
 			// другие заказы в задании
 			OutputDocument oOutputDocumentOthers = new OutputDocument();
 			oOutputDocumentOthers.FilterOutputsList = oOutputCur.ID.ToString();
-			oOutputDocumentOthers.FillDataAsync();
+			oOutputDocumentOthers.FillData();
 			if (oOutputDocumentOthers.ErrorNumber != 0 ||
 				oOutputDocumentOthers.MainTable == null || 
 				oOutputDocumentOthers.MainTable.Rows.Count == 0)
@@ -2452,7 +2452,7 @@ namespace Logistics
 			oOutputDocumentAlso.FilterPartnersDetailsBayersList = oOutputDocumentCur.PartnerDetailBayerID.ToString();
 			oOutputDocumentAlso.FilterIsConfirmed = false;
 			oOutputDocumentAlso.FilterIsBrought = false;
-			oOutputDocumentAlso.FillDataAsync();
+			oOutputDocumentAlso.FillData();
 			if (oOutputDocumentAlso.MainTable.Rows.Count > 0)
 			{
 				int nAlsoCnt = 0;
@@ -2481,7 +2481,7 @@ namespace Logistics
 				oOutputDocumentCur.DateOutput;
 			oInputAlso.FilterPartnersList = oOutputDocumentCur.PartnerTargetID.ToString();
 			oInputAlso.FilterIsConfirmed = false;
-			oInputAlso.FillDataAsync();
+			oInputAlso.FillData();
 			if (oInputAlso.MainTable.Rows.Count > 0)
 			{
 				sText = "—уществует еще " + RFMUtilities.Declen(oInputAlso.MainTable.Rows.Count, "задание", "задани€", "заданий") + " на приход (возврат) " +
@@ -2868,7 +2868,7 @@ namespace Logistics
 			bool bAll = (grdOutputsDocuments.IsCheckerInclude && grdOutputsDocuments.IsCheckerShow && grdOutputsDocuments.MarkedCount > 0); 
 			OutputDocument oOutputDocumentVeterinaryBlank = new OutputDocument();
 			OutputsDocumentsPrepareIDList(oOutputDocumentVeterinaryBlank, bAll);
-			oOutputDocumentVeterinaryBlank.FillDataAsync();
+			oOutputDocumentVeterinaryBlank.FillData();
 			if (oOutputDocumentVeterinaryBlank.ErrorNumber != 0 ||
 				oOutputDocumentVeterinaryBlank.MainTable == null)
 				return;
@@ -3088,7 +3088,7 @@ namespace Logistics
 			{
 				Output oOutputTemp = new Output();
 				oOutputTemp.ID = oOutputDocumentCur.OutputID;
-				oOutputTemp.FillDataAsync();
+				oOutputTemp.FillData();
 				if (oOutputTemp.ErrorNumber != 0 || oOutputTemp.MainTable == null)
 				{
 					RFMMessage.MessageBoxError("ќшибка при анализе существующих заданий на расход...");

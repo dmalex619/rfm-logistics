@@ -238,7 +238,7 @@ namespace Logistics
 				Driver oDriverTemp = new Driver();
 				oDriverTemp.FilterActual = true;
 				oDriverTemp.FilterCarsList = nCarID.ToString();
-				oDriverTemp.FillDataAsync(); 
+				oDriverTemp.FillData(); 
 				if (oDriverTemp.ErrorNumber == 0 && oDriverTemp.MainTable.Rows.Count > 0)
 				{
 					foreach (DataRow dr in oDriverTemp.MainTable.Rows)
@@ -388,7 +388,7 @@ namespace Logistics
 		{
 			cboCar.DataSource = null;
 			oCar.ClearError();
-			if (oCar.FillDataAsync())
+			if (oCar.FillData())
 			{
 				cboCar.DataSource = new DataView(oCar.MainTable);
 				cboCar.ValueMember = oCar.ColumnID;
@@ -402,7 +402,7 @@ namespace Logistics
 		{
 			cboZone.DataSource = null;
 			oZone.ClearError();
-			if (oZone.FillDataAsync())
+			if (oZone.FillData())
 			{
 				cboZone.DataSource = new DataView(oZone.MainTable);
 				cboZone.ValueMember = oZone.ColumnID;

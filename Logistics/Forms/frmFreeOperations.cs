@@ -806,7 +806,7 @@ namespace Logistics
 
 			dgvOutputsDocuments.GetGridState();
 
-			oOutputDocumentsList.FillDataAsync();
+			oOutputDocumentsList.FillData();
 			dgvOutputsDocuments.IsLockRowChanged = true;
 
 			dgvOutputsDocuments.Restore(oOutputDocumentsList.MainTable);
@@ -883,7 +883,7 @@ namespace Logistics
 
 			dgvInputs.GetGridState();
 
-			oInputList.FillDataAsync();
+			oInputList.FillData();
 			dgvInputs.IsLockRowChanged = true;
 
 			dgvInputs.Restore(oInputList.MainTable);
@@ -930,7 +930,7 @@ namespace Logistics
 				return (true);
 
 			oInputDocumentInInput.FilterInputsList = oInputCur.ID.ToString();
-			oInputDocumentInInput.FillDataAsync();
+			oInputDocumentInInput.FillData();
 			dgvInputsDocuments.Restore(oInputDocumentInInput.MainTable);
 			return (oInputDocumentInInput.ErrorNumber == 0);
 		}
@@ -945,7 +945,7 @@ namespace Logistics
 				return (true);
 
 			oActForInput.FilterInputsList = oInputCur.ID.ToString();
-			oActForInput.FillDataAsync();
+			oActForInput.FillData();
 			dgvInputsActs.Restore(oActForInput.MainTable);
 			return (oActForInput.ErrorNumber == 0);
 		}
@@ -982,7 +982,7 @@ namespace Logistics
 
 			dgvMovingsDocuments.GetGridState();
 
-			oMovingDocumentsList.FillDataAsync();
+			oMovingDocumentsList.FillData();
 			dgvMovingsDocuments.IsLockRowChanged = true;
 
 			dgvMovingsDocuments.Restore(oMovingDocumentsList.MainTable);
@@ -1613,7 +1613,7 @@ namespace Logistics
 
 			Input oInputPrint = new Input();
 			oInputPrint.ID = Convert.ToInt32(dgvInputs.CurrentRow.Cells["dgvcInputs_ID"].Value);
-			oInputPrint.FillDataAsync();
+			oInputPrint.FillData();
 			if (oInputPrint.ErrorNumber != 0 || oInputPrint.MainTable == null)
 			{
 				RFMMessage.MessageBoxError("Ошибка при получении данных по заданию на приход...");
@@ -1639,7 +1639,7 @@ namespace Logistics
 
 			Input oInputPrint = new Input();
 			oInputPrint.ID = Convert.ToInt32(dgvInputs.CurrentRow.Cells["dgvcInputs_ID"].Value);
-			oInputPrint.FillDataAsync();
+			oInputPrint.FillData();
 			if (oInputPrint.ErrorNumber != 0 || oInputPrint.MainTable == null)
 			{
 				RFMMessage.MessageBoxError("Ошибка при получении данных по заданию на приход с учетом актов...");
@@ -2343,7 +2343,7 @@ namespace Logistics
 
 			InputDocument oInputDocument = new InputDocument();
 			oInputDocument.FilterInputsList = oInputCur.ID.ToString();
-			oInputDocument.FillDataAsync();
+			oInputDocument.FillData();
 			if (oInputDocument.MainTable == null)
 				return;
 
@@ -2677,7 +2677,7 @@ namespace Logistics
 			// другие заказы в задании
 			OutputDocument oOutputDocumentOthers = new OutputDocument();
 			oOutputDocumentOthers.FilterOutputsList = oOutputCur.ID.ToString();
-			oOutputDocumentOthers.FillDataAsync();
+			oOutputDocumentOthers.FillData();
 			if (oOutputDocumentOthers.ErrorNumber != 0 ||
 				oOutputDocumentOthers.MainTable == null ||
 				oOutputDocumentOthers.MainTable.Rows.Count == 0)
@@ -2745,7 +2745,7 @@ namespace Logistics
 			oOutputDocumentAlso.FilterPartnersDetailsBayersList = oOutputDocumentCur.PartnerDetailBayerID.ToString();
 			oOutputDocumentAlso.FilterIsConfirmed = false;
 			oOutputDocumentAlso.FilterIsBrought = false;
-			oOutputDocumentAlso.FillDataAsync();
+			oOutputDocumentAlso.FillData();
 			if (oOutputDocumentAlso.MainTable.Rows.Count > 0)
 			{
 				int nAlsoCnt = 0;
@@ -2774,7 +2774,7 @@ namespace Logistics
 				oOutputDocumentCur.DateOutput;
 			oInputAlso.FilterPartnersList = oOutputDocumentCur.PartnerTargetID.ToString();
 			oInputAlso.FilterIsConfirmed = false;
-			oInputAlso.FillDataAsync();
+			oInputAlso.FillData();
 			if (oInputAlso.MainTable.Rows.Count > 0)
 			{
 				sText = "Существует еще " + RFMUtilities.Declen(oInputAlso.MainTable.Rows.Count, "задание", "задания", "заданий") + " на приход (возврат) " +
@@ -3160,7 +3160,7 @@ namespace Logistics
 			bool bAll = (dgvOutputsDocuments.IsCheckerInclude && dgvOutputsDocuments.IsCheckerShow && dgvOutputsDocuments.MarkedCount > 0);
 			OutputDocument oOutputDocumentVeterinaryBlank = new OutputDocument();
 			OutputsDocumentsPrepareIDList(oOutputDocumentVeterinaryBlank, bAll);
-			oOutputDocumentVeterinaryBlank.FillDataAsync();
+			oOutputDocumentVeterinaryBlank.FillData();
 			if (oOutputDocumentVeterinaryBlank.ErrorNumber != 0 ||
 				oOutputDocumentVeterinaryBlank.MainTable == null)
 				return;

@@ -666,7 +666,7 @@ namespace Logistics
 
 					Good oGood = new Good(); 
 					oGood.PackingID = _SelectedPackingID;
-					oGood.FillDataAsync();
+					oGood.FillData();
 					// выбранный товар
 					DataRow rg = oGood.MainTable.Rows[0];
 					// добавляем новую строку для выбранного товара

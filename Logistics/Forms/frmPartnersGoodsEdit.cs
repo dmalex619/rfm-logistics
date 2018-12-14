@@ -226,7 +226,7 @@ namespace Logistics
 
 				Good oGoodTemp = new Good();
 				oGoodTemp.PackingsIDList = "," + _SelectedPackingsIDList;
-				oGoodTemp.FillDataAsync();
+				oGoodTemp.FillData();
 				if (oGoodTemp.ErrorNumber != 0 || oGoodTemp.MainTable == null || oGoodTemp.MainTable.Rows.Count == 0)
 				{
 					RFMCursorWait.Set(false);

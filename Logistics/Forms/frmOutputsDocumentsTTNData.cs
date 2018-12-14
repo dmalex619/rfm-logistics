@@ -117,7 +117,7 @@ namespace Logistics
 
 			dt = null;
 
-			oOutputDocument.FillDataAsync();
+			oOutputDocument.FillData();
 			if (oOutputDocument.ErrorNumber != 0 || oOutputDocument.MainTable == null)
 				bOK = false;
 
@@ -175,7 +175,7 @@ namespace Logistics
 
 			dt = null;
 
-			oOutput.FillDataAsync();
+			oOutput.FillData();
 			if (oOutput.ErrorNumber != 0 || oOutput.MainTable == null)
 				bOK = false;
 

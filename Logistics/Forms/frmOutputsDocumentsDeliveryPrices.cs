@@ -82,7 +82,7 @@ namespace Logistics
 			oOutputDocument.FilterDateBeg = dtrDates.dtpBegDate.Value;
 			oOutputDocument.FilterDateEnd = dtrDates.dtpEndDate.Value;
 			oOutputDocument.FilterDeliveryNeed = true;
-			oOutputDocument.FillDataAsync();
+			oOutputDocument.FillData();
 			if (oOutputDocument.ErrorNumber == 0 && oOutputDocument.MainTable != null)
 			{
 				if (oOutputDocument.MainTable.Rows.Count == 0)

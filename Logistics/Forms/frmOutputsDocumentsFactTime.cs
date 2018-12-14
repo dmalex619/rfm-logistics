@@ -88,7 +88,7 @@ namespace Logistics
 		{
 			oOutputDocument.ClearError();
 			oOutputDocument.FilterTripsList = nTripID.ToString();
-			oOutputDocument.FillDataAsync();
+			oOutputDocument.FillData();
 			if (oOutputDocument.ErrorNumber == 0)
 			{
 				dt = oOutputDocument.MainTable;

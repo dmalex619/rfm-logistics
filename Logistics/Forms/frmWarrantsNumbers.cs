@@ -307,7 +307,7 @@ namespace Logistics
 
 			grdData.GetGridState();
 
-			oWarrantList.FillDataAsync();
+			oWarrantList.FillData();
 			grdData.IsLockRowChanged = true;
 			grdData.Restore(oWarrantList.MainTable);
 
@@ -438,7 +438,7 @@ namespace Logistics
 			WarrantNumber oWarrantAnalysis = new WarrantNumber();
 			oWarrantAnalysis.FilterDateBeg = dDateBeg;
 			oWarrantAnalysis.FilterDateEnd = dDateEnd;
-			oWarrantAnalysis.FillDataAsync();
+			oWarrantAnalysis.FillData();
 			if (oWarrantAnalysis.ErrorNumber != 0 || oWarrantAnalysis.MainTable == null)
 			{
 				RFMMessage.MessageBoxError("Ошибка при анализе списка доверенностей...");
@@ -511,7 +511,7 @@ namespace Logistics
 				if (oWarrantAnalysis.OutputDocumentID.HasValue)
 				{
 					oOutputDocument.ID = (int)oWarrantAnalysis.OutputDocumentID;
-					oOutputDocument.FillDataAsync();
+					oOutputDocument.FillData();
 					if (oOutputDocument.MainTable.Rows.Count == 0)
 					{
 						sText += sNumber + ": не найден заказ на отгрузку с кодом " + oWarrantAnalysis.OutputDocumentID + 
@@ -557,7 +557,7 @@ namespace Logistics
 				if (oWarrantAnalysis.InputDocumentID.HasValue)
 				{
 					oInputDocument.ID = (int)oWarrantAnalysis.InputDocumentID;
-					oInputDocument.FillDataAsync();
+					oInputDocument.FillData();
 					if (oInputDocument.MainTable.Rows.Count != 1)
 					{
 						sText += sNumber + ": не найден заказ на поставку с кодом " + oWarrantAnalysis.InputDocumentID + 
@@ -591,7 +591,7 @@ namespace Logistics
 			bOK = true;
 			oOutputDocument.FilterDateBeg = dDateBeg;
 			oOutputDocument.FilterDateEnd = dDateEnd;
-			oOutputDocument.FillDataAsync();
+			oOutputDocument.FillData();
 			if (oOutputDocument.ErrorNumber != 0 || oOutputDocument.MainTable == null)
 			{
 				RFMMessage.MessageBoxError("Ошибка при анализе списка заказов на отгрузку...");
@@ -632,7 +632,7 @@ namespace Logistics
 						if (oOutputDocument.PF_WarrantNeed && sNumber.Length > 0)
 						{
 							oWarrantAnalysis.FilterOutputsDocumentsList = sOutputDocument;
-							oWarrantAnalysis.FillDataAsync();
+							oWarrantAnalysis.FillData();
 							if (oWarrantAnalysis.MainTable.Rows.Count == 0)
 							{
 								sText += sOutputDocument + ": в журнале не найдена доверенность (" + sNumber + ") для заказа" + 
@@ -650,7 +650,7 @@ namespace Logistics
 							oWarrantAnalysis.FilterPartnersSourceList = oOutputDocument.PartnerSourceID.ToString();
 							oWarrantAnalysis.FilterDateBeg = oOutputDocument.DateOutput.AddDays(-10);
 							oWarrantAnalysis.FilterDateEnd = oOutputDocument.DateOutput.AddDays(10);
-							oWarrantAnalysis.FillDataAsync();
+							oWarrantAnalysis.FillData();
 							if (oWarrantAnalysis.MainTable.Rows.Count == 0)
 							{
 								sText += sOutputDocument + ": в журнале не найдена доверенность по номеру (" + sNumber + "), указанному в заказе" + 
@@ -792,7 +792,7 @@ namespace Logistics
 			_SelectedText = "";
 
 			Partner oPartner = new Partner();
-			oPartner.FillDataAsync();
+			oPartner.FillData();
 			if (oPartner.ErrorNumber != 0 || oPartner.MainTable == null)
 			{
 				RFMMessage.MessageBoxError("Ошибка при получении данных (партнеры)...");
@@ -843,7 +843,7 @@ namespace Logistics
 			_SelectedText = "";
 
 			Partner oPartner = new Partner();
-			oPartner.FillDataAsync();
+			oPartner.FillData();
 			if (oPartner.ErrorNumber != 0 || oPartner.MainTable == null)
 			{
 				RFMMessage.MessageBoxError("Ошибка при получении данных (плательщики/поставщики)...");
@@ -894,7 +894,7 @@ namespace Logistics
 			_SelectedText = "";
 
 			Employee oEmployee = new Employee();
-			oEmployee.FillDataAsync();
+			oEmployee.FillData();
 			if (oEmployee.ErrorNumber != 0 || oEmployee.MainTable == null)
 			{
 				RFMMessage.MessageBoxError("Ошибка при получении данных (получатели)...");

@@ -869,7 +869,7 @@ namespace Logistics
 
 			DataRow o = ((DataRowView)grdOutputs.Rows[grdOutputs.CurrentRow.Index].DataBoundItem).Row;
 			oOutputDocumentInOutput.FilterOutputsList = o["OldOutputID"].ToString();//oOutputCur.ID.ToString();
-			oOutputDocumentInOutput.FillDataAsync();
+			oOutputDocumentInOutput.FillData();
 			grdOutputsDocumentsInOutputs.Restore(oOutputDocumentInOutput.MainTable);
 			return (oOutputDocumentInOutput.ErrorNumber == 0);
 		}
@@ -935,7 +935,7 @@ namespace Logistics
 				return (true);
 
 			oInputDocumentInInput.FilterInputsList = oInputCur.ID.ToString();
-			oInputDocumentInInput.FillDataAsync();
+			oInputDocumentInInput.FillData();
 			grdInputsDocuments.Restore(oInputDocumentInInput.MainTable);
 			return (oInputDocumentInInput.ErrorNumber == 0);
 		}
@@ -1093,7 +1093,7 @@ namespace Logistics
 			_SelectedText = "";
 
 			Car oCar = new Car();
-			oCar.FillDataAsync();
+			oCar.FillData();
 			if (oCar.ErrorNumber != 0 || oCar.MainTable == null)
 			{
 				RFMMessage.MessageBoxError("Ошибка при получении данных...");
@@ -1149,7 +1149,7 @@ namespace Logistics
 			_SelectedText = "";
 
 			Driver oDriver = new Driver();
-			oDriver.FillDataAsync();
+			oDriver.FillData();
 			oDriver.FilterActual = true;
 			if (oDriver.ErrorNumber != 0 || oDriver.MainTable == null)
 			{
@@ -1208,7 +1208,7 @@ namespace Logistics
 			Partner oOwner = new Partner();
 			oOwner.FilterActual = true;
 			oOwner.FilterIsOwner = true;
-			oOwner.FillDataAsync();
+			oOwner.FillData();
 			if (oOwner.ErrorNumber != 0 || oOwner.MainTable == null)
 			{
 				RFMMessage.MessageBoxError("Ошибка при получении данных...");
@@ -1266,7 +1266,7 @@ namespace Logistics
 			Partner oPartner = new Partner();
 			oPartner.IsCustomer = true;
 			oPartner.FilterActual = true;
-			oPartner.FillDataAsync();
+			oPartner.FillData();
 			if (oPartner.ErrorNumber != 0 || oPartner.MainTable == null)
 			{
 				RFMMessage.MessageBoxError("Ошибка при получении данных...");
@@ -1390,7 +1390,7 @@ namespace Logistics
 			{
 				oTrip.IDList = numTripID.Value.ToString();
 			}
-			oTrip.FillDataAsync();
+			oTrip.FillData();
 			if (oTrip.ErrorNumber == 0 && oTrip.MainTable != null)
 			{
 				foreach (DataRow tr in oTrip.MainTable.Rows)
@@ -1409,7 +1409,7 @@ namespace Logistics
 				Partner oPartnerTemp = new Partner();
 				oPartnerTemp.FilterActual = true;
 				oPartnerTemp.FilterNameContext = txtPartnerNameContext.Text.Trim();
-				oPartnerTemp.FillDataAsync();
+				oPartnerTemp.FillData();
 				sPartnersList = "";
 				foreach (DataRow r in oPartnerTemp.MainTable.Rows)
 				{

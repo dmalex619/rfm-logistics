@@ -53,7 +53,7 @@ namespace Logistics
 		private void frmOutputsDocumentsVeterinaryBlankData_Load(object sender, EventArgs e)
 		{
 			oOutputDocument.IDList = sOutputsDocumentsList;
-			oOutputDocument.FillDataAsync();
+			oOutputDocument.FillData();
 
 			// товары каждого заказа
 			bool bVeterinaryUpdate = false;

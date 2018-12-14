@@ -97,7 +97,7 @@ namespace Logistics
 			PrintForm oPrintFormTemp = new PrintForm();
 			oPrintFormTemp.FilterPF_Name = txtPF_Name.Text.Trim();
 			oPrintFormTemp.FilterPF_Type = txtPF_Type.Text.Trim();
-			oPrintFormTemp.FillDataAsync();
+			oPrintFormTemp.FillData();
 			if (oPrintFormTemp.ErrorNumber == 0 && oPrintFormTemp.MainTable != null &&
 				oPrintFormTemp.MainTable.Rows.Count > 0)
 			{

@@ -302,7 +302,7 @@ namespace Logistics
 			cboPartner.DataSource = null;
 			oPartner.ClearError();
             oPartner.FilterIsOwner = true;
-            if (oPartner.FillDataAsync())
+            if (oPartner.FillData())
 			{
                 cboPartner.DataSource = new DataView(oPartner.MainTable);
                 cboPartner.ValueMember = oPartner.ColumnID;
@@ -316,7 +316,7 @@ namespace Logistics
 		{
 			cboZone.DataSource = null;
 			oZone.ClearError();
-            if (oZone.FillDataAsync())
+            if (oZone.FillData())
 			{
                 cboZone.DataSource = new DataView(oZone.MainTable);
                 cboZone.ValueMember = oZone.ColumnID;
@@ -330,7 +330,7 @@ namespace Logistics
         {
             cboUnit.DataSource = null;
             oCarTaskUnit.ClearError();
-            if (oCarTaskUnit.FillDataAsync())
+            if (oCarTaskUnit.FillData())
             {
                 cboUnit.DataSource = new DataView(oCarTaskUnit.MainTable);
                 cboUnit.ValueMember = oCarTaskUnit.ColumnID;

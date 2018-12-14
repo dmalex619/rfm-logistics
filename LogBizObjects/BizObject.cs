@@ -178,7 +178,7 @@ namespace LogBizObjects
 		/// Получение основного источника данных для бизнес-объекта _ds._MainTable
 		/// с использованием select из соответствующей таблицы БД_ServerTable.
 		/// </summary>
-		public abstract bool FillDataAsync();
+		public abstract bool FillData();
 
 		/// <summary>
 		/// Заполнение свойств экземпляра бизнес-объекта по данным _MainTable
@@ -284,7 +284,7 @@ namespace LogBizObjects
 			ClearError();
 
 			_ID = nID;
-			FillDataAsync();
+			FillData();
 			if (_MainTable.Rows.Count != 1)
 			{
 				return (false);

@@ -1163,7 +1163,7 @@ namespace LogBizObjects
 		/// <summary>
 		/// получение полного списка рейсов с дополнительными сведениями в MainTable
 		/// </summary>
-		public override async System.Threading.Tasks.Task<bool> FillDataAsync()
+		public override bool FillData()
 		{
 			ClearData();
 
@@ -1462,7 +1462,6 @@ namespace LogBizObjects
 				_MainTable = FillReadings(new SqlDataAdapter(_oCommand), _MainTable, _MainTableName);
 				_MainTable.PrimaryKey = new DataColumn[] { _MainTable.Columns[_ColumnID] };
 				_NeedRequery = false;
-                await System.Threading.Tasks.Task.Run(() => Thread.Sleep(500));
 			}
 			catch (Exception ex)
 			{
@@ -2787,7 +2786,7 @@ namespace LogBizObjects
 
 					Output oOutputCarried = new Output();
 					oOutputCarried.IDList = sOutputsCarriedList;
-					oOutputCarried.FillDataAsync();
+					oOutputCarried.FillData();
 					if (oOutputCarried.MainTable.Rows.Count > 0)
 					{
 						_TableOutputsInTrip.Merge(oOutputCarried.MainTable);
@@ -2870,7 +2869,7 @@ namespace LogBizObjects
 
 					Input oInputCarried = new Input();
 					oInputCarried.IDList = sInputsCarriedList;
-					oInputCarried.FillDataAsync();
+					oInputCarried.FillData();
 					if (oInputCarried.MainTable.Rows.Count > 0)
 					{
 						_TableInputsInTrip.Merge(oInputCarried.MainTable);
@@ -3012,7 +3011,7 @@ namespace LogBizObjects
 					{
 						OutputDocument oOutputDocumentCarried = new OutputDocument();
 						oOutputDocumentCarried.IDList = sOutputsDocumentsCarriedList;
-						oOutputDocumentCarried.FillDataAsync();
+						oOutputDocumentCarried.FillData();
 						if (oOutputDocumentCarried.MainTable.Rows.Count > 0)
 						{
                             // копирование части полей из таблицы перенесенных накладных
@@ -3172,7 +3171,7 @@ namespace LogBizObjects
 					{
 						InputDocument oInputDocumentCarried = new InputDocument();
 						oInputDocumentCarried.IDList = sInputsDocumentsCarriedList;
-						oInputDocumentCarried.FillDataAsync();
+						oInputDocumentCarried.FillData();
 						if (oInputDocumentCarried.MainTable.Rows.Count > 0)
 						{
 							_TableInputsDocumentsInTrip.Merge(oInputDocumentCarried.MainTable);

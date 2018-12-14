@@ -197,7 +197,7 @@ namespace Logistics
 		{
 			oTripReturn.ClearError();
             oTripReturn.ID = nTripReturnID;
-			oTripReturn.FillDataAsync();
+			oTripReturn.FillData();
 			if (oTripReturn.ErrorNumber == 0)
 			{
                 oTripReturn.FillTableTripsReturnsGoods();
@@ -238,7 +238,7 @@ namespace Logistics
 			if (oTripReturn != null && oTripReturn.HostID.HasValue)
 				oOwner.FilterHostsList = oTripReturn.HostID.ToString();
 
-            if (oOwner.FillDataAsync())
+            if (oOwner.FillData())
             {
                 cboOwner.ValueMember = oOwner.ColumnID;
                 cboOwner.DisplayMember = oOwner.ColumnName;
@@ -250,7 +250,7 @@ namespace Logistics
         private bool cboGoodsState_Restore()
         {
             oGoodState.ClearError();
-            if (oGoodState.FillDataAsync())
+            if (oGoodState.FillData())
             {
                 cboGoodsState.ValueMember = oGoodState.ColumnID;
 				cboGoodsState.DisplayMember = oGoodState.ColumnName;
@@ -448,7 +448,7 @@ namespace Logistics
 					}
 		
 					oGood.PackingID = _SelectedPackingID;
-					oGood.FillDataAsync();
+					oGood.FillData();
 					// выбранный товар
 					DataRow rg = oGood.MainTable.Rows[0];
 					// добавляем новую строку для выбранного товара

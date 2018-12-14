@@ -97,7 +97,7 @@ namespace LogBizObjects
 		/// <summary>
 		/// получение полного списка хостов в MainTable
 		/// </summary>
-		public override bool FillDataAsync()
+		public override bool FillData()
 		{
 			ClearData();
 
@@ -224,7 +224,7 @@ namespace LogBizObjects
 		public int Count()
 		{
 			_FilterActual = true;
-			FillDataAsync();
+			FillData();
 			return (MainTable.Rows.Count);
 		}
 

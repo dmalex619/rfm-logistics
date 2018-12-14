@@ -250,7 +250,7 @@ namespace Logistics
 				oPartner.FilterIsCustomer = true;
 				sText = "получатели";
 			}
-			if (!oPartner.FillDataAsync() ||
+			if (!oPartner.FillData() ||
 				oPartner.ErrorNumber != 0 || 
 				oPartner.MainTable == null)
 			{
@@ -343,7 +343,7 @@ namespace Logistics
 				return (false);
 
 			RFMCursorWait.Set(true);
-			if (!oZone.FillDataAsync() ||
+			if (!oZone.FillData() ||
 				oZone.ErrorNumber != 0 || 
 				oZone.MainTable == null)
 			{
@@ -491,7 +491,7 @@ namespace Logistics
 
 			RFMCursorWait.Set(true);
 			//oCar.FilterActual = true;
-			if (!oCar.FillDataAsync() ||
+			if (!oCar.FillData() ||
 				oCar.ErrorNumber != 0 || 
 				oCar.MainTable == null)
 			{
@@ -515,7 +515,7 @@ namespace Logistics
 
 			RFMCursorWait.Set(true);
 			//oCarType.FilterActual = true;
-			if (!oCarType.FillDataAsync() ||
+			if (!oCarType.FillData() ||
 				oCarType.ErrorNumber != 0 || 
 				oCarType.MainTable == null)
 			{
@@ -567,7 +567,7 @@ namespace Logistics
 
 			RFMCursorWait.Set(true);
 			//oEmployee.FilterActual = true;
-			if (!oEmployee.FillDataAsync() ||
+			if (!oEmployee.FillData() ||
 				oEmployee.ErrorNumber != 0 ||
 				oEmployee.MainTable == null)
 			{
@@ -595,7 +595,7 @@ namespace Logistics
 
 			RFMCursorWait.Set(true);
 			//oDriver.FilterActual = true;
-			if (!oDriver.FillDataAsync() ||
+			if (!oDriver.FillData() ||
 				oDriver.ErrorNumber != 0 || 
 				oDriver.MainTable == null)
 			{
@@ -745,7 +745,7 @@ namespace Logistics
 				return (false);
 
 			RFMCursorWait.Set(true);
-			if (!oGoodState.FillDataAsync() ||
+			if (!oGoodState.FillData() ||
 				oGoodState.ErrorNumber != 0 ||
 				oGoodState.MainTable == null)
 			{
@@ -772,7 +772,7 @@ namespace Logistics
 				return (false);
 
 			RFMCursorWait.Set(true);
-			if (!oHost.FillDataAsync() ||
+			if (!oHost.FillData() ||
 				oHost.ErrorNumber != 0 || 
 				oHost.MainTable == null)
 			{

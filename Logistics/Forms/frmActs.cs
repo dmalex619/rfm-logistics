@@ -314,7 +314,7 @@ namespace Logistics
 			// 
 
 			dgvActs.GetGridState();
-			oActList.FillDataAsync();
+			oActList.FillData();
 			dgvActs.IsLockRowChanged = true;
 			dgvActs.Restore(oActList.MainTable);
 			tmrRestore.Enabled = true;
@@ -516,7 +516,7 @@ namespace Logistics
 				RFMCursorWait.Set(true);
 				Partner oPartner = new Partner();
 				oPartner.FilterIsOwner = true;
-				oPartner.FillDataAsync();
+				oPartner.FillData();
 				RFMCursorWait.Set(false);
 				if (oPartner.ErrorNumber != 0 || oPartner.MainTable == null)
 				{

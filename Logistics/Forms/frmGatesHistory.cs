@@ -341,7 +341,7 @@ namespace Logistics
 			//
 
 			grdData.GetGridState();
-			oGateHistoryList.FillDataAsync();
+			oGateHistoryList.FillData();
 			grdData.IsLockRowChanged = true;
 			grdData.Restore(oGateHistoryList.MainTable);
 
@@ -405,7 +405,7 @@ namespace Logistics
 			if (oGateHistoryCur.WayBillID.HasValue && oGateHistoryCur.IsDeparture)
 			{
 				oGateHistoryTemp.FilterWayBillsList = oGateHistoryCur.WayBillID.ToString();
-				oGateHistoryTemp.FillDataAsync();
+				oGateHistoryTemp.FillData();
 				if (oGateHistoryTemp.ErrorNumber == 0 && oGateHistoryTemp.MainTable != null &&
 					oGateHistoryTemp.MainTable.Rows.Count > 1)
 				{
@@ -427,7 +427,7 @@ namespace Logistics
 			if (oGateHistoryCur.PassID.HasValue && !oGateHistoryCur.IsDeparture)
 			{
 				oGateHistoryTemp.FilterPassesList = oGateHistoryCur.PassID.ToString();
-				oGateHistoryTemp.FillDataAsync();
+				oGateHistoryTemp.FillData();
 				if (oGateHistoryTemp.ErrorNumber == 0 && oGateHistoryTemp.MainTable != null &&
 					oGateHistoryTemp.MainTable.Rows.Count > 1)
 				{

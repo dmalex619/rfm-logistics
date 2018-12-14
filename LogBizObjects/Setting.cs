@@ -54,7 +54,7 @@ namespace LogBizObjects
 			_ColumnName = "Name";
 		}
 
-		public override bool FillDataAsync()
+		public override bool FillData()
 		{
 			ClearData();
 

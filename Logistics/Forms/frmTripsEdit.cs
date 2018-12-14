@@ -2393,7 +2393,7 @@ namespace Logistics
 			cboCar.DataSource = null;
 			oCar.ClearError();
 			oCar.FilterActual = true;
-			if (oCar.FillDataAsync())
+			if (oCar.FillData())
 			{
 				cboCar.DataSource = new DataView(oCar.MainTable);
 				cboCar.ValueMember = oCar.ColumnID;
@@ -2408,7 +2408,7 @@ namespace Logistics
 			cboDriverEmployee.DataSource = null;
 			oDriver.ClearError();
             oDriver.FilterForGoodsOnly = true;
-			if (oDriver.FillDataAsync())
+			if (oDriver.FillData())
 			{
 				cboDriverEmployee.DataSource = new DataView(oDriver.MainTable);
 				cboDriverEmployee.ValueMember = oDriver.ColumnID;
@@ -2422,7 +2422,7 @@ namespace Logistics
 		{
 			cboPermitLevel.DataSource = null;
 			oPermitLevel.ClearError();
-			if (oPermitLevel.FillDataAsync())
+			if (oPermitLevel.FillData())
 			{
 				cboPermitLevel.DataSource = new DataView(oPermitLevel.MainTable);
 				cboPermitLevel.ValueMember = oPermitLevel.ColumnID;
@@ -2442,7 +2442,7 @@ namespace Logistics
 				oPartnerCarrier.FilterActual = true;
 				// для нового рейса - только актуальные 
 			}
-			if (oPartnerCarrier.FillDataAsync())
+			if (oPartnerCarrier.FillData())
 			{
 				cboPartnerCarrier.DataSource = new DataView(oPartnerCarrier.MainTable);
 				cboPartnerCarrier.ValueMember = oPartnerCarrier.ColumnID;
@@ -2533,7 +2533,7 @@ namespace Logistics
 				return (true);
 
 			oActForOutput.FilterOutputsList = oOutputCur.ID.ToString();
-			oActForOutput.FillDataAsync();
+			oActForOutput.FillData();
 			grdOutputs_Acts.Restore(oActForOutput.MainTable);
 			return (oActForOutput.ErrorNumber == 0);
 		}
@@ -2616,7 +2616,7 @@ namespace Logistics
 				return (true);
 
 			oActForInput.FilterInputsList = oInputCur.ID.ToString();
-			oActForInput.FillDataAsync();
+			oActForInput.FillData();
 			grdInputs_Acts.Restore(oActForInput.MainTable);
 			return (oActForInput.ErrorNumber == 0);
 		}
@@ -2641,7 +2641,7 @@ namespace Logistics
 			// задания на расход, присоединенные к этому рейсу
             if (nTripID.HasValue)
 			    oTripReturnList.FilterTripsList = nTripID.ToString();
-			oTripReturnList.FillDataAsync();
+			oTripReturnList.FillData();
 			grdTripsReturns.IsLockRowChanged = true;
 			grdTripsReturns.Restore(oTripReturnList.MainTable);
 
@@ -2803,7 +2803,7 @@ namespace Logistics
 				// самовывоз/самопривоз
 				oTripTemp.FilterSelfDelivery = true;
 			}
-			oTripTemp.FillDataAsync();
+			oTripTemp.FillData();
 			if (oTripTemp.ErrorNumber != 0 || oTripTemp.MainTable == null)
 				return;
 			if (oTripTemp.MainTable.Rows.Count == 0)
@@ -3065,7 +3065,7 @@ namespace Logistics
 
 					oOutputAdd.ClearFilters();
 					oOutputAdd.IDList = "," + _SelectedOutputsIDList;
-					oOutputAdd.FillDataAsync();
+					oOutputAdd.FillData();
 					if (oOutputAdd.MainTable == null || oOutputAdd.MainTable.Rows.Count == 0)
 						return;
 					else
@@ -3174,7 +3174,7 @@ namespace Logistics
 
 						oInputAdd.ClearFilters();
 						oInputAdd.IDList = "," + _SelectedInputsIDList;
-						oInputAdd.FillDataAsync();
+						oInputAdd.FillData();
 						if (oInputAdd.MainTable == null || oInputAdd.MainTable.Rows.Count == 0)
 							return;
 						else
@@ -3259,7 +3259,7 @@ namespace Logistics
 			oOutputAddTemp.FilterDateBeg =
 			oOutputAddTemp.FilterDateEnd =
 				dDate;
-			oOutputAddTemp.FillDataAsync();
+			oOutputAddTemp.FillData();
 			if (oOutputAddTemp.ErrorNumber == 0 &&
 				oOutputAddTemp.MainTable != null && oOutputAddTemp.MainTable.Rows.Count > 0)
 			{
@@ -3308,7 +3308,7 @@ namespace Logistics
 			oInputAddTemp.FilterDateBeg =
 			oInputAddTemp.FilterDateEnd =
 				dDate;
-			oInputAddTemp.FillDataAsync();
+			oInputAddTemp.FillData();
 			if (oInputAddTemp.ErrorNumber == 0 &&
 				oInputAddTemp.MainTable != null && oInputAddTemp.MainTable.Rows.Count > 0)
 			{
@@ -3614,7 +3614,7 @@ namespace Logistics
 
 				InputDocument oInputDocument = new InputDocument();
 				oInputDocument.FilterInputsList = oInputCur.ID.ToString();
-				oInputDocument.FillDataAsync();
+				oInputDocument.FillData();
 				if (oInputDocument.MainTable == null)
 					return;
 
@@ -3681,7 +3681,7 @@ namespace Logistics
 
 				InputDocument oInputDocument = new InputDocument();
 				oInputDocument.FilterInputsList = oInputCur.ID.ToString();
-				oInputDocument.FillDataAsync();
+				oInputDocument.FillData();
 				if (oInputDocument.MainTable == null || oInputDocument.MainTable.Rows.Count == 0)
 				{
 					RFMMessage.MessageBoxError("Нет данных о документах для задания на приход...");
@@ -3754,7 +3754,7 @@ namespace Logistics
 					bool bEdited = false;
 					InputDocument oInputDocumentTemp = new InputDocument();
 					oInputDocumentTemp.FilterInputsList = nInputID.ToString();
-					oInputDocumentTemp.FillDataAsync();
+					oInputDocumentTemp.FillData();
 					if (oInputDocumentTemp.ErrorNumber != 0 || oInputDocumentTemp.MainTable == null)
 						return;
 					if (oInputDocumentTemp.MainTable.Rows.Count > 0)

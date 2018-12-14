@@ -111,7 +111,7 @@ namespace Logistics
 			sSelectedDriversIDList = null;
 
 			Driver oDriver = new Driver();
-			oDriver.FillDataAsync();
+			oDriver.FillData();
 			oDriver.FilterActual = true;
 			if (oDriver.ErrorNumber != 0 || oDriver.MainTable == null)
 			{
@@ -156,7 +156,7 @@ namespace Logistics
 			Partner oOwner = new Partner();
 			oOwner.FilterIsOwner = true;
 			oOwner.FilterActual = true;
-			oOwner.FillDataAsync();
+			oOwner.FillData();
 			if (oOwner.ErrorNumber != 0 || oOwner.MainTable == null)
 			{
 				RFMMessage.MessageBoxError("Ошибка при получении данных...");

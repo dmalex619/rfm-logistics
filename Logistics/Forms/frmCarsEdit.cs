@@ -231,7 +231,7 @@ namespace Logistics
 
 			// уникальность имени и номера
 			Car oCarTemp = new Car();
-			oCarTemp.FillDataAsync();
+			oCarTemp.FillData();
 			foreach(DataRow dr in oCarTemp.MainTable.Rows)
 			{
 				if (nCarID == null || nCarID != Convert.ToInt32(dr["ID"]))
@@ -366,7 +366,7 @@ namespace Logistics
 		{
 			cboDriver.DataSource = null;
 			oDriver.ClearError();
-			if (oDriver.FillDataAsync())
+			if (oDriver.FillData())
 			{
 				cboDriver.DataSource = new DataView(oDriver.MainTable);
 				cboDriver.ValueMember = oDriver.ColumnID;
@@ -380,7 +380,7 @@ namespace Logistics
 		{
 			cboPermitLevel.DataSource = null;
 			oPermitLevel.ClearError();
-			if (oPermitLevel.FillDataAsync())
+			if (oPermitLevel.FillData())
 			{
 				cboPermitLevel.DataSource = new DataView(oPermitLevel.MainTable);
 				cboPermitLevel.ValueMember = oPermitLevel.ColumnID;

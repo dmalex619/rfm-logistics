@@ -419,7 +419,7 @@ namespace Logistics
 
 			grdData.GetGridState();
 
-			oPassList.FillDataAsync();
+			oPassList.FillData();
 			grdData.IsLockRowChanged = true;
 			grdData.Restore(oPassList.MainTable);
 			tmrRestore.Enabled = true;
@@ -440,7 +440,7 @@ namespace Logistics
 				return (true);
 
 			oTripList.FilterPassesList = oPassCur.ID.ToString();
-			oTripList.FillDataAsync();
+			oTripList.FillData();
 			grdTrips.Restore(oTripList.MainTable);
 
 			return (oTripList.ErrorNumber == 0);

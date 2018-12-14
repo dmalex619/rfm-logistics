@@ -91,7 +91,7 @@ namespace LogBizObjects
 		/// <summary>
 		/// получение списка внутр.перемещений (MainTable)
 		/// </summary>
-		public override bool FillDataAsync()
+		public override bool FillData()
 		{
 			ClearData();
 			return (_ErrorNumber == 0);

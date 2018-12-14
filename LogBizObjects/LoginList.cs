@@ -28,7 +28,7 @@ namespace LogBizObjects
 		/// <summary>
 		/// ¬озвращает DataSet со списком пользователей системы.
 		/// </summary>
-		public override bool FillDataAsync()
+		public override bool FillData()
 		{
 			try
 			{

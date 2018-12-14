@@ -342,7 +342,7 @@ namespace Logistics
 					}
 				}
 				oGoodTemp.PackingsIDList = "," + sb;
-				oGoodTemp.FillDataAsync();
+				oGoodTemp.FillData();
 			}
 
 			else
@@ -354,7 +354,7 @@ namespace Logistics
 
 					RFMCursorWait.Set(true);
 					oGoodTemp.PackingsIDList = "," + _SelectedPackingsIDList;
-					oGoodTemp.FillDataAsync();
+					oGoodTemp.FillData();
 					if (oGoodTemp.ErrorNumber != 0 || oGoodTemp.MainTable == null || oGoodTemp.MainTable.Rows.Count == 0)
 					{
 						RFMCursorWait.Set(false);
@@ -522,7 +522,7 @@ namespace Logistics
 			if (StartForm(new frmSelectOneInputDocument(this, false, oInputDocument)) == DialogResult.Yes)
 			{
 				oInputDocument.ID = _SelectedInputDocumentID;
-				oInputDocument.FillDataAsync();
+				oInputDocument.FillData();
 				if ((_SelectedInputDocumentID != null) && (oInputDocument.MainTable.Rows.Count > 0))
 				{
 					txtInputDocument.Text = oInputDocument.MainTable.Rows[0]["ID"].ToString() + " [" +
@@ -548,7 +548,7 @@ namespace Logistics
 			if (StartForm(new frmSelectOneInput(this, false, oInput)) == DialogResult.Yes)
 			{
 				oInput.ID = _SelectedInputID;
-				oInput.FillDataAsync();
+				oInput.FillData();
 				if ((_SelectedInputID != null) && (oInput.MainTable.Rows.Count > 0))
 				{
 					txtInput.Text = oInput.MainTable.Rows[0]["ID"].ToString() + " [" +

@@ -1193,7 +1193,7 @@ namespace LogBizObjects
 		/// <summary>
 		/// получение полного списка расходных документов с дополнительными сведениями в MainTable
 		/// </summary>
-		public override bool FillDataAsync()
+		public override bool FillData()
 		{
 			ClearData();
 
@@ -1468,7 +1468,7 @@ namespace LogBizObjects
 			ClearData();
 
 			_UseByOutputsDocumentSort = true;
-			bool bResult = FillDataAsync();
+			bool bResult = FillData();
 			_UseByOutputsDocumentSort = null;
 
 			return (bResult);

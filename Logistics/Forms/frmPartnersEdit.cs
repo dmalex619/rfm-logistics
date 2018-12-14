@@ -630,7 +630,7 @@ namespace Logistics
 		{
 			cboZone.DataSource = null;
 			oZone.ClearError();
-			if (oZone.FillDataAsync())
+			if (oZone.FillData())
 			{
 				cboZone.DataSource = new DataView(oZone.MainTable);
 				cboZone.ValueMember = oZone.ColumnID;
@@ -644,7 +644,7 @@ namespace Logistics
 		{
 			cboPermitLevel.DataSource = null;
 			oPermitLevel.ClearError();
-			if (oPermitLevel.FillDataAsync())
+			if (oPermitLevel.FillData())
 			{
 				cboPermitLevel.DataSource = new DataView(oPermitLevel.MainTable);
 				cboPermitLevel.ValueMember = oPermitLevel.ColumnID;
@@ -753,7 +753,7 @@ namespace Logistics
 			oPrintForm.ClearFilters();
 			oPrintForm.FilterPF_Name = sPF_BillName;
 			oPrintForm.FilterPF_Type = sPF_BillType;
-			oPrintForm.FillDataAsync();
+			oPrintForm.FillData();
 			if (oPrintForm.ErrorNumber != 0 || oPrintForm.MainTable == null)
 			{
 				RFMMessage.MessageBoxError("Ошибка при получении данных о печатных формах...");

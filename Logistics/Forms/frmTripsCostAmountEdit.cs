@@ -35,7 +35,7 @@ namespace Logistics
 		private void frmTripsCostAmountEdit_Load(object sender, EventArgs e)
 		{
             CarTaskUnit ctUnit = new CarTaskUnit();
-            if (!ctUnit.FillDataAsync())
+            if (!ctUnit.FillData())
             {
                 Dispose();
                 return;

@@ -229,7 +229,7 @@ namespace Logistics
 		{
 			cboCurrency.DataSource = null;
 			oCurrency.ClearError();
-			if (oCurrency.FillDataAsync())
+			if (oCurrency.FillData())
 			{
 				cboCurrency.DataSource = new DataView(oCurrency.MainTable);
 				cboCurrency.ValueMember = oCurrency.ColumnID;
@@ -246,7 +246,7 @@ namespace Logistics
 		private bool dgvInputDocumentGoods_Restore()
 		{
     	    oInputDocument.ClearError();
-		    oInputDocument.FillDataAsync();
+		    oInputDocument.FillData();
 	        if (oInputDocument.ErrorNumber == 0)
             {
                 if (nInputDocumentID != 0)
@@ -758,7 +758,7 @@ namespace Logistics
 					// идем по каждому выбранному товару
 					Good oGoodNew = new Good();
 					oGoodNew.PackingsIDList = _SelectedPackingsIDList;
-					oGoodNew.FillDataAsync();
+					oGoodNew.FillData();
 					if (oGoodNew.ErrorNumber == 0 && oGoodNew.MainTable != null &&
 						oGoodNew.MainTable.Rows.Count > 0)
 					{

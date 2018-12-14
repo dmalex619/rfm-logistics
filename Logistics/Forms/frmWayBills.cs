@@ -456,7 +456,7 @@ namespace Logistics
 			grdWayBills_Fillings.DataSource = null;
 			
 			grdWayBills.GetGridState();
-			oWayBillList.FillDataAsync();
+			oWayBillList.FillData();
 			grdWayBills.IsLockRowChanged = true;
 			grdWayBills.Restore(oWayBillList.MainTable);
 			tmrRestore.Enabled = true;
@@ -477,7 +477,7 @@ namespace Logistics
 				return (true);
 
 			oTripInWayBillList.FilterWayBillsList = oWayBillCur.ID.ToString();
-			oTripInWayBillList.FillDataAsync();
+			oTripInWayBillList.FillData();
 			grdWayBills_Trips.Restore(oTripInWayBillList.MainTable);
 
 			return (oTripInWayBillList.ErrorNumber == 0);
@@ -493,7 +493,7 @@ namespace Logistics
 				return (true);
 
 			oFillingInWayBillList.FilterWayBillsList = oWayBillCur.ID.ToString();
-			oFillingInWayBillList.FillDataAsync();
+			oFillingInWayBillList.FillData();
 			grdWayBills_Fillings.Restore(oFillingInWayBillList.MainTable);
 
 			return (oFillingInWayBillList.ErrorNumber == 0);
@@ -534,7 +534,7 @@ namespace Logistics
 			// 
 
 			grdFillings.GetGridState();
-			oFillingList.FillDataAsync();
+			oFillingList.FillData();
 			grdFillings.IsLockRowChanged = true;
 			grdFillings.Restore(oFillingList.MainTable);
 
@@ -1017,7 +1017,7 @@ namespace Logistics
 
 				Car oCarTemp = new Car();
 				oCarTemp.ID = (int)oWayBillCur.CarID;
-				oCarTemp.FillDataAsync();
+				oCarTemp.FillData();
 				if (oCarTemp.ErrorNumber != 0 || oCarTemp.MainTable.Rows.Count != 1)
 				{
 					RFMMessage.MessageBoxError("Ошибка при получении данных о машине в путевом листе...");

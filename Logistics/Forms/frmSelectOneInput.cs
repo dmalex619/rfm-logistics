@@ -484,7 +484,7 @@ namespace Logistics
 			{
 				Trip oTripFilter = new Trip();
 				oTripFilter.FilterAliasContext = txtTripAliasContext.Text.Trim();
-				oTripFilter.FillDataAsync();
+				oTripFilter.FillData();
 				if (oTripFilter.ErrorNumber == 0 && oTripFilter.MainTable != null)
 				{
 					foreach (DataRow tr in oTripFilter.MainTable.Rows)
@@ -540,7 +540,7 @@ namespace Logistics
 
 			grdInputs.GetGridState();
 
-			oInputList.FillDataAsync();
+			oInputList.FillData();
 			grdInputs.IsLockRowChanged = true;
 			grdInputs.Restore(oInputList.MainTable);
 			tmrRestore.Enabled = true;
@@ -575,7 +575,7 @@ namespace Logistics
 				return (true);
 
 			oInputDocumentInInput.FilterInputsList = oInputCur.ID.ToString();
-			oInputDocumentInInput.FillDataAsync();
+			oInputDocumentInInput.FillData();
 			grdInputsDocuments.Restore(oInputDocumentInInput.MainTable);
 			return (oInputDocumentInInput.ErrorNumber == 0);
 		}

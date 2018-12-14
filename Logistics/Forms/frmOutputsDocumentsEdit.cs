@@ -214,7 +214,7 @@ namespace Logistics
 			cboCurrency.DataSource = null;
 			Currency oCurrency;
 			oCurrency = new Currency();
-			if (oCurrency.FillDataAsync())
+			if (oCurrency.FillData())
 			{
 				cboCurrency.ValueMember = oCurrency.ColumnID;
 				cboCurrency.DisplayMember = oCurrency.ColumnName;
@@ -240,7 +240,7 @@ namespace Logistics
 		{
 			cboGoodState.DataSource = null;
 			oGoodState.ClearError();
-			if (oGoodState.FillDataAsync())
+			if (oGoodState.FillData())
 			{
 				cboGoodState.ValueMember = oGoodState.ColumnID;
 				cboGoodState.DisplayMember = oGoodState.ColumnName;
@@ -257,7 +257,7 @@ namespace Logistics
 			oOwner.FilterIsOwner = true;
 			if (oOutputDocument != null && oOutputDocument.HostID.HasValue)
 				oOwner.FilterHostsList = oOutputDocument.HostID.ToString();
-			if (oOwner.FillDataAsync())
+			if (oOwner.FillData())
 			{
 				cboOwner.ValueMember = oOwner.ColumnID;
 				cboOwner.DisplayMember = oOwner.ColumnName;
@@ -597,7 +597,7 @@ namespace Logistics
 					// идем по каждому выбранному товару
 					Good oGoodNew = new Good();
 					oGoodNew.PackingsIDList = _SelectedPackingsIDList;
-					oGoodNew.FillDataAsync();
+					oGoodNew.FillData();
 					if (oGoodNew.ErrorNumber == 0 && oGoodNew.MainTable != null &&
 						oGoodNew.MainTable.Rows.Count > 0)
 					{

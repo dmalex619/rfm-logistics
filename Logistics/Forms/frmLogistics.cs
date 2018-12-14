@@ -497,7 +497,7 @@ namespace Logistics
             {
                 RFMCursorWait.Set(true);
                 CarType oCarType = new CarType();
-                oCarType.FillDataAsync();
+                oCarType.FillData();
                 RFMCursorWait.Set(false);
                 if (oCarType.ErrorNumber != 0 || oCarType.MainTable == null)
                 {
@@ -549,7 +549,7 @@ namespace Logistics
             {
                 RFMCursorWait.Set(true);
                 Partner oPartner = new Partner();
-                oPartner.FillDataAsync();
+                oPartner.FillData();
                 RFMCursorWait.Set(false);
                 if (oPartner.ErrorNumber != 0 || oPartner.MainTable == null)
                 {
@@ -799,7 +799,7 @@ namespace Logistics
 			oTrip.FilterDateEnd = oTrip.FilterDateBeg;
 			oTrip.FilterSelfDelivery = false;
 
-			if (oTrip.FillDataAsync())
+			if (oTrip.FillData())
 			{
 				oTrip.MainTable.PrimaryKey = new DataColumn[] { oTrip.MainTable.Columns["ID"] };
 				cboTrips.ValueMember = oTrip.MainTable.Columns[0].ColumnName;
@@ -818,9 +818,9 @@ namespace Logistics
 			OutputDocument oCarOutputDocuments = new OutputDocument();
 			InputDocument oCarInputDocuments = new InputDocument();
 			oCarOutputDocuments.FilterTripsList = nTripID.ToString();
-			oCarOutputDocuments.FillDataAsync();
+			oCarOutputDocuments.FillData();
 			oCarInputDocuments.FilterTripsList = nTripID.ToString();
-			oCarInputDocuments.FillDataAsync();
+			oCarInputDocuments.FillData();
 			DataRow dro;
 			for (int i = 0; i < oCarInputDocuments.MainTable.Rows.Count; i++)
 			{
@@ -932,7 +932,7 @@ namespace Logistics
 			nPointQnt = 0;
 			OutputDocument oOutputDocumentTemp = new OutputDocument();
 			oOutputDocumentTemp.FilterTripsList = nTripID.ToString();
-			oOutputDocumentTemp.FillDataAsync();
+			oOutputDocumentTemp.FillData();
 			if (oOutputDocumentTemp.ErrorNumber == 0 && oOutputDocumentTemp.MainTable != null && oOutputDocumentTemp.MainTable.Rows.Count > 0)
 			{
 				DataView dv = new DataView(oOutputDocumentTemp.MainTable);
@@ -1194,7 +1194,7 @@ namespace Logistics
 					// число точек
 					OutputDocument oOutputDocumentTemp = new OutputDocument();
 					oOutputDocumentTemp.FilterOutputsList = sOutputsList;
-					oOutputDocumentTemp.FillDataAsync();
+					oOutputDocumentTemp.FillData();
 					if (oOutputDocumentTemp.ErrorNumber == 0 && oOutputDocumentTemp.MainTable != null && oOutputDocumentTemp.MainTable.Rows.Count > 0)
 					{
 						DataView dv = new DataView(oOutputDocumentTemp.MainTable);
@@ -1533,7 +1533,7 @@ namespace Logistics
 			{
 				OutputDocument oOutputDocument = new OutputDocument();
 				oOutputDocument.FilterOutputsList = drvP["OutputID"].ToString();
-				oOutputDocument.FillDataAsync();
+				oOutputDocument.FillData();
 				DataRow drOD;
 				bool bWarrantNeed = false;
 				for (int i = 0; i < oOutputDocument.MainTable.Rows.Count; i++)
@@ -1937,7 +1937,7 @@ namespace Logistics
 			{
 				OutputDocument oOutputDocument = new OutputDocument();
 				oOutputDocument.FilterOutputsList = drvP["OutputID"].ToString();
-				oOutputDocument.FillDataAsync();
+				oOutputDocument.FillData();
 				DataRow drOD;
 				bool bWarrantNeed = false;
 				for (int i = 0; i < oOutputDocument.MainTable.Rows.Count; i++)

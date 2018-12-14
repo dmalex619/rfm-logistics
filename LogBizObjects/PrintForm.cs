@@ -99,7 +99,7 @@ namespace LogBizObjects
 		/// <summary>
 		/// получение списка печатных форм
 		/// </summary>
-		public override bool FillDataAsync()
+		public override bool FillData()
 		{
 			ClearData();
 

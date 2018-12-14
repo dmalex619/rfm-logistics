@@ -64,7 +64,7 @@ namespace Logistics
 			bool bResult = true;
 
 			oTrip.ID = nTripID;
-			oTrip.FillDataAsync();
+			oTrip.FillData();
 			if (oTrip.ErrorNumber != 0 || oTrip.MainTable.Rows.Count != 1)
 			{
 				RFMMessage.MessageBoxError("Ошибка при получении данных о рейсе...");

@@ -280,7 +280,7 @@ namespace Logistics
 		{
 			oAct.ClearError();
             oAct.ID = nActID;
-			oAct.FillDataAsync();
+			oAct.FillData();
 			if (oAct.ErrorNumber == 0)
 			{
                 if (nActID != 0)
@@ -340,7 +340,7 @@ namespace Logistics
             oPartner.FilterIsOwner = true;
 			if (oAct != null && oAct.HostID.HasValue)
 				oPartner.FilterHostsList = oAct.HostID.ToString();
-            if (oPartner.FillDataAsync())
+            if (oPartner.FillData())
             {
                 cboOwner.DataSource = new DataView(oPartner.MainTable);
                 cboOwner.ValueMember = oPartner.ColumnID;
@@ -353,7 +353,7 @@ namespace Logistics
         private bool cboGoodsState_Restore()
         {
             oGoodState.ClearError();
-            if (oGoodState.FillDataAsync())
+            if (oGoodState.FillData())
             {
                 cboGoodsState.DataSource = new DataView(oGoodState.MainTable);
                 cboGoodsState.ValueMember = oGoodState.ColumnID;
@@ -630,7 +630,7 @@ namespace Logistics
 					}
 		
 					oGood.PackingID = _SelectedPackingID;
-					oGood.FillDataAsync();
+					oGood.FillData();
 					// выбранный товар
 					DataRow rg = oGood.MainTable.Rows[0];
 					// добавляем новую строку для выбранного товара

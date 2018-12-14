@@ -153,7 +153,7 @@ namespace LogBizObjects
 		/// <summary>
 		/// получение полного списка зон в MainTable
 		/// </summary>
-		public override bool FillDataAsync()
+		public override bool FillData()
 		{
 			return (FillDataFull(false)); 
 		}

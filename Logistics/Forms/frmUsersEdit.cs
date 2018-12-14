@@ -70,7 +70,7 @@ namespace Logistics
 			if (bResult)
 			{
 				oUser.ID = ID;
-				oUser.FillDataAsync();
+				oUser.FillData();
 				if (oUser.ErrorNumber != 0 || oUser.MainTable == null)
 				{
 					//RFMMessage.MessageBoxError("Ошибка при получении данных о пользователе...");
@@ -257,7 +257,7 @@ namespace Logistics
 		{
 			cboEmployee.DataSource = null;
 			oEmployee.ClearError();
-			if (oEmployee.FillDataAsync())
+			if (oEmployee.FillData())
 			{
 				cboEmployee.ValueMember = oEmployee.ColumnID;
 				cboEmployee.DisplayMember = oEmployee.ColumnName;

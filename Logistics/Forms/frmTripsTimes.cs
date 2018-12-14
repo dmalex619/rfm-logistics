@@ -50,7 +50,7 @@ namespace Logistics
 			bool bResult = true;
 
 			oTrip.ID = nTripID;
-			oTrip.FillDataAsync();
+			oTrip.FillData();
 			if (oTrip.ErrorNumber != 0 || oTrip.MainTable == null)
 			{
 				bResult = false;

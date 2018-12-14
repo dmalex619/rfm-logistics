@@ -195,7 +195,7 @@ namespace Logistics
 				ucSelectRecordID_GoodsBrands.txtData.Text = sSelectedGoodsBrandsNames;
 			}
 
-			oHost.FillDataAsync();
+			oHost.FillData();
 			if (nHostID.HasValue)
 			{
 				DataRow rh = oHost.MainTable.Rows.Find(nHostID);
@@ -282,7 +282,7 @@ namespace Logistics
 
 			grdData.DataSource = null;
 
-			oGoods.FillDataAsync();
+			oGoods.FillData();
 
 			if ((chkWeightNot.Checked) || (chkWeight.Checked))
 			{

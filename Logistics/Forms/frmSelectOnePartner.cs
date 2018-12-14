@@ -123,7 +123,7 @@ namespace Logistics
 
 			oPartnerCur = new Partner();
 
-			oHost.FillDataAsync();
+			oHost.FillData();
 			if (nHostID.HasValue)
 			{
 				DataRow rh = oHost.MainTable.Rows.Find(nHostID);
@@ -235,7 +235,7 @@ namespace Logistics
 
 			dgvData.GetGridState();
 
-			oPartnerList.FillDataAsync();
+			oPartnerList.FillData();
 			dgvData.Restore(oPartnerList.MainTable);
 			tmrRestore.Enabled = true;
 			RFMCursorWait.LockWindowUpdate(IntPtr.Zero);

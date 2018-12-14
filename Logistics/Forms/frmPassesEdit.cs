@@ -69,7 +69,7 @@ namespace Logistics
 			if (bResult)
 			{
 				oPass.ID = nPassID;
-				oPass.FillDataAsync();
+				oPass.FillData();
 				if (oPass.ErrorNumber != 0 || oPass.MainTable == null)
 				{
 					bResult = false;
@@ -302,7 +302,7 @@ namespace Logistics
 			cboPartner.DataSource = null;
 			oPartner.ClearError();
 			oPartner.FilterActual = true;
-			if (oPartner.FillDataAsync())
+			if (oPartner.FillData())
 			{
 				cboPartner.DataSource = new DataView(oPartner.MainTable);
 				cboPartner.ValueMember = oPartner.ColumnID;
@@ -318,7 +318,7 @@ namespace Logistics
 			oCarrierPartner.ClearError();
 			oCarrierPartner.FilterActual = true; 
 			oCarrierPartner.FilterIsTransport = true;
-			if (oCarrierPartner.FillDataAsync())
+			if (oCarrierPartner.FillData())
 			{
 				cboCarrierPartner.DataSource = new DataView(oCarrierPartner.MainTable);
 				cboCarrierPartner.ValueMember = oCarrierPartner.ColumnID;
@@ -338,7 +338,7 @@ namespace Logistics
 			Pass oPassTemp = new Pass();
 			oPassTemp.FilterDateEnd = DateTime.Now.Date.AddMonths(-1);
 			oPassTemp.FilterDateEnd = DateTime.Now.Date;
-			oPassTemp.FillDataAsync();
+			oPassTemp.FillData();
 			if (oPassTemp.ErrorNumber != 0 || oPassTemp.MainTable == null)
 				return;
 			if (oPassTemp.MainTable.Rows.Count == 0)
@@ -451,7 +451,7 @@ namespace Logistics
 			// ранее введеные значения 
 			Pass oPassTemp = new Pass();
 			oPass.FilterDateBeg = dtpDatePass.Value.Date.AddMonths(-12);
-			oPassTemp.FillDataAsync();
+			oPassTemp.FillData();
 			if (oPassTemp.ErrorNumber != 0 || oPassTemp.MainTable == null)
 				return;
 			if (oPassTemp.MainTable.Rows.Count == 0)

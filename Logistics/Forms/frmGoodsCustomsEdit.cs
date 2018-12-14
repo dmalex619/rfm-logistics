@@ -171,7 +171,7 @@ namespace Logistics
 				if (_SelectedPackingsIDList == null || !_SelectedPackingsIDList.Contains(","))
 					return;
 				oGoodTemp.PackingsIDList = "," + _SelectedPackingsIDList;
-				oGoodTemp.FillDataAsync();
+				oGoodTemp.FillData();
 				if (oGoodTemp.ErrorNumber != 0 || oGoodTemp.MainTable == null || oGoodTemp.MainTable.Rows.Count == 0)
 					return;
 			}
