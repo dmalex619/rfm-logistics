@@ -28,13 +28,13 @@ namespace Logistics
 		/// </summary>
 		private void InitializeComponent()
 		{
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnHelp = new RFMBaseClasses.RFMButton();
             this.btnExit = new RFMBaseClasses.RFMButton();
             this.pnlData = new RFMBaseClasses.RFMPanel();
@@ -67,6 +67,7 @@ namespace Logistics
             this.lblCopies = new RFMBaseClasses.RFMLabel();
             this.pnlSelectConditions = new RFMBaseClasses.RFMPanel();
             this.pnlDeliveryNeed = new RFMBaseClasses.RFMPanel();
+            this.optTransportBill_Plus1 = new RFMBaseClasses.RFMRadioButton();
             this.optPrintTTNOnly = new RFMBaseClasses.RFMRadioButton();
             this.optPrintTTNandTransportBill = new RFMBaseClasses.RFMRadioButton();
             this.optPrintTransportBillOnly = new RFMBaseClasses.RFMRadioButton();
@@ -75,7 +76,6 @@ namespace Logistics
             this.lblShipperInfo = new RFMBaseClasses.RFMLabel();
             this.lblPointCharge = new RFMBaseClasses.RFMLabel();
             this.txtPointCharge = new RFMBaseClasses.RFMTextBox();
-            this.optTransportBill_1 = new RFMBaseClasses.RFMRadioButton();
             this.pnlData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCopies)).BeginInit();
@@ -129,14 +129,14 @@ namespace Logistics
             this.grdData.BackgroundColor = System.Drawing.SystemColors.Window;
             this.grdData.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.grdData.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grdData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.grdData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.grcConsigneeInfo,
@@ -300,8 +300,8 @@ namespace Logistics
             // 
             this.grcDateOutput.AgrType = RFMBaseClasses.EnumAgregate.None;
             this.grcDateOutput.DataPropertyName = "DateOutput";
-            dataGridViewCellStyle2.Format = "dd.MM.yyyy";
-            this.grcDateOutput.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle9.Format = "dd.MM.yyyy";
+            this.grcDateOutput.DefaultCellStyle = dataGridViewCellStyle9;
             this.grcDateOutput.HeaderText = "Дата доставки";
             this.grcDateOutput.Name = "grcDateOutput";
             this.grcDateOutput.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
@@ -341,9 +341,9 @@ namespace Logistics
             // 
             this.grcSBoxes.AgrType = RFMBaseClasses.EnumAgregate.None;
             this.grcSBoxes.DataPropertyName = "SBoxes";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle3.Format = "#####0";
-            this.grcSBoxes.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle10.Format = "#####0";
+            this.grcSBoxes.DefaultCellStyle = dataGridViewCellStyle10;
             this.grcSBoxes.HeaderText = "Мест";
             this.grcSBoxes.Name = "grcSBoxes";
             this.grcSBoxes.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
@@ -353,9 +353,9 @@ namespace Logistics
             // 
             this.grcSBrutto.AgrType = RFMBaseClasses.EnumAgregate.None;
             this.grcSBrutto.DataPropertyName = "SBrutto";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle4.Format = "#####0.000";
-            this.grcSBrutto.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle11.Format = "#####0.000";
+            this.grcSBrutto.DefaultCellStyle = dataGridViewCellStyle11;
             this.grcSBrutto.HeaderText = "Брутто";
             this.grcSBrutto.Name = "grcSBrutto";
             this.grcSBrutto.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
@@ -365,9 +365,9 @@ namespace Logistics
             // 
             this.grcSNetto.AgrType = RFMBaseClasses.EnumAgregate.None;
             this.grcSNetto.DataPropertyName = "SNetto";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle5.Format = "#####0.000";
-            this.grcSNetto.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle12.Format = "#####0.000";
+            this.grcSNetto.DefaultCellStyle = dataGridViewCellStyle12;
             this.grcSNetto.HeaderText = "Нетто";
             this.grcSNetto.Name = "grcSNetto";
             this.grcSNetto.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
@@ -377,9 +377,9 @@ namespace Logistics
             // 
             this.grcSAmount.AgrType = RFMBaseClasses.EnumAgregate.None;
             this.grcSAmount.DataPropertyName = "SAmount";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle6.Format = "########0.00";
-            this.grcSAmount.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle13.Format = "########0.00";
+            this.grcSAmount.DefaultCellStyle = dataGridViewCellStyle13;
             this.grcSAmount.HeaderText = "Сумма";
             this.grcSAmount.Name = "grcSAmount";
             this.grcSAmount.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
@@ -389,9 +389,9 @@ namespace Logistics
             // 
             this.grcSVat.AgrType = RFMBaseClasses.EnumAgregate.None;
             this.grcSVat.DataPropertyName = "SVat";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle7.Format = "#######0.00";
-            this.grcSVat.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle14.Format = "#######0.00";
+            this.grcSVat.DefaultCellStyle = dataGridViewCellStyle14;
             this.grcSVat.HeaderText = "НДС";
             this.grcSVat.Name = "grcSVat";
             this.grcSVat.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
@@ -485,7 +485,7 @@ namespace Logistics
             // 
             // pnlDeliveryNeed
             // 
-            this.pnlDeliveryNeed.Controls.Add(this.optTransportBill_1);
+            this.pnlDeliveryNeed.Controls.Add(this.optTransportBill_Plus1);
             this.pnlDeliveryNeed.Controls.Add(this.optPrintTTNOnly);
             this.pnlDeliveryNeed.Controls.Add(this.optPrintTTNandTransportBill);
             this.pnlDeliveryNeed.Controls.Add(this.optPrintTransportBillOnly);
@@ -493,6 +493,17 @@ namespace Logistics
             this.pnlDeliveryNeed.Name = "pnlDeliveryNeed";
             this.pnlDeliveryNeed.Size = new System.Drawing.Size(556, 25);
             this.pnlDeliveryNeed.TabIndex = 5;
+            // 
+            // optTransportBill_Plus1
+            // 
+            this.optTransportBill_Plus1.AutoSize = true;
+            this.optTransportBill_Plus1.Location = new System.Drawing.Point(395, 4);
+            this.optTransportBill_Plus1.Name = "optTransportBill_Plus1";
+            this.optTransportBill_Plus1.Size = new System.Drawing.Size(71, 18);
+            this.optTransportBill_Plus1.TabIndex = 3;
+            this.optTransportBill_Plus1.Text = "ТрН + 1";
+            this.ttToolTip.SetToolTip(this.optTransportBill_Plus1, "Транспортные накладные + 1 общая (через перевозчика)");
+            this.optTransportBill_Plus1.UseVisualStyleBackColor = true;
             // 
             // optPrintTTNOnly
             // 
@@ -505,17 +516,17 @@ namespace Logistics
             this.optPrintTTNOnly.TabIndex = 0;
             this.optPrintTTNOnly.TabStop = true;
             this.optPrintTTNOnly.Text = "только ТТН";
-            this.ttToolTip.SetToolTip(this.optPrintTTNOnly, "Только товарно-транспортные накладные");
+            this.ttToolTip.SetToolTip(this.optPrintTTNOnly, "Только товарно-транспортные накладные (форма № 1-Т)");
             this.optPrintTTNOnly.UseVisualStyleBackColor = true;
             // 
             // optPrintTTNandTransportBill
             // 
             this.optPrintTTNandTransportBill.AutoSize = true;
-            this.optPrintTTNandTransportBill.Location = new System.Drawing.Point(220, 4);
+            this.optPrintTTNandTransportBill.Location = new System.Drawing.Point(267, 4);
             this.optPrintTTNandTransportBill.Name = "optPrintTTNandTransportBill";
-            this.optPrintTTNandTransportBill.Size = new System.Drawing.Size(81, 18);
+            this.optPrintTTNandTransportBill.Size = new System.Drawing.Size(88, 18);
             this.optPrintTTNandTransportBill.TabIndex = 2;
-            this.optPrintTTNandTransportBill.Text = "ТТН + ТН";
+            this.optPrintTTNandTransportBill.Text = "ТТН + ТрН";
             this.ttToolTip.SetToolTip(this.optPrintTTNandTransportBill, "Товарно-транспортные и транспортные накладные");
             this.optPrintTTNandTransportBill.UseVisualStyleBackColor = true;
             // 
@@ -523,12 +534,12 @@ namespace Logistics
             // 
             this.optPrintTransportBillOnly.AutoSize = true;
             this.optPrintTransportBillOnly.IsChanged = true;
-            this.optPrintTransportBillOnly.Location = new System.Drawing.Point(116, 4);
+            this.optPrintTransportBillOnly.Location = new System.Drawing.Point(136, 4);
             this.optPrintTransportBillOnly.Name = "optPrintTransportBillOnly";
-            this.optPrintTransportBillOnly.Size = new System.Drawing.Size(84, 18);
+            this.optPrintTransportBillOnly.Size = new System.Drawing.Size(91, 18);
             this.optPrintTransportBillOnly.TabIndex = 1;
-            this.optPrintTransportBillOnly.Text = "только ТН";
-            this.ttToolTip.SetToolTip(this.optPrintTransportBillOnly, "Только транспортные накладные");
+            this.optPrintTransportBillOnly.Text = "только ТрН";
+            this.ttToolTip.SetToolTip(this.optPrintTransportBillOnly, "Только транспортные накладные (приложение № 4)");
             this.optPrintTransportBillOnly.UseVisualStyleBackColor = true;
             // 
             // lblPrintForm
@@ -593,17 +604,6 @@ namespace Logistics
             this.txtPointCharge.Size = new System.Drawing.Size(557, 22);
             this.txtPointCharge.TabIndex = 3;
             this.ttToolTip.SetToolTip(this.txtPointCharge, "Примечание по заказу");
-            // 
-            // optTransportBill_1
-            // 
-            this.optTransportBill_1.AutoSize = true;
-            this.optTransportBill_1.Location = new System.Drawing.Point(321, 4);
-            this.optTransportBill_1.Name = "optTransportBill_1";
-            this.optTransportBill_1.Size = new System.Drawing.Size(64, 18);
-            this.optTransportBill_1.TabIndex = 3;
-            this.optTransportBill_1.Text = "ТН + 1";
-            this.ttToolTip.SetToolTip(this.optTransportBill_1, "Транспортные накладные + 1 общая (через перевозчика)");
-            this.optTransportBill_1.UseVisualStyleBackColor = true;
             // 
             // frmOutputsDocumentsTTNData
             // 
@@ -681,7 +681,7 @@ namespace Logistics
         private RFMBaseClasses.RFMRadioButton optPrintTTNOnly;
         private RFMBaseClasses.RFMRadioButton optPrintTTNandTransportBill;
         private RFMBaseClasses.RFMRadioButton optPrintTransportBillOnly;
-        private RFMBaseClasses.RFMRadioButton optTransportBill_1;
+        private RFMBaseClasses.RFMRadioButton optTransportBill_Plus1;
     }
 }
 
