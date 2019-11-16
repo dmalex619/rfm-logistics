@@ -75,6 +75,7 @@ namespace Logistics
             this.lblShipperInfo = new RFMBaseClasses.RFMLabel();
             this.lblPointCharge = new RFMBaseClasses.RFMLabel();
             this.txtPointCharge = new RFMBaseClasses.RFMTextBox();
+            this.optTransportBill_1 = new RFMBaseClasses.RFMRadioButton();
             this.pnlData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCopies)).BeginInit();
@@ -107,9 +108,9 @@ namespace Logistics
             // 
             // pnlData
             // 
-            this.pnlData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlData.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnlData.Controls.Add(this.grdData);
             this.pnlData.Location = new System.Drawing.Point(4, 90);
@@ -122,9 +123,9 @@ namespace Logistics
             this.grdData.AllowUserToAddRows = false;
             this.grdData.AllowUserToDeleteRows = false;
             this.grdData.AllowUserToOrderColumns = true;
-            this.grdData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.grdData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.grdData.BackgroundColor = System.Drawing.SystemColors.Window;
             this.grdData.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.grdData.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
@@ -468,8 +469,8 @@ namespace Logistics
             // 
             // pnlSelectConditions
             // 
-            this.pnlSelectConditions.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlSelectConditions.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlSelectConditions.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnlSelectConditions.Controls.Add(this.pnlDeliveryNeed);
             this.pnlSelectConditions.Controls.Add(this.lblPrintForm);
@@ -484,6 +485,7 @@ namespace Logistics
             // 
             // pnlDeliveryNeed
             // 
+            this.pnlDeliveryNeed.Controls.Add(this.optTransportBill_1);
             this.pnlDeliveryNeed.Controls.Add(this.optPrintTTNOnly);
             this.pnlDeliveryNeed.Controls.Add(this.optPrintTTNandTransportBill);
             this.pnlDeliveryNeed.Controls.Add(this.optPrintTransportBillOnly);
@@ -503,27 +505,30 @@ namespace Logistics
             this.optPrintTTNOnly.TabIndex = 0;
             this.optPrintTTNOnly.TabStop = true;
             this.optPrintTTNOnly.Text = "только ТТН";
+            this.ttToolTip.SetToolTip(this.optPrintTTNOnly, "Только товарно-транспортные накладные");
             this.optPrintTTNOnly.UseVisualStyleBackColor = true;
             // 
             // optPrintTTNandTransportBill
             // 
             this.optPrintTTNandTransportBill.AutoSize = true;
-            this.optPrintTTNandTransportBill.Location = new System.Drawing.Point(364, 4);
+            this.optPrintTTNandTransportBill.Location = new System.Drawing.Point(220, 4);
             this.optPrintTTNandTransportBill.Name = "optPrintTTNandTransportBill";
-            this.optPrintTTNandTransportBill.Size = new System.Drawing.Size(173, 18);
+            this.optPrintTTNandTransportBill.Size = new System.Drawing.Size(81, 18);
             this.optPrintTTNandTransportBill.TabIndex = 2;
-            this.optPrintTTNandTransportBill.Text = "ТТН + трансп. накладную";
+            this.optPrintTTNandTransportBill.Text = "ТТН + ТН";
+            this.ttToolTip.SetToolTip(this.optPrintTTNandTransportBill, "Товарно-транспортные и транспортные накладные");
             this.optPrintTTNandTransportBill.UseVisualStyleBackColor = true;
             // 
             // optPrintTransportBillOnly
             // 
             this.optPrintTransportBillOnly.AutoSize = true;
             this.optPrintTransportBillOnly.IsChanged = true;
-            this.optPrintTransportBillOnly.Location = new System.Drawing.Point(144, 4);
+            this.optPrintTransportBillOnly.Location = new System.Drawing.Point(116, 4);
             this.optPrintTransportBillOnly.Name = "optPrintTransportBillOnly";
-            this.optPrintTransportBillOnly.Size = new System.Drawing.Size(176, 18);
+            this.optPrintTransportBillOnly.Size = new System.Drawing.Size(84, 18);
             this.optPrintTransportBillOnly.TabIndex = 1;
-            this.optPrintTransportBillOnly.Text = "только трансп. накладную";
+            this.optPrintTransportBillOnly.Text = "только ТН";
+            this.ttToolTip.SetToolTip(this.optPrintTransportBillOnly, "Только транспортные накладные");
             this.optPrintTransportBillOnly.UseVisualStyleBackColor = true;
             // 
             // lblPrintForm
@@ -540,8 +545,8 @@ namespace Logistics
             // 
             // txtShipperInfo
             // 
-            this.txtShipperInfo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtShipperInfo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtShipperInfo.DisabledBackColor = System.Drawing.SystemColors.Control;
             this.txtShipperInfo.DisabledForeColor = System.Drawing.SystemColors.WindowText;
             this.txtShipperInfo.Location = new System.Drawing.Point(112, 1);
@@ -578,8 +583,8 @@ namespace Logistics
             // 
             // txtPointCharge
             // 
-            this.txtPointCharge.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPointCharge.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPointCharge.DisabledBackColor = System.Drawing.SystemColors.Control;
             this.txtPointCharge.DisabledForeColor = System.Drawing.SystemColors.WindowText;
             this.txtPointCharge.Location = new System.Drawing.Point(112, 24);
@@ -588,6 +593,17 @@ namespace Logistics
             this.txtPointCharge.Size = new System.Drawing.Size(557, 22);
             this.txtPointCharge.TabIndex = 3;
             this.ttToolTip.SetToolTip(this.txtPointCharge, "Примечание по заказу");
+            // 
+            // optTransportBill_1
+            // 
+            this.optTransportBill_1.AutoSize = true;
+            this.optTransportBill_1.Location = new System.Drawing.Point(321, 4);
+            this.optTransportBill_1.Name = "optTransportBill_1";
+            this.optTransportBill_1.Size = new System.Drawing.Size(64, 18);
+            this.optTransportBill_1.TabIndex = 3;
+            this.optTransportBill_1.Text = "ТН + 1";
+            this.ttToolTip.SetToolTip(this.optTransportBill_1, "Транспортные накладные + 1 общая (через перевозчика)");
+            this.optTransportBill_1.UseVisualStyleBackColor = true;
             // 
             // frmOutputsDocumentsTTNData
             // 
@@ -665,7 +681,7 @@ namespace Logistics
         private RFMBaseClasses.RFMRadioButton optPrintTTNOnly;
         private RFMBaseClasses.RFMRadioButton optPrintTTNandTransportBill;
         private RFMBaseClasses.RFMRadioButton optPrintTransportBillOnly;
-
-	}
+        private RFMBaseClasses.RFMRadioButton optTransportBill_1;
+    }
 }
 
