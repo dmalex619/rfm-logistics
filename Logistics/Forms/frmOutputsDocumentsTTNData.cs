@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -38,7 +38,7 @@ namespace Logistics
 
 		public frmOutputsDocumentsTTNData(OutputDocument _oOutputDocument)
 		{
-			if (_oOutputDocument == null || 
+			if (_oOutputDocument == null ||
 				(!_oOutputDocument.ID.HasValue && _oOutputDocument.IDList == null))
 			{
 				DialogResult = DialogResult.No;
@@ -80,7 +80,7 @@ namespace Logistics
 					{
 						if (dt == null || dt.Rows.Count == 0)
 						{
-							RFMMessage.MessageBoxInfo("Нет расходных документов...");
+							RFMMessage.MessageBoxInfo("РќРµС‚ СЂР°СЃС…РѕРґРЅС‹С… РґРѕРєСѓРјРµРЅС‚РѕРІ...");
 							bOK = false;
 						}
 					}
@@ -92,7 +92,7 @@ namespace Logistics
 					{
 						if (dt == null || dt.Rows.Count == 0)
 						{
-							RFMMessage.MessageBoxInfo("Нет расходов...");
+							RFMMessage.MessageBoxInfo("РќРµС‚ СЂР°СЃС…РѕРґРѕРІ...");
 							bOK = false;
 						}
 					}
@@ -101,7 +101,7 @@ namespace Logistics
 
 			if (bOK)
 			{
-				grdData.IsCheckerShow = true; 
+				grdData.IsCheckerShow = true;
 				grdData_Restore();
 			}
 			else
@@ -254,12 +254,12 @@ namespace Logistics
 		private void btnPrint_Click(object sender, EventArgs e)
 		{
 			if (grdData.Rows.Count == 0 || grdData.CurrentRow == null)
-				return; 
+				return;
 
 			DataTable dtRep = CopyTable(dt, "dtRep", "IsMarked = true", "");
 			if (dtRep.Rows.Count == 0)
 			{
-				// текущая запись
+				// С‚РµРєСѓС‰Р°СЏ Р·Р°РїРёСЃСЊ
 				DataRow dr = ((DataRowView)((DataGridViewRow)grdData.Rows[grdData.CurrentRow.Index]).DataBoundItem).Row;
 				DataTable dtRepTemp = CopyTable(dt, "dtRep", "IDList = '" + dr["IDList"].ToString() + "'", "");
 				dtRep.Merge(dtRepTemp);
@@ -270,121 +270,121 @@ namespace Logistics
 				//r["ShipperInfo"] = txtShipperInfo.Text;
 				r["PointCharge"] = txtPointCharge.Text;
 
-                // Убираем лишние пробелы
-                r["BillNumbersList"] = r["BillNumbersList"].ToString().Trim();
-                r["OrderNumbersList"] = r["OrderNumbersList"].ToString().Trim();
-                r["FactureNumbersList"] = r["FactureNumbersList"].ToString().Trim();
-            }
+				// РЈР±РёСЂР°РµРј Р»РёС€РЅРёРµ РїСЂРѕР±РµР»С‹
+				r["BillNumbersList"] = r["BillNumbersList"].ToString().Trim();
+				r["OrderNumbersList"] = r["OrderNumbersList"].ToString().Trim();
+				r["FactureNumbersList"] = r["FactureNumbersList"].ToString().Trim();
+			}
 
-            // 2019-11-19
-            // Формируем общую транспортную накладную на перевозчика
-            // Заказ от БО, письма Пакина от 28.10 и 14.11 2019
-            if (optTransportBill_Plus1.Checked)
-            {
-                // Новые данные: Организация-перевозчик, наименование товаров, адрес промежуточного склада
-                string newOrganizationInfo = "ООО \"ПродТранс\", ИНН 7724726640, " +
-                    "143007, Московская обл., г.Одинцово, ул. Советская, дом 9, оф. 4, тел. +7(495)980-08-91, " +
-                    "р/с 40702809000001634487, в банке ВТБ 24 (ПАО), БИК 044525716, к/с 30101810100000000716";
-                string newWarehouseAddress = "Московская обл., Раменский р-н, пос.Родники, ул. Трудовая, дом 10";
-                string newGoodName = dtRep.Rows[0]["GoodName"].ToString();
+			// 2019-11-19
+			// Р¤РѕСЂРјРёСЂСѓРµРј РѕР±С‰СѓСЋ С‚СЂР°РЅСЃРїРѕСЂС‚РЅСѓСЋ РЅР°РєР»Р°РґРЅСѓСЋ РЅР° РїРµСЂРµРІРѕР·С‡РёРєР°
+			// Р—Р°РєР°Р· РѕС‚ Р‘Рћ, РїРёСЃСЊРјР° РџР°РєРёРЅР° РѕС‚ 28.10 Рё 14.11 2019
+			if (optTransportBill_Plus1.Checked)
+			{
+				// РќРѕРІС‹Рµ РґР°РЅРЅС‹Рµ: РћСЂРіР°РЅРёР·Р°С†РёСЏ-РїРµСЂРµРІРѕР·С‡РёРє, РЅР°РёРјРµРЅРѕРІР°РЅРёРµ С‚РѕРІР°СЂРѕРІ, Р°РґСЂРµСЃ РїСЂРѕРјРµР¶СѓС‚РѕС‡РЅРѕРіРѕ СЃРєР»Р°РґР°
+				string newOrganizationInfo = "РћРћРћ \"РџСЂРѕРґРўСЂР°РЅСЃ\", РРќРќ 7724726640, " +
+					"143007, РњРѕСЃРєРѕРІСЃРєР°СЏ РѕР±Р»., Рі.РћРґРёРЅС†РѕРІРѕ, СѓР». РЎРѕРІРµС‚СЃРєР°СЏ, РґРѕРј 9, РѕС„. 4, С‚РµР». +7(495)980-08-91, " +
+					"СЂ/СЃ 40702809000001634487, РІ Р±Р°РЅРєРµ Р’РўР‘ 24 (РџРђРћ), Р‘РРљ 044525716, Рє/СЃ 30101810100000000716";
+				string newWarehouseAddress = "РњРѕСЃРєРѕРІСЃРєР°СЏ РѕР±Р»., Р Р°РјРµРЅСЃРєРёР№ СЂ-РЅ, РїРѕСЃ.Р РѕРґРЅРёРєРё, СѓР». РўСЂСѓРґРѕРІР°СЏ, РґРѕРј 10";
+				string newGoodName = dtRep.Rows[0]["GoodName"].ToString();
 
-                // Создаем новую пустую таблицу для суммарных записей
-                DataTable dtSummary = CopyTable(dtRep, "dtSummary", "ID = 0", "");
+				// РЎРѕР·РґР°РµРј РЅРѕРІСѓСЋ РїСѓСЃС‚СѓСЋ С‚Р°Р±Р»РёС†Сѓ РґР»СЏ СЃСѓРјРјР°СЂРЅС‹С… Р·Р°РїРёСЃРµР№
+				DataTable dtSummary = CopyTable(dtRep, "dtSummary", "ID = 0", "");
 
-                // Сортируем исходную таблицу
-                DataView dv = dtRep.DefaultView;
-                dv.Sort = "ShipperInfo";
-                dtRep = dv.ToTable();
+				// РЎРѕСЂС‚РёСЂСѓРµРј РёСЃС…РѕРґРЅСѓСЋ С‚Р°Р±Р»РёС†Сѓ
+				DataView dv = dtRep.DefaultView;
+				dv.Sort = "ShipperInfo";
+				dtRep = dv.ToTable();
 
-                // Переменные для подсчета суммирующих значений
-                string oldShipperInfo = "*";
-                decimal sBoxes = 0, sNetto = 0, sBrutto = 0, sAmount = 0, sVAT = 0;
-                int rCount = -1;
+				// РџРµСЂРµРјРµРЅРЅС‹Рµ РґР»СЏ РїРѕРґСЃС‡РµС‚Р° СЃСѓРјРјРёСЂСѓСЋС‰РёС… Р·РЅР°С‡РµРЅРёР№
+				string oldShipperInfo = "*";
+				decimal sBoxes = 0, sNetto = 0, sBrutto = 0, sAmount = 0, sVAT = 0;
+				int rCount = -1;
 
-                // Цикл по старой таблице для суммирования значений
-                foreach (DataRow r in dtRep.Rows)
-                {
-                    // Новая организация-владелец товара?
-                    if (oldShipperInfo != r["ShipperInfo"].ToString())
-                    {
-                        oldShipperInfo = r["ShipperInfo"].ToString();
-                        rCount++;
-                        sBoxes = sNetto = sBrutto = sAmount = sVAT = 0;
+				// Р¦РёРєР» РїРѕ СЃС‚Р°СЂРѕР№ С‚Р°Р±Р»РёС†Рµ РґР»СЏ СЃСѓРјРјРёСЂРѕРІР°РЅРёСЏ Р·РЅР°С‡РµРЅРёР№
+				foreach (DataRow r in dtRep.Rows)
+				{
+					// РќРѕРІР°СЏ РѕСЂРіР°РЅРёР·Р°С†РёСЏ-РІР»Р°РґРµР»РµС† С‚РѕРІР°СЂР°?
+					if (oldShipperInfo != r["ShipperInfo"].ToString())
+					{
+						oldShipperInfo = r["ShipperInfo"].ToString();
+						rCount++;
+						sBoxes = sNetto = sBrutto = sAmount = sVAT = 0;
 
-                        // Создаем строку для новой таблицы
-                        DataRow newRow = dtSummary.NewRow();
+						// РЎРѕР·РґР°РµРј СЃС‚СЂРѕРєСѓ РґР»СЏ РЅРѕРІРѕР№ С‚Р°Р±Р»РёС†С‹
+						DataRow newRow = dtSummary.NewRow();
 
-                        // Копируем все поля старой таблицы в новую
-                        for (int i = 0; i < dtRep.Columns.Count; i++)
-                            newRow[i] = r[i];
+						// РљРѕРїРёСЂСѓРµРј РІСЃРµ РїРѕР»СЏ СЃС‚Р°СЂРѕР№ С‚Р°Р±Р»РёС†С‹ РІ РЅРѕРІСѓСЋ
+						for (int i = 0; i < dtRep.Columns.Count; i++)
+							newRow[i] = r[i];
 
-                        newRow["IDList"] = (rCount + 1).ToString();
-                        newRow["ID"] = rCount + 1;
+						newRow["IDList"] = (rCount + 1).ToString();
+						newRow["ID"] = rCount + 1;
 
-                        newRow["ConsigneeInfo"] = newOrganizationInfo;
-                        newRow["PayerTransportInfo"] = oldShipperInfo;
-                        //newRow["PayerTransportInfo"] = newRow["OrganizationInfo"];
-                        newRow["PointDisCharge"] = newWarehouseAddress;
-                        newRow["GoodName"] = newGoodName;
+						newRow["ConsigneeInfo"] = newOrganizationInfo;
+						newRow["PayerTransportInfo"] = oldShipperInfo;
+						//newRow["PayerTransportInfo"] = newRow["OrganizationInfo"];
+						newRow["PointDisCharge"] = newWarehouseAddress;
+						newRow["GoodName"] = newGoodName;
 
-                        newRow["BillNumbersList"] = "";
-                        newRow["OrderNumbersList"] = "";
-                        newRow["FactureNumbersList"] = "";
+						newRow["BillNumbersList"] = "";
+						newRow["OrderNumbersList"] = "";
+						newRow["FactureNumbersList"] = "";
 
-                        // Добавляем строку в новую таблицу
-                        dtSummary.Rows.Add(newRow);
-                    }
+						// Р”РѕР±Р°РІР»СЏРµРј СЃС‚СЂРѕРєСѓ РІ РЅРѕРІСѓСЋ С‚Р°Р±Р»РёС†Сѓ
+						dtSummary.Rows.Add(newRow);
+					}
 
-                    // Подсчитываем суммовые данные
-                    sBoxes += (decimal)r["SBoxes"];
-                    sNetto += (decimal)r["SNetto"];
-                    sBrutto += (decimal)r["SBrutto"];
-                    sAmount += (decimal)r["SAmount"];
-                    sVAT += (decimal)r["SVAT"];
+					// РџРѕРґСЃС‡РёС‚С‹РІР°РµРј СЃСѓРјРјРѕРІС‹Рµ РґР°РЅРЅС‹Рµ
+					sBoxes += (decimal)r["SBoxes"];
+					sNetto += (decimal)r["SNetto"];
+					sBrutto += (decimal)r["SBrutto"];
+					sAmount += (decimal)r["SAmount"];
+					sVAT += (decimal)r["SVAT"];
 
-                    // Заполняем их в новой таблице
-                    DataRow nr = dtSummary.Rows[rCount];
+					// Р—Р°РїРѕР»РЅСЏРµРј РёС… РІ РЅРѕРІРѕР№ С‚Р°Р±Р»РёС†Рµ
+					DataRow nr = dtSummary.Rows[rCount];
 
-                    nr["SBoxes"] = sBoxes;
-                    nr["SNetto"] = sNetto;
-                    nr["SBrutto"] = sBrutto;
-                    nr["SAmount"] = sAmount;
-                    nr["SVAT"] = sVAT;
+					nr["SBoxes"] = sBoxes;
+					nr["SNetto"] = sNetto;
+					nr["SBrutto"] = sBrutto;
+					nr["SAmount"] = sAmount;
+					nr["SVAT"] = sVAT;
 
-                    nr["BillNumbersList"] += (nr["BillNumbersList"].ToString().Length == 0 ? "" : ",") + 
-                        r["BillNumbersList"].ToString().Trim();
-                    nr["OrderNumbersList"] += (nr["OrderNumbersList"].ToString().Length == 0 ? "" : ",") +
-                        r["OrderNumbersList"].ToString().Trim();
-                    nr["FactureNumbersList"] += (nr["FactureNumbersList"].ToString().Length == 0 ? "" : ",") +
-                        r["FactureNumbersList"].ToString().Trim();
+					nr["BillNumbersList"] += (nr["BillNumbersList"].ToString().Length == 0 ? "" : ",") +
+						r["BillNumbersList"].ToString().Trim();
+					nr["OrderNumbersList"] += (nr["OrderNumbersList"].ToString().Length == 0 ? "" : ",") +
+						r["OrderNumbersList"].ToString().Trim();
+					nr["FactureNumbersList"] += (nr["FactureNumbersList"].ToString().Length == 0 ? "" : ",") +
+						r["FactureNumbersList"].ToString().Trim();
 
-                    // Меняем данные в старой таблице
-                    r["OrganizationInfo"] = newOrganizationInfo;
-                    r["ShipperInfo"] = newOrganizationInfo;
-                    r["PointCharge"] = newWarehouseAddress;
-                }
+					// РњРµРЅСЏРµРј РґР°РЅРЅС‹Рµ РІ СЃС‚Р°СЂРѕР№ С‚Р°Р±Р»РёС†Рµ
+					r["OrganizationInfo"] = newOrganizationInfo;
+					r["ShipperInfo"] = newOrganizationInfo;
+					r["PointCharge"] = newWarehouseAddress;
+				}
 
-                // Отображаем форму печати
-                ActiveReport3 repTransportBill_Plus1 = new TransportBill();
-                ActiveReport3 repTransportBill_All = new TransportBill();
-                StartForm(new frmActiveReport(
-                    new DataTable[] { dtSummary, dtRep },
-                    new ActiveReport3[] { repTransportBill_Plus1, repTransportBill_All },
-                    (int)numCopies.Value));
-            }
-            else
-            {
-                if (optPrintTTNOnly.Checked || optPrintTTNandTransportBill.Checked)
-                {
-                    ActiveReport3 repTTN = new TtnOneLine();
-                    StartForm(new frmActiveReport(dtRep, repTTN, (int)numCopies.Value));
-                }
-                if (optPrintTransportBillOnly.Checked || optPrintTTNandTransportBill.Checked)
-                {
-                    ActiveReport3 repTransportBill = new TransportBill();
-                    StartForm(new frmActiveReport(dtRep, repTransportBill, (int)numCopies.Value));
-                }
-            }
-        }
-    }
+				// РћС‚РѕР±СЂР°Р¶Р°РµРј С„РѕСЂРјСѓ РїРµС‡Р°С‚Рё
+				ActiveReport3 repTransportBill_Plus1 = new TransportBill();
+				ActiveReport3 repTransportBill_All = new TransportBill();
+				StartForm(new frmActiveReport(
+					new DataTable[] { dtSummary, dtRep },
+					new ActiveReport3[] { repTransportBill_Plus1, repTransportBill_All },
+					(int)numCopies.Value));
+			}
+			else
+			{
+				if (optPrintTTNOnly.Checked || optPrintTTNandTransportBill.Checked)
+				{
+					ActiveReport3 repTTN = new TtnOneLine();
+					StartForm(new frmActiveReport(dtRep, repTTN, (int)numCopies.Value));
+				}
+				if (optPrintTransportBillOnly.Checked || optPrintTTNandTransportBill.Checked)
+				{
+					ActiveReport3 repTransportBill = new TransportBill();
+					StartForm(new frmActiveReport(dtRep, repTransportBill, (int)numCopies.Value));
+				}
+			}
+		}
+	}
 }
