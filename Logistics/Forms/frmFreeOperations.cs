@@ -1,13 +1,9 @@
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
-
-using RFMBaseClasses;
 using LogBizObjects;
+using RFMBaseClasses;
 using RFMPublic;
 
 namespace Logistics
@@ -28,8 +24,6 @@ namespace Logistics
 
 		private Host oHost;
 		private int? nUserHostID = null;
-
-		private decimal nVatVeterinaryPayment = 18;
 
 		// дл€ фильтров
 		public string _SelectedIDList;
@@ -1867,11 +1861,14 @@ namespace Logistics
 				return;
 			}
 
-			LogService.OutputDocumentTransportAct_Print(oOutputDocumentPrint, 18, this);
+			Setting oVat = new Setting();
+			if (decimal.TryParse(oVat.FillVariable("gnVAT1"), out decimal nVatTransportPayment) == false)
+				nVatTransportPayment = 20;
+			LogService.OutputDocumentTransportAct_Print(oOutputDocumentPrint, nVatTransportPayment, this);
 
 			if (oOutputDocumentPrint.PF_FactureNeed)
 			{
-				LogService.OutputDocumentTransportFacture_Print(oOutputDocumentPrint, 18, this);
+				LogService.OutputDocumentTransportFacture_Print(oOutputDocumentPrint, nVatTransportPayment, this);
 			}
 		}
 
@@ -1893,21 +1890,9 @@ namespace Logistics
 				return;
 			}
 
-			/*
-			if (!oOutputDocumentPrint.PF_BillNeed && !oOutputDocumentPrint.PF_FactureNeed)
-			{
-				RFMMessage.MessageBoxInfo("ќформление документов (накладной и счета-фактуры) не требуетс€...");
-				return;
-			} 
-			if (oOutputDocumentPrint.PF_BillNeed)
-			{
-				LogService.OutputDocumentVeterinaryPayment_Print(oOutputDocumentPrint, "BILL", 18, this);
-			}
-			if (oOutputDocumentPrint.PF_FactureNeed)
-			{
-				LogService.OutputDocumentVeterinaryPayment_Print(oOutputDocumentPrint, "FACTURE", 18, this);
-			}
-			*/ 
+			Setting oVat = new Setting();
+			if (decimal.TryParse(oVat.FillVariable("gnVAT1"), out decimal nVatVeterinaryPayment) == false)
+				nVatVeterinaryPayment = 20;
 			LogService.OutputDocumentVeterinaryPayment_Print(oOutputDocumentPrint, "BILL", nVatVeterinaryPayment, this);
 			LogService.OutputDocumentVeterinaryPayment_Print(oOutputDocumentPrint, "FACTURE", nVatVeterinaryPayment, this);
 		}

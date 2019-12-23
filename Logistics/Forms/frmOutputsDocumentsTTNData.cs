@@ -1,17 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
-using System.IO;
 
 using DataDynamics.ActiveReports;
 
-using RFMBaseClasses;
-using RFMPublic;
 using LogBizObjects;
+
+using RFMBaseClasses;
+
+using RFMPublic;
 
 namespace Logistics
 {
@@ -282,11 +279,17 @@ namespace Logistics
 			if (optTransportBill_Plus1.Checked)
 			{
 				// Новые данные: Организация-перевозчик, наименование товаров, адрес промежуточного склада
+				Setting oProdTrans = new Setting();
+				string newOrganizationInfo = oProdTrans.FillVariable("BoCarrier");
+				string newWarehouseAddress = oProdTrans.FillVariable("BoAddress");
+				string newGoodName = oProdTrans.FillVariable("BoGoodName");
+				/*
 				string newOrganizationInfo = "ООО \"ПродТранс\", ИНН 7724726640, " +
 					"143007, Московская обл., г.Одинцово, ул. Советская, дом 9, оф. 4, тел. +7(495)980-08-91, " +
 					"р/с 40702809000001634487, в банке ВТБ 24 (ПАО), БИК 044525716, к/с 30101810100000000716";
 				string newWarehouseAddress = "Московская обл., Раменский р-н, пос.Родники, ул. Трудовая, дом 10";
 				string newGoodName = dtRep.Rows[0]["GoodName"].ToString();
+				*/
 
 				// Создаем новую пустую таблицу для суммарных записей
 				DataTable dtSummary = CopyTable(dtRep, "dtSummary", "ID = 0", "");

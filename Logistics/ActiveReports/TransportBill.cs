@@ -26,19 +26,19 @@ namespace Logistics
             txtGoodName.Text = sGoodName.Substring(0, 1).ToUpper() + sGoodName.Substring(1, sGoodName.Length - 1);
 
             int nBoxes = Convert.ToInt32(Fields["SBoxes"].Value);
-            txtBoxesWords.Text = RFMPublic.RFMUtilities.ValToTxt(nBoxes) + " êîð.";
+            txtBoxesWords.Text = RFMPublic.RFMUtilities.ValToTxt(nBoxes) + " ÐºÐ¾Ñ€.";
 
-            txtNettoBrutto.Text = "Âåñ íåòòî - " + Convert.ToInt32(Fields["SNetto"].Value).ToString() +
-                " êã, âåñ áðóòòî - " + Convert.ToInt32(Fields["SBrutto"].Value).ToString() + " êã";
+            txtNettoBrutto.Text = "Ð’ÐµÑ Ð½ÐµÑ‚Ñ‚Ð¾ - " + Convert.ToInt32(Fields["SNetto"].Value).ToString() +
+                " ÐºÐ³, Ð²ÐµÑ Ð±Ñ€ÑƒÑ‚Ñ‚Ð¾ - " + Convert.ToInt32(Fields["SBrutto"].Value).ToString() + " ÐºÐ³";
 
-            txtChargeData.Text = txtBoxesWords.Text + ", " + txtNettoBrutto.Text.ToLower() + " íà ìåñòå ïîãðóçêè";
-            txtDischargeData.Text = txtBoxesWords.Text + ", " + txtNettoBrutto.Text.ToLower() + " íà ìåñòå âûãðóçêè";
+            txtChargeData.Text = txtBoxesWords.Text + ", " + txtNettoBrutto.Text.ToLower() + " Ð½Ð° Ð¼ÐµÑÑ‚Ðµ Ð¿Ð¾Ð³Ñ€ÑƒÐ·ÐºÐ¸";
+            txtDischargeData.Text = txtBoxesWords.Text + ", " + txtNettoBrutto.Text.ToLower() + " Ð½Ð° Ð¼ÐµÑÑ‚Ðµ Ð²Ñ‹Ð³Ñ€ÑƒÐ·ÐºÐ¸";
 
             txtDriverName.Text = Fields["DriverName"].Value.ToString() + 
-                (Fields["DriverPhone"].Value.ToString().Length > 0 ? ", ìîá.òåë. " + Fields["DriverPhone"].Value.ToString().ToString() : "");
+                (Fields["DriverPhone"].Value.ToString().Length > 0 ? ", Ð¼Ð¾Ð±.Ñ‚ÐµÐ». " + Fields["DriverPhone"].Value.ToString().ToString() : "");
             txtCarInfo.Text = Fields["CarTypeName"].Value.ToString() + ", " +
                 Fields["CarNumber"].Value.ToString() +
-                (Fields["TrailerNumber"].Value.ToString().Length > 0 ? ", ïðèöåï " + Fields["TrailerNumber"].Value.ToString() : "");
+                (Fields["TrailerNumber"].Value.ToString().Length > 0 ? ", Ð¿Ñ€Ð¸Ñ†ÐµÐ¿ " + Fields["TrailerNumber"].Value.ToString() : "");
 
             txtCurrentUserName1.Text = txtCurrentUserName2.Text = 
                 ((RFMBaseClasses.RFMFormMain)System.Windows.Forms.Application.OpenForms[0]).UserInfo.UserAlias;

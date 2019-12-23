@@ -217,7 +217,7 @@ namespace Logistics
             this.lblGroupHeader101.Name = "lblGroupHeader101";
             this.lblGroupHeader101.Style = "color: Black; ddo-char-set: 204; text-align: center; font-weight: bold; font-size" +
                 ": 12pt; font-family: Tahoma; white-space: nowrap; ";
-            this.lblGroupHeader101.Text = "АКТ";
+            this.lblGroupHeader101.Text = "РђРљРў";
             this.lblGroupHeader101.Top = 0.9055119F;
             this.lblGroupHeader101.Width = 1.732284F;
             // 
@@ -238,7 +238,7 @@ namespace Logistics
             this.label10.Name = "label10";
             this.label10.Style = "color: Black; ddo-char-set: 1; text-align: center; font-weight: normal; font-size" +
                 ": 12pt; font-family: Tahoma; white-space: nowrap; ";
-            this.label10.Text = "СДАЧИ - ПРИЕМКИ ВЫПОЛНЕННЫХ РАБОТ";
+            this.label10.Text = "РЎР”РђР§Р - РџР РР•РњРљР Р’Р«РџРћР›РќР•РќРќР«РҐ Р РђР‘РћРў";
             this.label10.Top = 1.102362F;
             this.label10.Width = 4.68504F;
             // 
@@ -281,7 +281,7 @@ namespace Logistics
             this.label31.Name = "label31";
             this.label31.Style = "color: Black; ddo-char-set: 204; font-style: normal; font-size: 9.75pt; font-fami" +
                 "ly: Tahoma; white-space: nowrap; ";
-            this.label31.Text = "Приложение к накладной №";
+            this.label31.Text = "РџСЂРёР»РѕР¶РµРЅРёРµ Рє РЅР°РєР»Р°РґРЅРѕР№ в„–";
             this.label31.Top = 0.3149606F;
             this.label31.Width = 2.047244F;
             // 
@@ -560,7 +560,7 @@ namespace Logistics
             this.label1.Name = "label1";
             this.label1.Style = "color: Black; ddo-char-set: 204; font-style: normal; font-size: 9.75pt; font-fami" +
                 "ly: Tahoma; white-space: nowrap; ";
-            this.label1.Text = "в лице";
+            this.label1.Text = "РІ Р»РёС†Рµ";
             this.label1.Top = 0.6692913F;
             this.label1.Width = 0.472441F;
             // 
@@ -624,7 +624,7 @@ namespace Logistics
             this.label11.Name = "label11";
             this.label11.Style = "color: Black; ddo-char-set: 204; font-style: normal; font-size: 9.75pt; font-fami" +
                 "ly: Tahoma; white-space: nowrap; ";
-            this.label11.Text = "в лице";
+            this.label11.Text = "РІ Р»РёС†Рµ";
             this.label11.Top = 1.377953F;
             this.label11.Width = 0.511811F;
             // 
@@ -666,7 +666,7 @@ namespace Logistics
             this.label12.Name = "label12";
             this.label12.Style = "color: Black; ddo-char-set: 204; font-style: normal; font-size: 9.75pt; font-fami" +
                 "ly: Tahoma; white-space: nowrap; ";
-            this.label12.Text = "именуемого в дальнейшем \"Заказчик\", и ";
+            this.label12.Text = "РёРјРµРЅСѓРµРјРѕРіРѕ РІ РґР°Р»СЊРЅРµР№С€РµРј \"Р—Р°РєР°Р·С‡РёРє\", Рё ";
             this.label12.Top = 0.9055119F;
             this.label12.Width = 7.559055F;
             // 
@@ -687,8 +687,8 @@ namespace Logistics
             this.label2.Name = "label2";
             this.label2.Style = "color: Black; ddo-char-set: 1; font-size: 10pt; font-family: Tahoma; white-space:" +
                 " nowrap; ";
-            this.label2.Text = "именуемого в дальнейшем \"Исполнитель\", составили настоящий акт в том, что \"Исполн" +
-                "ителем\" по заявке";
+            this.label2.Text = "РёРјРµРЅСѓРµРјРѕРіРѕ РІ РґР°Р»СЊРЅРµР№С€РµРј \"РСЃРїРѕР»РЅРёС‚РµР»СЊ\", СЃРѕСЃС‚Р°РІРёР»Рё РЅР°СЃС‚РѕСЏС‰РёР№ Р°РєС‚ РІ С‚РѕРј, С‡С‚Рѕ \"РСЃРїРѕР»РЅ" +
+                "РёС‚РµР»РµРј\" РїРѕ Р·Р°СЏРІРєРµ";
             this.label2.Top = 1.614173F;
             this.label2.Width = 7.559055F;
             // 
@@ -730,7 +730,7 @@ namespace Logistics
             this.label13.Name = "label13";
             this.label13.Style = "color: Black; ddo-char-set: 1; font-size: 10pt; font-family: Tahoma; white-space:" +
                 " nowrap; ";
-            this.label13.Text = "\"Заказчика\" были выполнены автоперевозки:";
+            this.label13.Text = "\"Р—Р°РєР°Р·С‡РёРєР°\" Р±С‹Р»Рё РІС‹РїРѕР»РЅРµРЅС‹ Р°РІС‚РѕРїРµСЂРµРІРѕР·РєРё:";
             this.label13.Top = 1.850394F;
             this.label13.Width = 7.559055F;
             // 
@@ -751,7 +751,7 @@ namespace Logistics
             this.label14.Name = "label14";
             this.label14.Style = "color: Black; ddo-char-set: 1; font-size: 10pt; font-family: Tahoma; white-space:" +
                 " nowrap; ";
-            this.label14.Text = "Номер машины:";
+            this.label14.Text = "РќРѕРјРµСЂ РјР°С€РёРЅС‹:";
             this.label14.Top = 2.165354F;
             this.label14.Width = 1.417323F;
             // 
@@ -772,7 +772,7 @@ namespace Logistics
             this.label15.Name = "label15";
             this.label15.Style = "color: Black; ddo-char-set: 1; font-size: 10pt; font-family: Tahoma; white-space:" +
                 " nowrap; ";
-            this.label15.Text = "Наименование груза:";
+            this.label15.Text = "РќР°РёРјРµРЅРѕРІР°РЅРёРµ РіСЂСѓР·Р°:";
             this.label15.Top = 2.440945F;
             this.label15.Width = 1.417323F;
             // 
@@ -793,7 +793,7 @@ namespace Logistics
             this.label16.Name = "label16";
             this.label16.Style = "color: Black; ddo-char-set: 1; font-size: 10pt; font-family: Tahoma; white-space:" +
                 " nowrap; ";
-            this.label16.Text = "Дата перевозки:";
+            this.label16.Text = "Р”Р°С‚Р° РїРµСЂРµРІРѕР·РєРё:";
             this.label16.Top = 2.716536F;
             this.label16.Width = 1.417323F;
             // 
@@ -814,7 +814,7 @@ namespace Logistics
             this.label17.Name = "label17";
             this.label17.Style = "color: Black; ddo-char-set: 1; font-size: 10pt; font-family: Tahoma; white-space:" +
                 " nowrap; ";
-            this.label17.Text = "Пункт погрузки:";
+            this.label17.Text = "РџСѓРЅРєС‚ РїРѕРіСЂСѓР·РєРё:";
             this.label17.Top = 2.992126F;
             this.label17.Width = 1.417323F;
             // 
@@ -835,7 +835,7 @@ namespace Logistics
             this.label18.Name = "label18";
             this.label18.Style = "color: Black; ddo-char-set: 1; font-size: 10pt; font-family: Tahoma; white-space:" +
                 " nowrap; ";
-            this.label18.Text = "Пункт выгрузки:";
+            this.label18.Text = "РџСѓРЅРєС‚ РІС‹РіСЂСѓР·РєРё:";
             this.label18.Top = 3.267717F;
             this.label18.Width = 1.417323F;
             // 
@@ -856,7 +856,7 @@ namespace Logistics
             this.label19.Name = "label19";
             this.label19.Style = "color: Black; ddo-char-set: 1; font-size: 10pt; font-family: Tahoma; white-space:" +
                 " nowrap; ";
-            this.label19.Text = "и предъявлен к оплате счет-фактура № ";
+            this.label19.Text = "Рё РїСЂРµРґСЉСЏРІР»РµРЅ Рє РѕРїР»Р°С‚Рµ СЃС‡РµС‚-С„Р°РєС‚СѓСЂР° в„– ";
             this.label19.Top = 3.543307F;
             this.label19.Width = 2.598425F;
             // 
@@ -877,7 +877,7 @@ namespace Logistics
             this.label20.Name = "label20";
             this.label20.Style = "color: Black; ddo-char-set: 1; font-size: 10pt; font-family: Tahoma; white-space:" +
                 " nowrap; ";
-            this.label20.Text = "на сумму: ";
+            this.label20.Text = "РЅР° СЃСѓРјРјСѓ: ";
             this.label20.Top = 3.818898F;
             this.label20.Width = 1.417323F;
             // 
@@ -898,7 +898,7 @@ namespace Logistics
             this.label21.Name = "label21";
             this.label21.Style = "color: Black; ddo-char-set: 1; font-size: 10pt; font-family: Tahoma; white-space:" +
                 " nowrap; ";
-            this.label21.Text = "в том числе НДС:";
+            this.label21.Text = "РІ С‚РѕРј С‡РёСЃР»Рµ РќР”РЎ:";
             this.label21.Top = 4.094488F;
             this.label21.Width = 1.417323F;
             // 
@@ -1199,7 +1199,7 @@ namespace Logistics
             this.label22.Name = "label22";
             this.label22.Style = "color: Black; ddo-char-set: 1; font-size: 10pt; font-family: Tahoma; white-space:" +
                 " nowrap; ";
-            this.label22.Text = "Перевозки выполнены в полном объеме и с необходимым качеством.";
+            this.label22.Text = "РџРµСЂРµРІРѕР·РєРё РІС‹РїРѕР»РЅРµРЅС‹ РІ РїРѕР»РЅРѕРј РѕР±СЉРµРјРµ Рё СЃ РЅРµРѕР±С…РѕРґРёРјС‹Рј РєР°С‡РµСЃС‚РІРѕРј.";
             this.label22.Top = 4.409449F;
             this.label22.Width = 7.559055F;
             // 
@@ -1220,7 +1220,7 @@ namespace Logistics
             this.label23.Name = "label23";
             this.label23.Style = "color: Black; ddo-char-set: 1; text-align: center; font-size: 10pt; font-family: " +
                 "Tahoma; white-space: nowrap; ";
-            this.label23.Text = "Адреса и банковские реквизиты сторон:";
+            this.label23.Text = "РђРґСЂРµСЃР° Рё Р±Р°РЅРєРѕРІСЃРєРёРµ СЂРµРєРІРёР·РёС‚С‹ СЃС‚РѕСЂРѕРЅ:";
             this.label23.Top = 4.92126F;
             this.label23.Width = 7.637796F;
             // 
@@ -1241,7 +1241,7 @@ namespace Logistics
             this.label24.Name = "label24";
             this.label24.Style = "color: Black; ddo-char-set: 1; text-align: center; font-size: 10pt; font-family: " +
                 "Tahoma; white-space: nowrap; ";
-            this.label24.Text = "ЗАКАЗЧИК";
+            this.label24.Text = "Р—РђРљРђР—Р§РРљ";
             this.label24.Top = 5.19685F;
             this.label24.Width = 3.740157F;
             // 
@@ -1262,7 +1262,7 @@ namespace Logistics
             this.label25.Name = "label25";
             this.label25.Style = "color: Black; ddo-char-set: 1; text-align: center; font-size: 10pt; font-family: " +
                 "Tahoma; white-space: nowrap; ";
-            this.label25.Text = "ИСПОЛНИТЕЛЬ";
+            this.label25.Text = "РРЎРџРћР›РќРРўР•Р›Р¬";
             this.label25.Top = 5.19685F;
             this.label25.Width = 3.661417F;
             // 
@@ -1518,7 +1518,7 @@ namespace Logistics
             this.label3.Name = "label3";
             this.label3.Style = "color: Black; ddo-char-set: 1; font-size: 10pt; font-family: Tahoma; white-space:" +
                 " nowrap; ";
-            this.label3.Text = "ИНН ";
+            this.label3.Text = "РРќРќ ";
             this.label3.Top = 5.669291F;
             this.label3.Width = 0.3937008F;
             // 
@@ -1539,7 +1539,7 @@ namespace Logistics
             this.label4.Name = "label4";
             this.label4.Style = "color: Black; ddo-char-set: 1; font-size: 10pt; font-family: Tahoma; white-space:" +
                 " nowrap; ";
-            this.label4.Text = "КПП";
+            this.label4.Text = "РљРџРџ";
             this.label4.Top = 5.905512F;
             this.label4.Width = 0.3937008F;
             // 
@@ -1560,7 +1560,7 @@ namespace Logistics
             this.label5.Name = "label5";
             this.label5.Style = "color: Black; ddo-char-set: 1; font-size: 10pt; font-family: Tahoma; white-space:" +
                 " nowrap; ";
-            this.label5.Text = "Р/с";
+            this.label5.Text = "Р /СЃ";
             this.label5.Top = 6.614173F;
             this.label5.Width = 0.3937008F;
             // 
@@ -1581,7 +1581,7 @@ namespace Logistics
             this.label6.Name = "label6";
             this.label6.Style = "color: Black; ddo-char-set: 1; font-size: 10pt; font-family: Tahoma; white-space:" +
                 " nowrap; ";
-            this.label6.Text = "К/с";
+            this.label6.Text = "Рљ/СЃ";
             this.label6.Top = 6.850394F;
             this.label6.Width = 0.3937008F;
             // 
@@ -1624,7 +1624,7 @@ namespace Logistics
             this.label7.Name = "label7";
             this.label7.Style = "color: Black; ddo-char-set: 1; font-size: 10pt; font-family: Tahoma; white-space:" +
                 " nowrap; ";
-            this.label7.Text = "БИК";
+            this.label7.Text = "Р‘РРљ";
             this.label7.Top = 7.322834F;
             this.label7.Width = 0.3937008F;
             // 
@@ -1818,7 +1818,7 @@ namespace Logistics
             this.label8.Name = "label8";
             this.label8.Style = "color: Black; ddo-char-set: 1; font-size: 10pt; font-family: Tahoma; white-space:" +
                 " nowrap; ";
-            this.label8.Text = "ИНН ";
+            this.label8.Text = "РРќРќ ";
             this.label8.Top = 5.669291F;
             this.label8.Width = 0.3937008F;
             // 
@@ -1839,7 +1839,7 @@ namespace Logistics
             this.label9.Name = "label9";
             this.label9.Style = "color: Black; ddo-char-set: 1; font-size: 10pt; font-family: Tahoma; white-space:" +
                 " nowrap; ";
-            this.label9.Text = "КПП";
+            this.label9.Text = "РљРџРџ";
             this.label9.Top = 5.905512F;
             this.label9.Width = 0.3937008F;
             // 
@@ -1860,7 +1860,7 @@ namespace Logistics
             this.label26.Name = "label26";
             this.label26.Style = "color: Black; ddo-char-set: 1; font-size: 10pt; font-family: Tahoma; white-space:" +
                 " nowrap; ";
-            this.label26.Text = "Р/с";
+            this.label26.Text = "Р /СЃ";
             this.label26.Top = 6.614173F;
             this.label26.Width = 0.3937008F;
             // 
@@ -1881,7 +1881,7 @@ namespace Logistics
             this.label27.Name = "label27";
             this.label27.Style = "color: Black; ddo-char-set: 1; font-size: 10pt; font-family: Tahoma; white-space:" +
                 " nowrap; ";
-            this.label27.Text = "К/с";
+            this.label27.Text = "Рљ/СЃ";
             this.label27.Top = 6.850394F;
             this.label27.Width = 0.3937008F;
             // 
@@ -1924,7 +1924,7 @@ namespace Logistics
             this.label28.Name = "label28";
             this.label28.Style = "color: Black; ddo-char-set: 1; font-size: 10pt; font-family: Tahoma; white-space:" +
                 " nowrap; ";
-            this.label28.Text = "БИК";
+            this.label28.Text = "Р‘РРљ";
             this.label28.Top = 7.322834F;
             this.label28.Width = 0.3937008F;
             // 
@@ -1989,7 +1989,7 @@ namespace Logistics
             this.label29.Name = "label29";
             this.label29.Style = "color: Black; ddo-char-set: 1; font-size: 10pt; font-family: Tahoma; white-space:" +
                 " nowrap; ";
-            this.label29.Text = "Тел.";
+            this.label29.Text = "РўРµР».";
             this.label29.Top = 6.377953F;
             this.label29.Width = 0.3937008F;
             // 
@@ -2010,7 +2010,7 @@ namespace Logistics
             this.label30.Name = "label30";
             this.label30.Style = "color: Black; ddo-char-set: 1; font-size: 10pt; font-family: Tahoma; white-space:" +
                 " nowrap; ";
-            this.label30.Text = "Тел.";
+            this.label30.Text = "РўРµР».";
             this.label30.Top = 6.377953F;
             this.label30.Width = 0.3937008F;
             // 

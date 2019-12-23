@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,7 +8,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Collections;
 
-using DataDynamics.ActiveReports; 
+using DataDynamics.ActiveReports;
 
 using RFMBaseClasses;
 using RFMPublic;
@@ -24,13 +24,19 @@ namespace Logistics
 		private OutputDocument oOutputDocumentForPrint = null;
 		private Input oInputForPrint = null;
 
-		private decimal nVatTransport = 18;
-		private decimal nVatVeterinaryPayment = 18;
+		private readonly decimal nVatTransport;
+		private readonly decimal nVatVeterinaryPayment;
 
 		public frmTripsPrintDocuments(Trip _oTrip)
 		{
 			oTrip = _oTrip;
 			InitializeComponent();
+
+			Setting oVat = new Setting();
+			if (decimal.TryParse(oVat.FillVariable("gnVAT1"), out decimal nVat) == false)
+				nVatVeterinaryPayment = nVatTransport = nVat;
+			else
+				nVatVeterinaryPayment = nVatTransport = 20;
 		}
 
 		public frmTripsPrintDocuments(Trip _oTrip, OutputDocument _oOutputDocumentForPrint)
@@ -64,35 +70,35 @@ namespace Logistics
 					oTrip.FillOne(oTrip.MainTable.Rows[0]);
 					lblTripAlias.Text = oTrip.Alias;
 
-					// если рейс на самовывоз - запретить печать маршрутного листа и доверенностей
+					// РµСЃР»Рё СЂРµР№СЃ РЅР° СЃР°РјРѕРІС‹РІРѕР· - Р·Р°РїСЂРµС‚РёС‚СЊ РїРµС‡Р°С‚СЊ РјР°СЂС€СЂСѓС‚РЅРѕРіРѕ Р»РёСЃС‚Р° Рё РґРѕРІРµСЂРµРЅРЅРѕСЃС‚РµР№
 					if (oTrip.SelfDelivery)
 					{
 						chkTripBill.Enabled =
 						chkTripBillShort.Enabled =
-                        chkDrivingScheme.Enabled = 
+						chkDrivingScheme.Enabled =
 						chkWarrant.Enabled =
-							false; 
+							false;
 					}
 				}
 				else
 				{
-					lblTripAlias.Text = RFMUtilities.Declen(oTrip.MainTable.Rows.Count, "рейс", "рейса", "рейсов") + ":"; 
+					lblTripAlias.Text = RFMUtilities.Declen(oTrip.MainTable.Rows.Count, "СЂРµР№СЃ", "СЂРµР№СЃР°", "СЂРµР№СЃРѕРІ") + ":";
 				}
 
 				btnClearAll_Click(null, null);
 				chkBill.Checked =
 				chkFacture.Checked =
-                chkPayBill.Checked = 
-                chkQuality.Checked = 
-				chkInputBillReturn.Checked = 
-				chkInputWarrant.Checked = 
+				chkPayBill.Checked =
+				chkQuality.Checked =
+				chkInputBillReturn.Checked =
+				chkInputWarrant.Checked =
 					true;
 
-                // Условная отметка
-                if (chkTripBill.Enabled || chkTripBillShort.Enabled)
-                    chkTripBill.Checked = chkTripBillShort.Checked = chkDrivingScheme.Checked = true;
-                if (chkWarrant.Enabled)
-                    chkWarrant.Checked = true;
+				// РЈСЃР»РѕРІРЅР°СЏ РѕС‚РјРµС‚РєР°
+				if (chkTripBill.Enabled || chkTripBillShort.Enabled)
+					chkTripBill.Checked = chkTripBillShort.Checked = chkDrivingScheme.Checked = true;
+				if (chkWarrant.Enabled)
+					chkWarrant.Checked = true;
 
 				chkBill_CheckedChanged(null, null);
 			}
@@ -108,20 +114,20 @@ namespace Logistics
 					false;
 				if (oOutputDocumentForPrint != null)
 				{
-					// печать для одного расх.документа
+					// РїРµС‡Р°С‚СЊ РґР»СЏ РѕРґРЅРѕРіРѕ СЂР°СЃС….РґРѕРєСѓРјРµРЅС‚Р°
 					chkInputBillReturn.Checked =
 					chkInputWarrant.Checked =
 					chkInputBillReturn.Enabled =
 					chkInputWarrant.Enabled =
 						false;
-					Text += ": расходный документ";
+					Text += ": СЂР°СЃС…РѕРґРЅС‹Р№ РґРѕРєСѓРјРµРЅС‚";
 					lblOutputs.Text += " " + oOutputDocumentForPrint.PartnerBayerFactName;
 				}
 				if (oInputForPrint != null)
 				{
-					// печать для одного прихода
+					// РїРµС‡Р°С‚СЊ РґР»СЏ РѕРґРЅРѕРіРѕ РїСЂРёС…РѕРґР°
 					chkBill.Checked =
-					chkFacture.Checked=
+					chkFacture.Checked =
 					chkPayBill.Checked =
 					chkWarrant.Checked =
 					chkQuality.Checked =
@@ -134,7 +140,7 @@ namespace Logistics
 					chkQuality.Enabled =
 					chkVeterinary.Enabled =
 						false;
-					Text += ": приход";
+					Text += ": РїСЂРёС…РѕРґ";
 					lblInputs.Text += ": " + oInputForPrint.PartnerName;
 				}
 			}
@@ -144,7 +150,7 @@ namespace Logistics
 				Dispose();
 			}
 		}
-		
+
 		private void btnExit_Click(object sender, EventArgs e)
 		{
 			Dispose();
@@ -159,17 +165,17 @@ namespace Logistics
 		{
 			if (!chkTripBill.Checked &&
 				!chkTripBillShort.Checked &&
-                !chkDrivingScheme.Checked && 
+				!chkDrivingScheme.Checked &&
 				!chkBill.Checked &&
 				!chkFacture.Checked &&
 				!chkPayBill.Checked &&
 				!chkVeterinary.Checked &&
 				!chkQuality.Checked &&
-				!chkWarrant.Checked && 
-				!chkInputBillReturn.Checked &&  
-				!chkInputWarrant.Checked )
+				!chkWarrant.Checked &&
+				!chkInputBillReturn.Checked &&
+				!chkInputWarrant.Checked)
 			{
-				RFMMessage.MessageBoxError("Не выбраны документы для печати...");
+				RFMMessage.MessageBoxError("РќРµ РІС‹Р±СЂР°РЅС‹ РґРѕРєСѓРјРµРЅС‚С‹ РґР»СЏ РїРµС‡Р°С‚Рё...");
 				return;
 			}
 
@@ -191,7 +197,7 @@ namespace Logistics
 				}
 			}
 
-			// если документы показаны/напечатаны, закрываем форму 
+			// РµСЃР»Рё РґРѕРєСѓРјРµРЅС‚С‹ РїРѕРєР°Р·Р°РЅС‹/РЅР°РїРµС‡Р°С‚Р°РЅС‹, Р·Р°РєСЂС‹РІР°РµРј С„РѕСЂРјСѓ 
 			if (bReady)
 			{
 				DialogResult = DialogResult.Yes;
@@ -199,25 +205,25 @@ namespace Logistics
 			}
 		}
 
-	#region Print
+		#region Print
 
-	#region Trips
+		#region Trips
 
 		private bool Trip_Print()
 		{
-			bool bTripPrint = 
-				chkTripBill.Checked || 
+			bool bTripPrint =
+				chkTripBill.Checked ||
 				chkTripBillShort.Checked ||
-                chkDrivingScheme.Checked;
-			bool bOutputDocumentPrint = 
-				chkBill.Checked || 
-				chkFacture.Checked || 
+				chkDrivingScheme.Checked;
+			bool bOutputDocumentPrint =
+				chkBill.Checked ||
+				chkFacture.Checked ||
 				chkPayBill.Checked ||
-				chkVeterinary.Checked || 
-				chkQuality.Checked || 
+				chkVeterinary.Checked ||
+				chkQuality.Checked ||
 				chkWarrant.Checked;
-			bool bInputDocumentPrint = 
-				chkInputBillReturn.Checked || 
+			bool bInputDocumentPrint =
+				chkInputBillReturn.Checked ||
 				chkInputWarrant.Checked;
 
 			Trip oTripTemp = new Trip();
@@ -228,7 +234,7 @@ namespace Logistics
 			ArrayList a_Rep = new ArrayList();
 			ArrayList a_Cnt = new ArrayList();
 
-			// список обработанных заказов
+			// СЃРїРёСЃРѕРє РѕР±СЂР°Р±РѕС‚Р°РЅРЅС‹С… Р·Р°РєР°Р·РѕРІ
 			DataTable tOutputsDocuments = new DataTable();
 			tOutputsDocuments.Columns.Add("ID", Type.GetType("System.Int32"));
 			tOutputsDocuments.PrimaryKey = new DataColumn[] { tOutputsDocuments.Columns["ID"] };
@@ -241,29 +247,29 @@ namespace Logistics
 
 			DataTable tOutputsDocumentsInTrip = null;
 
-			// идем по списку рейсов 
+			// РёРґРµРј РїРѕ СЃРїРёСЃРєСѓ СЂРµР№СЃРѕРІ 
 			foreach (DataRow rTrip in oTrip.MainTable.Rows)
 			{
 				oTripTemp.FillOne(rTrip);
 
-				#region документы по машине
+				#region РґРѕРєСѓРјРµРЅС‚С‹ РїРѕ РјР°С€РёРЅРµ
 
-				// маршрутный лист (полный, краткий)
+				// РјР°СЂС€СЂСѓС‚РЅС‹Р№ Р»РёСЃС‚ (РїРѕР»РЅС‹Р№, РєСЂР°С‚РєРёР№)
 				if (chkTripBill.Checked || chkTripBillShort.Checked)
 				{
 					bool bPrint = true;
 					if (oTripTemp.SelfDelivery)
 					{
-						//RFMMessage.MessageBoxError("Рейс \"" + oTripTemp.Alias + "\" оформлен на машину клиента.\n" +
-						//	"Маршрутный лист не печатается.");
-						bPrint = false; 
+						//RFMMessage.MessageBoxError("Р РµР№СЃ \"" + oTripTemp.Alias + "\" РѕС„РѕСЂРјР»РµРЅ РЅР° РјР°С€РёРЅСѓ РєР»РёРµРЅС‚Р°.\n" +
+						//	"РњР°СЂС€СЂСѓС‚РЅС‹Р№ Р»РёСЃС‚ РЅРµ РїРµС‡Р°С‚Р°РµС‚СЃСЏ.");
+						bPrint = false;
 					}
 					else
 					{
 						if (!oTripTemp.DriverEmployeeID.HasValue && oTripTemp.DriverName.Length == 0)
 						{
-							RFMMessage.MessageBoxError("Для рейса \"" + oTripTemp.Alias + "\" не определен водитель.\n" +
-								"Маршрутный лист не печатается.");
+							RFMMessage.MessageBoxError("Р”Р»СЏ СЂРµР№СЃР° \"" + oTripTemp.Alias + "\" РЅРµ РѕРїСЂРµРґРµР»РµРЅ РІРѕРґРёС‚РµР»СЊ.\n" +
+								"РњР°СЂС€СЂСѓС‚РЅС‹Р№ Р»РёСЃС‚ РЅРµ РїРµС‡Р°С‚Р°РµС‚СЃСЏ.");
 							bPrint = false;
 						}
 
@@ -271,7 +277,7 @@ namespace Logistics
 						{
 							if (!oTripTemp.DateBeg.HasValue)
 							{
-								// Автоматическое начало рейса при печати маршрутного листа
+								// РђРІС‚РѕРјР°С‚РёС‡РµСЃРєРѕРµ РЅР°С‡Р°Р»Рѕ СЂРµР№СЃР° РїСЂРё РїРµС‡Р°С‚Рё РјР°СЂС€СЂСѓС‚РЅРѕРіРѕ Р»РёСЃС‚Р°
 								if (oTripTemp.ID.HasValue)
 								{
 									int nTripID = (int)oTripTemp.ID;
@@ -279,8 +285,8 @@ namespace Logistics
 								}
 								else
 								{
-									/*RFMMessage.MessageBoxError("Рейс \"" + oTripTemp.Alias + "\" еще не начат.\n" +
-										"Маршрутный лист не печатается.");
+									/*RFMMessage.MessageBoxError("Р РµР№СЃ \"" + oTripTemp.Alias + "\" РµС‰Рµ РЅРµ РЅР°С‡Р°С‚.\n" +
+										"РњР°СЂС€СЂСѓС‚РЅС‹Р№ Р»РёСЃС‚ РЅРµ РїРµС‡Р°С‚Р°РµС‚СЃСЏ.");
 									bPrint = false;*/
 								}
 							}
@@ -288,13 +294,13 @@ namespace Logistics
 					}
 					if (bPrint)
 					{
-						// маршрутный лист полный
+						// РјР°СЂС€СЂСѓС‚РЅС‹Р№ Р»РёСЃС‚ РїРѕР»РЅС‹Р№
 						if (chkTripBill.Checked)
 						{
 							LogService.TripBill_Print(oTripTemp, new TripBill(), this, true,
 								ref a_Dt, ref a_Rep, ref a_Cnt, 1);
 						}
-						// маршрутный лист краткий 
+						// РјР°СЂС€СЂСѓС‚РЅС‹Р№ Р»РёСЃС‚ РєСЂР°С‚РєРёР№ 
 						if (chkTripBillShort.Checked)
 						{
 							LogService.TripBill_Print(oTripTemp, new TripBillShort(), this, true,
@@ -303,44 +309,44 @@ namespace Logistics
 					}
 				}
 
-                // Печать схем проезда
-                if (chkDrivingScheme.Checked && 
-                    oTripTemp.FillTableDrivingSchemes(oTripTemp.ID.ToString()) &&
-                    oTripTemp.TableDrivingSchemes.Rows.Count > 0)
-                {
-                    // только сохраняем в массивы
-                    a_Dt.Add(oTripTemp.TableDrivingSchemes);
-                    a_Rep.Add(new DrivingScheme());
-                    a_Cnt.Add(1);
-                    //this.StartForm(new frmActiveReport(oTripTemp.TableDrivingSchemes, new DrivingScheme()));
-                }
+				// РџРµС‡Р°С‚СЊ СЃС…РµРј РїСЂРѕРµР·РґР°
+				if (chkDrivingScheme.Checked &&
+					oTripTemp.FillTableDrivingSchemes(oTripTemp.ID.ToString()) &&
+					oTripTemp.TableDrivingSchemes.Rows.Count > 0)
+				{
+					// С‚РѕР»СЊРєРѕ СЃРѕС…СЂР°РЅСЏРµРј РІ РјР°СЃСЃРёРІС‹
+					a_Dt.Add(oTripTemp.TableDrivingSchemes);
+					a_Rep.Add(new DrivingScheme());
+					a_Cnt.Add(1);
+					//this.StartForm(new frmActiveReport(oTripTemp.TableDrivingSchemes, new DrivingScheme()));
+				}
 
-				#endregion документы по машине
+				#endregion РґРѕРєСѓРјРµРЅС‚С‹ РїРѕ РјР°С€РёРЅРµ
 
-				#region документы по расходным документам
+				#region РґРѕРєСѓРјРµРЅС‚С‹ РїРѕ СЂР°СЃС…РѕРґРЅС‹Рј РґРѕРєСѓРјРµРЅС‚Р°Рј
 
 				tOutputsDocumentsInTrip = null;
 
 				if (bOutputDocumentPrint)
 				{
-					// получаем список заказов
+					// РїРѕР»СѓС‡Р°РµРј СЃРїРёСЃРѕРє Р·Р°РєР°Р·РѕРІ
 					oTripTemp.FillTableOutputsDocumentsInTrip();
 
 					if (oTripTemp.TableOutputsDocumentsInTrip.Rows.Count > 0)
 					{
 						bool bTripAllOutputsDocumentsConfirmed = true;
 
-						// все ли готово, стоит ли печатать 
+						// РІСЃРµ Р»Рё РіРѕС‚РѕРІРѕ, СЃС‚РѕРёС‚ Р»Рё РїРµС‡Р°С‚Р°С‚СЊ 
 						foreach (DataRow rOutputDocument in oTripTemp.TableOutputsDocumentsInTrip.Rows)
 						{
 							oOutputDocumentTemp.FillOne(rOutputDocument);
-							// хотя бы один расходный документ еще не подтвержден
+							// С…РѕС‚СЏ Р±С‹ РѕРґРёРЅ СЂР°СЃС…РѕРґРЅС‹Р№ РґРѕРєСѓРјРµРЅС‚ РµС‰Рµ РЅРµ РїРѕРґС‚РІРµСЂР¶РґРµРЅ
 							if (!oOutputDocumentTemp.IsConfirmed)
 							{
-								RFMMessage.MessageBoxError("Рейс: " + oTripTemp.Alias + ":\n" +
-									"для раcходного документа \"" + oOutputDocumentTemp.PartnerTargetName + "\" (код " + oOutputDocumentTemp.ID.ToString() + ") " +
-									"еще не подтверждена отгрузка со склада.\n" +
-									"Документы по рейсу не печатаются.");
+								RFMMessage.MessageBoxError("Р РµР№СЃ: " + oTripTemp.Alias + ":\n" +
+									"РґР»СЏ СЂР°cС…РѕРґРЅРѕРіРѕ РґРѕРєСѓРјРµРЅС‚Р° \"" + oOutputDocumentTemp.PartnerTargetName + "\" (РєРѕРґ " + oOutputDocumentTemp.ID.ToString() + ") " +
+									"РµС‰Рµ РЅРµ РїРѕРґС‚РІРµСЂР¶РґРµРЅР° РѕС‚РіСЂСѓР·РєР° СЃРѕ СЃРєР»Р°РґР°.\n" +
+									"Р”РѕРєСѓРјРµРЅС‚С‹ РїРѕ СЂРµР№СЃСѓ РЅРµ РїРµС‡Р°С‚Р°СЋС‚СЃСЏ.");
 								bTripAllOutputsDocumentsConfirmed = false;
 								break;
 							}
@@ -350,41 +356,41 @@ namespace Logistics
 						{
 							if (oTripTemp.IsPostern)
 							{
-								// ЗД - порядок печати обратный порядку загрузки
+								// Р—Р” - РїРѕСЂСЏРґРѕРє РїРµС‡Р°С‚Рё РѕР±СЂР°С‚РЅС‹Р№ РїРѕСЂСЏРґРєСѓ Р·Р°РіСЂСѓР·РєРё
 								tOutputsDocumentsInTrip = CopyTable(oTripTemp.TableOutputsDocumentsInTrip, "tOutputsDocumentsInTrip", "", "ByOrder desc, PartnerTargetName");
 							}
 							else
 							{
 								tOutputsDocumentsInTrip = CopyTable(oTripTemp.TableOutputsDocumentsInTrip, "tOutputsDocumentsInTrip", "", "ByOrder, PartnerTargetName");
 							}
-						
-							#region по заказам
+
+							#region РїРѕ Р·Р°РєР°Р·Р°Рј
 
 							if (optTotalSortByOrders.Checked)
 							{
-								// в порядке заказов
+								// РІ РїРѕСЂСЏРґРєРµ Р·Р°РєР°Р·РѕРІ
 								foreach (DataRow rOutputDocument in tOutputsDocumentsInTrip.Rows)
 								{
 									oOutputDocumentTemp.FillOne(rOutputDocument);
 
-									// документы уже напечатаны?
+									// РґРѕРєСѓРјРµРЅС‚С‹ СѓР¶Рµ РЅР°РїРµС‡Р°С‚Р°РЅС‹?
 									if (oOutputDocumentTemp.IsPrinted && !chkRepeat.Checked)
 										continue;
 
-									// накладная
+									// РЅР°РєР»Р°РґРЅР°СЏ
 									if (chkBill.Checked && (int)numBillCopies.Value != 0)
 									{
 										LogService.OutputDocumentBill_Print(oOutputDocumentTemp, "BILL", this, true, (0 == 1), true,
 												ref a_Dt, ref a_Rep, ref a_Cnt, (int)numBillCopies.Value, chkUsePerversionCopiesCnt.Checked);
 
-										// акт на трансп.услуги
+										// Р°РєС‚ РЅР° С‚СЂР°РЅСЃРї.СѓСЃР»СѓРіРё
 										if (oOutputDocumentTemp.DeliveryPrice != 0)
 										{
 											LogService.OutputDocumentTransportAct_Print(oOutputDocumentTemp, nVatTransport, this, true,
 												ref a_Dt, ref a_Rep, ref a_Cnt, (int)numBillCopies.Value);
 										}
 
-										// накладная на оформление вет.св-в
+										// РЅР°РєР»Р°РґРЅР°СЏ РЅР° РѕС„РѕСЂРјР»РµРЅРёРµ РІРµС‚.СЃРІ-РІ
 										if (oOutputDocumentTemp.VeterinaryPrice != 0)
 										{
 											LogService.OutputDocumentVeterinaryPayment_Print(oOutputDocumentTemp, "BILL", nVatVeterinaryPayment, this, true,
@@ -392,20 +398,20 @@ namespace Logistics
 										}
 									}
 
-									// счет-фактура
+									// СЃС‡РµС‚-С„Р°РєС‚СѓСЂР°
 									if (chkFacture.Checked && oOutputDocumentTemp.PF_FactureNeed)
 									{
-                                        LogService.OutputDocumentBill_Print(oOutputDocumentTemp, "FACTURE", this, true, (0 == 1), true,
+										LogService.OutputDocumentBill_Print(oOutputDocumentTemp, "FACTURE", this, true, (0 == 1), true,
 												ref a_Dt, ref a_Rep, ref a_Cnt, 1, chkUsePerversionCopiesCnt.Checked);
 
-										// счет-фактура на трансп.услуги
+										// СЃС‡РµС‚-С„Р°РєС‚СѓСЂР° РЅР° С‚СЂР°РЅСЃРї.СѓСЃР»СѓРіРё
 										if (oOutputDocumentTemp.DeliveryPrice != 0)
 										{
 											LogService.OutputDocumentTransportFacture_Print(oOutputDocumentTemp, nVatTransport, this, true,
-												ref a_Dt, ref a_Rep, ref a_Cnt, 1); 
+												ref a_Dt, ref a_Rep, ref a_Cnt, 1);
 										}
 
-										// счет-фактура на оформление вет.св-в
+										// СЃС‡РµС‚-С„Р°РєС‚СѓСЂР° РЅР° РѕС„РѕСЂРјР»РµРЅРёРµ РІРµС‚.СЃРІ-РІ
 										if (oOutputDocumentTemp.VeterinaryPrice != 0)
 										{
 											LogService.OutputDocumentVeterinaryPayment_Print(oOutputDocumentTemp, "FACTURE", nVatVeterinaryPayment, this, true,
@@ -413,75 +419,75 @@ namespace Logistics
 										}
 									}
 
-									// счет
+									// СЃС‡РµС‚
 									if (chkPayBill.Checked && oOutputDocumentTemp.PF_PayBillNeed)
 									{
-                                        LogService.OutputDocumentBill_Print(oOutputDocumentTemp, "INVOICE", this, true, (0 == 1), true,
+										LogService.OutputDocumentBill_Print(oOutputDocumentTemp, "INVOICE", this, true, (0 == 1), true,
 												ref a_Dt, ref a_Rep, ref a_Cnt, 1);
 									}
 
-									// вет.св-ва
+									// РІРµС‚.СЃРІ-РІР°
 									if (chkVeterinary.Checked)
 									{
 										LogService.OutputDocumentVeterinary_Print(oOutputDocumentTemp, true, this, true,
 											ref a_Dt, ref a_Rep, ref a_Cnt, 1);
 									}
 
-                                    // списки деклараций
+									// СЃРїРёСЃРєРё РґРµРєР»Р°СЂР°С†РёР№
 									if (chkQuality.Checked)
 									{
 										LogService.OutputDocumentQuality_Print(oOutputDocumentTemp, this, true,
 											ref a_Dt, ref a_Rep, ref a_Cnt, 1);
 									}
 
-									// доверенность
-                                    // не печатается для рейсов самовывоза, арендованных машин и доставке нашими машинами до перевозчика
+									// РґРѕРІРµСЂРµРЅРЅРѕСЃС‚СЊ
+									// РЅРµ РїРµС‡Р°С‚Р°РµС‚СЃСЏ РґР»СЏ СЂРµР№СЃРѕРІ СЃР°РјРѕРІС‹РІРѕР·Р°, Р°СЂРµРЅРґРѕРІР°РЅРЅС‹С… РјР°С€РёРЅ Рё РґРѕСЃС‚Р°РІРєРµ РЅР°С€РёРјРё РјР°С€РёРЅР°РјРё РґРѕ РїРµСЂРµРІРѕР·С‡РёРєР°
 									/*if (chkWarrant.Checked && oOutputDocumentTemp.PF_WarrantNeed && 
 										!oTripTemp.SelfDelivery && !oTripTemp.IsRentCar && !oTrip.PartnerCarrierID.HasValue)*/
-                                    // Изменение от 06.08.2018
-                                    // В связи с тем, что хозяин товара может быть и перевозчиком, последнее условие заблокировано
-                                    if (chkWarrant.Checked && 
-                                        oOutputDocumentTemp.PF_WarrantNeed && 
-                                        !oTripTemp.SelfDelivery && !oTripTemp.IsRentCar)
-                                    {
-                                            LogService.OutputDocumentWarrant_Print(oOutputDocumentTemp, this, true, true,
-											ref a_Dt, ref a_Rep, ref a_Cnt, 1);
+									// РР·РјРµРЅРµРЅРёРµ РѕС‚ 06.08.2018
+									// Р’ СЃРІСЏР·Рё СЃ С‚РµРј, С‡С‚Рѕ С…РѕР·СЏРёРЅ С‚РѕРІР°СЂР° РјРѕР¶РµС‚ Р±С‹С‚СЊ Рё РїРµСЂРµРІРѕР·С‡РёРєРѕРј, РїРѕСЃР»РµРґРЅРµРµ СѓСЃР»РѕРІРёРµ Р·Р°Р±Р»РѕРєРёСЂРѕРІР°РЅРѕ
+									if (chkWarrant.Checked &&
+										oOutputDocumentTemp.PF_WarrantNeed &&
+										!oTripTemp.SelfDelivery && !oTripTemp.IsRentCar)
+									{
+										LogService.OutputDocumentWarrant_Print(oOutputDocumentTemp, this, true, true,
+										ref a_Dt, ref a_Rep, ref a_Cnt, 1);
 									}
 
-									// записали, что обработали заказ
+									// Р·Р°РїРёСЃР°Р»Рё, С‡С‚Рѕ РѕР±СЂР°Р±РѕС‚Р°Р»Рё Р·Р°РєР°Р·
 									tOutputsDocuments.Rows.Add(oOutputDocumentTemp.ID);
 									sOutputsDocumentsList += oOutputDocumentTemp.ID.ToString() + ",";
 								}
 							}
 
-							#endregion по заказам
+							#endregion РїРѕ Р·Р°РєР°Р·Р°Рј
 
-							#region по типам документов
+							#region РїРѕ С‚РёРїР°Рј РґРѕРєСѓРјРµРЅС‚РѕРІ
 
 							if (optTotalSortByTypes.Checked)
 							{
-								// накладная
+								// РЅР°РєР»Р°РґРЅР°СЏ
 								if (chkBill.Checked && (int)numBillCopies.Value > 0)
 								{
 									foreach (DataRow rOutputDocument in tOutputsDocumentsInTrip.Rows)
 									{
 										oOutputDocumentTemp.FillOne(rOutputDocument);
 
-										// уже напечатан?
+										// СѓР¶Рµ РЅР°РїРµС‡Р°С‚Р°РЅ?
 										if (oOutputDocumentTemp.IsPrinted && !chkRepeat.Checked)
 											continue;
 
-                                        LogService.OutputDocumentBill_Print(oOutputDocumentTemp, "BILL", this, true, (0 == 1), true,
+										LogService.OutputDocumentBill_Print(oOutputDocumentTemp, "BILL", this, true, (0 == 1), true,
 												ref a_Dt, ref a_Rep, ref a_Cnt, (int)numBillCopies.Value, chkUsePerversionCopiesCnt.Checked);
 
-										// акт на трансп.услуги
+										// Р°РєС‚ РЅР° С‚СЂР°РЅСЃРї.СѓСЃР»СѓРіРё
 										if (oOutputDocumentTemp.DeliveryPrice != 0)
 										{
 											LogService.OutputDocumentTransportAct_Print(oOutputDocumentTemp, nVatTransport, this, true,
 												ref a_Dt, ref a_Rep, ref a_Cnt, (int)numBillCopies.Value);
 										}
 
-										// накладная на оформление вет.св-в
+										// РЅР°РєР»Р°РґРЅР°СЏ РЅР° РѕС„РѕСЂРјР»РµРЅРёРµ РІРµС‚.СЃРІ-РІ
 										if (oOutputDocumentTemp.VeterinaryPrice != 0)
 										{
 											LogService.OutputDocumentVeterinaryPayment_Print(oOutputDocumentTemp, "BILL", nVatVeterinaryPayment, this, true,
@@ -490,48 +496,48 @@ namespace Logistics
 
 										if (tOutputsDocuments.Rows.Find((int)oOutputDocumentTemp.ID) == null)
 										{
-											// записали, что обработали заказ
+											// Р·Р°РїРёСЃР°Р»Рё, С‡С‚Рѕ РѕР±СЂР°Р±РѕС‚Р°Р»Рё Р·Р°РєР°Р·
 											tOutputsDocuments.Rows.Add(oOutputDocumentTemp.ID);
 											sOutputsDocumentsList += oOutputDocumentTemp.ID.ToString() + ",";
 										}
 									}
 								}
 
-								// счет-фактура
+								// СЃС‡РµС‚-С„Р°РєС‚СѓСЂР°
 								if (chkFacture.Checked)
 								{
 									foreach (DataRow rOutputDocument in tOutputsDocumentsInTrip.Rows)
 									{
 										oOutputDocumentTemp.FillOne(rOutputDocument);
 
-										// уже напечатан?
+										// СѓР¶Рµ РЅР°РїРµС‡Р°С‚Р°РЅ?
 										if (oOutputDocumentTemp.IsPrinted && !chkRepeat.Checked)
 											continue;
-										// не нужен
+										// РЅРµ РЅСѓР¶РµРЅ
 										if (!oOutputDocumentTemp.PF_FactureNeed)
 											continue;
 
-										// еще не подтвержден
+										// РµС‰Рµ РЅРµ РїРѕРґС‚РІРµСЂР¶РґРµРЅ
 										if (!oOutputDocumentTemp.IsConfirmed)
 										{
-											RFMMessage.MessageBoxError("Рейс: " + oTripTemp.Alias + ":\n" +
-												"для раcходного документа \"" + oOutputDocumentTemp.PartnerTargetName + "\" (код " + oOutputDocumentTemp.ID.ToString() + ") " +
-												"еще не подтверждена отгрузка со склада.\n" +
-												"Документы по рейсу не печатаются.");
+											RFMMessage.MessageBoxError("Р РµР№СЃ: " + oTripTemp.Alias + ":\n" +
+												"РґР»СЏ СЂР°cС…РѕРґРЅРѕРіРѕ РґРѕРєСѓРјРµРЅС‚Р° \"" + oOutputDocumentTemp.PartnerTargetName + "\" (РєРѕРґ " + oOutputDocumentTemp.ID.ToString() + ") " +
+												"РµС‰Рµ РЅРµ РїРѕРґС‚РІРµСЂР¶РґРµРЅР° РѕС‚РіСЂСѓР·РєР° СЃРѕ СЃРєР»Р°РґР°.\n" +
+												"Р”РѕРєСѓРјРµРЅС‚С‹ РїРѕ СЂРµР№СЃСѓ РЅРµ РїРµС‡Р°С‚Р°СЋС‚СЃСЏ.");
 											continue;
 										}
 
-                                        LogService.OutputDocumentBill_Print(oOutputDocumentTemp, "FACTURE", this, true, (0 == 1), true,
+										LogService.OutputDocumentBill_Print(oOutputDocumentTemp, "FACTURE", this, true, (0 == 1), true,
 											ref a_Dt, ref a_Rep, ref a_Cnt, 1, chkUsePerversionCopiesCnt.Checked);
 
-										// счет-фактура на трансп.услуги
+										// СЃС‡РµС‚-С„Р°РєС‚СѓСЂР° РЅР° С‚СЂР°РЅСЃРї.СѓСЃР»СѓРіРё
 										if (oOutputDocumentTemp.DeliveryPrice != 0)
 										{
 											LogService.OutputDocumentTransportFacture_Print(oOutputDocumentTemp, nVatTransport, this, true,
 												ref a_Dt, ref a_Rep, ref a_Cnt, 1);
 										}
 
-										// счет-фактура на оформление вет.св-в
+										// СЃС‡РµС‚-С„Р°РєС‚СѓСЂР° РЅР° РѕС„РѕСЂРјР»РµРЅРёРµ РІРµС‚.СЃРІ-РІ
 										if (oOutputDocumentTemp.VeterinaryPrice != 0)
 										{
 											LogService.OutputDocumentVeterinaryPayment_Print(oOutputDocumentTemp, "FACTURE", nVatVeterinaryPayment, this, true,
@@ -546,18 +552,18 @@ namespace Logistics
 									}
 								}
 
-								// счет
+								// СЃС‡РµС‚
 								if (chkPayBill.Checked)
 								{
 									foreach (DataRow rOutputDocument in tOutputsDocumentsInTrip.Rows)
 									{
 										oOutputDocumentTemp.FillOne(rOutputDocument);
 
-										// не нужен
+										// РЅРµ РЅСѓР¶РµРЅ
 										if (!oOutputDocumentTemp.PF_PayBillNeed)
 											continue;
 
-                                        LogService.OutputDocumentBill_Print(oOutputDocumentTemp, "INVOICE", this, true, (0 == 1), true,
+										LogService.OutputDocumentBill_Print(oOutputDocumentTemp, "INVOICE", this, true, (0 == 1), true,
 											ref a_Dt, ref a_Rep, ref a_Cnt, 1);
 
 										if (tOutputsDocuments.Rows.Find((int)oOutputDocumentTemp.ID) == null)
@@ -568,7 +574,7 @@ namespace Logistics
 									}
 								}
 
-								// вет.св-ва
+								// РІРµС‚.СЃРІ-РІР°
 								if (chkVeterinary.Checked)
 								{
 									foreach (DataRow rOutputDocument in tOutputsDocumentsInTrip.Rows)
@@ -586,7 +592,7 @@ namespace Logistics
 									}
 								}
 
-                                // списки деклараций
+								// СЃРїРёСЃРєРё РґРµРєР»Р°СЂР°С†РёР№
 								if (chkQuality.Checked)
 								{
 									foreach (DataRow rOutputDocument in tOutputsDocumentsInTrip.Rows)
@@ -604,18 +610,18 @@ namespace Logistics
 									}
 								}
 
-								// доверенность
-								if (chkWarrant.Checked && 
+								// РґРѕРІРµСЂРµРЅРЅРѕСЃС‚СЊ
+								if (chkWarrant.Checked &&
 									!oTripTemp.SelfDelivery && !oTripTemp.IsRentCar)
 								{
 									foreach (DataRow rOutputDocument in tOutputsDocumentsInTrip.Rows)
 									{
 										oOutputDocumentTemp.FillOne(rOutputDocument);
 
-										// документы уже напечатаны?
+										// РґРѕРєСѓРјРµРЅС‚С‹ СѓР¶Рµ РЅР°РїРµС‡Р°С‚Р°РЅС‹?
 										if (oOutputDocumentTemp.IsPrinted && !chkRepeat.Checked)
 											continue;
-										// не нужна?
+										// РЅРµ РЅСѓР¶РЅР°?
 										if (!oOutputDocumentTemp.PF_WarrantNeed)
 											continue;
 
@@ -631,95 +637,95 @@ namespace Logistics
 								}
 							}
 
-							#endregion по типам документов
+							#endregion РїРѕ С‚РёРїР°Рј РґРѕРєСѓРјРµРЅС‚РѕРІ
 						}
 					}
 				}
-				
-				#endregion документы по расходным документам
 
-				#region документы по приходам
-				
+				#endregion РґРѕРєСѓРјРµРЅС‚С‹ РїРѕ СЂР°СЃС…РѕРґРЅС‹Рј РґРѕРєСѓРјРµРЅС‚Р°Рј
+
+				#region РґРѕРєСѓРјРµРЅС‚С‹ РїРѕ РїСЂРёС…РѕРґР°Рј
+
 				if (bInputDocumentPrint)
 				{
-					// получаем список приходов
+					// РїРѕР»СѓС‡Р°РµРј СЃРїРёСЃРѕРє РїСЂРёС…РѕРґРѕРІ
 					oTripTemp.FillTableInputsInTrip();
 
 					if (oTripTemp.TableInputsInTrip.Rows.Count > 0)
 					{
-						#region по заказам
+						#region РїРѕ Р·Р°РєР°Р·Р°Рј
 
 						if (optTotalSortByOrders.Checked)
 						{
-							// в порядке заказов
+							// РІ РїРѕСЂСЏРґРєРµ Р·Р°РєР°Р·РѕРІ
 							foreach (DataRow rInput in oTripTemp.TableInputsInTrip.Rows)
 							{
 								oInputTemp.FillOne(rInput);
 
 								/*
-								// документы уже напечатаны?
+								// РґРѕРєСѓРјРµРЅС‚С‹ СѓР¶Рµ РЅР°РїРµС‡Р°С‚Р°РЅС‹?
 								if (oInputTemp.IsPrinted && !chkRepeat.Checked)
 									continue;
 								*/
 
-								// возвратная накладная
+								// РІРѕР·РІСЂР°С‚РЅР°СЏ РЅР°РєР»Р°РґРЅР°СЏ
 								if (chkInputBillReturn.Checked && oInputTemp.IsReturn)
 								{
 									LogService.InputReturnBill_Print(oInputTemp, this, true,
 											ref a_Dt, ref a_Rep, ref a_Cnt, 1);
 								}
 
-								// доверенность 
-								if (chkInputWarrant.Checked && oInputTemp.PF_WarrantNeed && 
-									!oTripTemp.SelfDelivery && 
-									(!oTripTemp.IsRentCar || !oInputTemp.IsReturn) )
+								// РґРѕРІРµСЂРµРЅРЅРѕСЃС‚СЊ 
+								if (chkInputWarrant.Checked && oInputTemp.PF_WarrantNeed &&
+									!oTripTemp.SelfDelivery &&
+									(!oTripTemp.IsRentCar || !oInputTemp.IsReturn))
 								{
 									LogService.InputWarrant_Print(oInputTemp, this, true, true,
 										ref a_Dt, ref a_Rep, ref a_Cnt, 1);
 								}
 
-								// записали, что обработали заказ
+								// Р·Р°РїРёСЃР°Р»Рё, С‡С‚Рѕ РѕР±СЂР°Р±РѕС‚Р°Р»Рё Р·Р°РєР°Р·
 								tInputs.Rows.Add(oInputTemp.ID);
 								sInputsList += oInputTemp.ID.ToString() + ",";
 							}
 						}
-	
-						#endregion по заказам
 
-						#region по типам документов
+						#endregion РїРѕ Р·Р°РєР°Р·Р°Рј
+
+						#region РїРѕ С‚РёРїР°Рј РґРѕРєСѓРјРµРЅС‚РѕРІ
 
 						if (optTotalSortByTypes.Checked)
 						{
-							// вовзратная накладная 
+							// РІРѕРІР·СЂР°С‚РЅР°СЏ РЅР°РєР»Р°РґРЅР°СЏ 
 							if (chkInputBillReturn.Checked)
 							{
 								foreach (DataRow rInput in oTripTemp.TableInputsInTrip.Rows)
 								{
 									oInputTemp.FillOne(rInput);
-									
+
 									/*
-									// уже напечатан?
+									// СѓР¶Рµ РЅР°РїРµС‡Р°С‚Р°РЅ?
 									if (oInputTemp.IsPrinted && !chkRepeat.Checked)
 										continue;
 									*/
-									
+
 									if (!oInputTemp.IsReturn)
 										continue;
-										
+
 									LogService.InputReturnBill_Print(oInputTemp, this, true,
 											ref a_Dt, ref a_Rep, ref a_Cnt, 1);
-									
+
 									if (tInputs.Rows.Find((int)oInputTemp.ID) == null)
 									{
-										// записали, что обработали приход
+										// Р·Р°РїРёСЃР°Р»Рё, С‡С‚Рѕ РѕР±СЂР°Р±РѕС‚Р°Р»Рё РїСЂРёС…РѕРґ
 										tInputs.Rows.Add(oInputTemp.ID);
 										sInputsList += oInputTemp.ID.ToString() + ",";
 									}
 								}
 							}
 
-							// доверенность
-							if (chkInputWarrant.Checked && 
+							// РґРѕРІРµСЂРµРЅРЅРѕСЃС‚СЊ
+							if (chkInputWarrant.Checked &&
 								!oTripTemp.SelfDelivery)
 							{
 								foreach (DataRow rInput in oTripTemp.TableInputsInTrip.Rows)
@@ -727,15 +733,15 @@ namespace Logistics
 									oInputTemp.FillOne(rInput);
 
 									/*
-									// документы уже напечатаны?
+									// РґРѕРєСѓРјРµРЅС‚С‹ СѓР¶Рµ РЅР°РїРµС‡Р°С‚Р°РЅС‹?
 									if (oInputTemp.IsPrinted && !chkRepeat.Checked)
 										continue;
 									*/
 
-									// не нужна?
+									// РЅРµ РЅСѓР¶РЅР°?
 									if (!oInputTemp.PF_WarrantNeed)
 										continue;
-									// аренда - только на товар (не возврат)
+									// Р°СЂРµРЅРґР° - С‚РѕР»СЊРєРѕ РЅР° С‚РѕРІР°СЂ (РЅРµ РІРѕР·РІСЂР°С‚)
 									if (oTripTemp.IsRentCar && oInputTemp.IsReturn)
 										continue;
 
@@ -750,12 +756,12 @@ namespace Logistics
 								}
 							}
 
-							#endregion по типам документов
+							#endregion РїРѕ С‚РёРїР°Рј РґРѕРєСѓРјРµРЅС‚РѕРІ
 						}
 					}
 				}
 
-				#endregion документы по приходам
+				#endregion РґРѕРєСѓРјРµРЅС‚С‹ РїРѕ РїСЂРёС…РѕРґР°Рј
 			}
 
 			if (a_Dt.Count > 0)
@@ -769,7 +775,7 @@ namespace Logistics
 				int[] aCnt = new int[a_Dt.Count];
 				a_Cnt.CopyTo(aCnt);
 
-				// собственно печать 
+				// СЃРѕР±СЃС‚РІРµРЅРЅРѕ РїРµС‡Р°С‚СЊ 
 				if (chkDirectToPrinter.Checked)
 				{
 					StartForm(new frmActiveReport(aDt, aRep, aCnt, true));
@@ -779,16 +785,16 @@ namespace Logistics
 					StartForm(new frmActiveReport(aDt, aRep, aCnt));
 				}
 
-				// отметка печати
-                if (bOutputDocumentPrint && (chkBill.Checked || chkFacture.Checked))
+				// РѕС‚РјРµС‚РєР° РїРµС‡Р°С‚Рё
+				if (bOutputDocumentPrint && (chkBill.Checked || chkFacture.Checked))
 				{
 					int nUserID = ((RFMFormMain)Application.OpenForms[0]).UserID;
-					// машина
+					// РјР°С€РёРЅР°
 					foreach (DataRow rTrip in oTrip.MainTable.Rows)
 					{
 						oTripTemp.SetDatePrint((int)rTrip["ID"], false, nUserID);
 					}
-					// заказы
+					// Р·Р°РєР°Р·С‹
 					foreach (DataRow rOutputDocument in tOutputsDocuments.Rows)
 					{
 						oOutputDocumentTemp.SetDatePrint((int)rOutputDocument["ID"], false, nUserID);
@@ -797,16 +803,16 @@ namespace Logistics
 			}
 			else
 			{
-				RFMMessage.MessageBoxError("Нет данных для печати...");
+				RFMMessage.MessageBoxError("РќРµС‚ РґР°РЅРЅС‹С… РґР»СЏ РїРµС‡Р°С‚Рё...");
 				return (false);
 			}
 
 			return (true);
 		}
 
-	#endregion Trips
+		#endregion Trips
 
-	#region OutputDocument
+		#region OutputDocument
 
 		private bool OutputDocument_Print()
 		{
@@ -817,26 +823,26 @@ namespace Logistics
 				chkQuality.Checked ||
 				chkWarrant.Checked))
 			{
-				RFMMessage.MessageBoxError("Не выбраны документы для печати (расходный документ)...");
+				RFMMessage.MessageBoxError("РќРµ РІС‹Р±СЂР°РЅС‹ РґРѕРєСѓРјРµРЅС‚С‹ РґР»СЏ РїРµС‡Р°С‚Рё (СЂР°СЃС…РѕРґРЅС‹Р№ РґРѕРєСѓРјРµРЅС‚)...");
 				return (false);
 			}
 
 			OutputDocument oOutputDocumentTemp = new OutputDocument();
 			oOutputDocumentTemp.ReFillOne((int)oOutputDocumentForPrint.ID);
 
-			// проверки для расходного документа 
+			// РїСЂРѕРІРµСЂРєРё РґР»СЏ СЂР°СЃС…РѕРґРЅРѕРіРѕ РґРѕРєСѓРјРµРЅС‚Р° 
 			if (!oOutputDocumentTemp.IsConfirmed)
 			{
-				RFMMessage.MessageBoxError("Для раcходного документа \"" + oOutputDocumentTemp.PartnerTargetName + "\" (код " + oOutputDocumentTemp.ID.ToString() + ") " +
-					"еще не подтверждена отгрузка со склада.\n" +
-					"Документы не печатаются.");
+				RFMMessage.MessageBoxError("Р”Р»СЏ СЂР°cС…РѕРґРЅРѕРіРѕ РґРѕРєСѓРјРµРЅС‚Р° \"" + oOutputDocumentTemp.PartnerTargetName + "\" (РєРѕРґ " + oOutputDocumentTemp.ID.ToString() + ") " +
+					"РµС‰Рµ РЅРµ РїРѕРґС‚РІРµСЂР¶РґРµРЅР° РѕС‚РіСЂСѓР·РєР° СЃРѕ СЃРєР»Р°РґР°.\n" +
+					"Р”РѕРєСѓРјРµРЅС‚С‹ РЅРµ РїРµС‡Р°С‚Р°СЋС‚СЃСЏ.");
 				return (false);
 			}
 
 			if (oOutputDocumentTemp.IsPrinted && !chkRepeat.Checked)
 			{
-				RFMMessage.MessageBoxError("Для раcходного документа \"" + oOutputDocumentTemp.PartnerTargetName + "\" (код " + oOutputDocumentTemp.ID.ToString() + ") " +
-					"документы уже напечатаны.");
+				RFMMessage.MessageBoxError("Р”Р»СЏ СЂР°cС…РѕРґРЅРѕРіРѕ РґРѕРєСѓРјРµРЅС‚Р° \"" + oOutputDocumentTemp.PartnerTargetName + "\" (РєРѕРґ " + oOutputDocumentTemp.ID.ToString() + ") " +
+					"РґРѕРєСѓРјРµРЅС‚С‹ СѓР¶Рµ РЅР°РїРµС‡Р°С‚Р°РЅС‹.");
 				return (false);
 			}
 
@@ -846,21 +852,21 @@ namespace Logistics
 			ArrayList a_Dt = new ArrayList();
 			ArrayList a_Rep = new ArrayList();
 			ArrayList a_Cnt = new ArrayList();
-			
-			// накладная
+
+			// РЅР°РєР»Р°РґРЅР°СЏ
 			if (chkBill.Checked && (int)numBillCopies.Value != 0)
 			{
-                LogService.OutputDocumentBill_Print(oOutputDocumentTemp, "BILL", this, true, (0 == 1), true,
+				LogService.OutputDocumentBill_Print(oOutputDocumentTemp, "BILL", this, true, (0 == 1), true,
 					ref a_Dt, ref a_Rep, ref a_Cnt, (int)numBillCopies.Value, chkUsePerversionCopiesCnt.Checked);
 
-				// акт на трансп.услуги
+				// Р°РєС‚ РЅР° С‚СЂР°РЅСЃРї.СѓСЃР»СѓРіРё
 				if (oOutputDocumentTemp.DeliveryPrice != 0)
 				{
 					LogService.OutputDocumentTransportAct_Print(oOutputDocumentTemp, nVatTransport, this, true,
 						ref a_Dt, ref a_Rep, ref a_Cnt, (int)numBillCopies.Value);
 				}
 
-				// накладная на оформление вет.св-в
+				// РЅР°РєР»Р°РґРЅР°СЏ РЅР° РѕС„РѕСЂРјР»РµРЅРёРµ РІРµС‚.СЃРІ-РІ
 				if (oOutputDocumentTemp.VeterinaryPrice != 0)
 				{
 					LogService.OutputDocumentVeterinaryPayment_Print(oOutputDocumentTemp, "BILL", nVatVeterinaryPayment, this, true,
@@ -868,20 +874,20 @@ namespace Logistics
 				}
 			}
 
-			// счет-фактура
+			// СЃС‡РµС‚-С„Р°РєС‚СѓСЂР°
 			if (chkFacture.Checked && oOutputDocumentTemp.PF_FactureNeed)
 			{
-                LogService.OutputDocumentBill_Print(oOutputDocumentTemp, "FACTURE", this, true, (0 == 1), true,
+				LogService.OutputDocumentBill_Print(oOutputDocumentTemp, "FACTURE", this, true, (0 == 1), true,
 						ref a_Dt, ref a_Rep, ref a_Cnt, 1, chkUsePerversionCopiesCnt.Checked);
 
-				// счет-фактура на трансп.услуги
+				// СЃС‡РµС‚-С„Р°РєС‚СѓСЂР° РЅР° С‚СЂР°РЅСЃРї.СѓСЃР»СѓРіРё
 				if (oOutputDocumentTemp.DeliveryPrice != 0)
 				{
 					LogService.OutputDocumentTransportFacture_Print(oOutputDocumentTemp, nVatTransport, this, true,
 						ref a_Dt, ref a_Rep, ref a_Cnt, 1);
 				}
 
-				// счет-фактура на оформление вет.св-в
+				// СЃС‡РµС‚-С„Р°РєС‚СѓСЂР° РЅР° РѕС„РѕСЂРјР»РµРЅРёРµ РІРµС‚.СЃРІ-РІ
 				if (oOutputDocumentTemp.VeterinaryPrice != 0)
 				{
 					LogService.OutputDocumentVeterinaryPayment_Print(oOutputDocumentTemp, "FACTURE", nVatVeterinaryPayment, this, true,
@@ -889,28 +895,28 @@ namespace Logistics
 				}
 			}
 
-			// счет
+			// СЃС‡РµС‚
 			if (chkPayBill.Checked && oOutputDocumentTemp.PF_PayBillNeed)
 			{
-                LogService.OutputDocumentBill_Print(oOutputDocumentTemp, "INVOICE", this, true, (0 == 1), true,
+				LogService.OutputDocumentBill_Print(oOutputDocumentTemp, "INVOICE", this, true, (0 == 1), true,
 						ref a_Dt, ref a_Rep, ref a_Cnt, 1);
 			}
 
-			// вет.св-ва
+			// РІРµС‚.СЃРІ-РІР°
 			if (chkVeterinary.Checked)
 			{
 				LogService.OutputDocumentVeterinary_Print(oOutputDocumentTemp, true, this, true,
 					ref a_Dt, ref a_Rep, ref a_Cnt, 1);
 			}
 
-            // списки деклараций
+			// СЃРїРёСЃРєРё РґРµРєР»Р°СЂР°С†РёР№
 			if (chkQuality.Checked)
 			{
 				LogService.OutputDocumentQuality_Print(oOutputDocumentTemp, this, true,
 					ref a_Dt, ref a_Rep, ref a_Cnt, 1);
 			}
 
-			// доверенность 
+			// РґРѕРІРµСЂРµРЅРЅРѕСЃС‚СЊ 
 			if (chkWarrant.Checked && oOutputDocumentTemp.PF_WarrantNeed &&
 				!oTripTemp.SelfDelivery && !oTripTemp.IsRentCar)
 			{
@@ -929,7 +935,7 @@ namespace Logistics
 				int[] aCnt = new int[a_Dt.Count];
 				a_Cnt.CopyTo(aCnt);
 
-				// собственно печать 
+				// СЃРѕР±СЃС‚РІРµРЅРЅРѕ РїРµС‡Р°С‚СЊ 
 				if (chkDirectToPrinter.Checked)
 				{
 					StartForm(new frmActiveReport(aDt, aRep, aCnt, true));
@@ -939,7 +945,7 @@ namespace Logistics
 					StartForm(new frmActiveReport(aDt, aRep, aCnt));
 				}
 
-				// отметка печати
+				// РѕС‚РјРµС‚РєР° РїРµС‡Р°С‚Рё
 				if (chkBill.Checked || chkFacture.Checked)
 				{
 					int nUserID = ((RFMFormMain)Application.OpenForms[0]).UserID;
@@ -948,30 +954,30 @@ namespace Logistics
 			}
 			else
 			{
-				RFMMessage.MessageBoxError("Нет данных для печати (расходный документ)...");
+				RFMMessage.MessageBoxError("РќРµС‚ РґР°РЅРЅС‹С… РґР»СЏ РїРµС‡Р°С‚Рё (СЂР°СЃС…РѕРґРЅС‹Р№ РґРѕРєСѓРјРµРЅС‚)...");
 				return (false);
 			}
-			
+
 			return (true);
 		}
-	
-	#endregion OutputDocument
 
-	#region Input
+		#endregion OutputDocument
+
+		#region Input
 
 		private bool Input_Print()
 		{
 			if (!(chkInputBillReturn.Checked ||
 				chkInputWarrant.Checked))
 			{
-				RFMMessage.MessageBoxError("Не выбраны документы для печати (приход)...");
+				RFMMessage.MessageBoxError("РќРµ РІС‹Р±СЂР°РЅС‹ РґРѕРєСѓРјРµРЅС‚С‹ РґР»СЏ РїРµС‡Р°С‚Рё (РїСЂРёС…РѕРґ)...");
 				return (false);
 			}
 
 			Input oInputTemp = new Input();
 			oInputTemp.ReFillOne((int)oInputForPrint.ID);
 
-			// проверки для прихода - не требуются
+			// РїСЂРѕРІРµСЂРєРё РґР»СЏ РїСЂРёС…РѕРґР° - РЅРµ С‚СЂРµР±СѓСЋС‚СЃСЏ
 
 			Trip oTripTemp = new Trip();
 			oTripTemp.ReFillOne((int)oInputTemp.TripID);
@@ -980,14 +986,14 @@ namespace Logistics
 			ArrayList a_Rep = new ArrayList();
 			ArrayList a_Cnt = new ArrayList();
 
-			// возвратная накладная
+			// РІРѕР·РІСЂР°С‚РЅР°СЏ РЅР°РєР»Р°РґРЅР°СЏ
 			if (chkInputBillReturn.Checked && oInputTemp.IsReturn)
 			{
 				LogService.InputReturnBill_Print(oInputTemp, this, true,
 					ref a_Dt, ref a_Rep, ref a_Cnt, 1);
 			}
 
-			// доверенность 
+			// РґРѕРІРµСЂРµРЅРЅРѕСЃС‚СЊ 
 			if (chkInputWarrant.Checked && oInputTemp.PF_WarrantNeed &&
 				!oTripTemp.SelfDelivery &&
 				(!oTripTemp.IsRentCar || !oInputTemp.IsReturn))
@@ -995,7 +1001,7 @@ namespace Logistics
 				LogService.InputWarrant_Print(oInputTemp, this, true, true,
 					ref a_Dt, ref a_Rep, ref a_Cnt, 1);
 			}
-			
+
 			if (a_Dt.Count > 0)
 			{
 				DataTable[] aDt = new DataTable[a_Dt.Count];
@@ -1007,7 +1013,7 @@ namespace Logistics
 				int[] aCnt = new int[a_Dt.Count];
 				a_Cnt.CopyTo(aCnt);
 
-				// собственно печать 
+				// СЃРѕР±СЃС‚РІРµРЅРЅРѕ РїРµС‡Р°С‚СЊ 
 				if (chkDirectToPrinter.Checked)
 				{
 					StartForm(new frmActiveReport(aDt, aRep, aCnt, true));
@@ -1017,34 +1023,34 @@ namespace Logistics
 					StartForm(new frmActiveReport(aDt, aRep, aCnt));
 				}
 
-				// отметка печати - не требуется
+				// РѕС‚РјРµС‚РєР° РїРµС‡Р°С‚Рё - РЅРµ С‚СЂРµР±СѓРµС‚СЃСЏ
 			}
 			else
 			{
-				RFMMessage.MessageBoxError("Нет данных для печати (приход)...");
+				RFMMessage.MessageBoxError("РќРµС‚ РґР°РЅРЅС‹С… РґР»СЏ РїРµС‡Р°С‚Рё (РїСЂРёС…РѕРґ)...");
 				return (false);
 			}
 
 			return (true);
 		}
 
-	#endregion Input
+		#endregion Input
 
-	#endregion Print
+		#endregion Print
 
 		private void btnClearAll_Click(object sender, EventArgs e)
 		{
 			chkTripBill.Checked =
 			chkTripBillShort.Checked =
-            chkDrivingScheme.Checked = 
+			chkDrivingScheme.Checked =
 			chkBill.Checked =
 			chkFacture.Checked =
-			chkPayBill.Checked = 
+			chkPayBill.Checked =
 			chkVeterinary.Checked =
 			chkQuality.Checked =
-			chkWarrant.Checked = 
-			chkInputBillReturn.Checked = 
-			chkInputWarrant.Checked = 
+			chkWarrant.Checked =
+			chkInputBillReturn.Checked =
+			chkInputWarrant.Checked =
 			chkDirectToPrinter.Checked =
 				false;
 			numBillCopies.Value = 2;
