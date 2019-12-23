@@ -262,6 +262,22 @@ namespace Logistics
 				dtRep.Merge(dtRepTemp);
 			}
 
+			// При печати из складских заданий, если задание не имеет связанных расх. документов, 
+			// след. столбцы отсутствуют: OrderNumbersList, FactureNumbersList.
+			// Создаем их вручную
+			bool onl = false, fnl = false;
+			foreach (DataColumn col in dtRep.Columns)
+			{
+				if (col.ColumnName == "OrderNumbersList")
+					onl = true;
+				if (col.ColumnName == "FactureNumbersList")
+					fnl = true;
+			}
+			if (onl == false)
+				dtRep.Columns.Add("OrderNumbersList", typeof(string));
+			if (fnl == false)
+				dtRep.Columns.Add("FactureNumbersList", typeof(string));
+
 			foreach (DataRow r in dtRep.Rows)
 			{
 				//r["ShipperInfo"] = txtShipperInfo.Text;
