@@ -428,7 +428,7 @@ namespace Logistics
             this.txtHeaderOrderNumbersList.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
             this.txtHeaderOrderNumbersList.Border.TopColor = System.Drawing.Color.Black;
             this.txtHeaderOrderNumbersList.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.txtHeaderOrderNumbersList.DataField = "OrderNumbersList";
+            this.txtHeaderOrderNumbersList.DataField = "HeaderOrderNumbersList";
             this.txtHeaderOrderNumbersList.Height = 0.1968504F;
             this.txtHeaderOrderNumbersList.Left = 1.377953F;
             this.txtHeaderOrderNumbersList.MultiLine = false;
@@ -449,7 +449,7 @@ namespace Logistics
             this.txtHeaderFactureNumbersList.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
             this.txtHeaderFactureNumbersList.Border.TopColor = System.Drawing.Color.Black;
             this.txtHeaderFactureNumbersList.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.txtHeaderFactureNumbersList.DataField = "FactureNumbersList";
+            this.txtHeaderFactureNumbersList.DataField = "HeaderFactureNumbersList";
             this.txtHeaderFactureNumbersList.Height = 0.1968504F;
             this.txtHeaderFactureNumbersList.Left = 1.377953F;
             this.txtHeaderFactureNumbersList.MultiLine = false;
@@ -1043,8 +1043,8 @@ namespace Logistics
             this.txtDocuments.HyperLink = null;
             this.txtDocuments.Left = 0.07874016F;
             this.txtDocuments.Name = "txtDocuments";
-            this.txtDocuments.Style = "ddo-char-set: 1; text-align: left; font-weight: normal; font-size: 10pt; font-fam" +
-    "ily: Tahoma; ";
+            this.txtDocuments.Style = "ddo-char-set: 204; text-align: left; font-weight: normal; font-size: 9pt; font-fa" +
+    "mily: Tahoma; ";
             this.txtDocuments.Text = "txtDocuments";
             this.txtDocuments.Top = 2.874016F;
             this.txtDocuments.Width = 7.559055F;

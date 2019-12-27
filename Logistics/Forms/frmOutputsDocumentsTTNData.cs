@@ -278,6 +278,11 @@ namespace Logistics
 			if (fnl == false)
 				dtRep.Columns.Add("FactureNumbersList", typeof(string));
 
+			// Добавляем поля для печати верхних списков №№ заказов и фактур
+			// Для обычных накладных они должны печататься, для суммарной - нет
+			dtRep.Columns.Add("HeaderOrderNumbersList", typeof(string));
+			dtRep.Columns.Add("HeaderFactureNumbersList", typeof(string));
+
 			foreach (DataRow r in dtRep.Rows)
 			{
 				//r["ShipperInfo"] = txtShipperInfo.Text;
@@ -287,6 +292,9 @@ namespace Logistics
 				r["BillNumbersList"] = r["BillNumbersList"].ToString().Trim();
 				r["OrderNumbersList"] = r["OrderNumbersList"].ToString().Trim();
 				r["FactureNumbersList"] = r["FactureNumbersList"].ToString().Trim();
+
+				r["HeaderOrderNumbersList"] = r["OrderNumbersList"].ToString().Trim();
+				r["HeaderFactureNumbersList"] = r["FactureNumbersList"].ToString().Trim();
 			}
 
 			// 2019-11-19
@@ -371,17 +379,14 @@ namespace Logistics
 					nr["SAmount"] = sAmount;
 					nr["SVAT"] = sVAT;
 
-					/*
 					nr["BillNumbersList"] += (nr["BillNumbersList"].ToString().Length == 0 ? "" : ",") +
 						r["BillNumbersList"].ToString().Trim();
 					nr["OrderNumbersList"] += (nr["OrderNumbersList"].ToString().Length == 0 ? "" : ",") +
 						r["OrderNumbersList"].ToString().Trim();
 					nr["FactureNumbersList"] += (nr["FactureNumbersList"].ToString().Length == 0 ? "" : ",") +
 						r["FactureNumbersList"].ToString().Trim();
-					*/
-					nr["BillNumbersList"] = "";
-					nr["OrderNumbersList"] = "";
-					nr["FactureNumbersList"] = "";
+					nr["HeaderOrderNumbersList"] = "";
+					nr["HeaderFactureNumbersList"] = "";
 
 					// Меняем данные в старой таблице
 					//r["ShipperInfo"] = newOrganizationInfo;

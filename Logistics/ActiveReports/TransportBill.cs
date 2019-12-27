@@ -39,6 +39,7 @@ namespace Logistics
                 (Fields["FactureNumbersList"].Value.ToString().Length > 0 ? "УПД/С-Ф № " + Fields["FactureNumbersList"].Value.ToString() + ", " : "") +
                 (Fields["BillNumbersList"].Value.ToString().Length > 0 ? "Накл. № " + Fields["BillNumbersList"].Value.ToString() + ", " : "") +
                 (Fields["BillNumbersList"].Value.ToString().Length > 0 ? "декларации соответствия, удостоверения качества" : "");
+
             txtDriverName.Text = Fields["DriverName"].Value.ToString() + 
                 (Fields["DriverPhone"].Value.ToString().Length > 0 ? ", моб.тел. " + Fields["DriverPhone"].Value.ToString().ToString() : "");
             txtCarInfo.Text = 
