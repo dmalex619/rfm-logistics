@@ -785,7 +785,7 @@ namespace Logistics
             this.line17.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
             this.line17.Border.TopColor = System.Drawing.Color.Black;
             this.line17.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.line17.Height = 1.220472F;
+            this.line17.Height = 1.220473F;
             this.line17.Left = 3.858268F;
             this.line17.LineWeight = 1F;
             this.line17.Name = "line17";
@@ -1039,8 +1039,6 @@ namespace Logistics
             this.txtDocuments.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
             this.txtDocuments.Border.TopColor = System.Drawing.Color.Black;
             this.txtDocuments.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.txtDocuments.DataField = "=\"Зак. № \" + OrderNumbersList + \", УПД/С-Ф № \" + FactureNumbersList + \", накл. № " +
-    "\" + BillNumbersList + \", декларации соответствия, удостоверения качества\"";
             this.txtDocuments.Height = 0.1574805F;
             this.txtDocuments.HyperLink = null;
             this.txtDocuments.Left = 0.07874016F;
@@ -1530,7 +1528,7 @@ namespace Logistics
             this.line1.LineWeight = 1F;
             this.line1.Name = "line1";
             this.line1.Top = 1.259843F;
-            this.line1.Width = 7.637795F;
+            this.line1.Width = 7.637796F;
             this.line1.X1 = 0.03937008F;
             this.line1.X2 = 7.677166F;
             this.line1.Y1 = 1.259843F;
@@ -1571,7 +1569,7 @@ namespace Logistics
             this.line2.LineWeight = 1F;
             this.line2.Name = "line2";
             this.line2.Top = 1.811024F;
-            this.line2.Width = 7.637795F;
+            this.line2.Width = 7.637796F;
             this.line2.X1 = 0.03937008F;
             this.line2.X2 = 7.677166F;
             this.line2.Y1 = 1.811024F;
@@ -1612,7 +1610,7 @@ namespace Logistics
             this.line3.LineWeight = 1F;
             this.line3.Name = "line3";
             this.line3.Top = 2.125984F;
-            this.line3.Width = 7.637795F;
+            this.line3.Width = 7.637796F;
             this.line3.X1 = 0.03937008F;
             this.line3.X2 = 7.677166F;
             this.line3.Y1 = 2.125984F;
@@ -1654,7 +1652,7 @@ namespace Logistics
             this.line4.LineWeight = 1F;
             this.line4.Name = "line4";
             this.line4.Top = 2.440945F;
-            this.line4.Width = 7.637795F;
+            this.line4.Width = 7.637796F;
             this.line4.X1 = 0.03937008F;
             this.line4.X2 = 7.677166F;
             this.line4.Y1 = 2.440945F;
@@ -1696,7 +1694,7 @@ namespace Logistics
             this.line5.LineWeight = 1F;
             this.line5.Name = "line5";
             this.line5.Top = 3.031496F;
-            this.line5.Width = 7.637795F;
+            this.line5.Width = 7.637796F;
             this.line5.X1 = 0.03937008F;
             this.line5.X2 = 7.677166F;
             this.line5.Y1 = 3.031496F;
@@ -1738,7 +1736,7 @@ namespace Logistics
             this.line6.LineWeight = 1F;
             this.line6.Name = "line6";
             this.line6.Top = 3.622047F;
-            this.line6.Width = 7.637795F;
+            this.line6.Width = 7.637796F;
             this.line6.X1 = 0.03937008F;
             this.line6.X2 = 7.677166F;
             this.line6.Y1 = 3.622047F;
@@ -1779,7 +1777,7 @@ namespace Logistics
             this.line7.LineWeight = 1F;
             this.line7.Name = "line7";
             this.line7.Top = 3.937008F;
-            this.line7.Width = 7.637795F;
+            this.line7.Width = 7.637796F;
             this.line7.X1 = 0.03937008F;
             this.line7.X2 = 7.677166F;
             this.line7.Y1 = 3.937008F;
@@ -1820,7 +1818,7 @@ namespace Logistics
             this.line8.LineWeight = 1F;
             this.line8.Name = "line8";
             this.line8.Top = 4.527559F;
-            this.line8.Width = 7.637795F;
+            this.line8.Width = 7.637796F;
             this.line8.X1 = 0.03937008F;
             this.line8.X2 = 7.677166F;
             this.line8.Y1 = 4.527559F;
@@ -1881,7 +1879,7 @@ namespace Logistics
             this.line10.LineWeight = 1F;
             this.line10.Name = "line10";
             this.line10.Top = 5.15748F;
-            this.line10.Width = 7.637795F;
+            this.line10.Width = 7.637796F;
             this.line10.X1 = 0.03937008F;
             this.line10.X2 = 7.677166F;
             this.line10.Y1 = 5.15748F;
@@ -1943,7 +1941,7 @@ namespace Logistics
             this.line11.LineWeight = 1F;
             this.line11.Name = "line11";
             this.line11.Top = 6.062992F;
-            this.line11.Width = 7.637795F;
+            this.line11.Width = 7.637796F;
             this.line11.X1 = 0.03937008F;
             this.line11.X2 = 7.677166F;
             this.line11.Y1 = 6.062992F;
@@ -2047,7 +2045,7 @@ namespace Logistics
             this.line12.LineWeight = 1F;
             this.line12.Name = "line12";
             this.line12.Top = 6.377953F;
-            this.line12.Width = 7.637795F;
+            this.line12.Width = 7.637796F;
             this.line12.X1 = 0.03937008F;
             this.line12.X2 = 7.677166F;
             this.line12.Y1 = 6.377953F;
@@ -2068,7 +2066,7 @@ namespace Logistics
             this.line9.LineWeight = 1F;
             this.line9.Name = "line9";
             this.line9.Top = 4.84252F;
-            this.line9.Width = 7.637795F;
+            this.line9.Width = 7.637796F;
             this.line9.X1 = 0.03937008F;
             this.line9.X2 = 7.677166F;
             this.line9.Y1 = 4.84252F;
@@ -2109,7 +2107,7 @@ namespace Logistics
             this.line13.LineWeight = 1F;
             this.line13.Name = "line13";
             this.line13.Top = 6.692914F;
-            this.line13.Width = 7.637795F;
+            this.line13.Width = 7.637796F;
             this.line13.X1 = 0.03937008F;
             this.line13.X2 = 7.677166F;
             this.line13.Y1 = 6.692914F;
@@ -2151,7 +2149,7 @@ namespace Logistics
             this.line14.LineWeight = 1F;
             this.line14.Name = "line14";
             this.line14.Top = 7.559055F;
-            this.line14.Width = 7.637795F;
+            this.line14.Width = 7.637796F;
             this.line14.X1 = 0.03937008F;
             this.line14.X2 = 7.677166F;
             this.line14.Y1 = 7.559055F;
@@ -2193,7 +2191,7 @@ namespace Logistics
             this.line15.LineWeight = 1F;
             this.line15.Name = "line15";
             this.line15.Top = 7.874016F;
-            this.line15.Width = 7.637795F;
+            this.line15.Width = 7.637796F;
             this.line15.X1 = 0.03937008F;
             this.line15.X2 = 7.677166F;
             this.line15.Y1 = 7.874016F;
@@ -2234,7 +2232,7 @@ namespace Logistics
             this.line16.LineWeight = 1F;
             this.line16.Name = "line16";
             this.line16.Top = 8.188976F;
-            this.line16.Width = 7.637795F;
+            this.line16.Width = 7.637796F;
             this.line16.X1 = 0.03937008F;
             this.line16.X2 = 7.677166F;
             this.line16.Y1 = 8.188976F;
@@ -2276,7 +2274,7 @@ namespace Logistics
             this.line19.LineWeight = 1F;
             this.line19.Name = "line19";
             this.line19.Top = 8.503938F;
-            this.line19.Width = 7.637795F;
+            this.line19.Width = 7.637796F;
             this.line19.X1 = 0.03937008F;
             this.line19.X2 = 7.677166F;
             this.line19.Y1 = 8.503938F;
@@ -2318,7 +2316,7 @@ namespace Logistics
             this.line20.LineWeight = 1F;
             this.line20.Name = "line20";
             this.line20.Top = 8.818898F;
-            this.line20.Width = 7.637795F;
+            this.line20.Width = 7.637796F;
             this.line20.X1 = 0.03937008F;
             this.line20.X2 = 7.677166F;
             this.line20.Y1 = 8.818898F;
@@ -2360,7 +2358,7 @@ namespace Logistics
             this.line21.LineWeight = 1F;
             this.line21.Name = "line21";
             this.line21.Top = 9.133859F;
-            this.line21.Width = 7.637795F;
+            this.line21.Width = 7.637796F;
             this.line21.X1 = 0.03937008F;
             this.line21.X2 = 7.677166F;
             this.line21.Y1 = 9.133859F;
@@ -3269,14 +3267,14 @@ namespace Logistics
             this.textBox2.Border.TopColor = System.Drawing.Color.Black;
             this.textBox2.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
             this.textBox2.CanGrow = false;
-            this.textBox2.DataField = "PayerTransportInfo";
+            this.textBox2.DataField = "ShipperInfo";
             this.textBox2.Height = 0.7480315F;
             this.textBox2.HyperLink = null;
             this.textBox2.Left = 0.07874016F;
             this.textBox2.Name = "textBox2";
             this.textBox2.Style = "ddo-char-set: 1; text-align: center; font-weight: normal; font-size: 10pt; font-f" +
     "amily: Tahoma; ";
-            this.textBox2.Text = "PayerTransportInfo";
+            this.textBox2.Text = "ShipperInfo";
             this.textBox2.Top = 16.92913F;
             this.textBox2.Width = 3.740157F;
             // 
@@ -3357,7 +3355,7 @@ namespace Logistics
             this.line34.LineWeight = 1F;
             this.line34.Name = "line34";
             this.line34.Top = 17.67717F;
-            this.line34.Width = 7.637795F;
+            this.line34.Width = 7.637796F;
             this.line34.X1 = 0.03937008F;
             this.line34.X2 = 7.677166F;
             this.line34.Y1 = 17.67717F;
@@ -3373,7 +3371,7 @@ namespace Logistics
             this.line35.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
             this.line35.Border.TopColor = System.Drawing.Color.Black;
             this.line35.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.line35.Height = 0.7874012F;
+            this.line35.Height = 0.7874107F;
             this.line35.Left = 3.858268F;
             this.line35.LineWeight = 1F;
             this.line35.Name = "line35";
@@ -3667,7 +3665,7 @@ namespace Logistics
             this.line43.LineWeight = 1F;
             this.line43.Name = "line43";
             this.line43.Top = 18.11024F;
-            this.line43.Width = 1.968504F;
+            this.line43.Width = 1.968505F;
             this.line43.X1 = 1.220472F;
             this.line43.X2 = 3.188977F;
             this.line43.Y1 = 18.11024F;

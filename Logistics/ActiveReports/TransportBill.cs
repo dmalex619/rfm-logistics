@@ -28,15 +28,21 @@ namespace Logistics
             int nBoxes = Convert.ToInt32(Fields["SBoxes"].Value);
             txtBoxesWords.Text = RFMPublic.RFMUtilities.ValToTxt(nBoxes) + " кор.";
 
-            txtNettoBrutto.Text = "Вес нетто - " + Convert.ToInt32(Fields["SNetto"].Value).ToString() +
-                " кг, вес брутто - " + Convert.ToInt32(Fields["SBrutto"].Value).ToString() + " кг";
+            txtNettoBrutto.Text = "Вес нетто - " + Convert.ToDecimal(Fields["SNetto"].Value).ToString("N3") +
+                " кг, вес брутто - " + Convert.ToDecimal(Fields["SBrutto"].Value).ToString("N3") + " кг";
 
             txtChargeData.Text = txtBoxesWords.Text + ", " + txtNettoBrutto.Text.ToLower() + " на месте погрузки";
             txtDischargeData.Text = txtBoxesWords.Text + ", " + txtNettoBrutto.Text.ToLower() + " на месте выгрузки";
 
+            txtDocuments.Text = 
+                (Fields["OrderNumbersList"].Value.ToString().Length > 0 ? "Зак. № " + Fields["OrderNumbersList"].Value.ToString() + ", " : "") +
+                (Fields["FactureNumbersList"].Value.ToString().Length > 0 ? "УПД/С-Ф № " + Fields["FactureNumbersList"].Value.ToString() + ", " : "") +
+                (Fields["BillNumbersList"].Value.ToString().Length > 0 ? "Накл. № " + Fields["BillNumbersList"].Value.ToString() + ", " : "") +
+                (Fields["BillNumbersList"].Value.ToString().Length > 0 ? "декларации соответствия, удостоверения качества" : "");
             txtDriverName.Text = Fields["DriverName"].Value.ToString() + 
                 (Fields["DriverPhone"].Value.ToString().Length > 0 ? ", моб.тел. " + Fields["DriverPhone"].Value.ToString().ToString() : "");
-            txtCarInfo.Text = Fields["CarTypeName"].Value.ToString() + ", " +
+            txtCarInfo.Text = 
+                (Fields["CarTypeName"].Value.ToString().Length > 0 ? Fields["CarTypeName"].Value.ToString() + ", " : "") +
                 Fields["CarNumber"].Value.ToString() +
                 (Fields["TrailerNumber"].Value.ToString().Length > 0 ? ", прицеп " + Fields["TrailerNumber"].Value.ToString() : "");
 

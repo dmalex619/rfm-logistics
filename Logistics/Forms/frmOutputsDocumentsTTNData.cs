@@ -337,7 +337,8 @@ namespace Logistics
 						for (int i = 0; i < dtRep.Columns.Count; i++)
 							newRow[i] = r[i];
 
-						newRow["IDList"] = (rCount + 1).ToString();
+						//newRow["IDList"] = (rCount + 1).ToString();
+						newRow["IDList"] = "";
 						newRow["ID"] = rCount + 1;
 
 						newRow["ConsigneeInfo"] = newOrganizationInfo;
@@ -370,17 +371,29 @@ namespace Logistics
 					nr["SAmount"] = sAmount;
 					nr["SVAT"] = sVAT;
 
+					/*
 					nr["BillNumbersList"] += (nr["BillNumbersList"].ToString().Length == 0 ? "" : ",") +
 						r["BillNumbersList"].ToString().Trim();
 					nr["OrderNumbersList"] += (nr["OrderNumbersList"].ToString().Length == 0 ? "" : ",") +
 						r["OrderNumbersList"].ToString().Trim();
 					nr["FactureNumbersList"] += (nr["FactureNumbersList"].ToString().Length == 0 ? "" : ",") +
 						r["FactureNumbersList"].ToString().Trim();
+					*/
+					nr["BillNumbersList"] = "";
+					nr["OrderNumbersList"] = "";
+					nr["FactureNumbersList"] = "";
 
 					// Меняем данные в старой таблице
+					//r["ShipperInfo"] = newOrganizationInfo;
 					r["OrganizationInfo"] = newOrganizationInfo;
-					r["ShipperInfo"] = newOrganizationInfo;
 					r["PointCharge"] = newWarehouseAddress;
+
+					r["DriverName"] = "";
+					r["DriverPhone"] = "";
+
+					r["CarTypeName"] = "";
+					r["CarNumber"] = "";
+					r["TrailerNumber"] = "";
 				}
 
 				// Отображаем форму печати
@@ -393,6 +406,15 @@ namespace Logistics
 			}
 			else
 			{
+				/*
+				// Изменение от 27.12.2019
+				// Чтобы сохранить единый бланк, подменяем часть данных
+				foreach (DataRow r in dtRep.Rows)
+				{
+					r["PayerTransportInfo"] = r["ShipperInfo"].ToString();
+				}
+				*/
+
 				if (optPrintTTNOnly.Checked || optPrintTTNandTransportBill.Checked)
 				{
 					ActiveReport3 repTTN = new TtnOneLine();
