@@ -8,7 +8,7 @@ namespace Logistics
 	public static class StartProgram
 	{
 		public static object[] ParamStore = null;
-		public static string CurVersion = "Logistics 3.0.191222";
+		public static string CurVersion = "Logistics 3.0.191227";
 
 		/// <summary>
 		/// The main entry point for the application.
