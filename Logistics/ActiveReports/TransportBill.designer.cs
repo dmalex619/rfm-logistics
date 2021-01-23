@@ -429,7 +429,7 @@ namespace Logistics
             this.label10.Style = "color: Black; ddo-char-set: 1; font-size: 10pt; font-family: Tahoma; white-space:" +
     " nowrap; vertical-align: top; ";
             this.label10.Text = "Экземпляр № 1,2,3,4";
-            this.label10.Top = 0.2755906F;
+            this.label10.Top = 0.2559055F;
             this.label10.Width = 1.417323F;
             // 
             // txtBillNumber
