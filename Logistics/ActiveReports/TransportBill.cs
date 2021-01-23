@@ -47,8 +47,8 @@ namespace Logistics
                 Fields["CarNumber"].Value.ToString() +
                 (Fields["TrailerNumber"].Value.ToString().Length > 0 ? ", прицеп " + Fields["TrailerNumber"].Value.ToString() : "");
 
-            txtCurrentUserName1.Text = txtCurrentUserName2.Text = 
-                ((RFMBaseClasses.RFMFormMain)System.Windows.Forms.Application.OpenForms[0]).UserInfo.UserAlias;
+            /*txtCurrentUserName1.Text = txtCurrentUserName2.Text = 
+                ((RFMBaseClasses.RFMFormMain)System.Windows.Forms.Application.OpenForms[0]).UserInfo.UserAlias;*/
         }
 	}
 }
