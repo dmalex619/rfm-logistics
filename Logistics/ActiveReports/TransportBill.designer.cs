@@ -481,6 +481,8 @@ namespace Logistics
             // 
             this.Detail.ColumnSpacing = 0F;
             this.Detail.Controls.AddRange(new DataDynamics.ActiveReports.ARControl[] {
+            this.label107,
+            this.label110,
             this.label80,
             this.label79,
             this.label37,
@@ -657,9 +659,7 @@ namespace Logistics
             this.label105,
             this.line61,
             this.line62,
-            this.label107,
             this.label109,
-            this.label110,
             this.line63,
             this.label30,
             this.line13,
@@ -810,7 +810,7 @@ namespace Logistics
             this.label100.Style = "color: Black; ddo-char-set: 204; text-align: center; font-style: normal; font-siz" +
     "e: 6pt; font-family: Tahoma; white-space: nowrap; ";
             this.label100.Text = "(фактические дата и время прибытия)";
-            this.label100.Top = 9.212599F;
+            this.label100.Top = 9.094488F;
             this.label100.Width = 1.653543F;
             // 
             // label99
@@ -1419,7 +1419,7 @@ namespace Logistics
             this.txtChargeStamp.Style = "ddo-char-set: 1; text-align: center; font-weight: normal; font-size: 10pt; font-f" +
     "amily: Tahoma; ";
             this.txtChargeStamp.Text = "txtChargeStamp";
-            this.txtChargeStamp.Top = 9.488189F;
+            this.txtChargeStamp.Top = 9.40945F;
             this.txtChargeStamp.Width = 0.7874016F;
             // 
             // label7
@@ -4179,12 +4179,12 @@ namespace Logistics
             this.line59.Left = 0F;
             this.line59.LineWeight = 1F;
             this.line59.Name = "line59";
-            this.line59.Top = 9.212599F;
+            this.line59.Top = 9.094488F;
             this.line59.Width = 1.811024F;
             this.line59.X1 = 0F;
             this.line59.X2 = 1.811024F;
-            this.line59.Y1 = 9.212599F;
-            this.line59.Y2 = 9.212599F;
+            this.line59.Y1 = 9.094488F;
+            this.line59.Y2 = 9.094488F;
             // 
             // line60
             // 
@@ -4307,7 +4307,7 @@ namespace Logistics
             this.label107.Style = "color: Black; ddo-char-set: 204; text-align: left; font-style: normal; font-size:" +
     " 10pt; font-family: Tahoma; white-space: nowrap; ";
             this.label107.Text = "ЗПУ отправителя №";
-            this.label107.Top = 9.645669F;
+            this.label107.Top = 9.40945F;
             this.label107.Width = 1.299213F;
             // 
             // label109
