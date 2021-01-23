@@ -207,7 +207,6 @@ namespace Logistics
             this.PageFooter = new DataDynamics.ActiveReports.PageFooter();
             this.shape1 = new DataDynamics.ActiveReports.Shape();
             this.label12 = new DataDynamics.ActiveReports.Label();
-            this.textBox4 = new DataDynamics.ActiveReports.TextBox();
             this.line11 = new DataDynamics.ActiveReports.Line();
             this.label35 = new DataDynamics.ActiveReports.Label();
             this.line12 = new DataDynamics.ActiveReports.Line();
@@ -354,7 +353,6 @@ namespace Logistics
             ((System.ComponentModel.ISupportInitialize)(this.label30)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDischargeData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.label12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.label35)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.label36)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.label41)).BeginInit();
@@ -687,7 +685,6 @@ namespace Logistics
             this.line10,
             this.shape1,
             this.label12,
-            this.textBox4,
             this.line11,
             this.line12,
             this.line19,
@@ -704,7 +701,7 @@ namespace Logistics
             this.line58,
             this.textBox6,
             this.textBox7});
-            this.Detail.Height = 59.05512F;
+            this.Detail.Height = 29.52756F;
             this.Detail.Name = "Detail";
             this.Detail.Format += new System.EventHandler(this.Detail_Format);
             // 
@@ -4338,26 +4335,6 @@ namespace Logistics
             this.label12.Top = 15.90551F;
             this.label12.Width = 3.622047F;
             // 
-            // textBox4
-            // 
-            this.textBox4.Border.BottomColor = System.Drawing.Color.Black;
-            this.textBox4.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.textBox4.Border.LeftColor = System.Drawing.Color.Black;
-            this.textBox4.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.textBox4.Border.RightColor = System.Drawing.Color.Black;
-            this.textBox4.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.textBox4.Border.TopColor = System.Drawing.Color.Black;
-            this.textBox4.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.textBox4.Height = 0.1574801F;
-            this.textBox4.Left = 0.03937008F;
-            this.textBox4.MultiLine = false;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Style = "ddo-char-set: 1; text-align: left; font-weight: normal; font-size: 10pt; font-fam" +
-    "ily: Tahoma; ";
-            this.textBox4.Text = "txtCarInfo";
-            this.textBox4.Top = 15.55118F;
-            this.textBox4.Width = 7.559056F;
-            // 
             // line11
             // 
             this.line11.Border.BottomColor = System.Drawing.Color.Black;
@@ -4515,7 +4492,7 @@ namespace Logistics
             this.line48.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
             this.line48.Border.TopColor = System.Drawing.Color.Black;
             this.line48.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.line48.Height = 2.047245F;
+            this.line48.Height = 2.244093F;
             this.line48.Left = 3.818898F;
             this.line48.LineWeight = 1F;
             this.line48.Name = "line48";
@@ -4524,7 +4501,7 @@ namespace Logistics
             this.line48.X1 = 3.818898F;
             this.line48.X2 = 3.818898F;
             this.line48.Y1 = 20.43307F;
-            this.line48.Y2 = 22.48032F;
+            this.line48.Y2 = 22.67716F;
             // 
             // label81
             // 
@@ -4964,7 +4941,6 @@ namespace Logistics
             ((System.ComponentModel.ISupportInitialize)(this.label30)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDischargeData)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.label12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.label35)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.label36)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.label41)).EndInit();
@@ -5162,7 +5138,6 @@ namespace Logistics
         private DataDynamics.ActiveReports.Label label35;
         private DataDynamics.ActiveReports.Shape shape1;
         private DataDynamics.ActiveReports.Label label12;
-        private DataDynamics.ActiveReports.TextBox textBox4;
         private DataDynamics.ActiveReports.Line line11;
         private DataDynamics.ActiveReports.Label label36;
         private DataDynamics.ActiveReports.Label label41;
