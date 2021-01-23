@@ -688,7 +688,7 @@ namespace Logistics
     "e: 6pt; font-family: Tahoma; white-space: inherit; ";
             this.label80.Text = "(должность, подпись, расшифровка подписи перевозчика (уполномоченного лица) при н" +
     "еобходимости)";
-            this.label80.Top = 10.35433F;
+            this.label80.Top = 10.27559F;
             this.label80.Width = 3.740157F;
             // 
             // label79
@@ -709,7 +709,7 @@ namespace Logistics
     "e: 6pt; font-family: Tahoma; white-space: inherit; ";
             this.label79.Text = "(должность, подпись, расшифровка подписи Перевозчика (уполномоченного лица) при н" +
     "еобходимости)";
-            this.label79.Top = 10.35433F;
+            this.label79.Top = 10.27559F;
             this.label79.Width = 3.740157F;
             // 
             // label37
@@ -729,7 +729,7 @@ namespace Logistics
             this.label37.Style = "color: Black; ddo-char-set: 204; text-align: center; font-style: normal; font-siz" +
     "e: 6pt; font-family: Tahoma; white-space: nowrap; ";
             this.label37.Text = "(должность, подпись, расшифровка подписи грузополучателя (уполномоченного лица))";
-            this.label37.Top = 10.03937F;
+            this.label37.Top = 9.96063F;
             this.label37.Width = 3.740157F;
             // 
             // label6
@@ -750,7 +750,7 @@ namespace Logistics
     "e: 6pt; font-family: Tahoma; white-space: nowrap; ";
             this.label6.Text = "(должность, подпись, расшифровка подписи лица, от которого забирается груз (уполн" +
     "омоченного лица)";
-            this.label6.Top = 10.03937F;
+            this.label6.Top = 9.96063F;
             this.label6.Width = 3.740157F;
             // 
             // label108
@@ -770,7 +770,7 @@ namespace Logistics
             this.label108.Style = "color: Black; ddo-char-set: 204; text-align: center; font-style: normal; font-siz" +
     "e: 6pt; font-family: Tahoma; white-space: inherit; ";
             this.label108.Text = "(фактическое состояние груза, тары, упаковки, маркировки и опломбирования)";
-            this.label108.Top = 9.40945F;
+            this.label108.Top = 9.330709F;
             this.label108.Width = 3.740157F;
             // 
             // label101
@@ -790,7 +790,7 @@ namespace Logistics
             this.label101.Style = "color: Black; ddo-char-set: 204; text-align: center; font-style: normal; font-siz" +
     "e: 6pt; font-family: Tahoma; white-space: nowrap; ";
             this.label101.Text = "(фактические дата и время убытия)";
-            this.label101.Top = 8.937008F;
+            this.label101.Top = 8.858268F;
             this.label101.Width = 1.653544F;
             // 
             // label100
@@ -810,7 +810,7 @@ namespace Logistics
             this.label100.Style = "color: Black; ddo-char-set: 204; text-align: center; font-style: normal; font-siz" +
     "e: 6pt; font-family: Tahoma; white-space: nowrap; ";
             this.label100.Text = "(фактические дата и время прибытия)";
-            this.label100.Top = 8.937008F;
+            this.label100.Top = 8.858268F;
             this.label100.Width = 1.653543F;
             // 
             // label99
@@ -830,7 +830,7 @@ namespace Logistics
             this.label99.Style = "color: Black; ddo-char-set: 204; text-align: center; font-style: normal; font-siz" +
     "e: 6pt; font-family: Tahoma; white-space: nowrap; ";
             this.label99.Text = "(дата и время подачи транспортного средства под выгрузку)";
-            this.label99.Top = 8.661418F;
+            this.label99.Top = 8.582677F;
             this.label99.Width = 3.740157F;
             // 
             // label98
@@ -850,7 +850,7 @@ namespace Logistics
             this.label98.Style = "color: Black; ddo-char-set: 204; text-align: center; font-style: normal; font-siz" +
     "e: 6pt; font-family: Tahoma; white-space: nowrap; ";
             this.label98.Text = "(дата и время подачи транспортного средства под погрузку)";
-            this.label98.Top = 8.661418F;
+            this.label98.Top = 8.582677F;
             this.label98.Width = 3.740157F;
             // 
             // label93
@@ -870,7 +870,7 @@ namespace Logistics
             this.label93.Style = "color: Black; ddo-char-set: 204; text-align: center; font-style: normal; font-siz" +
     "e: 6pt; font-family: Tahoma; white-space: inherit; ";
             this.label93.Text = "(объявленная стоимость (ценность) груза)";
-            this.label93.Top = 3.937008F;
+            this.label93.Top = 3.976378F;
             this.label93.Width = 7.559056F;
             // 
             // label88
@@ -890,7 +890,7 @@ namespace Logistics
             this.label88.Style = "color: Black; ddo-char-set: 204; text-align: center; font-style: normal; font-siz" +
     "e: 6pt; font-family: Tahoma; white-space: inherit; ";
             this.label88.Text = resources.GetString("label88.Text");
-            this.label88.Top = 4.96063F;
+            this.label88.Top = 5F;
             this.label88.Width = 7.559056F;
             // 
             // label87
@@ -910,7 +910,7 @@ namespace Logistics
             this.label87.Style = "color: Black; ddo-char-set: 204; text-align: center; font-style: normal; font-siz" +
     "e: 6pt; font-family: Tahoma; white-space: inherit; ";
             this.label87.Text = resources.GetString("label87.Text");
-            this.label87.Top = 3.582677F;
+            this.label87.Top = 3.622047F;
             this.label87.Width = 7.559056F;
             // 
             // label24
@@ -1093,7 +1093,7 @@ namespace Logistics
             this.label33.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
             this.label33.Border.TopColor = System.Drawing.Color.Black;
             this.label33.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.label33.Height = 0.1574804F;
+            this.label33.Height = 0.1968504F;
             this.label33.HyperLink = null;
             this.label33.Left = 1.102362F;
             this.label33.MultiLine = false;
@@ -1122,7 +1122,7 @@ namespace Logistics
             this.txtGoodName.Style = "ddo-char-set: 1; text-align: left; font-weight: normal; font-size: 10pt; font-fam" +
     "ily: Tahoma; ";
             this.txtGoodName.Text = "txtGoodName";
-            this.txtGoodName.Top = 2.440945F;
+            this.txtGoodName.Top = 2.480315F;
             this.txtGoodName.Width = 7.559055F;
             // 
             // txtBoxesWords
@@ -1143,7 +1143,7 @@ namespace Logistics
             this.txtBoxesWords.Style = "ddo-char-set: 1; text-align: left; font-weight: normal; font-size: 10pt; font-fam" +
     "ily: Tahoma; ";
             this.txtBoxesWords.Text = "txtBoxesWords";
-            this.txtBoxesWords.Top = 2.795276F;
+            this.txtBoxesWords.Top = 2.834646F;
             this.txtBoxesWords.Width = 7.559055F;
             // 
             // txtNettoBrutto
@@ -1164,7 +1164,7 @@ namespace Logistics
             this.txtNettoBrutto.Style = "ddo-char-set: 1; text-align: left; font-weight: normal; font-size: 10pt; font-fam" +
     "ily: Tahoma; ";
             this.txtNettoBrutto.Text = "txtNettoBrutto";
-            this.txtNettoBrutto.Top = 3.149606F;
+            this.txtNettoBrutto.Top = 3.188977F;
             this.txtNettoBrutto.Width = 7.559055F;
             // 
             // label1
@@ -1185,7 +1185,7 @@ namespace Logistics
             this.label1.Style = "color: Black; ddo-char-set: 1; text-align: center; font-weight: bold; font-size: " +
     "10pt; font-family: Tahoma; white-space: nowrap; ";
             this.label1.Text = "4. Сопроводительные документы на груз";
-            this.label1.Top = 4.094488F;
+            this.label1.Top = 4.133858F;
             this.label1.Width = 5.511811F;
             // 
             // txtDocuments
@@ -1205,7 +1205,7 @@ namespace Logistics
             this.txtDocuments.Style = "ddo-char-set: 204; text-align: left; font-weight: normal; font-size: 9pt; font-fa" +
     "mily: Tahoma; ";
             this.txtDocuments.Text = "txtDocuments";
-            this.txtDocuments.Top = 4.291338F;
+            this.txtDocuments.Top = 4.330709F;
             this.txtDocuments.Width = 7.559055F;
             // 
             // label2
@@ -1226,7 +1226,7 @@ namespace Logistics
             this.label2.Style = "color: Black; ddo-char-set: 1; text-align: center; font-weight: bold; font-size: " +
     "10pt; font-family: Tahoma; white-space: nowrap; ";
             this.label2.Text = "5. Указания грузоотправителя";
-            this.label2.Top = 5.708662F;
+            this.label2.Top = 5.748032F;
             this.label2.Width = 5.511811F;
             // 
             // txtDirections1
@@ -1248,7 +1248,7 @@ namespace Logistics
     "ily: Tahoma; ";
             this.txtDirections1.Text = "Рефрижератор, наличие санитарного паспорта на ТС, обязателен температурный режим " +
     "-18С, ЗПУ грузоотправителя";
-            this.txtDirections1.Top = 5.944882F;
+            this.txtDirections1.Top = 5.984252F;
             this.txtDirections1.Width = 7.559055F;
             // 
             // txtDirections2
@@ -1269,7 +1269,7 @@ namespace Logistics
             this.txtDirections2.Style = "ddo-char-set: 1; text-align: left; font-weight: normal; font-size: 10pt; font-fam" +
     "ily: Tahoma; ";
             this.txtDirections2.Text = "Стоимость груза в соответствии с товарной накладной";
-            this.txtDirections2.Top = 3.779528F;
+            this.txtDirections2.Top = 3.818898F;
             this.txtDirections2.Width = 7.559055F;
             // 
             // label3
@@ -1290,7 +1290,7 @@ namespace Logistics
             this.label3.Style = "color: Black; ddo-char-set: 1; text-align: center; font-weight: bold; font-size: " +
     "10pt; font-family: Tahoma; white-space: nowrap; ";
             this.label3.Text = "6. Прием груза";
-            this.label3.Top = 7.125984F;
+            this.label3.Top = 7.047245F;
             this.label3.Width = 3.740157F;
             // 
             // txtPointCharge
@@ -1312,7 +1312,7 @@ namespace Logistics
             this.txtPointCharge.Style = "ddo-char-set: 1; text-align: left; font-weight: normal; font-size: 10pt; font-fam" +
     "ily: Tahoma; ";
             this.txtPointCharge.Text = "PointCharge";
-            this.txtPointCharge.Top = 8.110236F;
+            this.txtPointCharge.Top = 8.031496F;
             this.txtPointCharge.Width = 3.740157F;
             // 
             // txtChargeData
@@ -1333,7 +1333,7 @@ namespace Logistics
             this.txtChargeData.Style = "ddo-char-set: 1; text-align: left; font-weight: normal; font-size: 10pt; font-fam" +
     "ily: Tahoma; ";
             this.txtChargeData.Text = "txtChargeData";
-            this.txtChargeData.Top = 9.56693F;
+            this.txtChargeData.Top = 9.488189F;
             this.txtChargeData.Width = 3.740157F;
             // 
             // label4
@@ -1354,7 +1354,7 @@ namespace Logistics
             this.label4.Style = "color: Black; ddo-char-set: 204; text-align: left; font-style: normal; font-size:" +
     " 10pt; font-family: Tahoma; white-space: nowrap; ";
             this.label4.Text = "Груз в коробах на паллетах на месте погрузки";
-            this.label4.Top = 9.094488F;
+            this.label4.Top = 9.015748F;
             this.label4.Width = 3.740157F;
             // 
             // label5
@@ -1375,7 +1375,7 @@ namespace Logistics
             this.label5.Style = "color: Black; ddo-char-set: 1; text-align: center; font-weight: bold; font-size: " +
     "10pt; font-family: Tahoma; white-space: nowrap; ";
             this.label5.Text = "7. Сдача груза";
-            this.label5.Top = 7.125984F;
+            this.label5.Top = 7.047245F;
             this.label5.Width = 3.740157F;
             // 
             // txtPointDischarge
@@ -1397,7 +1397,7 @@ namespace Logistics
             this.txtPointDischarge.Style = "ddo-char-set: 1; text-align: left; font-weight: normal; font-size: 10pt; font-fam" +
     "ily: Tahoma; ";
             this.txtPointDischarge.Text = "PointDischarge";
-            this.txtPointDischarge.Top = 8.110236F;
+            this.txtPointDischarge.Top = 8.031496F;
             this.txtPointDischarge.Width = 3.740157F;
             // 
             // txtChargeStamp
@@ -1419,7 +1419,7 @@ namespace Logistics
             this.txtChargeStamp.Style = "ddo-char-set: 1; text-align: center; font-weight: normal; font-size: 10pt; font-f" +
     "amily: Tahoma; ";
             this.txtChargeStamp.Text = "txtChargeStamp";
-            this.txtChargeStamp.Top = 9.251969F;
+            this.txtChargeStamp.Top = 9.173228F;
             this.txtChargeStamp.Width = 0.7874016F;
             // 
             // label7
@@ -1628,7 +1628,7 @@ namespace Logistics
             this.label19.Style = "color: Black; ddo-char-set: 204; text-align: center; font-style: normal; font-siz" +
     "e: 6pt; font-family: Tahoma; white-space: inherit; ";
             this.label19.Text = resources.GetString("label19.Text");
-            this.label19.Top = 2.598425F;
+            this.label19.Top = 2.637795F;
             this.label19.Width = 7.559055F;
             // 
             // line2
@@ -1645,12 +1645,12 @@ namespace Logistics
             this.line2.Left = 0F;
             this.line2.LineWeight = 1F;
             this.line2.Name = "line2";
-            this.line2.Top = 2.598425F;
+            this.line2.Top = 2.637795F;
             this.line2.Width = 7.637796F;
             this.line2.X1 = 0F;
             this.line2.X2 = 7.637796F;
-            this.line2.Y1 = 2.598425F;
-            this.line2.Y2 = 2.598425F;
+            this.line2.Y1 = 2.637795F;
+            this.line2.Y2 = 2.637795F;
             // 
             // label20
             // 
@@ -1669,7 +1669,7 @@ namespace Logistics
             this.label20.Style = "color: Black; ddo-char-set: 204; text-align: center; font-style: normal; font-siz" +
     "e: 6pt; font-family: Tahoma; white-space: inherit; ";
             this.label20.Text = resources.GetString("label20.Text");
-            this.label20.Top = 2.952756F;
+            this.label20.Top = 2.992126F;
             this.label20.Width = 7.559056F;
             // 
             // line3
@@ -1686,12 +1686,12 @@ namespace Logistics
             this.line3.Left = 0F;
             this.line3.LineWeight = 1F;
             this.line3.Name = "line3";
-            this.line3.Top = 2.952756F;
+            this.line3.Top = 2.992126F;
             this.line3.Width = 7.637796F;
             this.line3.X1 = 0F;
             this.line3.X2 = 7.637796F;
-            this.line3.Y1 = 2.952756F;
-            this.line3.Y2 = 2.952756F;
+            this.line3.Y1 = 2.992126F;
+            this.line3.Y2 = 2.992126F;
             // 
             // label21
             // 
@@ -1711,7 +1711,7 @@ namespace Logistics
     "e: 6pt; font-family: Tahoma; white-space: nowrap; ";
             this.label21.Text = "(масса нетто (брутто) грузовых мест в килограммах, размеры (высота, ширина и длин" +
     "а) в метрах, объем грузовых мест в кубических метрах)";
-            this.label21.Top = 3.307087F;
+            this.label21.Top = 3.346457F;
             this.label21.Width = 7.559056F;
             // 
             // line4
@@ -1728,12 +1728,12 @@ namespace Logistics
             this.line4.Left = 0F;
             this.line4.LineWeight = 1F;
             this.line4.Name = "line4";
-            this.line4.Top = 3.307087F;
+            this.line4.Top = 3.346457F;
             this.line4.Width = 7.637796F;
             this.line4.X1 = 0F;
             this.line4.X2 = 7.637796F;
-            this.line4.Y1 = 3.307087F;
-            this.line4.Y2 = 3.307087F;
+            this.line4.Y1 = 3.346457F;
+            this.line4.Y2 = 3.346457F;
             // 
             // label22
             // 
@@ -1752,7 +1752,7 @@ namespace Logistics
             this.label22.Style = "color: Black; ddo-char-set: 204; text-align: center; font-style: normal; font-siz" +
     "e: 6pt; font-family: Tahoma; white-space: inherit; ";
             this.label22.Text = resources.GetString("label22.Text");
-            this.label22.Top = 4.448819F;
+            this.label22.Top = 4.488189F;
             this.label22.Width = 7.559056F;
             // 
             // line5
@@ -1769,12 +1769,12 @@ namespace Logistics
             this.line5.Left = 0F;
             this.line5.LineWeight = 1F;
             this.line5.Name = "line5";
-            this.line5.Top = 4.448819F;
+            this.line5.Top = 4.488189F;
             this.line5.Width = 7.637796F;
             this.line5.X1 = 0F;
             this.line5.X2 = 7.637796F;
-            this.line5.Y1 = 4.448819F;
-            this.line5.Y2 = 4.448819F;
+            this.line5.Y1 = 4.488189F;
+            this.line5.Y2 = 4.488189F;
             // 
             // label23
             // 
@@ -1794,7 +1794,7 @@ namespace Logistics
     "e: 6pt; font-family: Tahoma; white-space: nowrap; ";
             this.label23.Text = "(параметры транспортного средства, необходимые для осуществления перевозки груза " +
     "(тип, марка, грузоподъемность, вместимость и др.)";
-            this.label23.Top = 6.102362F;
+            this.label23.Top = 6.141733F;
             this.label23.Width = 7.559056F;
             // 
             // line6
@@ -1811,12 +1811,12 @@ namespace Logistics
             this.line6.Left = 0F;
             this.line6.LineWeight = 1F;
             this.line6.Name = "line6";
-            this.line6.Top = 6.102362F;
+            this.line6.Top = 6.141733F;
             this.line6.Width = 7.637796F;
             this.line6.X1 = 0F;
             this.line6.X2 = 7.637796F;
-            this.line6.Y1 = 6.102362F;
-            this.line6.Y2 = 6.102362F;
+            this.line6.Y1 = 6.141733F;
+            this.line6.Y2 = 6.141733F;
             // 
             // label26
             // 
@@ -1837,7 +1837,7 @@ namespace Logistics
             this.label26.Text = "(указания, необходимые для выполнения фитосанитарных, санитарных, карантинных, та" +
     "моженных и прочих требований, установленных законодательством Российской Федерац" +
     "ии)";
-            this.label26.Top = 6.417323F;
+            this.label26.Top = 6.456693F;
             this.label26.Width = 7.559056F;
             // 
             // line7
@@ -1854,12 +1854,12 @@ namespace Logistics
             this.line7.Left = 0F;
             this.line7.LineWeight = 1F;
             this.line7.Name = "line7";
-            this.line7.Top = 6.417323F;
+            this.line7.Top = 6.456693F;
             this.line7.Width = 7.637796F;
             this.line7.X1 = 0F;
             this.line7.X2 = 7.637796F;
-            this.line7.Y1 = 6.417323F;
-            this.line7.Y2 = 6.417323F;
+            this.line7.Y1 = 6.456693F;
+            this.line7.Y2 = 6.456693F;
             // 
             // label27
             // 
@@ -1878,7 +1878,7 @@ namespace Logistics
             this.label27.Style = "color: Black; ddo-char-set: 204; text-align: center; font-style: normal; font-siz" +
     "e: 6pt; font-family: Tahoma; white-space: nowrap; ";
             this.label27.Text = "(адрес места погрузки)";
-            this.label27.Top = 8.385827F;
+            this.label27.Top = 8.307087F;
             this.label27.Width = 3.740157F;
             // 
             // label28
@@ -1898,7 +1898,7 @@ namespace Logistics
             this.label28.Style = "color: Black; ddo-char-set: 204; text-align: center; font-style: normal; font-siz" +
     "e: 6pt; font-family: Tahoma; white-space: inherit; ";
             this.label28.Text = "(фактическое состояние груза, тары, упаковки, маркировки и опломбирования)";
-            this.label28.Top = 9.40945F;
+            this.label28.Top = 9.330709F;
             this.label28.Width = 3.740157F;
             // 
             // label29
@@ -1918,7 +1918,7 @@ namespace Logistics
             this.label29.Style = "color: Black; ddo-char-set: 204; text-align: center; font-style: normal; font-siz" +
     "e: 6pt; font-family: Tahoma; white-space: nowrap; ";
             this.label29.Text = "масса груза, кол-во грузовых мест";
-            this.label29.Top = 9.72441F;
+            this.label29.Top = 9.645669F;
             this.label29.Width = 3.740157F;
             // 
             // label34
@@ -1938,7 +1938,7 @@ namespace Logistics
             this.label34.Style = "color: Black; ddo-char-set: 204; text-align: center; font-style: normal; font-siz" +
     "e: 6pt; font-family: Tahoma; white-space: nowrap; ";
             this.label34.Text = "(адрес места выгрузки)";
-            this.label34.Top = 8.385827F;
+            this.label34.Top = 8.307087F;
             this.label34.Width = 3.740157F;
             // 
             // textBox1
@@ -1959,7 +1959,7 @@ namespace Logistics
             this.textBox1.Style = "ddo-char-set: 1; text-align: center; font-weight: normal; font-size: 10pt; font-f" +
     "amily: Tahoma; ";
             this.textBox1.Text = "txtChargeStamp";
-            this.textBox1.Top = 9.251969F;
+            this.textBox1.Top = 9.173228F;
             this.textBox1.Width = 0.7874016F;
             // 
             // line9
@@ -1976,12 +1976,12 @@ namespace Logistics
             this.line9.Left = 0F;
             this.line9.LineWeight = 1F;
             this.line9.Name = "line9";
-            this.line9.Top = 9.40945F;
+            this.line9.Top = 9.330709F;
             this.line9.Width = 7.637796F;
             this.line9.X1 = 0F;
             this.line9.X2 = 7.637796F;
-            this.line9.Y1 = 9.40945F;
-            this.line9.Y2 = 9.40945F;
+            this.line9.Y1 = 9.330709F;
+            this.line9.Y2 = 9.330709F;
             // 
             // label38
             // 
@@ -3826,12 +3826,12 @@ namespace Logistics
             this.line52.Left = 0F;
             this.line52.LineWeight = 1F;
             this.line52.Name = "line52";
-            this.line52.Top = 3.582677F;
+            this.line52.Top = 3.622047F;
             this.line52.Width = 7.637796F;
             this.line52.X1 = 0F;
             this.line52.X2 = 7.637796F;
-            this.line52.Y1 = 3.582677F;
-            this.line52.Y2 = 3.582677F;
+            this.line52.Y1 = 3.622047F;
+            this.line52.Y2 = 3.622047F;
             // 
             // line53
             // 
@@ -3847,12 +3847,12 @@ namespace Logistics
             this.line53.Left = 0F;
             this.line53.LineWeight = 1F;
             this.line53.Name = "line53";
-            this.line53.Top = 4.96063F;
+            this.line53.Top = 5F;
             this.line53.Width = 7.637796F;
             this.line53.X1 = 0F;
             this.line53.X2 = 7.637796F;
-            this.line53.Y1 = 4.96063F;
-            this.line53.Y2 = 4.96063F;
+            this.line53.Y1 = 5F;
+            this.line53.Y2 = 5F;
             // 
             // label106
             // 
@@ -3873,7 +3873,7 @@ namespace Logistics
             this.label106.Text = "(реквизиты документа, подтверждающего об отгрузке товаров (наименование документо" +
     "в об отгрузке, номер документа об отгрузке, дата документа об отгрузке, наименов" +
     "ание и ИНН продавца и покупателя, др.)";
-            this.label106.Top = 5.472441F;
+            this.label106.Top = 5.511811F;
             this.label106.Width = 7.559056F;
             // 
             // line54
@@ -3890,12 +3890,12 @@ namespace Logistics
             this.line54.Left = 0F;
             this.line54.LineWeight = 1F;
             this.line54.Name = "line54";
-            this.line54.Top = 5.472441F;
+            this.line54.Top = 5.511811F;
             this.line54.Width = 7.637796F;
             this.line54.X1 = 0F;
             this.line54.X2 = 7.637796F;
-            this.line54.Y1 = 5.472441F;
-            this.line54.Y2 = 5.472441F;
+            this.line54.Y1 = 5.511811F;
+            this.line54.Y2 = 5.511811F;
             // 
             // label102
             // 
@@ -4013,12 +4013,12 @@ namespace Logistics
             this.line55.Left = 0F;
             this.line55.LineWeight = 1F;
             this.line55.Name = "line55";
-            this.line55.Top = 3.937008F;
+            this.line55.Top = 3.976378F;
             this.line55.Width = 7.637796F;
             this.line55.X1 = 0F;
             this.line55.X2 = 7.637796F;
-            this.line55.Y1 = 3.937008F;
-            this.line55.Y2 = 3.937008F;
+            this.line55.Y1 = 3.976378F;
+            this.line55.Y2 = 3.976378F;
             // 
             // label94
             // 
@@ -4037,7 +4037,7 @@ namespace Logistics
             this.label94.Style = "color: Black; ddo-char-set: 204; text-align: center; font-style: normal; font-siz" +
     "e: 6pt; font-family: Tahoma; white-space: inherit; ";
             this.label94.Text = resources.GetString("label94.Text");
-            this.label94.Top = 6.732284F;
+            this.label94.Top = 6.771654F;
             this.label94.Width = 7.559056F;
             // 
             // line56
@@ -4054,12 +4054,12 @@ namespace Logistics
             this.line56.Left = 0F;
             this.line56.LineWeight = 1F;
             this.line56.Name = "line56";
-            this.line56.Top = 6.732283F;
+            this.line56.Top = 6.771654F;
             this.line56.Width = 7.637796F;
             this.line56.X1 = 0F;
             this.line56.X2 = 7.637796F;
-            this.line56.Y1 = 6.732283F;
-            this.line56.Y2 = 6.732283F;
+            this.line56.Y1 = 6.771654F;
+            this.line56.Y2 = 6.771654F;
             // 
             // line57
             // 
@@ -4075,12 +4075,12 @@ namespace Logistics
             this.line57.Left = 3.818898F;
             this.line57.LineWeight = 1F;
             this.line57.Name = "line57";
-            this.line57.Top = 7.125984F;
+            this.line57.Top = 7.047245F;
             this.line57.Width = 0F;
             this.line57.X1 = 3.818898F;
             this.line57.X2 = 3.818898F;
-            this.line57.Y1 = 7.125984F;
-            this.line57.Y2 = 10.55118F;
+            this.line57.Y1 = 7.047245F;
+            this.line57.Y2 = 10.47244F;
             // 
             // label96
             // 
@@ -4100,7 +4100,7 @@ namespace Logistics
             this.label96.Style = "color: Black; ddo-char-set: 1; text-align: left; font-weight: normal; font-size: " +
     "10pt; font-family: Tahoma; white-space: nowrap; ";
             this.label96.Text = "Лицо, от которого забирается груз";
-            this.label96.Top = 7.362205F;
+            this.label96.Top = 7.283465F;
             this.label96.Width = 3.740157F;
             // 
             // label97
@@ -4120,7 +4120,7 @@ namespace Logistics
             this.label97.Style = "color: Black; ddo-char-set: 204; text-align: center; font-style: normal; font-siz" +
     "e: 6pt; font-family: Tahoma; white-space: inherit; ";
             this.label97.Text = resources.GetString("label97.Text");
-            this.label97.Top = 7.795276F;
+            this.label97.Top = 7.716536F;
             this.label97.Width = 3.740157F;
             // 
             // line8
@@ -4137,12 +4137,12 @@ namespace Logistics
             this.line8.Left = 0F;
             this.line8.LineWeight = 1F;
             this.line8.Name = "line8";
-            this.line8.Top = 8.385827F;
+            this.line8.Top = 8.307087F;
             this.line8.Width = 7.637796F;
             this.line8.X1 = 0F;
             this.line8.X2 = 7.637796F;
-            this.line8.Y1 = 8.385827F;
-            this.line8.Y2 = 8.385827F;
+            this.line8.Y1 = 8.307087F;
+            this.line8.Y2 = 8.307087F;
             // 
             // line46
             // 
@@ -4158,12 +4158,12 @@ namespace Logistics
             this.line46.Left = 0F;
             this.line46.LineWeight = 1F;
             this.line46.Name = "line46";
-            this.line46.Top = 8.661418F;
+            this.line46.Top = 8.582677F;
             this.line46.Width = 7.637796F;
             this.line46.X1 = 0F;
             this.line46.X2 = 7.637796F;
-            this.line46.Y1 = 8.661418F;
-            this.line46.Y2 = 8.661418F;
+            this.line46.Y1 = 8.582677F;
+            this.line46.Y2 = 8.582677F;
             // 
             // line59
             // 
@@ -4179,12 +4179,12 @@ namespace Logistics
             this.line59.Left = 0F;
             this.line59.LineWeight = 1F;
             this.line59.Name = "line59";
-            this.line59.Top = 8.937008F;
+            this.line59.Top = 8.858268F;
             this.line59.Width = 1.811024F;
             this.line59.X1 = 0F;
             this.line59.X2 = 1.811024F;
-            this.line59.Y1 = 8.937008F;
-            this.line59.Y2 = 8.937008F;
+            this.line59.Y1 = 8.858268F;
+            this.line59.Y2 = 8.858268F;
             // 
             // line60
             // 
@@ -4200,12 +4200,12 @@ namespace Logistics
             this.line60.Left = 1.968504F;
             this.line60.LineWeight = 1F;
             this.line60.Name = "line60";
-            this.line60.Top = 8.937008F;
+            this.line60.Top = 8.858268F;
             this.line60.Width = 1.811024F;
             this.line60.X1 = 1.968504F;
             this.line60.X2 = 3.779528F;
-            this.line60.Y1 = 8.937008F;
-            this.line60.Y2 = 8.937008F;
+            this.line60.Y1 = 8.858268F;
+            this.line60.Y2 = 8.858268F;
             // 
             // label104
             // 
@@ -4224,7 +4224,7 @@ namespace Logistics
             this.label104.Style = "color: Black; ddo-char-set: 204; text-align: center; font-style: normal; font-siz" +
     "e: 6pt; font-family: Tahoma; white-space: nowrap; ";
             this.label104.Text = "(фактические дата и время убытия)";
-            this.label104.Top = 8.937008F;
+            this.label104.Top = 8.858268F;
             this.label104.Width = 1.653544F;
             // 
             // label105
@@ -4244,7 +4244,7 @@ namespace Logistics
             this.label105.Style = "color: Black; ddo-char-set: 204; text-align: center; font-style: normal; font-siz" +
     "e: 6pt; font-family: Tahoma; white-space: nowrap; ";
             this.label105.Text = "(фактические дата и время прибытия)";
-            this.label105.Top = 8.937008F;
+            this.label105.Top = 8.858268F;
             this.label105.Width = 1.653544F;
             // 
             // line61
@@ -4261,12 +4261,12 @@ namespace Logistics
             this.line61.Left = 3.858268F;
             this.line61.LineWeight = 1F;
             this.line61.Name = "line61";
-            this.line61.Top = 8.937008F;
+            this.line61.Top = 8.858268F;
             this.line61.Width = 1.811023F;
             this.line61.X1 = 3.858268F;
             this.line61.X2 = 5.669291F;
-            this.line61.Y1 = 8.937008F;
-            this.line61.Y2 = 8.937008F;
+            this.line61.Y1 = 8.858268F;
+            this.line61.Y2 = 8.858268F;
             // 
             // line62
             // 
@@ -4282,12 +4282,12 @@ namespace Logistics
             this.line62.Left = 5.826772F;
             this.line62.LineWeight = 1F;
             this.line62.Name = "line62";
-            this.line62.Top = 8.937008F;
+            this.line62.Top = 8.858268F;
             this.line62.Width = 1.811024F;
             this.line62.X1 = 5.826772F;
             this.line62.X2 = 7.637796F;
-            this.line62.Y1 = 8.937008F;
-            this.line62.Y2 = 8.937008F;
+            this.line62.Y1 = 8.858268F;
+            this.line62.Y2 = 8.858268F;
             // 
             // label107
             // 
@@ -4307,7 +4307,7 @@ namespace Logistics
             this.label107.Style = "color: Black; ddo-char-set: 204; text-align: left; font-style: normal; font-size:" +
     " 10pt; font-family: Tahoma; white-space: nowrap; ";
             this.label107.Text = "ЗПУ отправителя №";
-            this.label107.Top = 9.40945F;
+            this.label107.Top = 9.330709F;
             this.label107.Width = 1.299213F;
             // 
             // label109
@@ -4328,7 +4328,7 @@ namespace Logistics
             this.label109.Style = "color: Black; ddo-char-set: 204; text-align: left; font-style: normal; font-size:" +
     " 10pt; font-family: Tahoma; white-space: nowrap; ";
             this.label109.Text = "Груз в коробах на паллетах на месте выгрузки";
-            this.label109.Top = 9.094488F;
+            this.label109.Top = 9.015748F;
             this.label109.Width = 3.740157F;
             // 
             // label110
@@ -4349,7 +4349,7 @@ namespace Logistics
             this.label110.Style = "color: Black; ddo-char-set: 204; text-align: left; font-style: normal; font-size:" +
     " 10pt; font-family: Tahoma; white-space: nowrap; ";
             this.label110.Text = "ЗПУ отправителя №";
-            this.label110.Top = 9.251969F;
+            this.label110.Top = 9.173228F;
             this.label110.Width = 1.299212F;
             // 
             // line63
@@ -4366,12 +4366,12 @@ namespace Logistics
             this.line63.Left = 0F;
             this.line63.LineWeight = 1F;
             this.line63.Name = "line63";
-            this.line63.Top = 7.795276F;
+            this.line63.Top = 7.716536F;
             this.line63.Width = 7.637796F;
             this.line63.X1 = 0F;
             this.line63.X2 = 7.637796F;
-            this.line63.Y1 = 7.795276F;
-            this.line63.Y2 = 7.795276F;
+            this.line63.Y1 = 7.716536F;
+            this.line63.Y2 = 7.716536F;
             // 
             // label30
             // 
@@ -4390,7 +4390,7 @@ namespace Logistics
             this.label30.Style = "color: Black; ddo-char-set: 204; text-align: center; font-style: normal; font-siz" +
     "e: 6pt; font-family: Tahoma; white-space: nowrap; ";
             this.label30.Text = "масса груза, кол-во грузовых мест";
-            this.label30.Top = 9.72441F;
+            this.label30.Top = 9.645669F;
             this.label30.Width = 3.740157F;
             // 
             // line13
@@ -4407,12 +4407,12 @@ namespace Logistics
             this.line13.Left = 0F;
             this.line13.LineWeight = 1F;
             this.line13.Name = "line13";
-            this.line13.Top = 10.03937F;
+            this.line13.Top = 9.960629F;
             this.line13.Width = 7.637796F;
             this.line13.X1 = 0F;
             this.line13.X2 = 7.637796F;
-            this.line13.Y1 = 10.03937F;
-            this.line13.Y2 = 10.03937F;
+            this.line13.Y1 = 9.960629F;
+            this.line13.Y2 = 9.960629F;
             // 
             // line45
             // 
@@ -4428,12 +4428,12 @@ namespace Logistics
             this.line45.Left = 0F;
             this.line45.LineWeight = 1F;
             this.line45.Name = "line45";
-            this.line45.Top = 10.35433F;
+            this.line45.Top = 10.27559F;
             this.line45.Width = 7.637796F;
             this.line45.X1 = 0F;
             this.line45.X2 = 7.637796F;
-            this.line45.Y1 = 10.35433F;
-            this.line45.Y2 = 10.35433F;
+            this.line45.Y1 = 10.27559F;
+            this.line45.Y2 = 10.27559F;
             // 
             // txtDischargeData
             // 
@@ -4452,7 +4452,7 @@ namespace Logistics
             this.txtDischargeData.Style = "ddo-char-set: 1; text-align: left; font-weight: normal; font-size: 10pt; font-fam" +
     "ily: Tahoma; ";
             this.txtDischargeData.Text = "txtDischargeData";
-            this.txtDischargeData.Top = 9.56693F;
+            this.txtDischargeData.Top = 9.488189F;
             this.txtDischargeData.Width = 3.740157F;
             // 
             // line10
@@ -4469,12 +4469,12 @@ namespace Logistics
             this.line10.Left = 0F;
             this.line10.LineWeight = 1F;
             this.line10.Name = "line10";
-            this.line10.Top = 9.72441F;
+            this.line10.Top = 9.645669F;
             this.line10.Width = 7.637796F;
             this.line10.X1 = 0F;
             this.line10.X2 = 7.637796F;
-            this.line10.Y1 = 9.72441F;
-            this.line10.Y2 = 9.72441F;
+            this.line10.Y1 = 9.645669F;
+            this.line10.Y2 = 9.645669F;
             // 
             // GroupFooter1
             // 
@@ -4498,7 +4498,7 @@ namespace Logistics
             this.PageSettings.PaperHeight = 11.69291F;
             this.PageSettings.PaperKind = System.Drawing.Printing.PaperKind.A4;
             this.PageSettings.PaperWidth = 8.267716F;
-            this.PrintWidth = 8.425197F;
+            this.PrintWidth = 7.862696F;
             this.Sections.Add(this.PageHeader);
             this.Sections.Add(this.GroupHeader1);
             this.Sections.Add(this.Detail);
