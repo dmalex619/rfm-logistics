@@ -1539,7 +1539,7 @@ namespace Logistics
             this.txtChargeData.Style = "ddo-char-set: 1; text-align: left; font-weight: normal; font-size: 10pt; font-fam" +
     "ily: Tahoma; ";
             this.txtChargeData.Text = "txtChargeData";
-            this.txtChargeData.Top = 9.173228F;
+            this.txtChargeData.Top = 9.094488F;
             this.txtChargeData.Width = 3.740157F;
             // 
             // label4
