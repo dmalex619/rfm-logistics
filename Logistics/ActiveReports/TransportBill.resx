@@ -120,6 +120,15 @@
   <data name="txtDateOutput.OutputFormat" xml:space="preserve">
     <value>dd.MM.yyyy</value>
   </data>
+  <data name="textBox5.OutputFormat" xml:space="preserve">
+    <value>dd.MM.yyyy</value>
+  </data>
+  <data name="textBox6.OutputFormat" xml:space="preserve">
+    <value>dd.MM.yyyy</value>
+  </data>
+  <data name="textBox7.OutputFormat" xml:space="preserve">
+    <value>dd.MM.yyyy</value>
+  </data>
   <data name="label88.Text" xml:space="preserve">
     <value>(перечень прилагаемых к грузу сертификатов, паспортов качества, удостоверений, разрешений, инструкций, товарораспорядительных и других документов, наличие которых установлено законодательством Российской Федерации, либо регистрационные номера указанных документов, если такие документы (сведения о таких документах) содержатся в государственных информационных системах)</value>
   </data>
