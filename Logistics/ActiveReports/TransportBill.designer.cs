@@ -1873,7 +1873,7 @@ namespace Logistics
             this.label19.Left = 0.03937008F;
             this.label19.Name = "label19";
             this.label19.Style = "color: Black; ddo-char-set: 204; text-align: center; font-style: normal; font-siz" +
-    "e: 9pt; font-family: Tahoma; white-space: inherit; ";
+    "e: 6pt; font-family: Tahoma; white-space: inherit; ";
             this.label19.Text = resources.GetString("label19.Text");
             this.label19.Top = 2.440945F;
             this.label19.Width = 7.559055F;
