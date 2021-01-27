@@ -747,7 +747,7 @@ namespace Logistics
             this.label111.Style = "color: Black; ddo-char-set: 204; text-align: center; font-style: normal; font-siz" +
     "e: 6pt; font-family: Tahoma; white-space: inherit; ";
             this.label111.Text = "(полное наименование организации плательщика (грузоотправителя), ИНН, адрес, банк" +
-    "овские реквизиты организации плательщика (грузоотправителя)";
+    "овские реквизиты организации плательщика (грузоотправителя))";
             this.label111.Top = 19.64567F;
             this.label111.Width = 3.740157F;
             // 
@@ -2517,8 +2517,7 @@ namespace Logistics
             this.label48.Name = "label48";
             this.label48.Style = "color: Black; ddo-char-set: 204; text-align: center; font-style: normal; font-siz" +
     "e: 6pt; font-family: Tahoma; white-space: nowrap; ";
-            this.label48.Text = "(наименование и адрес места нахождения, ИНН, номер телефона - для юридического ли" +
-    "ца)";
+            this.label48.Text = "(наименование и адрес места нахождения, ИНН, № тел. - для юридического лица)";
             this.label48.Top = 13.70079F;
             this.label48.Width = 7.559056F;
             // 
@@ -2579,8 +2578,8 @@ namespace Logistics
             this.label49.Name = "label49";
             this.label49.Style = "color: Black; ddo-char-set: 204; text-align: center; font-style: normal; font-siz" +
     "e: 6pt; font-family: Tahoma; white-space: nowrap; ";
-            this.label49.Text = "(фамилия, имя, отчество (при наличии), ИНН, данные о средствах связи (при их нали" +
-    "чии) водителя (водителей)";
+            this.label49.Text = "(ФИО (при наличии), ИНН, данные о средствах связи (при их наличии) водителя (води" +
+    "телей)";
             this.label49.Top = 14.01575F;
             this.label49.Width = 7.559056F;
             // 
@@ -2621,8 +2620,8 @@ namespace Logistics
             this.label51.Name = "label51";
             this.label51.Style = "color: Black; ddo-char-set: 204; text-align: center; font-style: normal; font-siz" +
     "e: 6pt; font-family: Tahoma; white-space: nowrap; ";
-            this.label51.Text = "(фамилия, имя, отчество (при наличии), ИНН, адрес места жительства, номер телефон" +
-    "а - для физического лица (уполномоченного лица)";
+            this.label51.Text = "(ФИО (при наличии), ИНН, адрес места жительства, № тел. - для физ. лица (уполномо" +
+    "ченного лица)";
             this.label51.Top = 13.34646F;
             this.label51.Width = 7.559056F;
             // 
@@ -3143,7 +3142,7 @@ namespace Logistics
             this.label66.Name = "label66";
             this.label66.Style = "color: Black; ddo-char-set: 204; text-align: center; font-style: normal; font-siz" +
     "e: 6pt; font-family: Tahoma; white-space: nowrap; ";
-            this.label66.Text = "(дата, форма переадресовки (устно или письменно)";
+            this.label66.Text = "(дата, форма переадресовки (устно или письменно))";
             this.label66.Top = 16.73228F;
             this.label66.Width = 3.740157F;
             // 
@@ -3310,7 +3309,8 @@ namespace Logistics
             this.label71.Name = "label71";
             this.label71.Style = "color: Black; ddo-char-set: 204; text-align: center; font-style: normal; font-siz" +
     "e: 6pt; font-family: Tahoma; white-space: nowrap; ";
-            this.label71.Text = "(должность, подпись, расшифровка подписи грузоотправителя (уполномоченного лица)";
+            this.label71.Text = "(должность, подпись, расшифровка подписи грузоотправителя (уполномоченного лица))" +
+    "";
             this.label71.Top = 17.51969F;
             this.label71.Width = 3.740157F;
             // 
@@ -3352,7 +3352,7 @@ namespace Logistics
             this.label72.Name = "label72";
             this.label72.Style = "color: Black; ddo-char-set: 204; text-align: center; font-style: normal; font-siz" +
     "e: 6pt; font-family: Tahoma; white-space: nowrap; ";
-            this.label72.Text = "(должность, подпись, расшифровка подписи перевозчика (уполномоченного лица)";
+            this.label72.Text = "(должность, подпись, расшифровка подписи перевозчика (уполномоченного лица))";
             this.label72.Top = 17.51969F;
             this.label72.Width = 3.700788F;
             // 
@@ -4576,7 +4576,7 @@ namespace Logistics
             this.label83.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
             this.label83.Border.TopColor = System.Drawing.Color.Black;
             this.label83.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.label83.Height = 0.1968504F;
+            this.label83.Height = 0.2165354F;
             this.label83.HyperLink = "";
             this.label83.Left = 3.858268F;
             this.label83.Name = "label83";
@@ -4617,7 +4617,7 @@ namespace Logistics
             this.label85.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
             this.label85.Border.TopColor = System.Drawing.Color.Black;
             this.label85.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.label85.Height = 0.1968504F;
+            this.label85.Height = 0.2165354F;
             this.label85.HyperLink = "";
             this.label85.Left = 3.858268F;
             this.label85.Name = "label85";
@@ -4686,7 +4686,7 @@ namespace Logistics
             this.label113.Style = "color: Black; ddo-char-set: 204; text-align: center; font-style: normal; font-siz" +
     "e: 6pt; font-family: Tahoma; white-space: inherit; ";
             this.label113.Text = "(должность, подпись, расшифровка подписи лица, ответственного за оформление факта" +
-    " хозяйственной жизни со стороны грузоотправителя (уполномоченное лицо)";
+    " хозяйственной жизни со стороны грузоотправителя (уполномоченное лицо))";
             this.label113.Top = 20F;
             this.label113.Width = 3.740157F;
             // 
@@ -4707,7 +4707,7 @@ namespace Logistics
             this.label114.Style = "color: Black; ddo-char-set: 204; text-align: center; font-style: normal; font-siz" +
     "e: 6pt; font-family: Tahoma; white-space: inherit; ";
             this.label114.Text = "(должность, подпись, расшифровка подписи лица, ответственного за оформление факта" +
-    " хозяйственной жизни со стороны перевозчика (уполномоченное лицо)";
+    " хозяйственной жизни со стороны перевозчика (уполномоченное лицо))";
             this.label114.Top = 20F;
             this.label114.Width = 3.740157F;
             // 
