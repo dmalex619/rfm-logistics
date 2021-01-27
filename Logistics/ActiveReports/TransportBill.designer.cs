@@ -1509,14 +1509,13 @@ namespace Logistics
             this.txtPointCharge.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
             this.txtPointCharge.Border.TopColor = System.Drawing.Color.Black;
             this.txtPointCharge.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.txtPointCharge.DataField = "=\"Адрес места погрузки: \" + PointCharge";
+            this.txtPointCharge.DataField = "PointCharge";
             this.txtPointCharge.Height = 0.3543307F;
             this.txtPointCharge.HyperLink = null;
             this.txtPointCharge.Left = 0.03937008F;
-            this.txtPointCharge.MultiLine = false;
             this.txtPointCharge.Name = "txtPointCharge";
             this.txtPointCharge.Style = "ddo-char-set: 1; text-align: left; font-weight: normal; font-size: 10pt; font-fam" +
-    "ily: Tahoma; ";
+    "ily: Tahoma; white-space: inherit; ";
             this.txtPointCharge.Text = "PointCharge";
             this.txtPointCharge.Top = 7.598425F;
             this.txtPointCharge.Width = 3.740157F;
@@ -1594,11 +1593,10 @@ namespace Logistics
             this.txtPointDischarge.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
             this.txtPointDischarge.Border.TopColor = System.Drawing.Color.Black;
             this.txtPointDischarge.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.txtPointDischarge.DataField = "=\"Адрес места выгрузки: \" + PointDischarge";
+            this.txtPointDischarge.DataField = "PointDischarge";
             this.txtPointDischarge.Height = 0.3543307F;
             this.txtPointDischarge.HyperLink = null;
             this.txtPointDischarge.Left = 3.858268F;
-            this.txtPointDischarge.MultiLine = false;
             this.txtPointDischarge.Name = "txtPointDischarge";
             this.txtPointDischarge.Style = "ddo-char-set: 1; text-align: left; font-weight: normal; font-size: 10pt; font-fam" +
     "ily: Tahoma; ";
