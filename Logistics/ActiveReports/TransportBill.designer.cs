@@ -4855,7 +4855,7 @@ namespace Logistics
             this.PageSettings.PaperHeight = 11.69291F;
             this.PageSettings.PaperKind = System.Drawing.Printing.PaperKind.A4;
             this.PageSettings.PaperWidth = 8.267716F;
-            this.PrintWidth = 7.844161F;
+            this.PrintWidth = 7.874016F;
             this.Sections.Add(this.PageHeader);
             this.Sections.Add(this.GroupHeader1);
             this.Sections.Add(this.Detail);

@@ -42,8 +42,9 @@ namespace Logistics
 
             txtDriverName.Text = Fields["DriverName"].Value.ToString() + 
                 (Fields["DriverPhone"].Value.ToString().Length > 0 ? ", моб.тел. " + Fields["DriverPhone"].Value.ToString().ToString() : "");
-            txtCarInfo.Text = 
-                (Fields["CarTypeName"].Value.ToString().Length > 0 ? Fields["CarTypeName"].Value.ToString() + ", " : "") +
+            txtCarInfo.Text =
+                //(Fields["CarTypeName"].Value.ToString().Length > 0 ? Fields["CarTypeName"].Value.ToString() + ", " : "") +
+                (Fields["CarModel"].Value.ToString().Length > 0 ? Fields["CarModel"].Value.ToString() + ", " : "") +
                 Fields["CarNumber"].Value.ToString() +
                 (Fields["TrailerNumber"].Value.ToString().Length > 0 ? ", прицеп " + Fields["TrailerNumber"].Value.ToString() : "");
 

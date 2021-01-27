@@ -120,6 +120,15 @@
   <data name="txtDateOutput.OutputFormat" xml:space="preserve">
     <value>dd.MM.yyyy</value>
   </data>
+  <data name="textBox5.OutputFormat" xml:space="preserve">
+    <value>dd.MM.yyyy</value>
+  </data>
+  <data name="textBox6.OutputFormat" xml:space="preserve">
+    <value>dd.MM.yyyy</value>
+  </data>
+  <data name="textBox7.OutputFormat" xml:space="preserve">
+    <value>dd.MM.yyyy</value>
+  </data>
   <data name="label88.Text" xml:space="preserve">
     <value>(перечень прилагаемых к грузу сертификатов, паспортов качества, удостоверений, разрешений, инструкций, товарораспорядительных и других документов, наличие которых установлено законодательством Российской Федерации, либо регистрационные номера указанных документов, если такие документы (сведения о таких документах) содержатся в государственных информационных системах)</value>
   </data>
@@ -147,7 +156,7 @@
   <data name="label44.Text" xml:space="preserve">
     <value>(размер штрафа за непредъявление транспортных средств для перевозки груза, за задержку (простой) транспортных средств, поданных под погрузку, выгрузку, за простой специализированных транспортных средств и задержку (простой) контейнеров), (фамилия, имя, отчество, должность лица, принявшего заказ (заявку) к исполнению), (подпись)</value>
   </data>
-  <data name="textBox5.OutputFormat" xml:space="preserve">
+  <data name="textBox5.OutputFormat_Duplicate[1]" xml:space="preserve">
     <value>dd.MM.yyyy</value>
   </data>
   <data name="label94.Text" xml:space="preserve">
@@ -156,10 +165,10 @@
   <data name="label84.Text" xml:space="preserve">
     <value>3) расходы перевозчика за перевозку опасных грузов, грузов, перевозимых тяжеловесными и (или) крупногабаритными транспортными средствами, уплату таможенных пошлин и сборов в рублях _______________ (при наличии)</value>
   </data>
-  <data name="textBox6.OutputFormat" xml:space="preserve">
+  <data name="textBox6.OutputFormat_Duplicate[1]" xml:space="preserve">
     <value>dd.MM.yyyy</value>
   </data>
-  <data name="textBox7.OutputFormat" xml:space="preserve">
+  <data name="textBox7.OutputFormat_Duplicate[1]" xml:space="preserve">
     <value>dd.MM.yyyy</value>
   </data>
   <metadata name="$this.TrayLargeIcon" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
