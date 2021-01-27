@@ -31,6 +31,7 @@ namespace Logistics
             this.txtBillNumber = new DataDynamics.ActiveReports.TextBox();
             this.txtDateOutput = new DataDynamics.ActiveReports.TextBox();
             this.Detail = new DataDynamics.ActiveReports.Detail();
+            this.textBox4 = new DataDynamics.ActiveReports.TextBox();
             this.label113 = new DataDynamics.ActiveReports.Label();
             this.label114 = new DataDynamics.ActiveReports.Label();
             this.label28 = new DataDynamics.ActiveReports.Label();
@@ -59,7 +60,6 @@ namespace Logistics
             this.line17 = new DataDynamics.ActiveReports.Line();
             this.Дата = new DataDynamics.ActiveReports.Label();
             this.label32 = new DataDynamics.ActiveReports.Label();
-            this.line18 = new DataDynamics.ActiveReports.Line();
             this.txtShipperInfo = new DataDynamics.ActiveReports.TextBox();
             this.txtConsigneeInfo = new DataDynamics.ActiveReports.TextBox();
             this.label33 = new DataDynamics.ActiveReports.Label();
@@ -229,14 +229,15 @@ namespace Logistics
             this.pageBreak1 = new DataDynamics.ActiveReports.PageBreak();
             this.line36 = new DataDynamics.ActiveReports.Line();
             this.line37 = new DataDynamics.ActiveReports.Line();
+            this.line18 = new DataDynamics.ActiveReports.Line();
             this.GroupFooter1 = new DataDynamics.ActiveReports.GroupFooter();
             this.PageFooter = new DataDynamics.ActiveReports.PageFooter();
-            this.textBox4 = new DataDynamics.ActiveReports.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.lblGroupHeader101)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.label31)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.label10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBillNumber)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDateOutput)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.label113)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.label114)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.label28)).BeginInit();
@@ -372,7 +373,6 @@ namespace Logistics
             ((System.ComponentModel.ISupportInitialize)(this.textBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.label77)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // PageHeader
@@ -712,6 +712,26 @@ namespace Logistics
             this.Detail.Height = 21.25984F;
             this.Detail.Name = "Detail";
             this.Detail.Format += new System.EventHandler(this.Detail_Format);
+            // 
+            // textBox4
+            // 
+            this.textBox4.Border.BottomColor = System.Drawing.Color.Black;
+            this.textBox4.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
+            this.textBox4.Border.LeftColor = System.Drawing.Color.Black;
+            this.textBox4.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
+            this.textBox4.Border.RightColor = System.Drawing.Color.Black;
+            this.textBox4.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
+            this.textBox4.Border.TopColor = System.Drawing.Color.Black;
+            this.textBox4.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
+            this.textBox4.DataField = "OrganizationInfo";
+            this.textBox4.Height = 0.433071F;
+            this.textBox4.Left = 0.03937008F;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Style = "ddo-char-set: 1; text-align: left; font-weight: normal; font-size: 9pt; font-fami" +
+    "ly: Tahoma; ";
+            this.textBox4.Text = "OrganizationInfo";
+            this.textBox4.Top = 6.968504F;
+            this.textBox4.Width = 3.740157F;
             // 
             // label113
             // 
@@ -1288,27 +1308,6 @@ namespace Logistics
             this.label32.Text = "Заказ (заявка)";
             this.label32.Top = 0F;
             this.label32.Width = 1.181103F;
-            // 
-            // line18
-            // 
-            this.line18.Border.BottomColor = System.Drawing.Color.Black;
-            this.line18.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.line18.Border.LeftColor = System.Drawing.Color.Black;
-            this.line18.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.line18.Border.RightColor = System.Drawing.Color.Black;
-            this.line18.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.line18.Border.TopColor = System.Drawing.Color.Black;
-            this.line18.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.line18.Height = 0F;
-            this.line18.Left = 0F;
-            this.line18.LineWeight = 1F;
-            this.line18.Name = "line18";
-            this.line18.Top = 0.3543307F;
-            this.line18.Width = 7.637796F;
-            this.line18.X1 = 0F;
-            this.line18.X2 = 7.637796F;
-            this.line18.Y1 = 0.3543307F;
-            this.line18.Y2 = 0.3543307F;
             // 
             // txtShipperInfo
             // 
@@ -4764,7 +4763,7 @@ namespace Logistics
             this.label77.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
             this.label77.Border.TopColor = System.Drawing.Color.Black;
             this.label77.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.label77.Height = 0.1968504F;
+            this.label77.Height = 0.1574803F;
             this.label77.HyperLink = "";
             this.label77.Left = 2.283465F;
             this.label77.Name = "label77";
@@ -4833,6 +4832,27 @@ namespace Logistics
             this.line37.Y1 = 20.74803F;
             this.line37.Y2 = 20.74803F;
             // 
+            // line18
+            // 
+            this.line18.Border.BottomColor = System.Drawing.Color.Black;
+            this.line18.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
+            this.line18.Border.LeftColor = System.Drawing.Color.Black;
+            this.line18.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
+            this.line18.Border.RightColor = System.Drawing.Color.Black;
+            this.line18.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
+            this.line18.Border.TopColor = System.Drawing.Color.Black;
+            this.line18.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
+            this.line18.Height = 0F;
+            this.line18.Left = 0F;
+            this.line18.LineWeight = 1F;
+            this.line18.Name = "line18";
+            this.line18.Top = 0.3543307F;
+            this.line18.Width = 7.637796F;
+            this.line18.X1 = 0F;
+            this.line18.X2 = 7.637796F;
+            this.line18.Y1 = 0.3543307F;
+            this.line18.Y2 = 0.3543307F;
+            // 
             // GroupFooter1
             // 
             this.GroupFooter1.Height = 0F;
@@ -4843,26 +4863,6 @@ namespace Logistics
             // 
             this.PageFooter.Height = 0F;
             this.PageFooter.Name = "PageFooter";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Border.BottomColor = System.Drawing.Color.Black;
-            this.textBox4.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.textBox4.Border.LeftColor = System.Drawing.Color.Black;
-            this.textBox4.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.textBox4.Border.RightColor = System.Drawing.Color.Black;
-            this.textBox4.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.textBox4.Border.TopColor = System.Drawing.Color.Black;
-            this.textBox4.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.textBox4.DataField = "OrganizationInfo";
-            this.textBox4.Height = 0.433071F;
-            this.textBox4.Left = 0.03937008F;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Style = "ddo-char-set: 1; text-align: left; font-weight: normal; font-size: 9pt; font-fami" +
-    "ly: Tahoma; ";
-            this.textBox4.Text = "OrganizationInfo";
-            this.textBox4.Top = 6.968504F;
-            this.textBox4.Width = 3.740157F;
             // 
             // TransportBill
             // 
@@ -4892,6 +4892,7 @@ namespace Logistics
             ((System.ComponentModel.ISupportInitialize)(this.label10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBillNumber)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDateOutput)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.label113)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.label114)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.label28)).EndInit();
@@ -5027,7 +5028,6 @@ namespace Logistics
             ((System.ComponentModel.ISupportInitialize)(this.textBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.label77)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }
