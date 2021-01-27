@@ -4128,12 +4128,12 @@ namespace Logistics
             this.line8.Left = 0F;
             this.line8.LineWeight = 1F;
             this.line8.Name = "line8";
-            this.line8.Top = 7.952756F;
+            this.line8.Top = 7.913386F;
             this.line8.Width = 7.637796F;
             this.line8.X1 = 0F;
             this.line8.X2 = 7.637796F;
-            this.line8.Y1 = 7.952756F;
-            this.line8.Y2 = 7.952756F;
+            this.line8.Y1 = 7.913386F;
+            this.line8.Y2 = 7.913386F;
             // 
             // line46
             // 
