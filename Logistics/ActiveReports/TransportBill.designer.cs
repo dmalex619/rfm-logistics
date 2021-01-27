@@ -31,6 +31,14 @@ namespace Logistics
             this.txtBillNumber = new DataDynamics.ActiveReports.TextBox();
             this.txtDateOutput = new DataDynamics.ActiveReports.TextBox();
             this.Detail = new DataDynamics.ActiveReports.Detail();
+            this.label112 = new DataDynamics.ActiveReports.Label();
+            this.label111 = new DataDynamics.ActiveReports.Label();
+            this.label81 = new DataDynamics.ActiveReports.Label();
+            this.label36 = new DataDynamics.ActiveReports.Label();
+            this.label41 = new DataDynamics.ActiveReports.Label();
+            this.label35 = new DataDynamics.ActiveReports.Label();
+            this.label107 = new DataDynamics.ActiveReports.Label();
+            this.label110 = new DataDynamics.ActiveReports.Label();
             this.label80 = new DataDynamics.ActiveReports.Label();
             this.label79 = new DataDynamics.ActiveReports.Label();
             this.label37 = new DataDynamics.ActiveReports.Label();
@@ -194,46 +202,48 @@ namespace Logistics
             this.label105 = new DataDynamics.ActiveReports.Label();
             this.line61 = new DataDynamics.ActiveReports.Line();
             this.line62 = new DataDynamics.ActiveReports.Line();
-            this.label107 = new DataDynamics.ActiveReports.Label();
             this.label109 = new DataDynamics.ActiveReports.Label();
-            this.label110 = new DataDynamics.ActiveReports.Label();
             this.line63 = new DataDynamics.ActiveReports.Line();
             this.label30 = new DataDynamics.ActiveReports.Label();
             this.line13 = new DataDynamics.ActiveReports.Line();
             this.line45 = new DataDynamics.ActiveReports.Line();
             this.txtDischargeData = new DataDynamics.ActiveReports.TextBox();
             this.line10 = new DataDynamics.ActiveReports.Line();
-            this.GroupFooter1 = new DataDynamics.ActiveReports.GroupFooter();
-            this.PageFooter = new DataDynamics.ActiveReports.PageFooter();
             this.shape1 = new DataDynamics.ActiveReports.Shape();
             this.label12 = new DataDynamics.ActiveReports.Label();
             this.line11 = new DataDynamics.ActiveReports.Line();
-            this.label35 = new DataDynamics.ActiveReports.Label();
             this.line12 = new DataDynamics.ActiveReports.Line();
             this.line19 = new DataDynamics.ActiveReports.Line();
             this.line47 = new DataDynamics.ActiveReports.Line();
-            this.label36 = new DataDynamics.ActiveReports.Label();
-            this.label41 = new DataDynamics.ActiveReports.Label();
             this.line48 = new DataDynamics.ActiveReports.Line();
-            this.label81 = new DataDynamics.ActiveReports.Label();
             this.label82 = new DataDynamics.ActiveReports.Label();
             this.label83 = new DataDynamics.ActiveReports.Label();
             this.label84 = new DataDynamics.ActiveReports.Label();
             this.label85 = new DataDynamics.ActiveReports.Label();
             this.label86 = new DataDynamics.ActiveReports.Label();
             this.line49 = new DataDynamics.ActiveReports.Line();
-            this.label111 = new DataDynamics.ActiveReports.Label();
-            this.label112 = new DataDynamics.ActiveReports.Label();
-            this.line58 = new DataDynamics.ActiveReports.Line();
             this.label113 = new DataDynamics.ActiveReports.Label();
             this.label114 = new DataDynamics.ActiveReports.Label();
+            this.line58 = new DataDynamics.ActiveReports.Line();
             this.textBox6 = new DataDynamics.ActiveReports.TextBox();
             this.textBox7 = new DataDynamics.ActiveReports.TextBox();
+            this.GroupFooter1 = new DataDynamics.ActiveReports.GroupFooter();
+            this.PageFooter = new DataDynamics.ActiveReports.PageFooter();
+            this.shape2 = new DataDynamics.ActiveReports.Shape();
+            this.label77 = new DataDynamics.ActiveReports.Label();
             ((System.ComponentModel.ISupportInitialize)(this.lblGroupHeader101)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.label31)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.label10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBillNumber)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDateOutput)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.label112)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.label111)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.label81)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.label36)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.label41)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.label35)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.label107)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.label110)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.label80)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.label79)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.label37)).BeginInit();
@@ -347,27 +357,20 @@ namespace Logistics
             ((System.ComponentModel.ISupportInitialize)(this.label97)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.label104)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.label105)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.label107)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.label109)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.label110)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.label30)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDischargeData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.label12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.label35)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.label36)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.label41)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.label81)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.label82)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.label83)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.label84)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.label85)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.label86)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.label111)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.label112)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.label113)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.label114)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.label77)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // PageHeader
@@ -700,10 +703,178 @@ namespace Logistics
             this.label114,
             this.line58,
             this.textBox6,
-            this.textBox7});
+            this.textBox7,
+            this.shape2,
+            this.label77});
             this.Detail.Height = 29.52756F;
             this.Detail.Name = "Detail";
             this.Detail.Format += new System.EventHandler(this.Detail_Format);
+            // 
+            // label112
+            // 
+            this.label112.Border.BottomColor = System.Drawing.Color.Black;
+            this.label112.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
+            this.label112.Border.LeftColor = System.Drawing.Color.Black;
+            this.label112.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
+            this.label112.Border.RightColor = System.Drawing.Color.Black;
+            this.label112.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
+            this.label112.Border.TopColor = System.Drawing.Color.Black;
+            this.label112.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
+            this.label112.Height = 0.1968504F;
+            this.label112.HyperLink = "";
+            this.label112.Left = 3.858268F;
+            this.label112.Name = "label112";
+            this.label112.Style = "color: Black; ddo-char-set: 204; text-align: center; font-style: normal; font-siz" +
+    "e: 6pt; font-family: Tahoma; white-space: inherit; ";
+            this.label112.Text = "(полное наименование организации (перевозчика), ИНН, адрес)";
+            this.label112.Top = 22.48032F;
+            this.label112.Width = 3.740157F;
+            // 
+            // label111
+            // 
+            this.label111.Border.BottomColor = System.Drawing.Color.Black;
+            this.label111.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
+            this.label111.Border.LeftColor = System.Drawing.Color.Black;
+            this.label111.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
+            this.label111.Border.RightColor = System.Drawing.Color.Black;
+            this.label111.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
+            this.label111.Border.TopColor = System.Drawing.Color.Black;
+            this.label111.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
+            this.label111.Height = 0.1968504F;
+            this.label111.HyperLink = "";
+            this.label111.Left = 0.03937008F;
+            this.label111.Name = "label111";
+            this.label111.Style = "color: Black; ddo-char-set: 204; text-align: center; font-style: normal; font-siz" +
+    "e: 6pt; font-family: Tahoma; white-space: inherit; ";
+            this.label111.Text = "(полное наименование организации плательщика (грузоотправителя), ИНН, адрес, банк" +
+    "овские реквизиты организации плательщика (грузоотправителя)";
+            this.label111.Top = 22.48032F;
+            this.label111.Width = 3.740157F;
+            // 
+            // label81
+            // 
+            this.label81.Border.BottomColor = System.Drawing.Color.Black;
+            this.label81.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
+            this.label81.Border.LeftColor = System.Drawing.Color.Black;
+            this.label81.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
+            this.label81.Border.RightColor = System.Drawing.Color.Black;
+            this.label81.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
+            this.label81.Border.TopColor = System.Drawing.Color.Black;
+            this.label81.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
+            this.label81.Height = 0.1181102F;
+            this.label81.HyperLink = "";
+            this.label81.Left = 3.858268F;
+            this.label81.Name = "label81";
+            this.label81.Style = "color: Black; ddo-char-set: 204; text-align: left; font-style: normal; font-size:" +
+    " 6pt; font-family: Tahoma; white-space: nowrap; ";
+            this.label81.Text = "В том числе:";
+            this.label81.Top = 20.59055F;
+            this.label81.Width = 3.740158F;
+            // 
+            // label36
+            // 
+            this.label36.Border.BottomColor = System.Drawing.Color.Black;
+            this.label36.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
+            this.label36.Border.LeftColor = System.Drawing.Color.Black;
+            this.label36.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
+            this.label36.Border.RightColor = System.Drawing.Color.Black;
+            this.label36.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
+            this.label36.Border.TopColor = System.Drawing.Color.Black;
+            this.label36.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
+            this.label36.Height = 0.1968504F;
+            this.label36.HyperLink = "";
+            this.label36.Left = 0.03937008F;
+            this.label36.Name = "label36";
+            this.label36.Style = "color: Black; ddo-char-set: 204; text-align: center; font-style: normal; font-siz" +
+    "e: 6pt; font-family: Tahoma; white-space: inherit; ";
+            this.label36.Text = "(сведения о лице, от которого получено указание на переадресовку (наименование, ф" +
+    "амилия, имя, отчество (при наличии) и др.)";
+            this.label36.Top = 19.25197F;
+            this.label36.Width = 3.740157F;
+            // 
+            // label41
+            // 
+            this.label41.Border.BottomColor = System.Drawing.Color.Black;
+            this.label41.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
+            this.label41.Border.LeftColor = System.Drawing.Color.Black;
+            this.label41.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
+            this.label41.Border.RightColor = System.Drawing.Color.Black;
+            this.label41.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
+            this.label41.Border.TopColor = System.Drawing.Color.Black;
+            this.label41.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
+            this.label41.Height = 0.1968508F;
+            this.label41.HyperLink = "";
+            this.label41.Left = 3.897638F;
+            this.label41.Name = "label41";
+            this.label41.Style = "color: Black; ddo-char-set: 204; text-align: center; font-style: normal; font-siz" +
+    "e: 6pt; font-family: Tahoma; white-space: inherit; ";
+            this.label41.Text = "(при изменении получателя груза - новое наименование грузополучателя и место его " +
+    "нахождения)";
+            this.label41.Top = 19.25197F;
+            this.label41.Width = 3.700788F;
+            // 
+            // label35
+            // 
+            this.label35.Border.BottomColor = System.Drawing.Color.Black;
+            this.label35.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
+            this.label35.Border.LeftColor = System.Drawing.Color.Black;
+            this.label35.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
+            this.label35.Border.RightColor = System.Drawing.Color.Black;
+            this.label35.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
+            this.label35.Border.TopColor = System.Drawing.Color.Black;
+            this.label35.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
+            this.label35.Height = 0.1181108F;
+            this.label35.HyperLink = "";
+            this.label35.Left = 3.897638F;
+            this.label35.Name = "label35";
+            this.label35.Style = "color: Black; ddo-char-set: 204; text-align: center; font-style: normal; font-siz" +
+    "e: 6pt; font-family: Tahoma; white-space: nowrap; ";
+            this.label35.Text = "(адрес нового пункта выгрузки, дата и время подачи транспортного средства под выг" +
+    "рузку)";
+            this.label35.Top = 18.85827F;
+            this.label35.Width = 3.700788F;
+            // 
+            // label107
+            // 
+            this.label107.Border.BottomColor = System.Drawing.Color.Black;
+            this.label107.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
+            this.label107.Border.LeftColor = System.Drawing.Color.Black;
+            this.label107.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
+            this.label107.Border.RightColor = System.Drawing.Color.Black;
+            this.label107.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
+            this.label107.Border.TopColor = System.Drawing.Color.Black;
+            this.label107.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
+            this.label107.Height = 0.1574803F;
+            this.label107.HyperLink = "";
+            this.label107.Left = 0.03937008F;
+            this.label107.MultiLine = false;
+            this.label107.Name = "label107";
+            this.label107.Style = "color: Black; ddo-char-set: 204; text-align: left; font-style: normal; font-size:" +
+    " 10pt; font-family: Tahoma; white-space: nowrap; ";
+            this.label107.Text = "ЗПУ отправителя №";
+            this.label107.Top = 9.330709F;
+            this.label107.Width = 1.299213F;
+            // 
+            // label110
+            // 
+            this.label110.Border.BottomColor = System.Drawing.Color.Black;
+            this.label110.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
+            this.label110.Border.LeftColor = System.Drawing.Color.Black;
+            this.label110.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
+            this.label110.Border.RightColor = System.Drawing.Color.Black;
+            this.label110.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
+            this.label110.Border.TopColor = System.Drawing.Color.Black;
+            this.label110.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
+            this.label110.Height = 0.1574803F;
+            this.label110.HyperLink = "";
+            this.label110.Left = 3.858268F;
+            this.label110.MultiLine = false;
+            this.label110.Name = "label110";
+            this.label110.Style = "color: Black; ddo-char-set: 204; text-align: left; font-style: normal; font-size:" +
+    " 10pt; font-family: Tahoma; white-space: nowrap; ";
+            this.label110.Text = "ЗПУ отправителя №";
+            this.label110.Top = 9.173228F;
+            this.label110.Width = 1.299212F;
             // 
             // label80
             // 
@@ -963,8 +1134,8 @@ namespace Logistics
             this.label24.Left = 3.858268F;
             this.label24.MultiLine = false;
             this.label24.Name = "label24";
-            this.label24.Style = "color: Black; ddo-char-set: 1; text-align: center; font-weight: bold; font-size: " +
-    "10pt; font-family: Tahoma; white-space: nowrap; ";
+            this.label24.Style = "color: Black; ddo-char-set: 1; text-align: left; font-weight: bold; font-size: 10" +
+    "pt; font-family: Tahoma; white-space: nowrap; ";
             this.label24.Text = "2. Грузополучатель";
             this.label24.Top = 0.3937008F;
             this.label24.Width = 3.740157F;
@@ -984,11 +1155,11 @@ namespace Logistics
             this.label25.Left = 0.03937008F;
             this.label25.MultiLine = false;
             this.label25.Name = "label25";
-            this.label25.Style = "color: Black; ddo-char-set: 1; text-align: center; font-weight: bold; font-size: " +
-    "10pt; font-family: Tahoma; white-space: nowrap; ";
+            this.label25.Style = "color: Black; ddo-char-set: 1; text-align: left; font-weight: bold; font-size: 10" +
+    "pt; font-family: Tahoma; white-space: nowrap; ";
             this.label25.Text = "1. Грузоотправитель";
             this.label25.Top = 0.3937008F;
-            this.label25.Width = 3.740157F;
+            this.label25.Width = 1.692913F;
             // 
             // line17
             // 
@@ -2589,7 +2760,7 @@ namespace Logistics
             this.line27.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
             this.line27.Border.TopColor = System.Drawing.Color.Black;
             this.line27.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.line27.Height = 0.8661423F;
+            this.line27.Height = 0.8661404F;
             this.line27.Left = 3.818898F;
             this.line27.LineWeight = 1F;
             this.line27.Name = "line27";
@@ -3363,7 +3534,7 @@ namespace Logistics
             this.line41.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
             this.line41.Border.TopColor = System.Drawing.Color.Black;
             this.line41.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.line41.Height = 0.9055138F;
+            this.line41.Height = 0.9055099F;
             this.line41.Left = 3.700788F;
             this.line41.LineWeight = 1F;
             this.line41.Name = "line41";
@@ -3384,7 +3555,7 @@ namespace Logistics
             this.line42.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
             this.line42.Border.TopColor = System.Drawing.Color.Black;
             this.line42.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.line42.Height = 0.9055138F;
+            this.line42.Height = 0.9055099F;
             this.line42.Left = 6.141733F;
             this.line42.LineWeight = 1F;
             this.line42.Name = "line42";
@@ -3579,7 +3750,7 @@ namespace Logistics
             this.label95.Style = "color: Black; ddo-char-set: 1; text-align: center; font-weight: bold; font-size: " +
     "10pt; font-family: Tahoma; white-space: nowrap; ";
             this.label95.Text = "1а. Клиент (Заказчик организации перевозки) (при необходимости)";
-            this.label95.Top = 1.574803F;
+            this.label95.Top = 1.456693F;
             this.label95.Width = 5.51181F;
             // 
             // line50
@@ -3613,14 +3784,16 @@ namespace Logistics
             this.label103.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
             this.label103.Border.TopColor = System.Drawing.Color.Black;
             this.label103.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.label103.Height = 0.3149606F;
+            this.label103.Height = 0.1968504F;
             this.label103.HyperLink = "";
             this.label103.Left = 0.03937008F;
             this.label103.Name = "label103";
             this.label103.Style = "color: Black; ddo-char-set: 204; text-align: center; font-style: normal; font-siz" +
     "e: 6pt; font-family: Tahoma; white-space: inherit; ";
-            this.label103.Text = resources.GetString("label103.Text");
-            this.label103.Top = 1.929134F;
+            this.label103.Text = "(ФИО (при наличии), ИНН, адрес места жительства, № тел. - для физ. лица (уполномо" +
+    "ченного лица) (полное наименование, ИНН, адрес места нахождения, № тел. - для юр" +
+    ". лица)";
+            this.label103.Top = 2.047244F;
             this.label103.Width = 3.740157F;
             // 
             // line52
@@ -3718,14 +3891,16 @@ namespace Logistics
             this.label102.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
             this.label102.Border.TopColor = System.Drawing.Color.Black;
             this.label102.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.label102.Height = 0.3149606F;
+            this.label102.Height = 0.1968504F;
             this.label102.HyperLink = "";
             this.label102.Left = 3.858268F;
             this.label102.Name = "label102";
             this.label102.Style = "color: Black; ddo-char-set: 204; text-align: center; font-style: normal; font-siz" +
     "e: 6pt; font-family: Tahoma; white-space: inherit; ";
-            this.label102.Text = resources.GetString("label102.Text");
-            this.label102.Top = 1.929134F;
+            this.label102.Text = "(ФИО (при наличии), ИНН, адрес места жительства, № тел. - для физ. лица (уполномо" +
+    "ченного лица) (полное наименование, ИНН, адрес места нахождения, № тел. - для юр" +
+    ". лица)";
+            this.label102.Top = 2.047244F;
             this.label102.Width = 3.740157F;
             // 
             // line51
@@ -3742,12 +3917,12 @@ namespace Logistics
             this.line51.Left = 0F;
             this.line51.LineWeight = 1F;
             this.line51.Name = "line51";
-            this.line51.Top = 1.929134F;
+            this.line51.Top = 2.047244F;
             this.line51.Width = 7.637796F;
             this.line51.X1 = 0F;
             this.line51.X2 = 7.637796F;
-            this.line51.Y1 = 1.929134F;
-            this.line51.Y2 = 1.929134F;
+            this.line51.Y1 = 2.047244F;
+            this.line51.Y2 = 2.047244F;
             // 
             // label17
             // 
@@ -3759,13 +3934,15 @@ namespace Logistics
             this.label17.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
             this.label17.Border.TopColor = System.Drawing.Color.Black;
             this.label17.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.label17.Height = 0.3149606F;
+            this.label17.Height = 0.1968504F;
             this.label17.HyperLink = "";
             this.label17.Left = 0.03937008F;
             this.label17.Name = "label17";
             this.label17.Style = "color: Black; ddo-char-set: 204; text-align: center; font-style: normal; font-siz" +
     "e: 6pt; font-family: Tahoma; white-space: inherit; ";
-            this.label17.Text = resources.GetString("label17.Text");
+            this.label17.Text = "(ФИО (при наличии), ИНН, адрес места жительства, № тел. - для физ. лица (уполномо" +
+    "ченного лица) (полное наименование, ИНН, адрес места нахождения, № тел. - для юр" +
+    ". лица)";
             this.label17.Top = 1.220472F;
             this.label17.Width = 3.740157F;
             // 
@@ -3779,13 +3956,15 @@ namespace Logistics
             this.label18.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
             this.label18.Border.TopColor = System.Drawing.Color.Black;
             this.label18.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.label18.Height = 0.3149606F;
+            this.label18.Height = 0.1968504F;
             this.label18.HyperLink = "";
             this.label18.Left = 3.858268F;
             this.label18.Name = "label18";
             this.label18.Style = "color: Black; ddo-char-set: 204; text-align: center; font-style: normal; font-siz" +
     "e: 6pt; font-family: Tahoma; white-space: inherit; ";
-            this.label18.Text = resources.GetString("label18.Text");
+            this.label18.Text = "(ФИО (при наличии), ИНН, адрес места жительства, № тел. - для физ. лица (уполномо" +
+    "ченного лица) (полное наименование, ИНН, адрес места нахождения, № тел. - для юр" +
+    ". лица)";
             this.label18.Top = 1.220472F;
             this.label18.Width = 3.740157F;
             // 
@@ -3882,7 +4061,7 @@ namespace Logistics
             this.line57.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
             this.line57.Border.TopColor = System.Drawing.Color.Black;
             this.line57.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.line57.Height = 3.425197F;
+            this.line57.Height = 3.425195F;
             this.line57.Left = 3.818898F;
             this.line57.LineWeight = 1F;
             this.line57.Name = "line57";
@@ -4100,27 +4279,6 @@ namespace Logistics
             this.line62.Y1 = 8.858268F;
             this.line62.Y2 = 8.858268F;
             // 
-            // label107
-            // 
-            this.label107.Border.BottomColor = System.Drawing.Color.Black;
-            this.label107.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.label107.Border.LeftColor = System.Drawing.Color.Black;
-            this.label107.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.label107.Border.RightColor = System.Drawing.Color.Black;
-            this.label107.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.label107.Border.TopColor = System.Drawing.Color.Black;
-            this.label107.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.label107.Height = 0.1574803F;
-            this.label107.HyperLink = "";
-            this.label107.Left = 0.03937008F;
-            this.label107.MultiLine = false;
-            this.label107.Name = "label107";
-            this.label107.Style = "color: Black; ddo-char-set: 204; text-align: left; font-style: normal; font-size:" +
-    " 10pt; font-family: Tahoma; white-space: nowrap; ";
-            this.label107.Text = "ЗПУ отправителя №";
-            this.label107.Top = 9.330709F;
-            this.label107.Width = 1.299213F;
-            // 
             // label109
             // 
             this.label109.Border.BottomColor = System.Drawing.Color.Black;
@@ -4141,27 +4299,6 @@ namespace Logistics
             this.label109.Text = "Груз в коробах на паллетах на месте выгрузки";
             this.label109.Top = 9.015748F;
             this.label109.Width = 3.740157F;
-            // 
-            // label110
-            // 
-            this.label110.Border.BottomColor = System.Drawing.Color.Black;
-            this.label110.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.label110.Border.LeftColor = System.Drawing.Color.Black;
-            this.label110.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.label110.Border.RightColor = System.Drawing.Color.Black;
-            this.label110.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.label110.Border.TopColor = System.Drawing.Color.Black;
-            this.label110.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.label110.Height = 0.1574803F;
-            this.label110.HyperLink = "";
-            this.label110.Left = 3.858268F;
-            this.label110.MultiLine = false;
-            this.label110.Name = "label110";
-            this.label110.Style = "color: Black; ddo-char-set: 204; text-align: left; font-style: normal; font-size:" +
-    " 10pt; font-family: Tahoma; white-space: nowrap; ";
-            this.label110.Text = "ЗПУ отправителя №";
-            this.label110.Top = 9.173228F;
-            this.label110.Width = 1.299212F;
             // 
             // line63
             // 
@@ -4287,17 +4424,6 @@ namespace Logistics
             this.line10.Y1 = 9.645669F;
             this.line10.Y2 = 9.645669F;
             // 
-            // GroupFooter1
-            // 
-            this.GroupFooter1.Height = 0F;
-            this.GroupFooter1.KeepTogether = true;
-            this.GroupFooter1.Name = "GroupFooter1";
-            // 
-            // PageFooter
-            // 
-            this.PageFooter.Height = 0.02083333F;
-            this.PageFooter.Name = "PageFooter";
-            // 
             // shape1
             // 
             this.shape1.Border.BottomColor = System.Drawing.Color.Black;
@@ -4311,7 +4437,7 @@ namespace Logistics
             this.shape1.Height = 0.1968504F;
             this.shape1.Left = 3.582677F;
             this.shape1.Name = "shape1";
-            this.shape1.RoundingRadius = 10F;
+            this.shape1.RoundingRadius = 9.999999F;
             this.shape1.Top = 15.90551F;
             this.shape1.Width = 0.1968504F;
             // 
@@ -4345,7 +4471,7 @@ namespace Logistics
             this.line11.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
             this.line11.Border.TopColor = System.Drawing.Color.Black;
             this.line11.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.line11.Height = 0.8661423F;
+            this.line11.Height = 0.8661404F;
             this.line11.Left = 3.818898F;
             this.line11.LineWeight = 1F;
             this.line11.Name = "line11";
@@ -4355,27 +4481,6 @@ namespace Logistics
             this.line11.X2 = 3.818898F;
             this.line11.Y1 = 18.58268F;
             this.line11.Y2 = 19.44882F;
-            // 
-            // label35
-            // 
-            this.label35.Border.BottomColor = System.Drawing.Color.Black;
-            this.label35.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.label35.Border.LeftColor = System.Drawing.Color.Black;
-            this.label35.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.label35.Border.RightColor = System.Drawing.Color.Black;
-            this.label35.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.label35.Border.TopColor = System.Drawing.Color.Black;
-            this.label35.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.label35.Height = 0.1181108F;
-            this.label35.HyperLink = "";
-            this.label35.Left = 3.897638F;
-            this.label35.Name = "label35";
-            this.label35.Style = "color: Black; ddo-char-set: 204; text-align: center; font-style: normal; font-siz" +
-    "e: 6pt; font-family: Tahoma; white-space: nowrap; ";
-            this.label35.Text = "(адрес нового пункта выгрузки, дата и время подачи транспортного средства под выг" +
-    "рузку)";
-            this.label35.Top = 18.85827F;
-            this.label35.Width = 3.700788F;
             // 
             // line12
             // 
@@ -4440,48 +4545,6 @@ namespace Logistics
             this.line47.Y1 = 19.25197F;
             this.line47.Y2 = 19.25197F;
             // 
-            // label36
-            // 
-            this.label36.Border.BottomColor = System.Drawing.Color.Black;
-            this.label36.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.label36.Border.LeftColor = System.Drawing.Color.Black;
-            this.label36.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.label36.Border.RightColor = System.Drawing.Color.Black;
-            this.label36.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.label36.Border.TopColor = System.Drawing.Color.Black;
-            this.label36.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.label36.Height = 0.1968504F;
-            this.label36.HyperLink = "";
-            this.label36.Left = 0.03937008F;
-            this.label36.Name = "label36";
-            this.label36.Style = "color: Black; ddo-char-set: 204; text-align: center; font-style: normal; font-siz" +
-    "e: 6pt; font-family: Tahoma; white-space: inherit; ";
-            this.label36.Text = "(сведения о лице, от которого получено указание на переадресовку (наименование, ф" +
-    "амилия, имя, отчество (при наличии) и др.)";
-            this.label36.Top = 19.25197F;
-            this.label36.Width = 3.740157F;
-            // 
-            // label41
-            // 
-            this.label41.Border.BottomColor = System.Drawing.Color.Black;
-            this.label41.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.label41.Border.LeftColor = System.Drawing.Color.Black;
-            this.label41.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.label41.Border.RightColor = System.Drawing.Color.Black;
-            this.label41.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.label41.Border.TopColor = System.Drawing.Color.Black;
-            this.label41.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.label41.Height = 0.1968508F;
-            this.label41.HyperLink = "";
-            this.label41.Left = 3.897638F;
-            this.label41.Name = "label41";
-            this.label41.Style = "color: Black; ddo-char-set: 204; text-align: center; font-style: normal; font-siz" +
-    "e: 6pt; font-family: Tahoma; white-space: inherit; ";
-            this.label41.Text = "(при изменении получателя груза - новое наименование грузополучателя и место его " +
-    "нахождения)";
-            this.label41.Top = 19.25197F;
-            this.label41.Width = 3.700788F;
-            // 
             // line48
             // 
             this.line48.Border.BottomColor = System.Drawing.Color.Black;
@@ -4492,7 +4555,7 @@ namespace Logistics
             this.line48.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
             this.line48.Border.TopColor = System.Drawing.Color.Black;
             this.line48.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.line48.Height = 2.244093F;
+            this.line48.Height = 2.244091F;
             this.line48.Left = 3.818898F;
             this.line48.LineWeight = 1F;
             this.line48.Name = "line48";
@@ -4502,26 +4565,6 @@ namespace Logistics
             this.line48.X2 = 3.818898F;
             this.line48.Y1 = 20.43307F;
             this.line48.Y2 = 22.67716F;
-            // 
-            // label81
-            // 
-            this.label81.Border.BottomColor = System.Drawing.Color.Black;
-            this.label81.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.label81.Border.LeftColor = System.Drawing.Color.Black;
-            this.label81.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.label81.Border.RightColor = System.Drawing.Color.Black;
-            this.label81.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.label81.Border.TopColor = System.Drawing.Color.Black;
-            this.label81.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.label81.Height = 0.1181102F;
-            this.label81.HyperLink = "";
-            this.label81.Left = 3.858268F;
-            this.label81.Name = "label81";
-            this.label81.Style = "color: Black; ddo-char-set: 204; text-align: left; font-style: normal; font-size:" +
-    " 6pt; font-family: Tahoma; white-space: nowrap; ";
-            this.label81.Text = "В том числе:";
-            this.label81.Top = 20.59055F;
-            this.label81.Width = 3.740158F;
             // 
             // label82
             // 
@@ -4646,68 +4689,6 @@ namespace Logistics
             this.line49.Y1 = 22.48032F;
             this.line49.Y2 = 22.48032F;
             // 
-            // label111
-            // 
-            this.label111.Border.BottomColor = System.Drawing.Color.Black;
-            this.label111.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.label111.Border.LeftColor = System.Drawing.Color.Black;
-            this.label111.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.label111.Border.RightColor = System.Drawing.Color.Black;
-            this.label111.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.label111.Border.TopColor = System.Drawing.Color.Black;
-            this.label111.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.label111.Height = 0.1968504F;
-            this.label111.HyperLink = "";
-            this.label111.Left = 0.03937008F;
-            this.label111.Name = "label111";
-            this.label111.Style = "color: Black; ddo-char-set: 204; text-align: center; font-style: normal; font-siz" +
-    "e: 6pt; font-family: Tahoma; white-space: inherit; ";
-            this.label111.Text = "(полное наименование организации плательщика (грузоотправителя), ИНН, адрес, банк" +
-    "овские реквизиты организации плательщика (грузоотправителя)";
-            this.label111.Top = 22.48032F;
-            this.label111.Width = 3.740157F;
-            // 
-            // label112
-            // 
-            this.label112.Border.BottomColor = System.Drawing.Color.Black;
-            this.label112.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.label112.Border.LeftColor = System.Drawing.Color.Black;
-            this.label112.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.label112.Border.RightColor = System.Drawing.Color.Black;
-            this.label112.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.label112.Border.TopColor = System.Drawing.Color.Black;
-            this.label112.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.label112.Height = 0.1968504F;
-            this.label112.HyperLink = "";
-            this.label112.Left = 3.858268F;
-            this.label112.Name = "label112";
-            this.label112.Style = "color: Black; ddo-char-set: 204; text-align: center; font-style: normal; font-siz" +
-    "e: 6pt; font-family: Tahoma; white-space: inherit; ";
-            this.label112.Text = "(полное наименование организации (перевозчика), ИНН, адрес)";
-            this.label112.Top = 22.48032F;
-            this.label112.Width = 3.740157F;
-            // 
-            // line58
-            // 
-            this.line58.Border.BottomColor = System.Drawing.Color.Black;
-            this.line58.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.line58.Border.LeftColor = System.Drawing.Color.Black;
-            this.line58.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.line58.Border.RightColor = System.Drawing.Color.Black;
-            this.line58.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.line58.Border.TopColor = System.Drawing.Color.Black;
-            this.line58.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.line58.Height = 0F;
-            this.line58.Left = 0.1181102F;
-            this.line58.LineWeight = 1F;
-            this.line58.Name = "line58";
-            this.line58.Top = 23.66142F;
-            this.line58.Width = 7.519686F;
-            this.line58.X1 = 0.1181102F;
-            this.line58.X2 = 7.637796F;
-            this.line58.Y1 = 23.66142F;
-            this.line58.Y2 = 23.66142F;
-            // 
             // label113
             // 
             this.label113.Border.BottomColor = System.Drawing.Color.Black;
@@ -4749,6 +4730,27 @@ namespace Logistics
     " хозяйственной жизни со стороны перевозчика (уполномоченное лицо)";
             this.label114.Top = 23.66142F;
             this.label114.Width = 3.740157F;
+            // 
+            // line58
+            // 
+            this.line58.Border.BottomColor = System.Drawing.Color.Black;
+            this.line58.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
+            this.line58.Border.LeftColor = System.Drawing.Color.Black;
+            this.line58.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
+            this.line58.Border.RightColor = System.Drawing.Color.Black;
+            this.line58.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
+            this.line58.Border.TopColor = System.Drawing.Color.Black;
+            this.line58.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
+            this.line58.Height = 0F;
+            this.line58.Left = 0.1181102F;
+            this.line58.LineWeight = 1F;
+            this.line58.Name = "line58";
+            this.line58.Top = 23.66142F;
+            this.line58.Width = 7.519686F;
+            this.line58.X1 = 0.1181102F;
+            this.line58.X2 = 7.637796F;
+            this.line58.Y1 = 23.66142F;
+            this.line58.Y2 = 23.66142F;
             // 
             // textBox6
             // 
@@ -4794,6 +4796,54 @@ namespace Logistics
             this.textBox7.Top = 23.93701F;
             this.textBox7.Width = 0.7874014F;
             // 
+            // GroupFooter1
+            // 
+            this.GroupFooter1.Height = 0F;
+            this.GroupFooter1.KeepTogether = true;
+            this.GroupFooter1.Name = "GroupFooter1";
+            // 
+            // PageFooter
+            // 
+            this.PageFooter.Height = 0.02083333F;
+            this.PageFooter.Name = "PageFooter";
+            // 
+            // shape2
+            // 
+            this.shape2.Border.BottomColor = System.Drawing.Color.Black;
+            this.shape2.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
+            this.shape2.Border.LeftColor = System.Drawing.Color.Black;
+            this.shape2.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
+            this.shape2.Border.RightColor = System.Drawing.Color.Black;
+            this.shape2.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
+            this.shape2.Border.TopColor = System.Drawing.Color.Black;
+            this.shape2.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
+            this.shape2.Height = 0.1968504F;
+            this.shape2.Left = 2.007874F;
+            this.shape2.Name = "shape2";
+            this.shape2.RoundingRadius = 9.999999F;
+            this.shape2.Top = 0.3937008F;
+            this.shape2.Width = 0.1968504F;
+            // 
+            // label77
+            // 
+            this.label77.Border.BottomColor = System.Drawing.Color.Black;
+            this.label77.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
+            this.label77.Border.LeftColor = System.Drawing.Color.Black;
+            this.label77.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
+            this.label77.Border.RightColor = System.Drawing.Color.Black;
+            this.label77.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
+            this.label77.Border.TopColor = System.Drawing.Color.Black;
+            this.label77.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
+            this.label77.Height = 0.1968504F;
+            this.label77.HyperLink = "";
+            this.label77.Left = 2.244095F;
+            this.label77.Name = "label77";
+            this.label77.Style = "color: Black; ddo-char-set: 204; text-align: left; font-style: normal; font-size:" +
+    " 10pt; font-family: Tahoma; white-space: inherit; ";
+            this.label77.Text = "является экспедитором";
+            this.label77.Top = 0.3937008F;
+            this.label77.Width = 1.535433F;
+            // 
             // TransportBill
             // 
             this.PageSettings.DefaultPaperSize = false;
@@ -4805,7 +4855,7 @@ namespace Logistics
             this.PageSettings.PaperHeight = 11.69291F;
             this.PageSettings.PaperKind = System.Drawing.Printing.PaperKind.A4;
             this.PageSettings.PaperWidth = 8.267716F;
-            this.PrintWidth = 7.862696F;
+            this.PrintWidth = 8.385827F;
             this.Sections.Add(this.PageHeader);
             this.Sections.Add(this.GroupHeader1);
             this.Sections.Add(this.Detail);
@@ -4822,6 +4872,14 @@ namespace Logistics
             ((System.ComponentModel.ISupportInitialize)(this.label10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBillNumber)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDateOutput)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.label112)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.label111)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.label81)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.label36)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.label41)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.label35)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.label107)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.label110)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.label80)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.label79)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.label37)).EndInit();
@@ -4935,27 +4993,20 @@ namespace Logistics
             ((System.ComponentModel.ISupportInitialize)(this.label97)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.label104)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.label105)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.label107)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.label109)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.label110)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.label30)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDischargeData)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.label12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.label35)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.label36)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.label41)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.label81)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.label82)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.label83)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.label84)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.label85)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.label86)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.label111)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.label112)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.label113)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.label114)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.label77)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }
@@ -5159,5 +5210,7 @@ namespace Logistics
         private DataDynamics.ActiveReports.Line line58;
         private DataDynamics.ActiveReports.TextBox textBox6;
         private DataDynamics.ActiveReports.TextBox textBox7;
+        private DataDynamics.ActiveReports.Shape shape2;
+        private DataDynamics.ActiveReports.Label label77;
     }
 }
