@@ -39,6 +39,20 @@ namespace Logistics
             this.btnExit = new RFMBaseClasses.RFMButton();
             this.pnlData = new RFMBaseClasses.RFMPanel();
             this.grdData = new RFMBaseClasses.RFMDataGridView();
+            this.btnPrint = new RFMBaseClasses.RFMButton();
+            this.numCopies = new RFMBaseClasses.RFMNumericUpDown();
+            this.lblCopies = new RFMBaseClasses.RFMLabel();
+            this.pnlSelectConditions = new RFMBaseClasses.RFMPanel();
+            this.pnlDeliveryNeed = new RFMBaseClasses.RFMPanel();
+            this.optTransportBill_Plus1 = new RFMBaseClasses.RFMRadioButton();
+            this.optPrintTTNOnly = new RFMBaseClasses.RFMRadioButton();
+            this.optPrintTTNandTransportBill = new RFMBaseClasses.RFMRadioButton();
+            this.optPrintTransportBillOnly = new RFMBaseClasses.RFMRadioButton();
+            this.lblPrintForm = new RFMBaseClasses.RFMLabel();
+            this.txtShipperInfo = new RFMBaseClasses.RFMTextBox();
+            this.lblShipperInfo = new RFMBaseClasses.RFMLabel();
+            this.lblPointCharge = new RFMBaseClasses.RFMLabel();
+            this.txtPointCharge = new RFMBaseClasses.RFMTextBox();
             this.grcConsigneeInfo = new RFMBaseClasses.RFMDataGridViewTextBoxColumn();
             this.grcPayerGoodsInfo = new RFMBaseClasses.RFMDataGridViewTextBoxColumn();
             this.grcPayerTransportInfo = new RFMBaseClasses.RFMDataGridViewTextBoxColumn();
@@ -62,20 +76,6 @@ namespace Logistics
             this.grcSVat = new RFMBaseClasses.RFMDataGridViewTextBoxColumn();
             this.grcBillNumbersList = new RFMBaseClasses.RFMDataGridViewTextBoxColumn();
             this.grсIDList = new RFMBaseClasses.RFMDataGridViewTextBoxColumn();
-            this.btnPrint = new RFMBaseClasses.RFMButton();
-            this.numCopies = new RFMBaseClasses.RFMNumericUpDown();
-            this.lblCopies = new RFMBaseClasses.RFMLabel();
-            this.pnlSelectConditions = new RFMBaseClasses.RFMPanel();
-            this.pnlDeliveryNeed = new RFMBaseClasses.RFMPanel();
-            this.optTransportBill_Plus1 = new RFMBaseClasses.RFMRadioButton();
-            this.optPrintTTNOnly = new RFMBaseClasses.RFMRadioButton();
-            this.optPrintTTNandTransportBill = new RFMBaseClasses.RFMRadioButton();
-            this.optPrintTransportBillOnly = new RFMBaseClasses.RFMRadioButton();
-            this.lblPrintForm = new RFMBaseClasses.RFMLabel();
-            this.txtShipperInfo = new RFMBaseClasses.RFMTextBox();
-            this.lblShipperInfo = new RFMBaseClasses.RFMLabel();
-            this.lblPointCharge = new RFMBaseClasses.RFMLabel();
-            this.txtPointCharge = new RFMBaseClasses.RFMTextBox();
             this.pnlData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCopies)).BeginInit();
@@ -183,6 +183,193 @@ namespace Logistics
             this.grdData.Size = new System.Drawing.Size(670, 254);
             this.grdData.TabIndex = 0;
             // 
+            // btnPrint
+            // 
+            this.btnPrint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPrint.Image = global::Logistics.Properties.Resources.Print;
+            this.btnPrint.Location = new System.Drawing.Point(589, 354);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(32, 30);
+            this.btnPrint.TabIndex = 2;
+            this.ttToolTip.SetToolTip(this.btnPrint, "Печатать");
+            this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
+            // numCopies
+            // 
+            this.numCopies.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.numCopies.DisabledBackColor = System.Drawing.SystemColors.Control;
+            this.numCopies.DisabledForeColor = System.Drawing.SystemColors.WindowText;
+            this.numCopies.InputMask = "#########";
+            this.numCopies.IsNull = false;
+            this.numCopies.Location = new System.Drawing.Point(519, 359);
+            this.numCopies.Maximum = new decimal(new int[] {
+            999999999,
+            0,
+            0,
+            0});
+            this.numCopies.Name = "numCopies";
+            this.numCopies.RealPlaces = 9;
+            this.numCopies.Size = new System.Drawing.Size(47, 22);
+            this.numCopies.TabIndex = 1;
+            this.numCopies.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numCopies.Value = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            // 
+            // lblCopies
+            // 
+            this.lblCopies.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblCopies.AutoSize = true;
+            this.lblCopies.DisabledBackColor = System.Drawing.SystemColors.Control;
+            this.lblCopies.DisabledForeColor = System.Drawing.SystemColors.WindowText;
+            this.lblCopies.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblCopies.Location = new System.Drawing.Point(471, 363);
+            this.lblCopies.Name = "lblCopies";
+            this.lblCopies.Size = new System.Drawing.Size(42, 14);
+            this.lblCopies.TabIndex = 0;
+            this.lblCopies.Text = "Копий";
+            // 
+            // pnlSelectConditions
+            // 
+            this.pnlSelectConditions.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlSelectConditions.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlSelectConditions.Controls.Add(this.pnlDeliveryNeed);
+            this.pnlSelectConditions.Controls.Add(this.lblPrintForm);
+            this.pnlSelectConditions.Controls.Add(this.txtShipperInfo);
+            this.pnlSelectConditions.Controls.Add(this.lblShipperInfo);
+            this.pnlSelectConditions.Controls.Add(this.lblPointCharge);
+            this.pnlSelectConditions.Controls.Add(this.txtPointCharge);
+            this.pnlSelectConditions.Location = new System.Drawing.Point(5, 4);
+            this.pnlSelectConditions.Name = "pnlSelectConditions";
+            this.pnlSelectConditions.Size = new System.Drawing.Size(675, 80);
+            this.pnlSelectConditions.TabIndex = 5;
+            // 
+            // pnlDeliveryNeed
+            // 
+            this.pnlDeliveryNeed.Controls.Add(this.optTransportBill_Plus1);
+            this.pnlDeliveryNeed.Controls.Add(this.optPrintTTNOnly);
+            this.pnlDeliveryNeed.Controls.Add(this.optPrintTTNandTransportBill);
+            this.pnlDeliveryNeed.Controls.Add(this.optPrintTransportBillOnly);
+            this.pnlDeliveryNeed.Location = new System.Drawing.Point(112, 47);
+            this.pnlDeliveryNeed.Name = "pnlDeliveryNeed";
+            this.pnlDeliveryNeed.Size = new System.Drawing.Size(556, 25);
+            this.pnlDeliveryNeed.TabIndex = 5;
+            // 
+            // optTransportBill_Plus1
+            // 
+            this.optTransportBill_Plus1.AutoSize = true;
+            this.optTransportBill_Plus1.Location = new System.Drawing.Point(395, 4);
+            this.optTransportBill_Plus1.Name = "optTransportBill_Plus1";
+            this.optTransportBill_Plus1.Size = new System.Drawing.Size(71, 18);
+            this.optTransportBill_Plus1.TabIndex = 3;
+            this.optTransportBill_Plus1.Text = "ТрН + 1";
+            this.ttToolTip.SetToolTip(this.optTransportBill_Plus1, "Транспортные накладные + 1 общая (через перевозчика)");
+            this.optTransportBill_Plus1.UseVisualStyleBackColor = true;
+            // 
+            // optPrintTTNOnly
+            // 
+            this.optPrintTTNOnly.AutoSize = true;
+            this.optPrintTTNOnly.IsChanged = true;
+            this.optPrintTTNOnly.Location = new System.Drawing.Point(4, 4);
+            this.optPrintTTNOnly.Name = "optPrintTTNOnly";
+            this.optPrintTTNOnly.Size = new System.Drawing.Size(92, 18);
+            this.optPrintTTNOnly.TabIndex = 0;
+            this.optPrintTTNOnly.Text = "только ТТН";
+            this.ttToolTip.SetToolTip(this.optPrintTTNOnly, "Только товарно-транспортные накладные (форма № 1-Т)");
+            this.optPrintTTNOnly.UseVisualStyleBackColor = true;
+            // 
+            // optPrintTTNandTransportBill
+            // 
+            this.optPrintTTNandTransportBill.AutoSize = true;
+            this.optPrintTTNandTransportBill.Location = new System.Drawing.Point(267, 4);
+            this.optPrintTTNandTransportBill.Name = "optPrintTTNandTransportBill";
+            this.optPrintTTNandTransportBill.Size = new System.Drawing.Size(88, 18);
+            this.optPrintTTNandTransportBill.TabIndex = 2;
+            this.optPrintTTNandTransportBill.Text = "ТТН + ТрН";
+            this.ttToolTip.SetToolTip(this.optPrintTTNandTransportBill, "Товарно-транспортные и транспортные накладные");
+            this.optPrintTTNandTransportBill.UseVisualStyleBackColor = true;
+            // 
+            // optPrintTransportBillOnly
+            // 
+            this.optPrintTransportBillOnly.AutoSize = true;
+            this.optPrintTransportBillOnly.Checked = true;
+            this.optPrintTransportBillOnly.IsChanged = true;
+            this.optPrintTransportBillOnly.Location = new System.Drawing.Point(136, 4);
+            this.optPrintTransportBillOnly.Name = "optPrintTransportBillOnly";
+            this.optPrintTransportBillOnly.Size = new System.Drawing.Size(91, 18);
+            this.optPrintTransportBillOnly.TabIndex = 1;
+            this.optPrintTransportBillOnly.TabStop = true;
+            this.optPrintTransportBillOnly.Text = "только ТрН";
+            this.ttToolTip.SetToolTip(this.optPrintTransportBillOnly, "Только транспортные накладные (приложение № 4)");
+            this.optPrintTransportBillOnly.UseVisualStyleBackColor = true;
+            // 
+            // lblPrintForm
+            // 
+            this.lblPrintForm.AutoSize = true;
+            this.lblPrintForm.DisabledBackColor = System.Drawing.SystemColors.Control;
+            this.lblPrintForm.DisabledForeColor = System.Drawing.SystemColors.WindowText;
+            this.lblPrintForm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblPrintForm.Location = new System.Drawing.Point(2, 52);
+            this.lblPrintForm.Name = "lblPrintForm";
+            this.lblPrintForm.Size = new System.Drawing.Size(59, 14);
+            this.lblPrintForm.TabIndex = 4;
+            this.lblPrintForm.Text = "Печатать";
+            // 
+            // txtShipperInfo
+            // 
+            this.txtShipperInfo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtShipperInfo.DisabledBackColor = System.Drawing.SystemColors.Control;
+            this.txtShipperInfo.DisabledForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtShipperInfo.Location = new System.Drawing.Point(112, 1);
+            this.txtShipperInfo.MaxLength = 500;
+            this.txtShipperInfo.Name = "txtShipperInfo";
+            this.txtShipperInfo.Size = new System.Drawing.Size(557, 22);
+            this.txtShipperInfo.TabIndex = 1;
+            this.ttToolTip.SetToolTip(this.txtShipperInfo, "I. Грузоотправитель (название, адрес)");
+            this.txtShipperInfo.Visible = false;
+            // 
+            // lblShipperInfo
+            // 
+            this.lblShipperInfo.AutoSize = true;
+            this.lblShipperInfo.DisabledBackColor = System.Drawing.SystemColors.Control;
+            this.lblShipperInfo.DisabledForeColor = System.Drawing.SystemColors.WindowText;
+            this.lblShipperInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblShipperInfo.Location = new System.Drawing.Point(2, 4);
+            this.lblShipperInfo.Name = "lblShipperInfo";
+            this.lblShipperInfo.Size = new System.Drawing.Size(110, 14);
+            this.lblShipperInfo.TabIndex = 0;
+            this.lblShipperInfo.Text = "Грузоотправитель";
+            // 
+            // lblPointCharge
+            // 
+            this.lblPointCharge.AutoSize = true;
+            this.lblPointCharge.DisabledBackColor = System.Drawing.SystemColors.Control;
+            this.lblPointCharge.DisabledForeColor = System.Drawing.SystemColors.WindowText;
+            this.lblPointCharge.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblPointCharge.Location = new System.Drawing.Point(2, 27);
+            this.lblPointCharge.Name = "lblPointCharge";
+            this.lblPointCharge.Size = new System.Drawing.Size(94, 14);
+            this.lblPointCharge.TabIndex = 2;
+            this.lblPointCharge.Text = "Пункт погрузки";
+            // 
+            // txtPointCharge
+            // 
+            this.txtPointCharge.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPointCharge.DisabledBackColor = System.Drawing.SystemColors.Control;
+            this.txtPointCharge.DisabledForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtPointCharge.Location = new System.Drawing.Point(112, 24);
+            this.txtPointCharge.MaxLength = 500;
+            this.txtPointCharge.Name = "txtPointCharge";
+            this.txtPointCharge.Size = new System.Drawing.Size(557, 22);
+            this.txtPointCharge.TabIndex = 3;
+            this.ttToolTip.SetToolTip(this.txtPointCharge, "Примечание по заказу");
+            // 
             // grcConsigneeInfo
             // 
             this.grcConsigneeInfo.AgrType = RFMBaseClasses.EnumAgregate.None;
@@ -217,7 +404,7 @@ namespace Logistics
             // 
             this.grcOrganizationInfo.AgrType = RFMBaseClasses.EnumAgregate.None;
             this.grcOrganizationInfo.DataPropertyName = "OrganizationInfo";
-            this.grcOrganizationInfo.HeaderText = "II. Организация";
+            this.grcOrganizationInfo.HeaderText = "II. Организация-перевозчик";
             this.grcOrganizationInfo.Name = "grcOrganizationInfo";
             this.grcOrganizationInfo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             this.grcOrganizationInfo.ToolTipText = "(транспортный раздел)";
@@ -418,193 +605,6 @@ namespace Logistics
             this.grсIDList.ToolTipText = "Список кодов заказов (расходных документов)";
             this.grсIDList.Width = 70;
             // 
-            // btnPrint
-            // 
-            this.btnPrint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPrint.Image = global::Logistics.Properties.Resources.Print;
-            this.btnPrint.Location = new System.Drawing.Point(589, 354);
-            this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(32, 30);
-            this.btnPrint.TabIndex = 2;
-            this.ttToolTip.SetToolTip(this.btnPrint, "Печатать");
-            this.btnPrint.UseVisualStyleBackColor = true;
-            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
-            // 
-            // numCopies
-            // 
-            this.numCopies.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.numCopies.DisabledBackColor = System.Drawing.SystemColors.Control;
-            this.numCopies.DisabledForeColor = System.Drawing.SystemColors.WindowText;
-            this.numCopies.InputMask = "#########";
-            this.numCopies.IsNull = false;
-            this.numCopies.Location = new System.Drawing.Point(519, 359);
-            this.numCopies.Maximum = new decimal(new int[] {
-            999999999,
-            0,
-            0,
-            0});
-            this.numCopies.Name = "numCopies";
-            this.numCopies.RealPlaces = 9;
-            this.numCopies.Size = new System.Drawing.Size(47, 22);
-            this.numCopies.TabIndex = 1;
-            this.numCopies.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.numCopies.Value = new decimal(new int[] {
-            2,
-            0,
-            0,
-            0});
-            // 
-            // lblCopies
-            // 
-            this.lblCopies.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblCopies.AutoSize = true;
-            this.lblCopies.DisabledBackColor = System.Drawing.SystemColors.Control;
-            this.lblCopies.DisabledForeColor = System.Drawing.SystemColors.WindowText;
-            this.lblCopies.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblCopies.Location = new System.Drawing.Point(471, 363);
-            this.lblCopies.Name = "lblCopies";
-            this.lblCopies.Size = new System.Drawing.Size(42, 14);
-            this.lblCopies.TabIndex = 0;
-            this.lblCopies.Text = "Копий";
-            // 
-            // pnlSelectConditions
-            // 
-            this.pnlSelectConditions.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlSelectConditions.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnlSelectConditions.Controls.Add(this.pnlDeliveryNeed);
-            this.pnlSelectConditions.Controls.Add(this.lblPrintForm);
-            this.pnlSelectConditions.Controls.Add(this.txtShipperInfo);
-            this.pnlSelectConditions.Controls.Add(this.lblShipperInfo);
-            this.pnlSelectConditions.Controls.Add(this.lblPointCharge);
-            this.pnlSelectConditions.Controls.Add(this.txtPointCharge);
-            this.pnlSelectConditions.Location = new System.Drawing.Point(5, 4);
-            this.pnlSelectConditions.Name = "pnlSelectConditions";
-            this.pnlSelectConditions.Size = new System.Drawing.Size(675, 80);
-            this.pnlSelectConditions.TabIndex = 5;
-            // 
-            // pnlDeliveryNeed
-            // 
-            this.pnlDeliveryNeed.Controls.Add(this.optTransportBill_Plus1);
-            this.pnlDeliveryNeed.Controls.Add(this.optPrintTTNOnly);
-            this.pnlDeliveryNeed.Controls.Add(this.optPrintTTNandTransportBill);
-            this.pnlDeliveryNeed.Controls.Add(this.optPrintTransportBillOnly);
-            this.pnlDeliveryNeed.Location = new System.Drawing.Point(112, 47);
-            this.pnlDeliveryNeed.Name = "pnlDeliveryNeed";
-            this.pnlDeliveryNeed.Size = new System.Drawing.Size(556, 25);
-            this.pnlDeliveryNeed.TabIndex = 5;
-            // 
-            // optTransportBill_Plus1
-            // 
-            this.optTransportBill_Plus1.AutoSize = true;
-            this.optTransportBill_Plus1.Location = new System.Drawing.Point(395, 4);
-            this.optTransportBill_Plus1.Name = "optTransportBill_Plus1";
-            this.optTransportBill_Plus1.Size = new System.Drawing.Size(71, 18);
-            this.optTransportBill_Plus1.TabIndex = 3;
-            this.optTransportBill_Plus1.Text = "ТрН + 1";
-            this.ttToolTip.SetToolTip(this.optTransportBill_Plus1, "Транспортные накладные + 1 общая (через перевозчика)");
-            this.optTransportBill_Plus1.UseVisualStyleBackColor = true;
-            // 
-            // optPrintTTNOnly
-            // 
-            this.optPrintTTNOnly.AutoSize = true;
-            this.optPrintTTNOnly.IsChanged = true;
-            this.optPrintTTNOnly.Location = new System.Drawing.Point(4, 4);
-            this.optPrintTTNOnly.Name = "optPrintTTNOnly";
-            this.optPrintTTNOnly.Size = new System.Drawing.Size(92, 18);
-            this.optPrintTTNOnly.TabIndex = 0;
-            this.optPrintTTNOnly.Text = "только ТТН";
-            this.ttToolTip.SetToolTip(this.optPrintTTNOnly, "Только товарно-транспортные накладные (форма № 1-Т)");
-            this.optPrintTTNOnly.UseVisualStyleBackColor = true;
-            // 
-            // optPrintTTNandTransportBill
-            // 
-            this.optPrintTTNandTransportBill.AutoSize = true;
-            this.optPrintTTNandTransportBill.Location = new System.Drawing.Point(267, 4);
-            this.optPrintTTNandTransportBill.Name = "optPrintTTNandTransportBill";
-            this.optPrintTTNandTransportBill.Size = new System.Drawing.Size(88, 18);
-            this.optPrintTTNandTransportBill.TabIndex = 2;
-            this.optPrintTTNandTransportBill.Text = "ТТН + ТрН";
-            this.ttToolTip.SetToolTip(this.optPrintTTNandTransportBill, "Товарно-транспортные и транспортные накладные");
-            this.optPrintTTNandTransportBill.UseVisualStyleBackColor = true;
-            // 
-            // optPrintTransportBillOnly
-            // 
-            this.optPrintTransportBillOnly.AutoSize = true;
-            this.optPrintTransportBillOnly.Checked = true;
-            this.optPrintTransportBillOnly.IsChanged = true;
-            this.optPrintTransportBillOnly.Location = new System.Drawing.Point(136, 4);
-            this.optPrintTransportBillOnly.Name = "optPrintTransportBillOnly";
-            this.optPrintTransportBillOnly.Size = new System.Drawing.Size(91, 18);
-            this.optPrintTransportBillOnly.TabIndex = 1;
-            this.optPrintTransportBillOnly.TabStop = true;
-            this.optPrintTransportBillOnly.Text = "только ТрН";
-            this.ttToolTip.SetToolTip(this.optPrintTransportBillOnly, "Только транспортные накладные (приложение № 4)");
-            this.optPrintTransportBillOnly.UseVisualStyleBackColor = true;
-            // 
-            // lblPrintForm
-            // 
-            this.lblPrintForm.AutoSize = true;
-            this.lblPrintForm.DisabledBackColor = System.Drawing.SystemColors.Control;
-            this.lblPrintForm.DisabledForeColor = System.Drawing.SystemColors.WindowText;
-            this.lblPrintForm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblPrintForm.Location = new System.Drawing.Point(2, 52);
-            this.lblPrintForm.Name = "lblPrintForm";
-            this.lblPrintForm.Size = new System.Drawing.Size(59, 14);
-            this.lblPrintForm.TabIndex = 4;
-            this.lblPrintForm.Text = "Печатать";
-            // 
-            // txtShipperInfo
-            // 
-            this.txtShipperInfo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtShipperInfo.DisabledBackColor = System.Drawing.SystemColors.Control;
-            this.txtShipperInfo.DisabledForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtShipperInfo.Location = new System.Drawing.Point(112, 1);
-            this.txtShipperInfo.MaxLength = 500;
-            this.txtShipperInfo.Name = "txtShipperInfo";
-            this.txtShipperInfo.Size = new System.Drawing.Size(557, 22);
-            this.txtShipperInfo.TabIndex = 1;
-            this.ttToolTip.SetToolTip(this.txtShipperInfo, "I. Грузоотправитель (название, адрес)");
-            this.txtShipperInfo.Visible = false;
-            // 
-            // lblShipperInfo
-            // 
-            this.lblShipperInfo.AutoSize = true;
-            this.lblShipperInfo.DisabledBackColor = System.Drawing.SystemColors.Control;
-            this.lblShipperInfo.DisabledForeColor = System.Drawing.SystemColors.WindowText;
-            this.lblShipperInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblShipperInfo.Location = new System.Drawing.Point(2, 4);
-            this.lblShipperInfo.Name = "lblShipperInfo";
-            this.lblShipperInfo.Size = new System.Drawing.Size(110, 14);
-            this.lblShipperInfo.TabIndex = 0;
-            this.lblShipperInfo.Text = "Грузоотправитель";
-            // 
-            // lblPointCharge
-            // 
-            this.lblPointCharge.AutoSize = true;
-            this.lblPointCharge.DisabledBackColor = System.Drawing.SystemColors.Control;
-            this.lblPointCharge.DisabledForeColor = System.Drawing.SystemColors.WindowText;
-            this.lblPointCharge.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblPointCharge.Location = new System.Drawing.Point(2, 27);
-            this.lblPointCharge.Name = "lblPointCharge";
-            this.lblPointCharge.Size = new System.Drawing.Size(94, 14);
-            this.lblPointCharge.TabIndex = 2;
-            this.lblPointCharge.Text = "Пункт погрузки";
-            // 
-            // txtPointCharge
-            // 
-            this.txtPointCharge.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPointCharge.DisabledBackColor = System.Drawing.SystemColors.Control;
-            this.txtPointCharge.DisabledForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtPointCharge.Location = new System.Drawing.Point(112, 24);
-            this.txtPointCharge.MaxLength = 500;
-            this.txtPointCharge.Name = "txtPointCharge";
-            this.txtPointCharge.Size = new System.Drawing.Size(557, 22);
-            this.txtPointCharge.TabIndex = 3;
-            this.ttToolTip.SetToolTip(this.txtPointCharge, "Примечание по заказу");
-            // 
             // frmOutputsDocumentsTTNData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -653,35 +653,35 @@ namespace Logistics
 		private RFMBaseClasses.RFMLabel lblShipperInfo;
 		private RFMBaseClasses.RFMLabel lblPointCharge;
 		private RFMBaseClasses.RFMTextBox txtPointCharge;
-		private RFMBaseClasses.RFMDataGridViewTextBoxColumn grcConsigneeInfo;
-		private RFMBaseClasses.RFMDataGridViewTextBoxColumn grcPayerGoodsInfo;
-		private RFMBaseClasses.RFMDataGridViewTextBoxColumn grcPayerTransportInfo;
-		private RFMBaseClasses.RFMDataGridViewTextBoxColumn grcOrganizationInfo;
-		private RFMBaseClasses.RFMDataGridViewTextBoxColumn grcPointDischarge;
-		private RFMBaseClasses.RFMDataGridViewTextBoxColumn grcReAddressing;
-		private RFMBaseClasses.RFMDataGridViewTextBoxColumn grcStampNumber;
-		private RFMBaseClasses.RFMDataGridViewTextBoxColumn grcCarTypeName;
-		private RFMBaseClasses.RFMDataGridViewTextBoxColumn grcCarName;
-		private RFMBaseClasses.RFMDataGridViewTextBoxColumn grcCarNumber;
-		private RFMBaseClasses.RFMDataGridViewTextBoxColumn grcTrailerNumber;
-		private RFMBaseClasses.RFMDataGridViewTextBoxColumn grcDriverName;
-		private RFMBaseClasses.RFMDataGridViewTextBoxColumn grcDateOutput;
-		private RFMBaseClasses.RFMDataGridViewTextBoxColumn grcGoodName;
-		private RFMBaseClasses.RFMDataGridViewTextBoxColumn grcWeightText;
-		private RFMBaseClasses.RFMDataGridViewTextBoxColumn grcBoxName;
-		private RFMBaseClasses.RFMDataGridViewTextBoxColumn grcSBoxes;
-		private RFMBaseClasses.RFMDataGridViewTextBoxColumn grcSBrutto;
-		private RFMBaseClasses.RFMDataGridViewTextBoxColumn grcSNetto;
-		private RFMBaseClasses.RFMDataGridViewTextBoxColumn grcSAmount;
-		private RFMBaseClasses.RFMDataGridViewTextBoxColumn grcSVat;
-		private RFMBaseClasses.RFMDataGridViewTextBoxColumn grcBillNumbersList;
-		private RFMBaseClasses.RFMDataGridViewTextBoxColumn grсIDList;
         private RFMBaseClasses.RFMLabel lblPrintForm;
         private RFMBaseClasses.RFMPanel pnlDeliveryNeed;
         private RFMBaseClasses.RFMRadioButton optPrintTTNOnly;
         private RFMBaseClasses.RFMRadioButton optPrintTTNandTransportBill;
         private RFMBaseClasses.RFMRadioButton optPrintTransportBillOnly;
         private RFMBaseClasses.RFMRadioButton optTransportBill_Plus1;
+        private RFMBaseClasses.RFMDataGridViewTextBoxColumn grcConsigneeInfo;
+        private RFMBaseClasses.RFMDataGridViewTextBoxColumn grcPayerGoodsInfo;
+        private RFMBaseClasses.RFMDataGridViewTextBoxColumn grcPayerTransportInfo;
+        private RFMBaseClasses.RFMDataGridViewTextBoxColumn grcOrganizationInfo;
+        private RFMBaseClasses.RFMDataGridViewTextBoxColumn grcPointDischarge;
+        private RFMBaseClasses.RFMDataGridViewTextBoxColumn grcReAddressing;
+        private RFMBaseClasses.RFMDataGridViewTextBoxColumn grcStampNumber;
+        private RFMBaseClasses.RFMDataGridViewTextBoxColumn grcCarTypeName;
+        private RFMBaseClasses.RFMDataGridViewTextBoxColumn grcCarName;
+        private RFMBaseClasses.RFMDataGridViewTextBoxColumn grcCarNumber;
+        private RFMBaseClasses.RFMDataGridViewTextBoxColumn grcTrailerNumber;
+        private RFMBaseClasses.RFMDataGridViewTextBoxColumn grcDriverName;
+        private RFMBaseClasses.RFMDataGridViewTextBoxColumn grcDateOutput;
+        private RFMBaseClasses.RFMDataGridViewTextBoxColumn grcGoodName;
+        private RFMBaseClasses.RFMDataGridViewTextBoxColumn grcWeightText;
+        private RFMBaseClasses.RFMDataGridViewTextBoxColumn grcBoxName;
+        private RFMBaseClasses.RFMDataGridViewTextBoxColumn grcSBoxes;
+        private RFMBaseClasses.RFMDataGridViewTextBoxColumn grcSBrutto;
+        private RFMBaseClasses.RFMDataGridViewTextBoxColumn grcSNetto;
+        private RFMBaseClasses.RFMDataGridViewTextBoxColumn grcSAmount;
+        private RFMBaseClasses.RFMDataGridViewTextBoxColumn grcSVat;
+        private RFMBaseClasses.RFMDataGridViewTextBoxColumn grcBillNumbersList;
+        private RFMBaseClasses.RFMDataGridViewTextBoxColumn grсIDList;
     }
 }
 

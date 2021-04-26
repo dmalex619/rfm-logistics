@@ -111,10 +111,10 @@
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml" />
     <Reference Include="Telerik.Windows.Controls">
-      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for WPF R1 2018\Binaries\WPF40\Telerik.Windows.Controls.dll</HintPath>
+      <HintPath>..\..\..\Telerik 4_0 2018\Telerik.Windows.Controls.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Controls.DataVisualization">
-      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for WPF R1 2018\Binaries\WPF40\Telerik.Windows.Controls.DataVisualization.dll</HintPath>
+      <HintPath>..\..\..\Telerik 4_0 2018\Telerik.Windows.Controls.DataVisualization.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="WindowsFormsIntegration" />

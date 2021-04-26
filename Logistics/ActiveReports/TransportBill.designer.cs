@@ -232,6 +232,7 @@ namespace Logistics
             this.line18 = new DataDynamics.ActiveReports.Line();
             this.GroupFooter1 = new DataDynamics.ActiveReports.GroupFooter();
             this.PageFooter = new DataDynamics.ActiveReports.PageFooter();
+            this.textBox8 = new DataDynamics.ActiveReports.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.lblGroupHeader101)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.label31)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.label10)).BeginInit();
@@ -373,6 +374,7 @@ namespace Logistics
             ((System.ComponentModel.ISupportInitialize)(this.textBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.label77)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // PageHeader
@@ -508,6 +510,7 @@ namespace Logistics
             // 
             this.Detail.ColumnSpacing = 0F;
             this.Detail.Controls.AddRange(new DataDynamics.ActiveReports.ARControl[] {
+            this.textBox8,
             this.textBox4,
             this.label113,
             this.label114,
@@ -581,7 +584,6 @@ namespace Logistics
             this.label29,
             this.label34,
             this.textBox1,
-            this.line9,
             this.label38,
             this.line14,
             this.label39,
@@ -708,7 +710,8 @@ namespace Logistics
             this.pageBreak1,
             this.line36,
             this.line37,
-            this.line18});
+            this.line18,
+            this.line9});
             this.Detail.Height = 21.25984F;
             this.Detail.Name = "Detail";
             this.Detail.Format += new System.EventHandler(this.Detail_Format);
@@ -723,13 +726,13 @@ namespace Logistics
             this.textBox4.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
             this.textBox4.Border.TopColor = System.Drawing.Color.Black;
             this.textBox4.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.textBox4.DataField = "OrganizationInfo";
+            this.textBox4.DataField = "PayerTransportInfo";
             this.textBox4.Height = 0.433071F;
             this.textBox4.Left = 0.03937008F;
             this.textBox4.Name = "textBox4";
-            this.textBox4.Style = "ddo-char-set: 1; text-align: left; font-weight: normal; font-size: 9pt; font-fami" +
+            this.textBox4.Style = "ddo-char-set: 1; text-align: left; font-weight: normal; font-size: 8pt; font-fami" +
     "ly: Tahoma; ";
-            this.textBox4.Text = "OrganizationInfo";
+            this.textBox4.Text = "PayerTransportInfo";
             this.textBox4.Top = 6.968504F;
             this.textBox4.Width = 3.740157F;
             // 
@@ -935,7 +938,7 @@ namespace Logistics
             this.label107.MultiLine = false;
             this.label107.Name = "label107";
             this.label107.Style = "color: Black; ddo-char-set: 204; text-align: left; font-style: normal; font-size:" +
-    " 9pt; font-family: Tahoma; white-space: nowrap; ";
+    " 8pt; font-family: Tahoma; white-space: nowrap; ";
             this.label107.Text = "ЗПУ отправителя №";
             this.label107.Top = 8.700788F;
             this.label107.Width = 1.338583F;
@@ -956,7 +959,7 @@ namespace Logistics
             this.label110.MultiLine = false;
             this.label110.Name = "label110";
             this.label110.Style = "color: Black; ddo-char-set: 204; text-align: left; font-style: normal; font-size:" +
-    " 9pt; font-family: Tahoma; white-space: nowrap; ";
+    " 8pt; font-family: Tahoma; white-space: nowrap; ";
             this.label110.Text = "ЗПУ отправителя №";
             this.label110.Top = 8.700788F;
             this.label110.Width = 1.338583F;
@@ -1320,14 +1323,14 @@ namespace Logistics
             this.txtShipperInfo.Border.TopColor = System.Drawing.Color.Black;
             this.txtShipperInfo.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
             this.txtShipperInfo.CanGrow = false;
-            this.txtShipperInfo.DataField = "ShipperInfo";
+            this.txtShipperInfo.DataField = "PayerTransportInfo";
             this.txtShipperInfo.Height = 0.5905512F;
             this.txtShipperInfo.HyperLink = null;
             this.txtShipperInfo.Left = 0.03937008F;
             this.txtShipperInfo.Name = "txtShipperInfo";
             this.txtShipperInfo.Style = "ddo-char-set: 1; text-align: left; font-weight: normal; font-size: 9pt; font-fami" +
     "ly: Tahoma; ";
-            this.txtShipperInfo.Text = "ShipperInfo";
+            this.txtShipperInfo.Text = "PayerTransportInfo";
             this.txtShipperInfo.Top = 0.5511811F;
             this.txtShipperInfo.Width = 3.740157F;
             // 
@@ -1578,7 +1581,7 @@ namespace Logistics
             this.txtPointCharge.HyperLink = null;
             this.txtPointCharge.Left = 0.03937008F;
             this.txtPointCharge.Name = "txtPointCharge";
-            this.txtPointCharge.Style = "ddo-char-set: 1; text-align: left; font-weight: normal; font-size: 9pt; font-fami" +
+            this.txtPointCharge.Style = "ddo-char-set: 1; text-align: left; font-weight: normal; font-size: 8pt; font-fami" +
     "ly: Tahoma; white-space: inherit; ";
             this.txtPointCharge.Text = "PointCharge";
             this.txtPointCharge.Top = 7.598425F;
@@ -1598,7 +1601,7 @@ namespace Logistics
             this.txtChargeData.HyperLink = null;
             this.txtChargeData.Left = 0.03937008F;
             this.txtChargeData.Name = "txtChargeData";
-            this.txtChargeData.Style = "ddo-char-set: 1; text-align: left; font-weight: normal; font-size: 9pt; font-fami" +
+            this.txtChargeData.Style = "ddo-char-set: 1; text-align: left; font-weight: normal; font-size: 8pt; font-fami" +
     "ly: Tahoma; ";
             this.txtChargeData.Text = "txtChargeData";
             this.txtChargeData.Top = 9.055119F;
@@ -1620,7 +1623,7 @@ namespace Logistics
             this.label4.MultiLine = false;
             this.label4.Name = "label4";
             this.label4.Style = "color: Black; ddo-char-set: 204; text-align: left; font-style: normal; font-size:" +
-    " 9pt; font-family: Tahoma; white-space: nowrap; ";
+    " 8pt; font-family: Tahoma; white-space: nowrap; ";
             this.label4.Text = "Груз в коробах на паллетах на месте погрузки";
             this.label4.Top = 8.543307F;
             this.label4.Width = 3.740157F;
@@ -1661,7 +1664,7 @@ namespace Logistics
             this.txtPointDischarge.HyperLink = null;
             this.txtPointDischarge.Left = 3.858268F;
             this.txtPointDischarge.Name = "txtPointDischarge";
-            this.txtPointDischarge.Style = "ddo-char-set: 1; text-align: left; font-weight: normal; font-size: 9pt; font-fami" +
+            this.txtPointDischarge.Style = "ddo-char-set: 1; text-align: left; font-weight: normal; font-size: 8pt; font-fami" +
     "ly: Tahoma; ";
             this.txtPointDischarge.Text = "PointDischarge";
             this.txtPointDischarge.Top = 7.598425F;
@@ -1683,7 +1686,7 @@ namespace Logistics
             this.txtChargeStamp.Left = 1.417323F;
             this.txtChargeStamp.MultiLine = false;
             this.txtChargeStamp.Name = "txtChargeStamp";
-            this.txtChargeStamp.Style = "ddo-char-set: 204; text-align: center; font-weight: normal; font-size: 9pt; font-" +
+            this.txtChargeStamp.Style = "ddo-char-set: 204; text-align: center; font-weight: normal; font-size: 8pt; font-" +
     "family: Tahoma; ";
             this.txtChargeStamp.Text = "txtChargeStamp";
             this.txtChargeStamp.Top = 8.700788F;
@@ -2184,7 +2187,7 @@ namespace Logistics
             this.textBox1.Left = 5.236221F;
             this.textBox1.MultiLine = false;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Style = "ddo-char-set: 204; text-align: center; font-weight: normal; font-size: 9pt; font-" +
+            this.textBox1.Style = "ddo-char-set: 204; text-align: center; font-weight: normal; font-size: 8pt; font-" +
     "family: Tahoma; ";
             this.textBox1.Text = "txtChargeStamp";
             this.textBox1.Top = 8.700788F;
@@ -3326,14 +3329,14 @@ namespace Logistics
             this.textBox2.Border.TopColor = System.Drawing.Color.Black;
             this.textBox2.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
             this.textBox2.CanGrow = false;
-            this.textBox2.DataField = "ShipperInfo";
+            this.textBox2.DataField = "PayerTransportInfo";
             this.textBox2.Height = 0.472441F;
             this.textBox2.HyperLink = null;
             this.textBox2.Left = 0.03937008F;
             this.textBox2.Name = "textBox2";
             this.textBox2.Style = "ddo-char-set: 1; text-align: left; font-weight: normal; font-size: 9pt; font-fami" +
     "ly: Tahoma; ";
-            this.textBox2.Text = "ShipperInfo";
+            this.textBox2.Text = "PayerTransportInfo";
             this.textBox2.Top = 19.17323F;
             this.textBox2.Width = 3.740157F;
             // 
@@ -4298,7 +4301,7 @@ namespace Logistics
             this.label109.MultiLine = false;
             this.label109.Name = "label109";
             this.label109.Style = "color: Black; ddo-char-set: 204; text-align: left; font-style: normal; font-size:" +
-    " 9pt; font-family: Tahoma; white-space: nowrap; ";
+    " 8pt; font-family: Tahoma; white-space: nowrap; ";
             this.label109.Text = "Груз в коробах на паллетах на месте выгрузки";
             this.label109.Top = 8.543307F;
             this.label109.Width = 3.740157F;
@@ -4399,7 +4402,7 @@ namespace Logistics
             this.txtDischargeData.Height = 0.3149606F;
             this.txtDischargeData.Left = 3.858268F;
             this.txtDischargeData.Name = "txtDischargeData";
-            this.txtDischargeData.Style = "ddo-char-set: 1; text-align: left; font-weight: normal; font-size: 9pt; font-fami" +
+            this.txtDischargeData.Style = "ddo-char-set: 1; text-align: left; font-weight: normal; font-size: 8pt; font-fami" +
     "ly: Tahoma; ";
             this.txtDischargeData.Text = "txtDischargeData";
             this.txtDischargeData.Top = 9.055119F;
@@ -4864,6 +4867,26 @@ namespace Logistics
             this.PageFooter.Height = 0F;
             this.PageFooter.Name = "PageFooter";
             // 
+            // textBox8
+            // 
+            this.textBox8.Border.BottomColor = System.Drawing.Color.Black;
+            this.textBox8.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
+            this.textBox8.Border.LeftColor = System.Drawing.Color.Black;
+            this.textBox8.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
+            this.textBox8.Border.RightColor = System.Drawing.Color.Black;
+            this.textBox8.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
+            this.textBox8.Border.TopColor = System.Drawing.Color.Black;
+            this.textBox8.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
+            this.textBox8.DataField = "QualityNumbers";
+            this.textBox8.Height = 0.1574805F;
+            this.textBox8.Left = 0.03937007F;
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Style = "ddo-char-set: 204; text-align: left; font-weight: normal; font-size: 8pt; font-fa" +
+    "mily: Tahoma; ";
+            this.textBox8.Text = "QualityNumbers";
+            this.textBox8.Top = 4.606299F;
+            this.textBox8.Width = 7.559056F;
+            // 
             // TransportBill
             // 
             this.PageSettings.DefaultPaperSize = false;
@@ -5028,6 +5051,7 @@ namespace Logistics
             ((System.ComponentModel.ISupportInitialize)(this.textBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.label77)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }
@@ -5234,5 +5258,6 @@ namespace Logistics
         private DataDynamics.ActiveReports.Label label77;
         private DataDynamics.ActiveReports.PageBreak pageBreak1;
         private DataDynamics.ActiveReports.TextBox textBox4;
+        private DataDynamics.ActiveReports.TextBox textBox8;
     }
 }
