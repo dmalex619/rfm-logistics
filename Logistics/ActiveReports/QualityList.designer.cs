@@ -67,6 +67,7 @@ namespace Logistics
             this.lblPageHeader01 = new DataDynamics.ActiveReports.Label();
             this.reportInfo1 = new DataDynamics.ActiveReports.ReportInfo();
             this.GroupHeader1 = new DataDynamics.ActiveReports.GroupHeader();
+            this.shpGroupHeader101 = new DataDynamics.ActiveReports.Shape();
             this.lblGroupHeader108 = new DataDynamics.ActiveReports.Label();
             this.lblGroupHeader107 = new DataDynamics.ActiveReports.Label();
             this.lblGroupHeader106 = new DataDynamics.ActiveReports.Label();
@@ -87,7 +88,6 @@ namespace Logistics
             this.txtDateOutput = new DataDynamics.ActiveReports.TextBox();
             this.line2 = new DataDynamics.ActiveReports.Line();
             this.label3 = new DataDynamics.ActiveReports.Label();
-            this.shpGroupHeader101 = new DataDynamics.ActiveReports.Shape();
             this.GroupHeader2 = new DataDynamics.ActiveReports.GroupHeader();
             this.linGroupHeader201 = new DataDynamics.ActiveReports.Line();
             this.linGroupHeader202 = new DataDynamics.ActiveReports.Line();
@@ -230,6 +230,25 @@ namespace Logistics
             this.GroupHeader1.RepeatStyle = DataDynamics.ActiveReports.RepeatStyle.OnPage;
             this.GroupHeader1.Tag = "OrderUniq";
             // 
+            // shpGroupHeader101
+            // 
+            this.shpGroupHeader101.Border.BottomColor = System.Drawing.Color.Black;
+            this.shpGroupHeader101.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
+            this.shpGroupHeader101.Border.LeftColor = System.Drawing.Color.Black;
+            this.shpGroupHeader101.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
+            this.shpGroupHeader101.Border.RightColor = System.Drawing.Color.Black;
+            this.shpGroupHeader101.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
+            this.shpGroupHeader101.Border.TopColor = System.Drawing.Color.Black;
+            this.shpGroupHeader101.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
+            this.shpGroupHeader101.Height = 0.1574804F;
+            this.shpGroupHeader101.Left = 0.07874016F;
+            this.shpGroupHeader101.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.shpGroupHeader101.LineWeight = 2F;
+            this.shpGroupHeader101.Name = "shpGroupHeader101";
+            this.shpGroupHeader101.RoundingRadius = 0F;
+            this.shpGroupHeader101.Top = 0.7086614F;
+            this.shpGroupHeader101.Width = 10.82677F;
+            // 
             // lblGroupHeader108
             // 
             this.lblGroupHeader108.Border.BottomColor = System.Drawing.Color.Black;
@@ -242,7 +261,7 @@ namespace Logistics
             this.lblGroupHeader108.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
             this.lblGroupHeader108.Height = 0.1574803F;
             this.lblGroupHeader108.HyperLink = null;
-            this.lblGroupHeader108.Left = 6.023623F;
+            this.lblGroupHeader108.Left = 6.102362F;
             this.lblGroupHeader108.MultiLine = false;
             this.lblGroupHeader108.Name = "lblGroupHeader108";
             this.lblGroupHeader108.Style = "ddo-char-set: 204; font-size: 8pt; font-family: Tahoma; white-space: nowrap; ";
@@ -282,7 +301,7 @@ namespace Logistics
             this.lblGroupHeader106.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
             this.lblGroupHeader106.Height = 0.1574803F;
             this.lblGroupHeader106.HyperLink = null;
-            this.lblGroupHeader106.Left = 4.330709F;
+            this.lblGroupHeader106.Left = 4.409449F;
             this.lblGroupHeader106.MultiLine = false;
             this.lblGroupHeader106.Name = "lblGroupHeader106";
             this.lblGroupHeader106.Style = "ddo-char-set: 204; font-size: 8pt; font-family: Tahoma; white-space: nowrap; ";
@@ -445,14 +464,14 @@ namespace Logistics
             this.linGroupHeader103.Border.TopColor = System.Drawing.Color.Black;
             this.linGroupHeader103.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
             this.linGroupHeader103.Height = 0.1574804F;
-            this.linGroupHeader103.Left = 5.748032F;
+            this.linGroupHeader103.Left = 5.905512F;
             this.linGroupHeader103.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.linGroupHeader103.LineWeight = 2F;
             this.linGroupHeader103.Name = "linGroupHeader103";
             this.linGroupHeader103.Top = 0.7086614F;
             this.linGroupHeader103.Width = 0F;
-            this.linGroupHeader103.X1 = 5.748032F;
-            this.linGroupHeader103.X2 = 5.748032F;
+            this.linGroupHeader103.X1 = 5.905512F;
+            this.linGroupHeader103.X2 = 5.905512F;
             this.linGroupHeader103.Y1 = 0.7086614F;
             this.linGroupHeader103.Y2 = 0.8661417F;
             // 
@@ -466,7 +485,7 @@ namespace Logistics
             this.linGroupHeader104.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
             this.linGroupHeader104.Border.TopColor = System.Drawing.Color.Black;
             this.linGroupHeader104.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.linGroupHeader104.Height = 0.1574804F;
+            this.linGroupHeader104.Height = 0.1574803F;
             this.linGroupHeader104.Left = 7.086615F;
             this.linGroupHeader104.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.linGroupHeader104.LineWeight = 2F;
@@ -648,25 +667,6 @@ namespace Logistics
             this.label3.Text = "Наим-ние лица, принявшего декларац.";
             this.label3.Top = 0.7086614F;
             this.label3.Width = 2.204724F;
-            // 
-            // shpGroupHeader101
-            // 
-            this.shpGroupHeader101.Border.BottomColor = System.Drawing.Color.Black;
-            this.shpGroupHeader101.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.shpGroupHeader101.Border.LeftColor = System.Drawing.Color.Black;
-            this.shpGroupHeader101.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.shpGroupHeader101.Border.RightColor = System.Drawing.Color.Black;
-            this.shpGroupHeader101.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.shpGroupHeader101.Border.TopColor = System.Drawing.Color.Black;
-            this.shpGroupHeader101.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
-            this.shpGroupHeader101.Height = 0.1574804F;
-            this.shpGroupHeader101.Left = 0.07874016F;
-            this.shpGroupHeader101.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.shpGroupHeader101.LineWeight = 2F;
-            this.shpGroupHeader101.Name = "shpGroupHeader101";
-            this.shpGroupHeader101.RoundingRadius = 0F;
-            this.shpGroupHeader101.Top = 0.7086614F;
-            this.shpGroupHeader101.Width = 10.82677F;
             // 
             // GroupHeader2
             // 
@@ -885,13 +885,13 @@ namespace Logistics
             this.linDetail04.Border.TopColor = System.Drawing.Color.Black;
             this.linDetail04.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
             this.linDetail04.Height = 0.2362205F;
-            this.linDetail04.Left = 5.748032F;
+            this.linDetail04.Left = 5.905512F;
             this.linDetail04.LineWeight = 1F;
             this.linDetail04.Name = "linDetail04";
             this.linDetail04.Top = 0F;
             this.linDetail04.Width = 0F;
-            this.linDetail04.X1 = 5.748032F;
-            this.linDetail04.X2 = 5.748032F;
+            this.linDetail04.X1 = 5.905512F;
+            this.linDetail04.X2 = 5.905512F;
             this.linDetail04.Y1 = 0F;
             this.linDetail04.Y2 = 0.2362205F;
             // 
@@ -990,15 +990,15 @@ namespace Logistics
             this.txtDetail03.Border.TopColor = System.Drawing.Color.Black;
             this.txtDetail03.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
             this.txtDetail03.DataField = "QualityLicence";
-            this.txtDetail03.Height = 0.15625F;
+            this.txtDetail03.Height = 0.1574803F;
             this.txtDetail03.HyperLink = null;
-            this.txtDetail03.Left = 4.015748F;
+            this.txtDetail03.Left = 3.976378F;
             this.txtDetail03.MultiLine = false;
             this.txtDetail03.Name = "txtDetail03";
-            this.txtDetail03.Style = "ddo-char-set: 204; text-align: left; font-size: 8pt; font-family: Tahoma; ";
+            this.txtDetail03.Style = "ddo-char-set: 204; text-align: left; font-size: 7pt; font-family: Tahoma; ";
             this.txtDetail03.Text = "QualityLicence";
             this.txtDetail03.Top = 0.03937008F;
-            this.txtDetail03.Width = 1.692914F;
+            this.txtDetail03.Width = 1.850394F;
             // 
             // txtDetail04
             // 
@@ -1032,15 +1032,15 @@ namespace Logistics
             this.txtDetail05.Border.TopColor = System.Drawing.Color.Black;
             this.txtDetail05.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None;
             this.txtDetail05.DataField = "QualityDates";
-            this.txtDetail05.Height = 0.15625F;
+            this.txtDetail05.Height = 0.1574803F;
             this.txtDetail05.HyperLink = null;
-            this.txtDetail05.Left = 5.787402F;
+            this.txtDetail05.Left = 5.944882F;
             this.txtDetail05.MultiLine = false;
             this.txtDetail05.Name = "txtDetail05";
-            this.txtDetail05.Style = "ddo-char-set: 204; text-align: left; font-size: 8pt; font-family: Tahoma; ";
+            this.txtDetail05.Style = "ddo-char-set: 204; text-align: left; font-size: 7pt; font-family: Tahoma; ";
             this.txtDetail05.Text = "QualityDates";
             this.txtDetail05.Top = 0.03937008F;
-            this.txtDetail05.Width = 1.259843F;
+            this.txtDetail05.Width = 1.102362F;
             // 
             // line1
             // 
